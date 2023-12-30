@@ -28,6 +28,8 @@ import calendar from "../pages/calendar.vue";
 
 import invoice from "../pages/invoice.vue";
 
+import manageInvoice from "../pages/manage-invoice.vue";
+
 import user from "../pages/user.vue";
 
 import rolePermission from "../pages/roles-permission.vue";
@@ -77,6 +79,8 @@ const routes = [
             { path: ROOT_URL + '/calendar', name: 'calendar', component: calendar, meta: { title: TITLE + 'calendar' } },
 
             { path: ROOT_URL + '/invoice', name: 'invoice', component: invoice, meta: { title: TITLE + 'invoice' } },
+
+            { path: ROOT_URL + '/manage-invoice', name: 'manageInvoice', component: manageInvoice, meta: { title: TITLE + 'manage invoice' } },
 
             { path: ROOT_URL + '/user', name: 'user', component: user, meta: { title: TITLE + 'user' } },
 

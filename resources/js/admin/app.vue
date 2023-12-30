@@ -9,7 +9,7 @@ export default defineComponent({
         $route: {
             immediate: true,
             handler(to, from) {
-                document.title = to.meta.title || 'admin';
+                document.title = to.meta.title || 'MahiBro';
             }
         },
     }

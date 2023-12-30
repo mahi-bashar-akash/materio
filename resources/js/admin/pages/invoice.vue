@@ -11,11 +11,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-end p-2">
-                    <button class="btn btn-theme px-4">
+                <div class="col-md-6 d-flex justify-content-end align-items-center p-2">
+                    <router-link :to="{name: 'manageInvoice'}" class="btn btn-theme d-flex justify-content-center align-items-center px-4">
                         <i class="bi bi-plus-lg me-2"></i>
-                        Add
-                    </button>
+                        Add Invoice
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -57,16 +57,27 @@
                             </td>
                             <td class="action">
                                 <div class="d-flex align-items-center justify-content-end">
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-trash2"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
                                     <div class="dropdown">
-                                        <button type="button" class="btn btn-icon">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i>
                                         </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </td>
@@ -93,16 +104,27 @@
                             </td>
                             <td class="action">
                                 <div class="d-flex align-items-center justify-content-end">
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-trash2"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
                                     <div class="dropdown">
-                                        <button type="button" class="btn btn-icon">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i>
                                         </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </td>
@@ -129,16 +151,27 @@
                             </td>
                             <td class="action">
                                 <div class="d-flex align-items-center justify-content-end">
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-trash2"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
                                     <div class="dropdown">
-                                        <button type="button" class="btn btn-icon">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i>
                                         </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </td>
@@ -165,16 +198,27 @@
                             </td>
                             <td class="action">
                                 <div class="d-flex align-items-center justify-content-end">
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-trash2"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
                                     <div class="dropdown">
-                                        <button type="button" class="btn btn-icon">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i>
                                         </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </td>
@@ -201,16 +245,27 @@
                             </td>
                             <td class="action">
                                 <div class="d-flex align-items-center justify-content-end">
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-trash2"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
                                     <div class="dropdown">
-                                        <button type="button" class="btn btn-icon">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i>
                                         </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </td>
@@ -237,16 +292,27 @@
                             </td>
                             <td class="action">
                                 <div class="d-flex align-items-center justify-content-end">
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-trash2"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
                                     <div class="dropdown">
-                                        <button type="button" class="btn btn-icon">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i>
                                         </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </td>
@@ -275,21 +341,81 @@
                             </td>
                             <td class="action">
                                 <div class="d-flex align-items-center justify-content-end">
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-trash2"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-icon">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
                                     <div class="dropdown">
-                                        <button type="button" class="btn btn-icon">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i>
                                         </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-                        </tbody>
+                        <tr>
+                            <td class="checkbox">
+                                <input type="checkbox" name="checkbox" class="form-check-input">
+                            </td>
+                            <td class="id">#5029</td>
+                            <td class="name">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <div class="text-primary bg-primary-subtle rounded-circle fs-5 d-flex justify-content-center align-items-center" style="width: 45px; height: 45px;">
+                                        HD
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-bold">Hossain Doe</div>
+                                        <small class="text-secondary">hossain@gmail.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="date">
+                                December, 31, 2023
+                            </td>
+                            <td class="payment">
+                                $3313
+                            </td>
+                            <td class="action">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-three-dots-vertical"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Preview
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Edit
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item px-3 py-2">
+                                                    Delete
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

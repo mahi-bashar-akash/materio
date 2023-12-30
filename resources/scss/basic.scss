@@ -35,6 +35,7 @@ body{
     box-shadow: 0 0 0 0 !important;
     transition: 0.3s all ease-in-out;
     line-height: 3.5 !important;
+    border-radius: 5px;
 
     &:focus, &:active{
         transition: 0.3s all ease-in-out;
@@ -48,6 +49,7 @@ body{
     box-shadow: 0 0 0 0 !important;
     transition: 0.3s all ease-in-out;
     line-height: 1.5 !important;
+    border-radius: 5px;
 
     &:focus, &:active{
         transition: 0.3s all ease-in-out;
@@ -61,6 +63,7 @@ body{
     border: 1px solid var(--bs-border-color);
     outline: none;
     padding: 15px;
+    border-radius: 5px;
 }
 
 .form-check-input[type=checkbox] {
@@ -185,6 +188,11 @@ body{
                     min-width: 250px;
                 }
 
+                &.date, &.role{
+                    width: 170px;
+                    min-width: 170px
+                }
+
                 &.payment{
                     width: 90px;
                     min-width: 90px;
@@ -271,7 +279,7 @@ body{
                     min-width: 90px;
                 }
 
-                &.date{
+                &.date, &.role{
                     width: 170px;
                     min-width: 170px
                 }
@@ -326,6 +334,26 @@ body{
                 }
 
             }
+        }
+    }
+
+    tfoot {
+        th{
+            padding: 15px 0;
+            vertical-align: middle;
+            outline: none;
+            border-bottom: none;
+            transition: 0.3s all ease-in-out;
+            color: var(--bs-secondary);
+
+            &:first-child{
+                padding-left: 20px;
+            }
+
+            &:last-child{
+                padding-right: 20px;
+            }
+
         }
     }
 

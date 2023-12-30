@@ -1,7 +1,7 @@
 <template>
 
     <div class="mb-3 h5">
-        Welcome to materio! 👋🏻
+        Welcome to MahiBro! 👋🏻
     </div>
     <div class="mb-3 text-secondary text-opacity-50">
         Please sign-in to your account and start the adventure

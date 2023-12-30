@@ -1071,7 +1071,6 @@
 
             .invoice-wrapper{
                 width: 100%;
-                height: calc(100vh - 150px);
 
                 .invoice-header{
                     background-color: var(--bs-white);
@@ -1079,7 +1078,76 @@
                 }
 
                 .invoice-body{
-                    height: calc(100vh - 250px);
+                    height: calc(100vh - 230px);
+                    overflow-y: scroll;
+
+                    &::-webkit-scrollbar {
+                        background-color: transparent;
+                        width: 5px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: var(--bs-border-color);
+                        height: 5px !important;
+                    }
+
+                }
+
+                .invoice-manage-content{
+                    max-width: 1300px;
+                    font-size: 14px;
+
+                    .btn-discount{
+                        width: 65px;
+                        height: 45px;
+                        background-color: var(--bs-light);
+                        border: 1px solid var(--bs-border-color);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+
+                        &.active{
+                            border: 1px solid var(--theme);
+                            .check-icon{
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+
+                        .check-icon{
+                            top: -7px;
+                            right: -6px;
+                            position: absolute;
+                            opacity: 0;
+                            visibility: hidden;
+                            width: 16px;
+                            height: 16px;
+                            background-color: var(--bs-white);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // user wrapper
+
+            .user-wrapper{
+                width: 100%;
+
+                .user-header{
+                    background-color: var(--bs-white);
+                    padding: 0 12px;
+                }
+
+                .user-body{
+                    height: calc(100vh - 230px);
                     overflow-y: scroll;
 
                     &::-webkit-scrollbar {

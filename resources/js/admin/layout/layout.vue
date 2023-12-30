@@ -15,7 +15,7 @@
         <div class="admin-sidebar" :class="{'active': sidebarActive}">
             <div class="admin-sidebar-header">
                 <router-link :to="{name: 'dashboard'}" class="admin-sidebar-title">
-                    Materio
+                    MahiBro
                 </router-link>
                 <button type="button" class="btn btn-controller" @click="remove">
                     <i class="bi bi-x-lg"></i>
@@ -34,7 +34,7 @@
                 <router-link :to="{name: 'calendar'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-circle me-1"></i> Calendar
                 </router-link>
-                <router-link :to="{name: 'invoice'}" class="admin-sidebar-link" @click="remove">
+                <router-link :to="{name: 'invoice'}" class="admin-sidebar-link" :class="{ 'router-link-active': $route.name === 'manageInvoice' }" @click="remove">
                     <i class="bi bi-circle me-1"></i> Invoice
                 </router-link>
                 <router-link :to="{name: 'user'}" class="admin-sidebar-link" @click="remove">

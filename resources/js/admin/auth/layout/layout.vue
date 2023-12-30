@@ -5,7 +5,7 @@
             <div class="form-content">
                 <div class="mb-3 h5 d-flex align-items-center justify-content-center">
                     <img :src="`/images/svg/logo.svg`" class="img-fluid me-3" style="width: 35px; height: 35px;" alt="logo">
-                    MATERIO
+                    MahiBro
                 </div>
                 <router-view/>
             </div>
