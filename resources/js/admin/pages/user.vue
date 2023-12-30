@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end align-items-center p-2">
-                    <button type="button" class="btn btn-theme px-4">
+                    <button type="button" class="btn btn-theme px-4" @click="userModalController">
                         <i class="bi bi-plus-lg me-2"></i>
                         Add User
                     </button>
@@ -53,7 +53,7 @@
                                 Editor
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success">
+                                <div class="badge bg-success-subtle text-success px-4 py-2">
                                     Active
                                 </div>
                             </td>
@@ -102,7 +102,7 @@
                                 Admin
                             </td>
                             <td class="status">
-                                <div class="badge bg-danger-subtle text-danger">
+                                <div class="badge bg-danger-subtle text-danger px-4 py-2">
                                     InActive
                                 </div>
                             </td>
@@ -151,7 +151,7 @@
                                 Maintainer
                             </td>
                             <td class="status">
-                                <div class="badge bg-warning-subtle text-warning">
+                                <div class="badge bg-warning-subtle text-warning px-4 py-2">
                                     Pending
                                 </div>
                             </td>
@@ -200,7 +200,7 @@
                                 Author
                             </td>
                             <td class="status">
-                                <div class="badge bg-warning-subtle text-warning">
+                                <div class="badge bg-warning-subtle text-warning px-4 py-2">
                                     Pending
                                 </div>
                             </td>
@@ -249,7 +249,7 @@
                                 Subscriber
                             </td>
                             <td class="status">
-                                <div class="badge bg-danger-subtle text-danger">
+                                <div class="badge bg-danger-subtle text-danger px-4 py-2">
                                     InActive
                                 </div>
                             </td>
@@ -298,7 +298,7 @@
                                 Team manager
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success">
+                                <div class="badge bg-success-subtle text-success px-4 py-2">
                                     Active
                                 </div>
                             </td>
@@ -349,7 +349,7 @@
                                 academic coordinator
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success">
+                                <div class="badge bg-success-subtle text-success px-4 py-2">
                                     Active
                                 </div>
                             </td>
@@ -400,7 +400,7 @@
                                 Security manager
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success">
+                                <div class="badge bg-success-subtle text-success px-4 py-2">
                                     Active
                                 </div>
                             </td>
@@ -435,6 +435,88 @@
                 </table>
             </div>
         </div>
+
+        <div class="user-modal" :class="{'active' : userModalActive}">
+            <div class="d-flex justify-content-between align-items-center bg-light p-3">
+                <div class="fs-5 fw-semibold">Add User</div>
+                <button type="button" class="btn btn-close" @click="userModalController"></button>
+            </div>
+            <form class="user-content px-3 pt-3">
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="full-name" class="form-label">Full name</label>
+                        <input id="full-name" type="text" name="full-name" class="form-control" required autocomplete="new-full-name">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="user-name" class="form-label">Username</label>
+                        <input id="user-name" type="text" name="user-name" class="form-control" required autocomplete="new-user-name">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" type="email" name="email" class="form-control" required autocomplete="new-email">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="company" class="form-label">Company</label>
+                        <input id="company" type="text" name="company" class="form-control" required autocomplete="new-company">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="country" class="form-label">Country</label>
+                        <input id="country" type="text" name="country" class="form-control" required autocomplete="new-country">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="contact" class="form-label">Contact</label>
+                        <input id="contact" type="text" name="contact" class="form-control" required autocomplete="new-contact">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="role" class="form-label">Role</label>
+                        <select name="role" id="role" class="form-select">
+                            <option value="">Select Role</option>
+                            <option value="">Admin</option>
+                            <option value="">Author</option>
+                            <option value="">Editor</option>
+                            <option value="">Maintainer</option>
+                            <option value="">Subscriber</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="role" class="form-label">Status</label>
+                        <select name="role" id="role" class="form-select">
+                            <option value="">Select Status</option>
+                            <option value="">Active</option>
+                            <option value="">Inactive</option>
+                            <option value="">Pending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-theme w-100">
+                            SUBMIT
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-light w-100" @click="userModalController">
+                            CANCEL
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
     </div>
 
 </template>
@@ -445,7 +527,9 @@ export default {
 
     data(){
 
-        return{}
+        return{
+            userModalActive: false,
+        }
 
     },
 
@@ -457,7 +541,9 @@ export default {
 
     methods: {
 
-
+        userModalController(){
+            this.userModalActive = !this.userModalActive;
+        },
 
     }
 
