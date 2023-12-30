@@ -1067,6 +1067,35 @@
 
             }
 
+            // invoice wrapper
+
+            .invoice-wrapper{
+                width: 100%;
+                height: calc(100vh - 150px);
+
+                .invoice-header{
+                    background-color: var(--bs-white);
+                    padding: 0 12px;
+                }
+
+                .invoice-body{
+                    height: calc(100vh - 250px);
+                    overflow-y: scroll;
+
+                    &::-webkit-scrollbar {
+                        background-color: transparent;
+                        width: 5px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: var(--bs-border-color);
+                        height: 5px !important;
+                    }
+
+                }
+
+            }
+
         }
 
     }

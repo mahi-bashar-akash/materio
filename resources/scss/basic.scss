@@ -200,6 +200,11 @@ body{
                     min-width: 220px;
                 }
 
+                &.action{
+                    width: 120px;
+                    min-width: 120px
+                }
+
                 &:first-child{
                     padding-left: 18px;
                 }
@@ -246,6 +251,11 @@ body{
                     border-radius: 50%;
                 }
 
+                &.checkbox{
+                    width: 60px;
+                    min-width: 60px;
+                }
+
                 &.id{
                     width: 90px;
                     min-width: 90px;
@@ -261,6 +271,11 @@ body{
                     min-width: 90px;
                 }
 
+                &.date{
+                    width: 170px;
+                    min-width: 170px
+                }
+
                 &.status{
                     width: 90px;
                     min-width: 90px;
@@ -269,6 +284,30 @@ body{
                 &.default-width{
                     width: 220px;
                     min-width: 220px;
+                }
+
+                &.action{
+                    width: 120px;
+                    min-width: 120px;
+
+                    .btn-icon{
+                        background-color: transparent;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: none;
+                        outline: none;
+
+                        &:hover{
+                            background-color: var(--bs-border-color);
+                            box-shadow: 0 0 4px 0 var(--bs-border-color);
+                        }
+
+                    }
+
                 }
 
                 &.face{
