@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
+
+:root{
+    --theme: #9155FDFF;
+    --theme-dark: #7a46d7;
+    --roboto-slab-font: 'Roboto Slab', serif;
+}
+
+body{
+    font-family: var(--roboto-slab-font) !important;
+}
+
+// button area
+
+.btn-theme{
+    background-color: var(--theme) !important;
+    color: var(--bs-white) !important;
+    border: none;
+    outline: none;
+    transition: 0.3s all ease-in-out;
+    &:hover{
+        transition: 0.3s all ease-in-out;
+        background-color: var(--theme-dark) !important;
+    }
+}
+
+.btn{
+    height: 45px;
+}
+
+// form area
+
+.form-control{
+    height: 45px;
+    box-shadow: 0 0 0 0 !important;
+    transition: 0.3s all ease-in-out;
+    line-height: 3.5 !important;
+
+    &:focus, &:active{
+        transition: 0.3s all ease-in-out;
+        border: 1px solid var(--theme) !important;
+    }
+
+}
+
+.form-select{
+    height: 45px;
+    box-shadow: 0 0 0 0 !important;
+    transition: 0.3s all ease-in-out;
+    line-height: 1.5 !important;
+
+    &:focus, &:active{
+        transition: 0.3s all ease-in-out;
+        border: 1px solid var(--theme) !important;
+    }
+
+}
+
+.form-textarea{
+    width: 100%;
+    border: 1px solid var(--bs-border-color);
+    outline: none;
+    padding: 15px;
+}
+
+.form-check-input[type=checkbox] {
+    position: relative;
+    border: 2px solid var(--bs-border-color);
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 .6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    opacity: .5;
+    box-shadow: 0 0 0 0 !important;
+
+    &[type=checkbox]:hover {
+        opacity: 1;
+    }
+
+    &[type=checkbox]:checked {
+        border: 2px solid transparent;
+        background-color: var(--theme);
+        opacity: 1;
+
+        &[type=checkbox]:before {
+            content: '';
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            width: 5px;
+            border: solid #FFF;
+            height: 10px;
+            border-width: 0 2px 2px 0;
+            margin: -1px -1px 0 -1px;
+            transform: rotate(45deg) translate(-50%, -50%);
+            z-index: 2;
+        }
+
+    }
+
+    &[type=checkbox]:before {
+        content: '';
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        width: 7px;
+        height: 14px;
+        border: transparent;
+        border-width: 0 2px 2px 0;
+        margin: -1px -1px 0 -1px;
+        transform: rotate(45deg) translate(-50%, -50%);
+        z-index: 2;
+    }
+
+}
+
+// background area
+
+.bg-theme{
+    background-color: var(--theme) !important;
+}
+
+// text
+
+.text-theme{
+    color: var(--theme) !important;
+}
+
+.font-14{
+    font-size: 14px !important;
+}
+
+// cursor
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+.cursor-content-menu{
+    cursor: context-menu !important;
+}
+
+// dropdown
+
+.dropdown{
+    .dropdown-menu{
+        .dropdown-item{
+            font-size: 14px;
+            &:hover, &:active, &:focus, &.router-link-active{
+                background-color: var(--theme);
+                color: var(--bs-white);
+            }
+        }
+    }
+}
+
+// table
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+        tr {
+            th {
+                padding: 18px 0;
+                text-align: start;
+                border: none;
+                outline: none;
+
+                &.id{
+                    width: 90px;
+                    min-width: 90px;
+                }
+
+                &.name{
+                    width: 250px;
+                    min-width: 250px;
+                }
+
+                &.payment{
+                    width: 90px;
+                    min-width: 90px;
+                }
+
+                &.status{
+                    width: 90px;
+                    min-width: 90px;
+                }
+
+                &.default-width{
+                    width: 220px;
+                    min-width: 220px;
+                }
+
+                &:first-child{
+                    padding-left: 18px;
+                }
+
+                &:last-child{
+                    padding-right: 18px;
+                }
+
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                transition: 0.3s all ease-in-out;
+                td {
+                    background-color: var(--bs-light);
+                    transition: 0.3s all ease-in-out;
+
+                    &:first-child {
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                    }
+                }
+            }
+
+            td {
+                padding: 15px 0;
+                vertical-align: middle;
+                outline: none;
+                border-bottom: none;
+                transition: 0.3s all ease-in-out;
+                color: var(--bs-secondary);
+
+                .face{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                }
+
+                &.id{
+                    width: 90px;
+                    min-width: 90px;
+                }
+
+                &.name{
+                    width: 270px;
+                    min-width: 300px;
+                }
+
+                &.payment{
+                    width: 90px;
+                    min-width: 90px;
+                }
+
+                &.status{
+                    width: 90px;
+                    min-width: 90px;
+                }
+
+                &.default-width{
+                    width: 220px;
+                    min-width: 220px;
+                }
+
+                &.face{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+
+                &:first-child{
+                    padding-left: 20px;
+                }
+
+                &:last-child{
+                    padding-right: 20px;
+                }
+
+            }
+        }
+    }
+
+}
