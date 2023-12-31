@@ -167,7 +167,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-icon border-0" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
