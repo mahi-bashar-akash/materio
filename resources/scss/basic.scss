@@ -4,6 +4,8 @@
     --theme: #9155FDFF;
     --theme-dark: #7a46d7;
     --roboto-slab-font: 'Roboto Slab', serif;
+    --theme-light: #9155FD33;
+    --theme-lightest: #9155FD0C;
 }
 
 body{
@@ -128,6 +130,10 @@ body{
 
 .bg-theme{
     background-color: var(--theme) !important;
+}
+
+.bg-light-theme{
+    background-color: var(--theme-lightest) !important;
 }
 
 // text

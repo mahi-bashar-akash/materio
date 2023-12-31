@@ -1212,6 +1212,25 @@
 
             }
 
+            .pricing-wrapper{
+                max-width: 1300px;
+
+                .btn-current{
+                    border:none;
+                    outline: none;
+                    background-color: var(--bs-success-bg-subtle);
+                    color: var(--bs-success);
+                }
+
+                .btn-light-theme{
+                    border:none;
+                    outline: none;
+                    background-color: var(--theme-light);
+                    color: var(--theme);
+                }
+
+            }
+
         }
 
     }

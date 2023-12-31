@@ -40,11 +40,8 @@
                 <router-link :to="{name: 'user'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-circle me-1"></i> User
                 </router-link>
-                <router-link :to="{name: 'rolePermission'}" class="admin-sidebar-link" @click="remove">
-                    <i class="bi bi-circle me-1"></i> Roles & Permissions
-                </router-link>
-                <router-link :to="{name: 'pages'}" class="admin-sidebar-link" @click="remove">
-                    <i class="bi bi-circle me-1"></i> Pages
+                <router-link :to="{name: 'pricing'}" class="admin-sidebar-link" @click="remove">
+                    <i class="bi bi-circle me-1"></i> Pricing
                 </router-link>
             </div>
         </div>

@@ -32,9 +32,7 @@ import manageInvoice from "../pages/manage-invoice.vue";
 
 import user from "../pages/user.vue";
 
-import rolePermission from "../pages/roles-permission.vue";
-
-import pages from "../pages/pages.vue";
+import pricing from "../pages/pricing.vue";
 
 import profile from "../pages/profile.vue";
 
@@ -84,9 +82,7 @@ const routes = [
 
             { path: ROOT_URL + '/user', name: 'user', component: user, meta: { title: TITLE + 'user' } },
 
-            { path: ROOT_URL + '/rolePermission', name: 'rolePermission', component: rolePermission, meta: { title: TITLE + 'roles & Permission' } },
-
-            { path: ROOT_URL + '/pages', name: 'pages', component: pages, meta: { title: TITLE + 'pages' } },
+            { path: ROOT_URL + '/pricing', name: 'pricing', component: pricing, meta: { title: TITLE + 'pricing' } },
 
             { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + 'profile' } },
 
