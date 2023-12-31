@@ -8,7 +8,7 @@
                         <div class="company-details">
                             <div class="d-flex justify-content-start align-items-center fs-4">
                                 <img :src="`/images/svg/logo.svg`" class="img-fluid me-3" style="width: 45px; height: 45px;" alt="logo">
-                                MahiBro
+                                {{app_name}}
                             </div>
                             <div class="col-12 col-sm-10 col-md-8 col-lg-5 mt-3 text-secondary">
                                 Office 149, 450 South Brand Brooklyn
@@ -200,6 +200,7 @@ export default {
     data(){
 
         return{
+            app_name: window.core.APP_NAME,
             multipleParam: {
                 services: [
                     {

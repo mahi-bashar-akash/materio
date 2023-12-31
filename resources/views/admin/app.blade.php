@@ -13,7 +13,7 @@
 <body class="admin-portal" id="admin"></body>
 <script>
     window.core = {
-        APP_NAME: 'materio ',
+        APP_NAME: 'Materio ',
         APP_URL: '{{env('APP_URL')}}',
     };
 </script>
