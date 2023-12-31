@@ -52,11 +52,11 @@ const routes = [
 
         children: [
 
-            { path: AUTH_ROOT_URL + '/login', name: 'login', component: login, meta: { title: TITLE + 'login' } },
+            { path: AUTH_ROOT_URL + '/login', name: 'login', component: login, meta: { title: TITLE + ' - login' } },
 
-            { path: AUTH_ROOT_URL + '/register', name: 'register', component: register, meta: { title: TITLE + 'registration' } },
+            { path: AUTH_ROOT_URL + '/register', name: 'register', component: register, meta: { title: TITLE + ' - registration' } },
 
-            { path: AUTH_ROOT_URL + '/forget', name: 'forget', component: forget, meta: { title: TITLE + 'forget' } },
+            { path: AUTH_ROOT_URL + '/forget', name: 'forget', component: forget, meta: { title: TITLE + ' - forget' } },
 
         ]
 
@@ -68,25 +68,25 @@ const routes = [
 
         children: [
 
-            { path: ROOT_URL + '/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + 'dashboard' } },
+            { path: ROOT_URL + '/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard' } },
 
-            { path: ROOT_URL + '/email', name: 'email', component: email, meta: { title: TITLE + 'email' } },
+            { path: ROOT_URL + '/email', name: 'email', component: email, meta: { title: TITLE + ' - email' } },
 
-            { path: ROOT_URL + '/chat', name: 'chat', component: chat, meta: { title: TITLE + 'chat' } },
+            { path: ROOT_URL + '/chat', name: 'chat', component: chat, meta: { title: TITLE + ' - chat' } },
 
-            { path: ROOT_URL + '/calendar', name: 'calendar', component: calendar, meta: { title: TITLE + 'calendar' } },
+            { path: ROOT_URL + '/calendar', name: 'calendar', component: calendar, meta: { title: TITLE + ' - calendar' } },
 
-            { path: ROOT_URL + '/invoice', name: 'invoice', component: invoice, meta: { title: TITLE + 'invoice' } },
+            { path: ROOT_URL + '/invoice', name: 'invoice', component: invoice, meta: { title: TITLE + ' - invoice' } },
 
-            { path: ROOT_URL + '/manage-invoice', name: 'manageInvoice', component: manageInvoice, meta: { title: TITLE + 'manage invoice' } },
+            { path: ROOT_URL + '/manage-invoice', name: 'manageInvoice', component: manageInvoice, meta: { title: TITLE + ' - manage invoice' } },
 
-            { path: ROOT_URL + '/user', name: 'user', component: user, meta: { title: TITLE + 'user' } },
+            { path: ROOT_URL + '/user', name: 'user', component: user, meta: { title: TITLE + ' - user' } },
 
-            { path: ROOT_URL + '/pricing', name: 'pricing', component: pricing, meta: { title: TITLE + 'pricing' } },
+            { path: ROOT_URL + '/pricing', name: 'pricing', component: pricing, meta: { title: TITLE + ' - pricing' } },
 
-            { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + 'profile' } },
+            { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + ' - profile' } },
 
-            { path: ROOT_URL + '/settings', name: 'settings', component: settings, meta: { title: TITLE + 'settings' } },
+            { path: ROOT_URL + '/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings' } },
 
         ]
 

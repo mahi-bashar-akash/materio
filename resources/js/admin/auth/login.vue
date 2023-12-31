@@ -1,7 +1,7 @@
 <template>
 
     <div class="mb-3 h5">
-        Welcome to MahiBro! 👋🏻
+        Welcome to {{app_name}}! 👋🏻
     </div>
     <div class="mb-3 text-secondary text-opacity-50">
         Please sign-in to your account and start the adventure
@@ -63,6 +63,7 @@ export default {
     data(){
 
         return{
+            app_name: window.core.APP_NAME,
             password: '',
             passwordFieldType: 'password',
         }

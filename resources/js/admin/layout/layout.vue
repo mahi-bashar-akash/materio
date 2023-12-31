@@ -15,7 +15,7 @@
         <div class="admin-sidebar" :class="{'active': sidebarActive}">
             <div class="admin-sidebar-header">
                 <router-link :to="{name: 'dashboard'}" class="admin-sidebar-title">
-                    MahiBro
+                    {{app_name}}
                 </router-link>
                 <button type="button" class="btn btn-controller" @click="remove">
                     <i class="bi bi-x-lg"></i>
@@ -90,6 +90,7 @@ export default {
     data(){
 
         return{
+            app_name: window.core.APP_NAME,
             sidebarActive: false
         }
 
