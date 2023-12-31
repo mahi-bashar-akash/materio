@@ -33,6 +33,41 @@ body{
     color: var(--theme) !important;
 }
 
+.btn-discount{
+    width: 65px;
+    height: 45px;
+    background-color: var(--bs-light) !important;
+    border: 1px solid var(--bs-border-color) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &.active{
+        border: 1px solid var(--theme) !important;
+        .check-icon{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .check-icon{
+        top: -7px;
+        right: -6px;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        width: 16px;
+        height: 16px;
+        background-color: var(--bs-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+}
+
 .btn{
     height: 45px;
 }

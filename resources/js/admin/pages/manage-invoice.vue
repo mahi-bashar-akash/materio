@@ -119,12 +119,6 @@
                                 <input type="text" name="serviceHour" class="form-control" v-model="each.serviceHour" placeholder="Amount of hour">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-start align-items-center flex-wrap">
-                            <button v-for="(discount, index) in discounts" :key="index" type="button" name="ServiceDiscount" class="btn btn-discount m-2" @click="selectDiscount(discount)" :class="{ active: selectedDiscount === discount }">
-                                <i class="bi bi-check-circle-fill check-icon text-theme"></i>
-                                {{ discount }}%
-                            </button>
-                        </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4 p-3">
                         <div class="mb-3">
@@ -132,9 +126,22 @@
                                 <input type="text" name="serviceTotal" v-model="each.serviceTotal" class="form-control" placeholder="Amount of total">
                             </div>
                         </div>
-                        <div class="btn btn-danger w-100 d-flex justify-content-center align-items-center" @click="removeService(index)" v-if="this.multipleParam.services.length > 1">
-                            Remove
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <select name="serviceDiscount" class="form-select" v-model="each.serviceDiscount">
+                                    <option value="">Select Discount</option>
+                                    <option value="">0%</option>
+                                    <option value="">5%</option>
+                                    <option value="">10%</option>
+                                    <option value="">15%</option>
+                                    <option value="">20%</option>
+                                    <option value="">25%</option>
+                                </select>
+                            </div>
                         </div>
+                        <a href="javascript:void(0)" class="btn btn-danger h-auto" @click="removeService(index)" v-if="this.multipleParam.services.length > 1">
+                            Remove
+                        </a>
                     </div>
                 </div>
                 <button type="button" class="btn btn-theme px-4" :class="{ 'mt-3' : this.multipleParam.services.length > 1}" @click="addService">
@@ -193,8 +200,6 @@ export default {
     data(){
 
         return{
-            discounts: [0, 5, 10, 15, 20, 25],
-            selectedDiscount: 0,
             multipleParam: {
                 services: [
                     {
@@ -202,6 +207,7 @@ export default {
                         serviceDescription: '',
                         serviceCost: '',
                         serviceHour: '',
+                        serviceDiscount: '',
                         serviceTotal: '',
                     }
                 ],
@@ -218,23 +224,20 @@ export default {
 
     methods: {
 
-        selectDiscount(discount) {
-            this.selectedDiscount = discount;
-        },
-
         addService() {
-            this.multipleParam.services.push({
-                serviceCategory: '',
-                serviceDescription: '',
-                serviceCost: '',
-                serviceHour: '',
-                serviceTotal: '',
-            })
-
+            this.multipleParam.services.push(
+                {
+                    serviceCategory: '',
+                    serviceDescription: '',
+                    serviceCost: '',
+                    serviceHour: '',
+                    serviceDiscount: '',
+                    serviceTotal: '',
+                }
+            )
         },
 
         removeService(index) {
-            console.log(index)
             this.multipleParam.services.splice(index, 1)
         },
 
