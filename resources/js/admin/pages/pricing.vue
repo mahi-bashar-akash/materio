@@ -1,7 +1,7 @@
 <template>
 
     <div class="row justify-content-center">
-        <div class="pricing-wrapper bg-white rounded-3 shadow p-3 cursor-content-menu">
+        <div class="pricing-wrapper bg-light rounded-3 shadow p-3 cursor-content-menu">
 
             <div class="h5 text-center mb-3">
                 Pricing Plans
@@ -18,7 +18,7 @@
                 <div class="row">
 
                     <div class="col-12 col-md-6 col-xl-4 p-3">
-                        <div class="border p-3 shadow rounded-3">
+                        <div class="p-3 shadow rounded-3 bg-white">
                             <div class="fs-5 mb-3 text-center text-theme fw-semibold">
                                 Basic
                             </div>
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-xl-4 p-3">
-                        <div class="border p-3 shadow rounded-3">
+                        <div class="p-3 shadow rounded-3 border-theme bg-white">
                             <div class="mb-3 fw-semibold d-flex justify-content-center align-items-center">
                                 <span class="text-theme fs-5">Standard</span>
                                  <small class="badge bg-theme text-white px-4 py-2 ms-2">Popular</small>
@@ -105,7 +105,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-xl-4 p-3">
-                        <div class="border p-3 shadow rounded-3">
+                        <div class="p-3 shadow rounded-3 bg-white">
                             <div class="fs-5 mb-3 text-center text-theme fw-semibold">
                                 Enterprise
                             </div>
@@ -267,6 +267,72 @@
                         </tr>
                     </tfoot>
                 </table>
+            </div>
+
+            <div class="h5 text-center mt-4 mb-3">
+                FAQ's
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="col-11 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5 text-center">
+                    <small class="text-secondary text-opacity-75">
+                        Let us help answer the most common questions.
+                    </small>
+                </div>
+            </div>
+
+            <div class="row justify-content-center py-5">
+                <div class="col-9">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-white shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    General Settings
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar diam eros in elit. Pellentesque convallis laoreet laoreet.Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar diam eros in elit. Pellentesque convallis laoreet laoreet.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-white shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Users
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    We accept Visa®, MasterCard®, American Express®, and PayPal®. So you can be confident that your credit card information will be kept safe and secure.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-white shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Personal Data
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    2Checkout accepts all types of credit and debit cards.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-white shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Advanced Settings
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Yes. You may request a refund within 30 days of your purchase without any additional explanations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
