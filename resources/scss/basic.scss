@@ -26,6 +26,13 @@ body{
     }
 }
 
+.btn-light-theme{
+    border:none !important;
+    outline: none !important;
+    background-color: var(--theme-light) !important;
+    color: var(--theme) !important;
+}
+
 .btn{
     height: 45px;
 }
@@ -183,6 +190,16 @@ body{
                 text-align: start;
                 border: none;
                 outline: none;
+
+                &.checkbox{
+                    width: 60px;
+                    min-width: 60px;
+                }
+
+                &.button{
+                    width: 200px;
+                    min-width: 200px;
+                }
 
                 &.id{
                     width: 90px;
