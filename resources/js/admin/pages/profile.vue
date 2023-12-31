@@ -278,13 +278,13 @@
                                         <th class="name fw-semibold">
                                             TYPE
                                         </th>
-                                        <th class="default-width">
+                                        <th class="default-width text-center">
                                             EMAIL
                                         </th>
-                                        <th class="default-width">
+                                        <th class="default-width text-center">
                                             BROWSER
                                         </th>
-                                        <th class="default-width">
+                                        <th class="default-width text-center">
                                             APP
                                         </th>
                                     </tr>
@@ -294,13 +294,13 @@
                                         <td class="text-secondary name">
                                             New for you
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
                                     </tr>
@@ -308,13 +308,13 @@
                                         <td class="text-secondary name">
                                             Account activity
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
                                     </tr>
@@ -322,13 +322,13 @@
                                         <td class="text-secondary name">
                                             A new browser used to sign in
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
                                     </tr>
@@ -336,31 +336,85 @@
                                         <td class="text-secondary name">
                                             A new device is linked
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                        <td class="text-secondary default-width">
+                                        <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-secondary name">
-
-                                        </td>
-                                        <td class="text-secondary default-width"></td>
-                                        <td class="text-secondary default-width"></td>
-                                        <td class="text-secondary default-width"></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-
+                        <div class="d-flex justify-content-start align-items-center">
+                            <button type="submit" class="btn btn-theme px-4 shadow me-2">
+                                SUBMIT
+                            </button>
+                            <button type="button" class="btn btn-light px-4 shadow">
+                                CANCEL
+                            </button>
+                        </div>
                     </div>
                     <div class="rounded-3 border p-3 bg-white" v-if="tab === 5">
-                        this is connections
+                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-google fs-1 me-2"></i> Google
+                            </div>
+                            <button type="button" class="btn btn-theme px-4">
+                                No Connection
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-slack fs-1 me-2"></i> Slack
+                            </div>
+                            <button type="button" class="btn btn-theme px-4">
+                                No Connection
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-github fs-1 me-2"></i> Github
+                            </div>
+                            <button type="button" class="btn btn-theme px-4">
+                                No Connection
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-facebook fs-1 me-2"></i> Facebook
+                            </div>
+                            <button type="button" class="btn btn-theme px-4">
+                                No Connection
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-twitter fs-1 me-2"></i> Twitter
+                            </div>
+                            <button type="button" class="btn btn-theme px-4">
+                                No Connection
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-instagram fs-1 me-2"></i> Instagram
+                            </div>
+                            <button type="button" class="btn btn-theme px-4">
+                                No Connection
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-linkedin fs-1 me-2"></i> Linkedin
+                            </div>
+                            <button type="button" class="btn btn-theme px-4">
+                                No Connection
+                            </button>
+                        </div>
                     </div>
                 </div>
 
