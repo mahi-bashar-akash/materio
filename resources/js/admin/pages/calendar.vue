@@ -3,7 +3,7 @@
     <div class="calendar-wrapper">
         <div class="calendar-sidebar" :class="{'active' : calendarSidebarActive}">
             <div class="calendar-sidebar-header mb-3">
-                <button type="button" class="btn btn-theme" @click="manageEvent">
+                <button type="button" class="btn btn-theme" @click="manageEventOpen">
                     Add Event
                 </button>
                 <button type="button" class="ms-2 btn btn-close" @click="remove"></button>
@@ -53,7 +53,7 @@
                             Monday
                         </div>
                     </div>
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEvent">
+                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
                     <span class="col-md-6 py-2 px-3">
                         <span class="bi bi-circle-fill text-secondary me-2"></span>
                         Dart Game
@@ -62,7 +62,7 @@
                         06:00 pm
                     </span>
                     </small>
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEvent">
+                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
                     <span class="col-md-6 py-2 px-3">
                         <span class="bi bi-circle-fill text-warning me-2"></span>
                         Dinner
@@ -71,7 +71,7 @@
                         12:00 pm
                     </span>
                     </small>
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEvent">
+                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
                     <span class="col-md-6 py-2 px-3">
                         <span class="bi bi-circle-fill text-danger me-2"></span>
                         Meditation
@@ -80,7 +80,7 @@
                         06:00 am
                     </span>
                     </small>
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEvent">
+                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
                     <span class="col-md-6 py-2 px-3">
                         <span class="bi bi-circle-fill text-theme me-2"></span>
                         Product reviews
@@ -92,77 +92,71 @@
 
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="calendar-modal" :class="{'active': calendarModalActive}">
-                <div class="p-3 bg-light d-flex justify-content-between align-items-center fs-5 fw-semibold">
-                    Add Event
-                    <button type="button" class="btn btn-close" @click="remove"></button>
+    <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Event</h1>
+                    <button type="button" class="btn-close" @click="manageEventClose"></button>
                 </div>
-                <div class="calendar-modal-content">
-                    <div class="p-3">
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <input id="" type="text" class="form-control" placeholder="Title" required autocomplete="new-title">
-                            </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input id="" type="text" class="form-control" placeholder="Title" required autocomplete="new-title">
                         </div>
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <select name="" id="" class="form-select">
-                                    <option value="">Select Category</option>
-                                    <option value="">Personal</option>
-                                    <option value="">Business</option>
-                                    <option value="">Family</option>
-                                    <option value="">Holiday</option>
-                                </select>
-                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <select name="" id="" class="form-select">
+                                <option value="">Select Category</option>
+                                <option value="">Personal</option>
+                                <option value="">Business</option>
+                                <option value="">Family</option>
+                                <option value="">Holiday</option>
+                            </select>
                         </div>
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <input id="" type="text" class="form-control" placeholder="Start Date" required autocomplete="">
-                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input id="" type="text" class="form-control" placeholder="Start Date" required autocomplete="">
                         </div>
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <input id="" type="text" class="form-control" placeholder="End Date" required autocomplete="">
-                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input id="" type="text" class="form-control" placeholder="End Date" required autocomplete="">
                         </div>
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <input id="" type="text" class="form-control" placeholder="Event Url" required autocomplete="">
-                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input id="" type="text" class="form-control" placeholder="Event Url" required autocomplete="">
                         </div>
-
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <input id="" type="text" class="form-control" placeholder="Guest" required autocomplete="">
-                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input id="" type="text" class="form-control" placeholder="Guest" required autocomplete="">
                         </div>
-
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <input id="" type="text" class="form-control" placeholder="Location" required autocomplete="">
-                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <input id="" type="text" class="form-control" placeholder="Location" required autocomplete="">
                         </div>
-
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <textarea name="" class="form-textarea" cols="30" rows="5" placeholder="Description"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center justify-content-start">
-                            <button type="button" class="btn btn-theme px-4">
-                                SUBMIT
-                            </button>
-                            <button type="button" class="btn btn-light px-4 ms-2" @click="remove">
-                                CANCEL
-                            </button>
-                        </div>
-
+                    </div>
+                    <div class="form-group">
+                        <textarea name="" class="form-textarea" cols="30" rows="5" placeholder="Description"></textarea>
                     </div>
                 </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-light px-4 me-2" @click="manageEventClose">
+                        CANCEL
+                    </button>
+                    <button type="button" class="btn btn-theme px-4">
+                        SUBMIT
+                    </button>
+                </div>
             </div>
-
         </div>
     </div>
 
@@ -175,7 +169,6 @@ export default {
     data() {
 
         return {
-            calendarModalActive: false,
             calendarSidebarActive: false,
         }
 
@@ -188,9 +181,15 @@ export default {
 
     methods: {
 
-        manageEvent(){
-            this.calendarModalActive = true;
-            this.calendarSidebarActive = false;
+        manageEventOpen(){
+            const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
+            myModal.show();
+        },
+
+        manageEventClose(){
+            let myModalEl = document.getElementById('manageModal');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
         },
 
         calendarSidebarController(){

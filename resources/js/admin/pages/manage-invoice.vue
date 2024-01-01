@@ -182,9 +182,9 @@
                         <button type="submit" class="btn btn-theme px-4 me-2">
                             SUBMIT
                         </button>
-                        <button type="button" class="btn btn-light px-4">
+                        <router-link :to="{name: 'invoice'}" type="button" class="btn btn-light d-flex justify-content-center align-items-center px-4">
                             CANCEL
-                        </button>
+                        </router-link>
                     </span>
                 </div>
             </div>

@@ -43,6 +43,6 @@ Route::get('/front', [FrontController::class, 'front'])->where('any', '.*')->nam
 
 Route::get('/front/{any}', [FrontController::class, 'front'])->where('any', '.*')->name('lvs.front.any');
 
-Route::get('', function () { return redirect()->route('lvs.front.any', 'home'); } );
+Route::get('/', function () { return redirect()->route('lvs.front.any', 'home'); } );
 
 
