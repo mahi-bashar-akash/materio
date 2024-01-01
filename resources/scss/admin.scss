@@ -1214,6 +1214,16 @@
                     background-color: var(--bs-danger-bg-subtle);
                 }
 
+                .media-avatar{
+                    width: 45px;
+                    height: 45px;
+                    object-fit: cover;
+                    background-color: var(--bs-white);
+                    padding: 10px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 12px 0 var(--bs-border-color);
+                }
+
             }
 
             // modal

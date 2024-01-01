@@ -359,61 +359,97 @@
                         </div>
                     </div>
                     <div class="rounded-3 border p-3 bg-white" v-if="tab === 5">
-                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <i class="bi bi-google fs-1 me-2"></i> Google
-                            </div>
-                            <button type="button" class="btn btn-theme px-4">
-                                No Connection
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <i class="bi bi-slack fs-1 me-2"></i> Slack
-                            </div>
-                            <button type="button" class="btn btn-theme px-4">
-                                No Connection
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <i class="bi bi-github fs-1 me-2"></i> Github
-                            </div>
-                            <button type="button" class="btn btn-theme px-4">
-                                No Connection
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <i class="bi bi-facebook fs-1 me-2"></i> Facebook
-                            </div>
-                            <button type="button" class="btn btn-theme px-4">
-                                No Connection
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <i class="bi bi-twitter fs-1 me-2"></i> Twitter
-                            </div>
-                            <button type="button" class="btn btn-theme px-4">
-                                No Connection
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <i class="bi bi-instagram fs-1 me-2"></i> Instagram
-                            </div>
-                            <button type="button" class="btn btn-theme px-4">
-                                No Connection
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center border py-2 px-3">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <i class="bi bi-linkedin fs-1 me-2"></i> Linkedin
-                            </div>
-                            <button type="button" class="btn btn-theme px-4">
-                                No Connection
-                            </button>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div class="media-avatar me-3">
+                                                    <img :src="`/images/media/facebook.png`" class="img-fluid" alt="media">
+                                                </div>
+                                                Facebook
+                                            </div>
+                                        </td>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <button type="button" class="btn btn-theme px-4">
+                                                    No Connection
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div class="media-avatar me-3">
+                                                    <img :src="`/images/media/twitter.png`" class="img-fluid" alt="media">
+                                                </div>
+                                                Twitter
+                                            </div>
+                                        </td>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <button type="button" class="btn btn-theme px-4">
+                                                    No Connection
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div class="media-avatar me-3">
+                                                    <img :src="`/images/media/linkedin.png`" class="img-fluid" alt="media">
+                                                </div>
+                                                Linkedin
+                                            </div>
+                                        </td>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <button type="button" class="btn btn-theme px-4">
+                                                    No Connection
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div class="media-avatar me-3">
+                                                    <img :src="`/images/media/slack.png`" class="img-fluid" alt="media">
+                                                </div>
+                                                Slack
+                                            </div>
+                                        </td>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <button type="button" class="btn btn-theme px-4">
+                                                    No Connection
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div class="media-avatar me-3">
+                                                    <img :src="`/images/media/google.png`" class="img-fluid" alt="media">
+                                                </div>
+                                                Google
+                                            </div>
+                                        </td>
+                                        <td class="default-width">
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <button type="button" class="btn btn-theme px-4">
+                                                    No Connection
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
