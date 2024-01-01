@@ -1,6 +1,9 @@
 <template>
 
+    <!-- calendar wrapper -->
     <div class="calendar-wrapper">
+
+        <!-- calendar sidebar -->
         <div class="calendar-sidebar" :class="{'active' : calendarSidebarActive}">
             <div class="calendar-sidebar-header mb-3">
                 <button type="button" class="btn btn-theme" @click="manageEventOpen">
@@ -26,8 +29,11 @@
                 </button>
             </div>
         </div>
+
+        <!-- calendar content -->
         <div class="calendar-content">
 
+            <!-- calendar content header -->
             <div class="calendar-content-header">
                 <button type="button" class="btn btn-controller border-0" @click="calendarSidebarController">
                     <i class="bi bi-justify-left"></i>
@@ -42,9 +48,11 @@
                 </div>
             </div>
 
+            <!-- calendar content body -->
             <div class="calendar-content-body">
                 <div class="calendar-data" v-for="each in [1,2,3,4,5,6,7,8,9,10]">
 
+                    <!-- calendar single data show date with day -->
                     <div class="row bg-secondary-subtle border-bottom cursor-content-menu">
                         <div class="col-md-6 py-2 px-3">
                             December 18, 2023
@@ -53,41 +61,49 @@
                             Monday
                         </div>
                     </div>
+
+                    <!-- calendar sub single data show event -->
                     <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                    <span class="col-md-6 py-2 px-3">
-                        <span class="bi bi-circle-fill text-secondary me-2"></span>
-                        Dart Game
-                    </span>
-                        <span class="col-md-6 py-2 px-3 text-end">
-                        06:00 pm
-                    </span>
+                        <span class="col-md-6 py-2 px-3">
+                            <span class="bi bi-circle-fill text-secondary me-2"></span>
+                            Dart Game
+                        </span>
+                            <span class="col-md-6 py-2 px-3 text-end">
+                            06:00 pm
+                        </span>
                     </small>
+
+                    <!-- calendar sub single data show event -->
                     <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                    <span class="col-md-6 py-2 px-3">
-                        <span class="bi bi-circle-fill text-warning me-2"></span>
-                        Dinner
-                    </span>
-                        <span class="col-md-6 py-2 px-3 text-end">
-                        12:00 pm
-                    </span>
+                        <span class="col-md-6 py-2 px-3">
+                            <span class="bi bi-circle-fill text-warning me-2"></span>
+                            Dinner
+                        </span>
+                            <span class="col-md-6 py-2 px-3 text-end">
+                            12:00 pm
+                        </span>
                     </small>
+
+                    <!-- calendar sub single data show event -->
                     <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                    <span class="col-md-6 py-2 px-3">
-                        <span class="bi bi-circle-fill text-danger me-2"></span>
-                        Meditation
-                    </span>
-                        <span class="col-md-6 py-2 px-3 text-end">
-                        06:00 am
-                    </span>
+                        <span class="col-md-6 py-2 px-3">
+                            <span class="bi bi-circle-fill text-danger me-2"></span>
+                            Meditation
+                        </span>
+                            <span class="col-md-6 py-2 px-3 text-end">
+                            06:00 am
+                        </span>
                     </small>
+
+                    <!-- calendar sub single data show event -->
                     <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                    <span class="col-md-6 py-2 px-3">
-                        <span class="bi bi-circle-fill text-theme me-2"></span>
-                        Product reviews
-                    </span>
-                        <span class="col-md-6 py-2 px-3 text-end">
-                        03:00 pm
-                    </span>
+                        <span class="col-md-6 py-2 px-3">
+                            <span class="bi bi-circle-fill text-theme me-2"></span>
+                            Product reviews
+                        </span>
+                            <span class="col-md-6 py-2 px-3 text-end">
+                            03:00 pm
+                        </span>
                     </small>
 
                 </div>
@@ -95,6 +111,7 @@
         </div>
     </div>
 
+    <!-- event manage modal of calendar -->
     <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

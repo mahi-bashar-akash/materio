@@ -1,6 +1,9 @@
 <template>
 
+    <!-- user wrapper -->
     <div class="user-wrapper">
+
+        <!-- user header -->
         <div class="user-header border rounded-3">
             <div class="row">
                 <div class="col-md-6 p-2">
@@ -19,6 +22,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- user body -->
         <div class="user-body border rounded-3 mt-4 p-3 bg-white cursor-content-menu">
             <div class="table-responsive">
                 <table class="table">
@@ -436,6 +441,7 @@
             </div>
         </div>
 
+        <!-- user manage modal -->
         <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">

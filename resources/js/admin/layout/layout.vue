@@ -1,5 +1,6 @@
 <template>
 
+    <!-- preloader content -->
     <div id="preloader">
         <div class="position-relative">
             <div class="spinner-border text-secondary" role="status" style="width: 150px; height: 150px;">
@@ -11,7 +12,10 @@
         </div>
     </div>
 
+    <!-- admin wrapper content -->
     <div class="admin-wrapper" style="background: url('/images/dots.png')">
+
+        <!-- admin sidebar content -->
         <div class="admin-sidebar" :class="{'active': sidebarActive}">
             <div class="admin-sidebar-header">
                 <router-link :to="{name: 'dashboard'}" class="admin-sidebar-title">
@@ -45,7 +49,11 @@
                 </router-link>
             </div>
         </div>
+
+        <!-- admin content -->
         <div class="admin-content">
+
+            <!-- admin content header -->
             <div class="admin-content-header">
                 <button type="button" class="btn btn-controller" @click="btnController()">
                     <i class="bi bi-justify-left"></i>
@@ -73,9 +81,12 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- admin content body -->
             <div class="admin-content-body">
                 <router-view/>
             </div>
+
         </div>
     </div>
 

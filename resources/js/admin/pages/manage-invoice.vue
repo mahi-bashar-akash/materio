@@ -1,10 +1,15 @@
 <template>
 
+    <!-- invoice manage form action -->
     <form class="invoice-wrapper">
         <div class="row justify-content-center">
+
+            <!-- invoice manage content -->
             <div class="invoice-manage-content bg-white shadow p-3 p-md-5 rounded-3">
                 <div class="row">
                     <div class="col-md-7 p-3">
+
+                        <!-- admin company details -->
                         <div class="company-details">
                             <div class="d-flex justify-content-start align-items-center fs-4">
                                 <img :src="`/images/svg/logo.svg`" class="img-fluid me-3" style="width: 45px; height: 45px;" alt="logo">
@@ -16,7 +21,10 @@
                                 +1 (123) 456 7891, +44 (876) 543 2198
                             </div>
                         </div>
+
                     </div>
+
+                    <!-- invoice id with date input -->
                     <div class="col-md-5 p-3">
                         <div class="input-group input-group-sm mb-2 row">
                             <span class="input-group-text col-6 col-xl-4" id="inputGroup-sizing-sm">Invoice</span>
@@ -35,6 +43,8 @@
                 <hr class="border">
                 <div class="row">
                     <div class="col-md-6 p-3">
+
+                        <!-- select client -->
                         <div class="form-group">
                             <select name="" class="form-select">
                                 <option value="">Select Client</option>
@@ -50,6 +60,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 p-3">
+
+                        <!-- bill to selected client -->
                         <div class="h6 fw-semibold">Bill to:</div>
                         <div class="row">
                             <div class="col-6 p-2">
@@ -91,9 +103,12 @@
                                 BR91905
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <hr class="border">
+
+                <!-- multiple service list -->
                 <div class="row" v-for="(each, index) in multipleParam.services" :class="{ 'border-bottom' : this.multipleParam.services.length > 1}">
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4 p-3">
                         <div class="mb-3">
@@ -139,15 +154,21 @@
                                 </select>
                             </div>
                         </div>
+
+                        <!-- list remove action -->
                         <a href="javascript:void(0)" class="btn btn-danger h-auto" @click="removeService(index)" v-if="this.multipleParam.services.length > 1">
                             Remove
                         </a>
                     </div>
                 </div>
+
+                <!-- new list add action -->
                 <button type="button" class="btn btn-theme px-4" :class="{ 'mt-3' : this.multipleParam.services.length > 1}" @click="addService">
                     Add new line
                 </button>
                 <hr class="border">
+
+                <!-- count of data subtotal discount tax as total from service list -->
                 <table class="table">
                     <tbody>
                         <tr>
@@ -170,13 +191,18 @@
                         </tr>
                     </tfoot>
                 </table>
+
                 <hr class="border">
+
+                <!-- optional notes for client -->
                 <div class="mb-3">
                     <div class="form-group">
                         <label class="form-label">Notes:</label>
                         <textarea name="" class="form-textarea" cols="30" rows="4" required placeholder="[ Optional ] Add some notes" autocomplete="new-notes"></textarea>
                     </div>
                 </div>
+
+                <!-- invoice manage btn action -->
                 <div class="d-flex justify-content-between align-items-center">
                     <span class="d-flex justify-content-start align-items-center">
                         <button type="submit" class="btn btn-theme px-4 me-2">
@@ -187,6 +213,7 @@
                         </router-link>
                     </span>
                 </div>
+
             </div>
         </div>
     </form>

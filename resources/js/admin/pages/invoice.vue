@@ -1,6 +1,9 @@
 <template>
 
+    <!-- invoice wrapper -->
     <div class="invoice-wrapper">
+
+        <!-- invoice header -->
         <div class="invoice-header border rounded-3">
             <div class="row">
                 <div class="col-md-6 p-2">
@@ -19,6 +22,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- invoice body -->
         <div class="invoice-body border rounded-3 mt-4 p-3 bg-white cursor-content-menu">
             <div class="table-responsive">
                 <table class="table">

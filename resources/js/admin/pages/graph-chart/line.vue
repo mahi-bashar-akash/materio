@@ -1,4 +1,6 @@
 <template>
+
+    <!-- line graph content -->
     <div class="card bg-white shadow rounded-3 mb-3 cursor-content-menu border-0">
         <div class="card-header border-bottom-0 bg-white py-3">
             <strong class="h5 mb-3 fw-bold">Growth Chart</strong>
@@ -7,6 +9,7 @@
             <Bar :data="data" :options="options"/>
         </div>
     </div>
+
 </template>
 
 

@@ -1,6 +1,9 @@
 <template>
 
+    <!-- dashboard content -->
     <div class="row">
+
+        <!-- admin info -->
         <div class="col-lg-6 col-xl-4">
             <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu">
                 <div class="d-flex justify-content-center align-items-center flex-column mb-3">
@@ -17,6 +20,8 @@
                 <div class="text-secondary"> mahibashar2023@gmail.com </div>
             </div>
         </div>
+
+        <!-- project maximum list 5 -->
         <div class="col-lg-6 col-xl-8">
             <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu">
                 <div class="h5 mb-3 pt-3 ps-3 fw-bold">Project list</div>
@@ -101,8 +106,11 @@
                 </div>
             </div>
         </div>
+
         <div class="col-lg-5">
             <div class="row">
+
+                <!-- revenue increase -->
                 <div class="col-12 col-sm-6">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
                         <button type="button" class="btn btn-danger rounded-circle fs-5 cursor-content-menu" style="width: 55px; height: 55px">
@@ -118,6 +126,8 @@
                         </small>
                     </div>
                 </div>
+
+                <!-- reports -->
                 <div class="col-12 col-sm-6">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
                         <button type="button" class="btn btn-warning rounded-circle fs-5 cursor-content-menu" style="width: 55px; height: 55px">
@@ -133,6 +143,8 @@
                         </small>
                     </div>
                 </div>
+
+                <!-- new visitors -->
                 <div class="col-12">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
                         <button type="button" class="btn btn-theme rounded-circle fs-5 cursor-content-menu" style="width: 55px; height: 55px">
@@ -148,6 +160,7 @@
                         </small>
                     </div>
 
+                    <!-- meeting schedule -->
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
                         <div class="h5 mb-3 fw-bold ps-4">
                             Meeting Schedule
@@ -242,6 +255,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Client maximum list 5 -->
         <div class="col-lg-7">
             <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu">
                 <div class="h5 mb-3 pt-3 ps-3 fw-bold">Client list</div>
@@ -351,7 +366,7 @@
                 </div>
             </div>
 
-                <lineChart/>
+            <lineChart/>
 
         </div>
     </div>

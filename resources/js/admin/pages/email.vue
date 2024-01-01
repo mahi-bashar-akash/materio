@@ -1,6 +1,9 @@
 <template>
 
+    <!-- email wrapper -->
     <div class="email-wrapper">
+
+        <!-- email sidebar -->
         <div class="email-sidebar" :class="{active: emailSidebarActive}">
             <div class="email-sidebar-header">
                 MailBox
@@ -47,7 +50,11 @@
                 </button>
             </div>
         </div>
+
+        <!-- email body -->
         <div class="email-body">
+
+            <!-- email body header -->
             <div class="email-body-header border-bottom">
 
                 <a href="javascript:void(0)" class="btn-controller" @click="emailSidebarController">
@@ -64,10 +71,13 @@
                 </div>
 
             </div>
+
+            <!-- email body content -->
             <div class="email-body-content p-3">
 
                 <div class="email-content">
 
+                    <!-- email btn group -->
                     <div class="email-btn-group d-flex justify-content-start align-items-center">
                         <input type="checkbox" class="form-check-input">
                         <button type="button" class="btn btn-icon ms-2">
@@ -79,6 +89,8 @@
                     </div>
 
                     <div class="email-list-content">
+
+                        <!-- email single data -->
                         <div class="single-data row py-2 align-items-center cursor-content-menu" v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
                             <div class="col-12 col-xl-8 text-truncate d-flex align-items-center">
                                 <input type="checkbox" class="form-check-input">
@@ -103,6 +115,7 @@
 
                 </div>
 
+                <!-- email details content -->
                 <div class="email-details-content p-4" :class="{'active' : emailDetailsActive}">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <div class="email-user-info d-flex align-items-center">
@@ -139,6 +152,7 @@
                     <button type="submit" name="" class="btn btn-theme mt-3 px-5">Send</button>
                 </div>
 
+                <!-- email composer content -->
                 <div class="email-composer p-4" :class="{'active' : emailComposerActive}">
                     <div class="d-flex justify-content-start align-items-center fw-semibold mb-3">
                         <button type="button" class="btn btn-icon me-2" @click="emailComposerController">
@@ -147,6 +161,7 @@
                         Compose Mail
                     </div>
 
+                    <!-- email composer form action -->
                     <form>
                         <div class="form-group">
                             <input type="text" name="composer-email-to" class="email-form-control rounded-0 shadow-none border-bottom-0" placeholder="To:" required autocomplete="new-to">

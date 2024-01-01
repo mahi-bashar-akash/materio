@@ -1,11 +1,14 @@
 <template>
 
+    <!-- registration content -->
     <div class="mb-3 h5">
         Adventure starts here 🚀
     </div>
     <div class="mb-3 text-secondary text-opacity-50">
         Make your app management easy and fun!
     </div>
+
+    <!-- registration form action -->
     <form>
         <div class="mb-3">
             <div class="form-group">

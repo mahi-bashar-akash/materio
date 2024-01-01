@@ -1,5 +1,6 @@
 <template>
 
+    <!-- admin information form action -->
     <div class="bg-white rounded-3 p-3 p-md-5 shadow mb-4 cursor-content-menu">
         <form>
             <div class="fs-5 fw-semibold mb-4">Edit Profile</div>
@@ -110,6 +111,7 @@
         </form>
     </div>
 
+    <!-- admin deactivate account form action -->
     <div class="bg-white rounded-3 p-3 p-md-5 shadow mb-4 cursor-content-menu">
         <form>
             <div class="fs-5 fw-semibold mb-4">Delete Account</div>

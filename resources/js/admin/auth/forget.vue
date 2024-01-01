@@ -1,5 +1,6 @@
 <template>
 
+    <!-- forget password content -->
     <div v-if="step === 'forget-password'">
         <div class="mb-3 h5">
             Forgot Password? 🔒
@@ -7,6 +8,8 @@
         <div class="mb-3 text-secondary text-opacity-50">
             Enter your email and we'll send you instructions to reset your password
         </div>
+
+        <!-- forget password form action -->
         <form>
             <div class="mb-3">
                 <div class="form-group">
@@ -29,6 +32,7 @@
         </form>
     </div>
 
+    <!-- reset password content -->
     <div v-if="step === 'reset-password'">
         <div class="mb-3 h5">
             Reset Password 🔒
@@ -36,6 +40,8 @@
         <div class="mb-3 text-secondary text-opacity-50">
             Enter your email and we'll send you instructions to reset your password
         </div>
+
+        <!-- reset password form action -->
         <form>
             <div class="mb-3">
                 <div class="form-group">

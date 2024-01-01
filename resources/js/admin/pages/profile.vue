@@ -1,5 +1,6 @@
 <template>
 
+    <!-- profile wrapper -->
     <div class="profile-wrapper">
         <div class="row">
             <div class="col-xl-4 p-3 h-100">
@@ -19,6 +20,8 @@
                 </div>
             </div>
             <div class="col-xl-8 p-3">
+
+                <!-- button group -->
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -55,6 +58,7 @@
 
                 <div class="mt-1">
 
+                    <!-- project list data show -->
                     <div class="rounded-3 p-3 bg-white shadow" v-if="tab === 1">
                         <div class="h5 mb-3 pt-3 ps-3 fw-bold">Project list</div>
                         <div class="table-responsive">
@@ -138,6 +142,7 @@
                         </div>
                     </div>
 
+                    <!-- change password form action -->
                     <div class="rounded-3 p-3 bg-white shadow" v-if="tab === 2">
                         <form>
                             <div class="h5 mb-3 pt-3 ps-3 fw-bold">Change Password</div>
@@ -179,6 +184,7 @@
                         </form>
                     </div>
 
+                    <!-- billing & plans summary -->
                     <div v-if="tab === 3">
                         <div class="rounded-3 p-3 bg-white shadow">
                             <div class="h5 mb-3 pt-3 ps-3 fw-bold">Billing & Plans</div>
@@ -214,6 +220,7 @@
                             </div>
                         </div>
 
+                        <!-- billing address action -->
                         <div class="mt-3">
                             <div class="rounded-3 shadow p-3 bg-white">
                                 <div class="h5 mb-3 pt-3 ps-3 fw-bold">Billing Address</div>
@@ -263,6 +270,8 @@
                         </div>
 
                     </div>
+
+                    <!-- notification content -->
                     <div class="rounded-3 border p-3 bg-white" v-if="tab === 4">
                         <div class="h5 mb-3 pt-3 ps-3 fw-bold">Notification</div>
                         <hr class="border">
@@ -358,6 +367,8 @@
                             </button>
                         </div>
                     </div>
+
+                    <!-- connection with media content -->
                     <div class="rounded-3 border p-3 bg-white" v-if="tab === 5">
 
                         <div class="table-responsive">

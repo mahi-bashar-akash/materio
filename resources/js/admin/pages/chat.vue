@@ -1,7 +1,9 @@
 <template>
 
+    <!-- chat wrapper -->
     <div class="chat-wrapper">
 
+        <!-- owner details in left sidebar -->
         <div class="ownerDetails" :class="{'active' : ownerDetailsActive}">
             <div class="text-end">
                 <button type="button" class="btn btn-close" @click="remove"></button>
@@ -48,6 +50,7 @@
             </div>
         </div>
 
+        <!-- client details in left sidebar -->
         <div class="clientDetails" :class="{'active' : clientDetailsActive}">
             <div class="text-end">
                 <button type="button" class="btn btn-close" @click="remove"></button>
@@ -94,6 +97,7 @@
             </div>
         </div>
 
+        <!-- chat sidebar -->
         <div class="chat-sidebar" :class="{active: chatSidebarActive}">
             <div class="chat-sidebar-header">
                 <img :src="`/images/avatar.png`" class="img-fluid rounded-circle me-2 cursor-pointer" style="width: 45px; height: 45px;" alt="avatar" @click="ownerDetails">
@@ -150,20 +154,23 @@
                 </a>
             </div>
         </div>
+
+        <!-- chat body -->
         <div class="chat-body">
+
+            <!-- chat body header -->
             <div class="chat-body-header">
                 <div class="d-flex align-items-center justify-content-start">
                     <a href="javascript:void(0)" class="btn-controller" @click="chatSidebarController">
                         <i class="bi bi-justify-left"></i>
                     </a>
-
                     <div class="d-flex align-items-center cursor-pointer font-14" @click="clientDetails">
                         <img :src="'/images/clients/'+select.ClientImage" class="img-fluid rounded-circle me-2" style="width: 45px; height: 45px;" alt="client-avatar">
                         <span>
-                        <strong> {{select.clientName}} </strong>
-                        <br>
-                        <small class="text-secondary">harriet@gmail.com</small>
-                    </span>
+                            <strong> {{select.clientName}} </strong>
+                            <br>
+                            <small class="text-secondary">harriet@gmail.com</small>
+                        </span>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -199,14 +206,22 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- chat body content -->
             <div class="chat-body-content p-3">
+
+                <!-- chat content both user -->
                 <div class="chat-text-content p-1 cursor-content-menu">
+
+                    <!-- admin chat -->
                     <div class="d-flex justify-content-end align-items-center mb-3">
                         <div class="py-2 px-3 bg-theme text-white rounded-3 shadow-sm">
                             How can we help? We're here for you!
                         </div>
                         <img :src="`/images/avatar.png`" class="rounded-circle ms-2" style="width: 45px; height: 45px;" alt="avatar">
                     </div>
+
+                    <!-- client chat -->
                     <div class="d-flex justify-content-start align-items-center mb-3">
                         <img :src="'/images/clients/face-1.png'" class="img-fluid rounded-circle me-2" style="width: 45px; height: 45px;" alt="client-avatar">
                         <div class="py-2 px-3 bg-white text-secondary rounded-3 shadow-sm">
@@ -214,6 +229,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- send message content -->
                 <div class="mt-3">
                     <div class="position-relative">
                         <input type="text" name="" class="form-control" placeholder="Type you message" required>
@@ -225,6 +242,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

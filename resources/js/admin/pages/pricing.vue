@@ -1,5 +1,6 @@
 <template>
 
+    <!-- pricing wrapper -->
     <div class="row justify-content-center">
         <div class="pricing-wrapper bg-light rounded-3 shadow p-3 cursor-content-menu">
 
@@ -17,6 +18,7 @@
             <div class="mt-4 mb-3">
                 <div class="row">
 
+                    <!-- offer basic for plan -->
                     <div class="col-12 col-md-6 col-xl-4 p-3">
                         <div class="p-3 shadow rounded-3 bg-white">
                             <div class="fs-5 mb-3 text-center text-theme fw-semibold">
@@ -60,6 +62,7 @@
                         </div>
                     </div>
 
+                    <!-- offer standard for plan -->
                     <div class="col-12 col-md-6 col-xl-4 p-3">
                         <div class="p-3 shadow rounded-3 border-theme bg-white">
                             <div class="mb-3 fw-semibold d-flex justify-content-center align-items-center">
@@ -104,6 +107,7 @@
                         </div>
                     </div>
 
+                    <!-- offer enterprise for plan -->
                     <div class="col-12 col-md-6 col-xl-4 p-3">
                         <div class="p-3 shadow rounded-3 bg-white">
                             <div class="fs-5 mb-3 text-center text-theme fw-semibold">
@@ -150,6 +154,7 @@
                 </div>
             </div>
 
+            <!-- offer start from basic plan -->
             <div class="my-5 row justify-content-center text-center">
                 <div class="p-3 p-md-5 bg-light-theme col-10 col-sm-8 shadow">
                     <div class="h5 text-theme mb-3">
@@ -164,6 +169,7 @@
                 </div>
             </div>
 
+            <!-- pick plan in reasonable process -->
             <div class="h5 text-center mt-4 mb-3">
                 Pick a plan that works best for you
             </div>
@@ -174,6 +180,8 @@
                     </small>
                 </div>
             </div>
+
+            <!-- pick plan in reasonable process table show data -->
             <div class="table-responsive mt-4">
                 <table class="table border">
                     <thead>
@@ -269,6 +277,7 @@
                 </table>
             </div>
 
+            <!-- if client or user have any question -->
             <div class="h5 text-center mt-4 mb-3">
                 FAQ's
             </div>
