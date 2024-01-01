@@ -201,14 +201,18 @@ export default {
 
         emailSidebarController(){
             this.emailSidebarActive = !this.emailSidebarActive;
+            this.emailComposerActive = false;
+            this.emailDetailsActive = false;
         },
 
         emailDetailsController(){
             this.emailDetailsActive = !this.emailDetailsActive;
+            this.emailComposerActive = false;
         },
 
         emailComposerController(){
             this.emailComposerActive = !this.emailComposerActive;
+            this.emailDetailsActive = false;
         }
 
     }

@@ -1189,6 +1189,8 @@
 
             }
 
+            // pricing wrapper
+
             .pricing-wrapper{
                 max-width: 1300px;
 
@@ -1201,6 +1203,8 @@
 
             }
 
+            // profile wrapper
+
             .profile-wrapper{
 
                 .btn-light-danger{
@@ -1210,6 +1214,41 @@
                     background-color: var(--bs-danger-bg-subtle);
                 }
 
+            }
+
+            // modal
+
+            .modal{
+                .modal-dialog{
+                    .modal-content{
+                        padding: 15px;
+                        .modal-header{
+                            .btn-close{
+                                width: 25px;
+                                height: 25px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                transition: 0.3s all ease-in-out;
+                                margin-right: 0;
+                                box-shadow: 0 0 0 0 !important;
+
+                                &:hover{
+                                    transition: 0.3s all ease-in-out;
+                                    background-color: var(--bs-border-color);
+                                }
+
+                            }
+                        }
+                        .modal-body{
+
+                        }
+                        .modal-footer{
+
+                        }
+                    }
+                }
             }
 
         }
