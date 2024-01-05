@@ -21,7 +21,7 @@
             <div class="fw-semibold ms-4">Theme Colors</div>
         </div>
         <div class="color-selector">
-            <button v-for="color in themeColors" :key="color" type="button" class="btn btn-circle-code" :style="{ backgroundColor: color }" @click="updateThemeColor(color)"/>
+            <button v-for="color in themeColors" :key="color" type="button" class="btn btn-circle-code" :style="{ backgroundColor: color }" @click="updateThemeColor(color);"/>
         </div>
     </div>
 
@@ -167,7 +167,8 @@ export default {
             const darkenedColor = this.darken(color, 10);
             document.documentElement.style.setProperty('--theme-dark', darkenedColor);
             const lightenColor = this.lighten(color, 30);
-            document.documentElement.style.setProperty('--theme-light', lightenColor)
+            document.documentElement.style.setProperty('--theme-light', lightenColor);
+            this.colorWrapperActive = false
         },
 
         darken(color, amount) {
