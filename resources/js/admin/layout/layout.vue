@@ -12,6 +12,8 @@
         </div>
     </div>
 
+    <!--    -->
+
     <!-- admin wrapper content -->
     <div class="admin-wrapper" style="background: url('/images/dots.png')">
 

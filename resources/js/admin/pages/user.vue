@@ -4,7 +4,7 @@
     <div class="user-wrapper">
 
         <!-- user header -->
-        <div class="user-header border rounded-3">
+        <div class="user-header rounded-3">
             <div class="row">
                 <div class="col-md-6 p-2">
                     <div class="position-relative">

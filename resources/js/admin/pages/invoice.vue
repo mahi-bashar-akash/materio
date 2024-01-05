@@ -4,7 +4,7 @@
     <div class="invoice-wrapper">
 
         <!-- invoice header -->
-        <div class="invoice-header border rounded-3">
+        <div class="invoice-header rounded-3">
             <div class="row">
                 <div class="col-md-6 p-2">
                     <div class="position-relative">
