@@ -26,7 +26,7 @@
     </div>
 
     <!-- admin wrapper content -->
-    <div class="admin-wrapper" style="background: url('/images/dots.png')">
+    <div class="admin-wrapper" :style="{ background: 'url(' + imageUrl + ')' }">
 
         <!-- admin sidebar content -->
         <div class="admin-sidebar" :class="{'active': sidebarActive}">
@@ -108,17 +108,19 @@
 <script>
 
 import route from "../router/router";
+import tinycolor from 'tinycolor2';
 
 export default {
 
     data(){
 
         return{
+            imageUrl: '/images/dots.png',
             app_name: window.core.APP_NAME,
             sidebarActive: false,
             colorWrapperActive: false,
             selectedColor: null,
-            themeColors: ["#8C57FF", "#0D9394", "#FFB400", "#FF4C51", "#16B1FF"],
+            themeColors: ["#8C57FF", "#0D9394", "#8A8D93", "#FF4C51", "#16B1FF"],
         }
 
     },
@@ -133,8 +135,10 @@ export default {
         },3000);
 
         const savedColor = localStorage.getItem('themeColor');
-
-        if (savedColor) { this.selectedColor = savedColor; this.updateThemeColor(savedColor); }
+        if (savedColor) {
+            this.selectedColor = savedColor;
+            this.updateThemeColor(savedColor);
+        }
 
     },
 
@@ -160,7 +164,21 @@ export default {
             this.selectedColor = color;
             localStorage.setItem('themeColor', color);
             document.documentElement.style.setProperty('--theme', color);
+            const darkenedColor = this.darken(color, 10);
+            document.documentElement.style.setProperty('--theme-dark', darkenedColor);
+            const lightenColor = this.lighten(color, 30);
+            document.documentElement.style.setProperty('--theme-light', lightenColor)
         },
+
+        darken(color, amount) {
+            const darkColor = tinycolor(color).darken(amount).toString();
+            return darkColor;
+        },
+
+        lighten(color, amount) {
+            const lightColor = tinycolor(color).lighten(amount).toString();
+            return lightColor;
+        }
 
     }
 

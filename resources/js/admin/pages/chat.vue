@@ -52,7 +52,7 @@
 
         <!-- client details in left sidebar -->
         <div class="clientDetails" :class="{'active' : clientDetailsActive}">
-            <div class="text-end">
+            <div class="text-start">
                 <button type="button" class="btn btn-close" @click="remove"></button>
             </div>
             <div class="d-flex flex-column justify-content-between content">
