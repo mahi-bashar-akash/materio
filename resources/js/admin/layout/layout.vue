@@ -12,7 +12,18 @@
         </div>
     </div>
 
-    <!--    -->
+    <!--  color select content  -->
+    <div class="color-wrapper" :class="{'active': colorWrapperActive}">
+        <div class="color-controller">
+            <button type="button" class="btn btn-gear" @click="colorController">
+                <i class="bi bi-gear-fill"></i>
+            </button>
+            <div class="fw-semibold ms-4">Theme Colors</div>
+        </div>
+        <div class="color-selector">
+            <button v-for="color in themeColors" :key="color" type="button" class="btn btn-circle-code" :style="{ backgroundColor: color }" @click="updateThemeColor(color)"/>
+        </div>
+    </div>
 
     <!-- admin wrapper content -->
     <div class="admin-wrapper" style="background: url('/images/dots.png')">
@@ -104,7 +115,10 @@ export default {
 
         return{
             app_name: window.core.APP_NAME,
-            sidebarActive: false
+            sidebarActive: false,
+            colorWrapperActive: false,
+            selectedColor: null,
+            themeColors: ["#8C57FF", "#0D9394", "#FFB400", "#FF4C51", "#16B1FF"],
         }
 
     },
@@ -117,6 +131,10 @@ export default {
                 document.getElementById('admin').removeChild(preloader)
             },1000)
         },3000);
+
+        const savedColor = localStorage.getItem('themeColor');
+
+        if (savedColor) { this.selectedColor = savedColor; this.updateThemeColor(savedColor); }
 
     },
 
@@ -132,7 +150,17 @@ export default {
 
         pushLink(){
             route.push( { name: 'login' } )
-        }
+        },
+
+        colorController(){
+            this.colorWrapperActive = !this.colorWrapperActive
+        },
+
+        updateThemeColor(color) {
+            this.selectedColor = color;
+            localStorage.setItem('themeColor', color);
+            document.documentElement.style.setProperty('--theme', color);
+        },
 
     }
 
