@@ -359,10 +359,10 @@
                             </table>
                         </div>
                         <div class="d-flex justify-content-start align-items-center">
-                            <button type="submit" class="btn btn-theme px-4 shadow me-2">
+                            <button type="submit" class="btn btn-theme px-4 me-2">
                                 SUBMIT
                             </button>
-                            <button type="button" class="btn btn-light px-4 shadow">
+                            <button type="button" class="btn btn-light px-4 border">
                                 CANCEL
                             </button>
                         </div>

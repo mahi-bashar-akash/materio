@@ -510,7 +510,7 @@
                         </div>
                     </div>
                     <div class="modal-footer border-top-0">
-                        <button type="button" class="btn btn-light px-4 me-2" @click="manageUserClose">
+                        <button type="button" class="btn btn-light px-4 border me-2" @click="manageUserClose">
                             CANCEL
                         </button>
                         <button type="button" class="btn btn-theme px-4">

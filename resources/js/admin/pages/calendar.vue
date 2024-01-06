@@ -166,7 +166,7 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0">
-                    <button type="button" class="btn btn-light px-4 me-2" @click="manageEventClose">
+                    <button type="button" class="btn btn-light px-4 border me-2" @click="manageEventClose">
                         CANCEL
                     </button>
                     <button type="button" class="btn btn-theme px-4">
