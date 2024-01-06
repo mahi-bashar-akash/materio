@@ -32,7 +32,7 @@
                             <th class="checkbox">
                                 <input type="checkbox" name="checkbox" class="form-check-input">
                             </th>
-                            <th class="id">Id.</th>
+                            <th class="id">Invoice no.</th>
                             <th class="name">Client.</th>
                             <th class="date">Date.</th>
                             <th class="payment">Due.</th>
