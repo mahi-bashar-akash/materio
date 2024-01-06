@@ -1301,21 +1301,21 @@
     .color-controller{
         position: relative;
         top: 0;
-        left: -45px;
+        left: -60px;
         display: flex;
         justify-content: start;
         align-items: center;
 
         .btn-gear{
-            width: 35px;
-            height: 35px;
-            background-color: var(--bs-border-color);
+            width: 55px;
+            height: 55px;
+            background-color: var(--bs-white);
             outline: none;
             border: none;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;
+            box-shadow: 0 0 8px 0 var(--bs-border-color);
         }
 
     }
