@@ -21,7 +21,8 @@
             <div class="fw-semibold ms-4">Theme Colors</div>
         </div>
         <div class="color-selector">
-            <button v-for="color in themeColors" :key="color" type="button" class="btn btn-circle-code" :style="{ backgroundColor: color }" @click="updateThemeColor(color);"/>
+            <button v-for="color in themeColors" :key="color" type="button" class="btn btn-circle-code p-1" :style="{ backgroundColor: color }" @click="updateThemeColor(color);"/>
+            <input type="color" class="form-color" v-model="selectedColor" @input="handleColorChange">
         </div>
     </div>
 
@@ -119,8 +120,8 @@ export default {
             app_name: window.core.APP_NAME,
             sidebarActive: false,
             colorWrapperActive: false,
-            selectedColor: null,
             themeColors: ["#8C57FF", "#0D9394", "#8A8D93", "#FF4C51", "#16B1FF"],
+            selectedColor: "#8C57FF",
         }
 
     },
@@ -161,14 +162,13 @@ export default {
         },
 
         updateThemeColor(color) {
-            this.selectedColor = color;
             localStorage.setItem('themeColor', color);
             document.documentElement.style.setProperty('--theme', color);
             const darkenedColor = this.darken(color, 10);
             document.documentElement.style.setProperty('--theme-dark', darkenedColor);
             const lightenColor = this.lighten(color, 30);
             document.documentElement.style.setProperty('--theme-light', lightenColor);
-            this.colorWrapperActive = false
+            this.colorWrapperActive = false;
         },
 
         darken(color, amount) {
@@ -179,7 +179,11 @@ export default {
         lighten(color, amount) {
             const lightColor = tinyColor(color).lighten(amount).toString();
             return lightColor;
-        }
+        },
+
+        handleColorChange() {
+            this.updateThemeColor(this.selectedColor);
+        },
 
     }
 
