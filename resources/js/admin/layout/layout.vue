@@ -108,7 +108,7 @@
 <script>
 
 import route from "../router/router";
-import tinycolor from 'tinycolor2';
+import tinyColor from 'tinycolor2';
 
 export default {
 
@@ -172,12 +172,12 @@ export default {
         },
 
         darken(color, amount) {
-            const darkColor = tinycolor(color).darken(amount).toString();
+            const darkColor = tinyColor(color).darken(amount).toString();
             return darkColor;
         },
 
         lighten(color, amount) {
-            const lightColor = tinycolor(color).lighten(amount).toString();
+            const lightColor = tinyColor(color).lighten(amount).toString();
             return lightColor;
         }
 
