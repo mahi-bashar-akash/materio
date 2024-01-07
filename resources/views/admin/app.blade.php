@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="{{asset('/images/svg/logo.svg')}}" type="image/x-icon">
     <title> materio </title>
     @vite('resources/scss/basic.scss')
-    @vite('resources/scss/admin.scss')
     @vite('resources/js/admin/app.js')
 </head>
 <body class="admin-portal" id="admin"></body>
@@ -17,5 +16,4 @@
         APP_URL: '{{env('APP_URL')}}',
     };
 </script>
-
 </html>

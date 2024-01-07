@@ -204,8 +204,8 @@ body{
         .dropdown-item{
             font-size: 14px;
             &:hover, &:active, &:focus, &.router-link-active{
-                background-color: var(--theme);
-                color: var(--bs-white);
+                background-color: var(--theme) !important;
+                color: var(--bs-white) !important;
             }
         }
     }
@@ -421,3 +421,6 @@ body{
 .border-theme{
     border: 1px solid var(--theme);
 }
+
+@import "admin";
+@import "front";
