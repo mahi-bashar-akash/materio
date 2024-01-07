@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container p-3">
             <a class="navbar-brand" href="javascript:void(0)">
                 Materio

@@ -16,8 +16,8 @@ body{
 .btn-theme{
     background-color: var(--theme) !important;
     color: var(--bs-white) !important;
-    border: none;
-    outline: none;
+    border: none !important;
+    outline: none !important;
     transition: 0.3s all ease-in-out;
     &:hover{
         transition: 0.3s all ease-in-out;
