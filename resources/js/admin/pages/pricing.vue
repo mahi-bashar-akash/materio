@@ -153,7 +153,7 @@
 
         <!-- offer start from basic plan -->
         <div class="my-5 row justify-content-center text-center">
-            <div class="p-3 p-md-5 bg-light-theme col-10 col-sm-8 shadow">
+            <div class="p-3 p-md-5 bg-white col-10 col-sm-8 shadow">
                 <div class="h5 text-theme mb-3">
                     Still not convinced? Start with a 14-day FREE trial!
                 </div>

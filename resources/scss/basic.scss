@@ -174,7 +174,7 @@ body{
 }
 
 .bg-light-theme{
-    background-color: var(--theme-lightest) !important;
+    background-color: var(--theme-light) !important;
 }
 
 // text
@@ -420,6 +420,10 @@ body{
 
 .border-theme{
     border: 1px solid var(--theme);
+}
+
+.border-light-theme{
+    border: 1px solid var(--theme-light);
 }
 
 @import "admin";

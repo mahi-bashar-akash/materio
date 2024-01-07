@@ -1,5 +1,17 @@
 <template>
 
+    <!-- preloader content -->
+    <div id="preloader">
+        <div class="position-relative">
+            <div class="spinner-border text-secondary" role="status" style="width: 150px; height: 150px;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <img :src="`/images/svg/logo.svg`" class="img-fluid" style="width: 50px; height: 50px;" alt="logo">
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container p-3">
             <a class="navbar-brand" href="javascript:void(0)">
@@ -39,7 +51,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            User info
+                            Mahi Bashar Akash
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
                             <li>
@@ -69,7 +81,11 @@
         </div>
     </nav>
 
-    <router-view/>
+    <div class="w-100 py-4">
+        <div class="container">
+            <router-view/>
+        </div>
+    </div>
 
     <div class="w-100 footer bg-light">
         <div class="container">
@@ -182,6 +198,13 @@ export default {
     },
 
     mounted() {
+
+        setTimeout(() =>{
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                document.getElementById('front').removeChild(preloader)
+            },1000)
+        },3000);
 
         const savedColor = localStorage.getItem('themeColor');
         if (savedColor) {

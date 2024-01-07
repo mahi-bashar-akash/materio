@@ -1,0 +1,19 @@
+.front-portal{
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--bs-border-color);
+        height: 5px !important;
+    }
+
+    .slider-carousel{
+        .slider-item{
+            width: 100%;
+            height: 650px;
+        }
+    }
+
+}
