@@ -426,5 +426,32 @@ body{
     border: 1px solid var(--theme-light);
 }
 
+// pagination
+
+.pagination {
+    .page-item {
+
+        &.active .page-link {
+            background-color: var(--theme);
+            border: 1px solid transparent;
+            color: var(--bs-white);
+        }
+
+        .page-link {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 0;
+            color: var(--theme);
+            border: 1px solid var(--theme);
+            margin: 0 5px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+    }
+}
+
 @import "admin";
 @import "front";

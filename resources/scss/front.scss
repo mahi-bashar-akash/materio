@@ -1,4 +1,5 @@
 .front-portal{
+
     &::-webkit-scrollbar {
         background-color: transparent;
         width: 5px;
@@ -10,6 +11,7 @@
     }
 
     .slider-carousel{
+
         .slider-item{
             width: 100%;
             height: 450px;
@@ -20,9 +22,10 @@
             }
 
         }
+
     }
 
-    .product-carousel{
+    .product-carousel, .product-single{
         position: relative;
 
         .item{
@@ -60,6 +63,7 @@
                     opacity: 0;
                     transition: 0.3s all ease-in-out;
                 }
+
             }
 
         }
@@ -79,6 +83,87 @@
 
             .blog-image{
                 height: 250px;
+            }
+
+        }
+
+    }
+
+    .shop-wrapper{
+        display: flex;
+        position: relative;
+        overflow: hidden;
+
+        .shop-sidebar{
+            width: 300px;
+            height: calc(100vh - 150px);
+            padding: 15px;
+
+            @media screen and (max-width: 1200px) {
+                position: absolute;
+                left: -300px;
+                top: 0;
+                bottom: 0;
+                z-index: 3;
+                background-color: var(--bs-white);
+                transition: 0.3s all ease-in-out;
+
+                &.active{
+                    transition: 0.3s all ease-in-out;
+                    left: 0;
+                }
+
+            }
+
+
+            .sidebar-close{
+                display: none;
+
+                @media screen and (max-width: 1200px) {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                }
+
+            }
+
+        }
+
+        .shop-content{
+            width: calc(100% - 300px);
+            height: calc(100vh - 150px);
+
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+            }
+
+            .btn-controller{
+                visibility: hidden;
+                outline: none;
+                border: none;
+
+                @media screen and (max-width: 1200px) {
+                    visibility: visible;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+
+            }
+
+            .shop-product-content{
+                height: calc(100vh - 300px);
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar {
+                    background-color: transparent;
+                    width: 5px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: var(--bs-border-color);
+                    height: 5px !important;
+                }
+
             }
 
         }
