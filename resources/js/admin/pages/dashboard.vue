@@ -4,7 +4,7 @@
     <div class="row">
 
         <!-- admin info -->
-        <div class="col-lg-6 col-xl-4">
+        <div class="col-lg-6 col-xl-5">
             <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu">
                 <div class="d-flex justify-content-center align-items-center flex-column mb-3">
                     <img :src="`/images/avatar.png`" class="rounded-circle overflow-hidden" style="width: 144px; height: 144px" alt="admin avatar">
@@ -22,7 +22,7 @@
         </div>
 
         <!-- project maximum list 5 -->
-        <div class="col-lg-6 col-xl-8">
+        <div class="col-lg-6 col-xl-7">
             <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu">
                 <div class="h5 mb-3 pt-3 ps-3 fw-bold">Project list</div>
                 <div class="table-responsive">
@@ -107,7 +107,7 @@
             </div>
         </div>
 
-        <div class="col-lg-5">
+        <div class="col-lg-6 col-xl-5">
             <div class="row">
 
                 <!-- revenue increase -->
@@ -257,7 +257,7 @@
         </div>
 
         <!-- Client maximum list 5 -->
-        <div class="col-lg-7">
+        <div class="col-lg-6 col-xl-7">
             <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu">
                 <div class="h5 mb-3 pt-3 ps-3 fw-bold">Client list</div>
                 <div class="table-responsive">
