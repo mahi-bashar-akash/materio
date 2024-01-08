@@ -19,11 +19,13 @@ body{
     color: var(--bs-white) !important;
     border: none !important;
     outline: none !important;
-    transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out !important;
+
     &:hover{
-        transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out !important;
         background-color: var(--theme-dark) !important;
     }
+
 }
 
 .btn-light-theme{
@@ -70,6 +72,7 @@ body{
 
 .btn{
     height: 45px;
+    padding: 0 20px !important;
 }
 
 // form area
