@@ -43,6 +43,26 @@
                 </div>
             </div>
 
+            <div class="fs-5 fw-semibold">
+                Availability
+            </div>
+
+            <div class="py-3">
+                <a href="javascript:void(0)" class="nav-link p-2">
+                    In Stock
+                </a>
+                <a href="javascript:void(0)" class="nav-link p-2">
+                    Out of Stock
+                </a>
+                <a href="javascript:void(0)" class="nav-link p-2">
+                    Comming Soon
+                </a>
+            </div>
+
+            <div class="fs-5 fw-semibold">
+
+            </div>
+
         </div>
         <div class="shop-content">
 

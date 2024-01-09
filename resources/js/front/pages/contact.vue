@@ -82,6 +82,15 @@
         </div>
     </div>
 
+    <!-- google map area -->
+    <div class="mt-4">
+        <div style="overflow:hidden; min-width:100%; max-width:100%; height:500px;">
+            <div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                <iframe style="height:100%;width:100%;" src="https://www.google.com/maps/embed/v1/place?q=Jessore,+Bangladesh&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- brand area -->
     <section class="container-fluid w-100 border mt-3">
         <div class="brand-carousel owl-carousel owl-theme">
