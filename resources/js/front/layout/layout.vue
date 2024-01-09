@@ -28,9 +28,9 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
+                        <router-link :to="{name: 'blog'}" class="nav-link">
                             Blog
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)">
