@@ -111,6 +111,12 @@ body{
     outline: none;
     padding: 15px;
     border-radius: 5px;
+
+    &:focus, &:active{
+        transition: 0.3s all ease-in-out;
+        border: 1px solid var(--theme) !important;
+    }
+
 }
 
 .form-check-input[type=checkbox] {

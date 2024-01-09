@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container p-3">
             <router-link :to="{name: 'home'}" class="navbar-brand">
-                Materio
+                {{app_name}}
             </router-link>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,9 +33,9 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
+                        <router-link :to="{name: 'contact'}" class="nav-link">
                             Contact
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -193,7 +193,9 @@ export default {
 
     data(){
 
-        return{}
+        return{
+            app_name: window.core.APP_NAME
+        }
 
     },
 
