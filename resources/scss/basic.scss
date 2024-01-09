@@ -5,7 +5,7 @@
     --roboto-slab-font: 'Roboto Slab', serif;
     --theme-light: #9155FD33;
     --theme-lightest: #9155FD0C;
-    --theme-dark: rgba(100, 62, 171, 1);
+    --theme-dark: #643EAB;
 }
 
 body{
@@ -179,6 +179,10 @@ body{
 
 .bg-light-theme{
     background-color: var(--theme-light) !important;
+}
+
+.bg-lightest-theme{
+    background-color: var(--theme-lightest) !important;
 }
 
 // text

@@ -112,13 +112,14 @@
             width: 300px;
             height: calc(100vh - 150px);
             padding: 15px;
+            border: 1px solid var(--bs-border-color);
 
             @media screen and (max-width: 1200px) {
                 position: absolute;
                 left: -300px;
                 top: 0;
                 bottom: 0;
-                z-index: 3;
+                z-index: 5;
                 background-color: var(--bs-white);
                 transition: 0.3s all ease-in-out;
 
@@ -127,6 +128,11 @@
                     left: 0;
                 }
 
+            }
+
+            @media screen and (max-width: 567px) {
+                width: 100%;
+                left: -100%;
             }
 
 
@@ -139,6 +145,18 @@
                     align-items: center;
                 }
 
+                .btn-close{
+                    padding: 15px 20px !important;
+                    border-radius: 10px;
+                    transition: 0.3s all ease-in-out;
+
+                    &:hover{
+                        transition: 0.3s all ease-in-out;
+                        background-color: var(--bs-border-color);
+                    }
+
+                }
+
             }
 
         }
@@ -146,6 +164,7 @@
         .shop-content{
             width: calc(100% - 300px);
             height: calc(100vh - 150px);
+            border: 1px solid var(--bs-border-color);
 
             @media screen and (max-width: 1200px) {
                 width: 100%;
@@ -158,8 +177,15 @@
 
                 @media screen and (max-width: 1200px) {
                     visibility: visible;
-                    padding: 10px 20px;
+                    padding: 15px 20px;
                     border-radius: 10px;
+                    transition: 0.3s all ease-in-out;
+
+                    &:hover{
+                        transition: 0.3s all ease-in-out;
+                        background-color: var(--bs-border-color);
+                    }
+
                 }
 
             }
@@ -167,6 +193,7 @@
             .shop-product-content{
                 height: calc(100vh - 300px);
                 overflow-y: scroll;
+                border-top: 1px solid var(--bs-border-color);
 
                 &::-webkit-scrollbar {
                     background-color: transparent;

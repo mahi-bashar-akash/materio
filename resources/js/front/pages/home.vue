@@ -192,7 +192,7 @@
     <div class="w-100 container-fluid mt-4">
         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
             <div class="p-3">
-                <div class="w-100 coupon-box btn-light-theme">
+                <div class="w-100 coupon-box bg-light-theme">
                     <div class="d-flex justify-content-between align-items-center h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
                             <div class="fw-semibold text-secondary mb-2"> Best Selling </div>
@@ -204,7 +204,7 @@
                 </div>
             </div>
             <div class="p-3">
-                <div class="w-100 coupon-box btn-light-theme">
+                <div class="w-100 coupon-box bg-light-theme">
                     <div class="d-flex justify-content-between align-items-center h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
                             <div class="fw-semibold text-secondary mb-2"> New Arrivals </div>
@@ -216,7 +216,7 @@
                 </div>
             </div>
             <div class="p-3">
-                <div class="w-100 coupon-box btn-light-theme">
+                <div class="w-100 coupon-box bg-light-theme">
                     <div class="d-flex justify-content-between align-items-center h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
                             <div class="fw-semibold text-secondary mb-2"> Trending </div>

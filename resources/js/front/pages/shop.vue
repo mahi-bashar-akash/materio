@@ -12,10 +12,18 @@
             </div>
 
             <div class="py-3">
-                <a href="javascript:void(0)" class="nav-link p-2">Fruits</a>
-                <a href="javascript:void(0)" class="nav-link p-2">Vegetables</a>
-                <a href="javascript:void(0)" class="nav-link p-2">Meats</a>
-                <a href="javascript:void(0)" class="nav-link p-2">Fishes</a>
+                <a href="javascript:void(0)" class="nav-link p-2">
+                    Fruits
+                </a>
+                <a href="javascript:void(0)" class="nav-link p-2">
+                    Vegetables
+                </a>
+                <a href="javascript:void(0)" class="nav-link p-2">
+                    Meats
+                </a>
+                <a href="javascript:void(0)" class="nav-link p-2">
+                    Fishes
+                </a>
             </div>
 
             <div class="fs-5 fw-semibold">
