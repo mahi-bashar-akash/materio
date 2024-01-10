@@ -389,9 +389,11 @@
                         <div class="text-secondary text-opacity-50 fw-light mb-3">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
                         </div>
-                        <button type="button" class="btn btn-theme">
-                            Read more
-                        </button>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-theme">
+                                Read more
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -413,9 +415,11 @@
                         <div class="text-secondary text-opacity-50 fw-light mb-3">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
                         </div>
-                        <button type="button" class="btn btn-theme">
-                            Read more
-                        </button>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-theme">
+                                Read more
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -437,9 +441,11 @@
                         <div class="text-secondary text-opacity-50 fw-light mb-3">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
                         </div>
-                        <button type="button" class="btn btn-theme">
-                            Read more
-                        </button>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-theme">
+                                Read more
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
