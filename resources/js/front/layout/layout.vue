@@ -40,7 +40,7 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
+                        <a class="nav-link" href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                             Cart
                         </a>
                     </li>
@@ -183,6 +183,48 @@
         </div>
     </div>
 
+    <div class="offcanvas offcanvas-end cursor-content-menu" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="default-width">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <div style="width: 65px; height: 65px;" class="overflow-hidden rounded-circle">
+                                        <img :src="`/images/product/image-01.jpg`" class="img-fluid object-fit-cover" alt="product">
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold">Product name</div>
+                                        <small class="text-secondary d-block">$100</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <button type="button" class="btn btn-theme me-3" @click="decrement">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </button>
+                                    <input type="text" name="" class="form-control text-center" :value="number" min="1" max="10">
+                                    <button type="button" class="btn btn-theme ms-3" @click="increment">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 </template>
 
 <script>
@@ -194,7 +236,8 @@ export default {
     data(){
 
         return{
-            app_name: window.core.APP_NAME
+            app_name: window.core.APP_NAME,
+            number: 1,
         }
 
     },
@@ -237,6 +280,18 @@ export default {
             const lightColor = tinyColor(color).lighten(amount).toString();
             return lightColor;
         },
+
+        increment(){
+            if(this.number < 10){
+                this.number++
+            }
+        },
+
+        decrement(){
+            if(this.number > 1){
+                this.number--
+            }
+        }
 
     }
 

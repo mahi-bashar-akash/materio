@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 p-3 p-sm-4">
                 <div class="fs-4 fw-semibold">
                     Find us here.
                 </div>
@@ -46,7 +46,7 @@
                     dolore te feugait nulla facilisi.
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 p-3 p-sm-4">
                 <form autocomplete="off" class="row">
                     <div class="mb-3 col-md-6">
                         <div class="form-group">
