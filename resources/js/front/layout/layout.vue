@@ -55,24 +55,24 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
                             <li>
-                                <a class="dropdown-item px-3 py-2" href="javascript:void(0)">
+                                <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2">
                                     Dashboard
-                                </a>
+                                </router-link>
                             </li>
                             <li>
-                                <a class="dropdown-item px-3 py-2" href="javascript:void(0)">
+                                <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2">
                                     Settings
-                                </a>
+                                </router-link>
                             </li>
                             <li>
-                                <a class="dropdown-item px-3 py-2" href="javascript:void(0)">
-                                    Delete Account
-                                </a>
+                                <router-link :to="{name: 'orderHistory'}" class="dropdown-item px-3 py-2">
+                                    Order history
+                                </router-link>
                             </li>
                             <li>
-                                <a class="dropdown-item px-3 py-2" href="javascript:void(0)">
+                                <button type="button" class="dropdown-item px-3 py-2">
                                     Logout
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </li>

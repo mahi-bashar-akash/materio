@@ -26,6 +26,14 @@ import register from "../pages/auth/register.vue";
 
 import forget from "../pages/auth/forget.vue";
 
+import profileLayout from "../pages/profile/layout/layout.vue";
+
+import dashboard from "../pages/profile/dashboard.vue";
+
+import orderHistory from "../pages/profile/order-history.vue";
+
+import settings from "../pages/profile/settings.vue";
+
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/front";
@@ -39,16 +47,39 @@ const routes = [
         children: [
 
             { path: ROOT_URL + '/home', name: 'home', component: home, meta: { title: TITLE + ' - home' } },
+
             { path: ROOT_URL + '/shop', name: 'shop', component: shop, meta: { title: TITLE + ' - shop' } },
+
             { path: ROOT_URL + '/blog', name: 'blog', component: blog, meta: { title: TITLE + ' - blog' } },
+
             { path: ROOT_URL + '/contact', name: 'contact', component: contact, meta: { title: TITLE + ' - contact' } },
 
-            { path: ROOT_URL + '/auth', name: 'authLayout', component: authLayout,
+            { path: ROOT_URL, name: 'authLayout', component: authLayout,
+
                 children: [
-                    { path: ROOT_URL + '/login', name: 'login', component: login, meta: { title: TITLE + ' - login' } },
-                    { path: ROOT_URL + '/register', name: 'register', component: register, meta: { title: TITLE + ' - register' } },
-                    { path: ROOT_URL + '/forget', name: 'forget', component: forget, meta: { title: TITLE + ' - forget' } },
+
+                    { path: ROOT_URL + '/auth/login', name: 'login', component: login, meta: { title: TITLE + ' - login' } },
+
+                    { path: ROOT_URL + '/auth/register', name: 'register', component: register, meta: { title: TITLE + ' - register' } },
+
+                    { path: ROOT_URL + '/auth/forget', name: 'forget', component: forget, meta: { title: TITLE + ' - forget' } },
+
                 ]
+
+            },
+
+            { path: ROOT_URL, name: 'profileLayout', component: profileLayout,
+
+                children: [
+
+                    { path: ROOT_URL + '/profile/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard ' } },
+
+                    { path: ROOT_URL + '/profile/order-history', name: 'orderHistory', component: orderHistory, meta: { title: TITLE + ' - order history ' } },
+
+                    { path: ROOT_URL + '/profile/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings ' } },
+
+                ]
+
             }
 
         ]
