@@ -2,67 +2,63 @@
 
     <div class="container-fluid shop-wrapper">
         <div class="shop-sidebar" :class="{'active' : shopSidebarActive}">
+            <div class="inside-shadow">
+                <div class="sidebar-close">
+                    <button type="button" class="btn btn-close shadow-none" @click="sidebarController"></button>
+                </div>
 
-            <div class="sidebar-close">
-                <button type="button" class="btn btn-close shadow-none" @click="sidebarController"></button>
-            </div>
+                <div class="fs-5 fw-semibold mt-3">
+                    Category
+                </div>
 
-            <div class="fs-5 fw-semibold mt-3">
-                Category
-            </div>
+                <div class="py-3">
+                    <a href="javascript:void(0)" class="nav-link p-2">
+                        Fruits
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link p-2">
+                        Vegetables
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link p-2">
+                        Meats
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link p-2">
+                        Fishes
+                    </a>
+                </div>
 
-            <div class="py-3">
-                <a href="javascript:void(0)" class="nav-link p-2">
-                    Fruits
-                </a>
-                <a href="javascript:void(0)" class="nav-link p-2">
-                    Vegetables
-                </a>
-                <a href="javascript:void(0)" class="nav-link p-2">
-                    Meats
-                </a>
-                <a href="javascript:void(0)" class="nav-link p-2">
-                    Fishes
-                </a>
-            </div>
+                <div class="fs-5 fw-semibold">
+                    Price
+                </div>
 
-            <div class="fs-5 fw-semibold">
-                Price
-            </div>
-
-            <div class="row py-3">
-                <div class="col-6 mb-3 px-1">
-                    <div class="form-group">
-                        <input type="text" name="" class="form-control" placeholder="Min:">
+                <div class="row py-3">
+                    <div class="col-6 mb-3 px-1">
+                        <div class="form-group">
+                            <input type="text" name="" class="form-control" placeholder="Min:">
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3 px-1">
+                        <div class="form-group">
+                            <input type="text" name="" class="form-control" placeholder="Max:">
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 mb-3 px-1">
-                    <div class="form-group">
-                        <input type="text" name="" class="form-control" placeholder="Max:">
-                    </div>
+
+                <div class="fs-5 fw-semibold">
+                    Availability
+                </div>
+
+                <div class="py-3">
+                    <a href="javascript:void(0)" class="nav-link p-2">
+                        In Stock
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link p-2">
+                        Out of Stock
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link p-2">
+                        Comming Soon
+                    </a>
                 </div>
             </div>
-
-            <div class="fs-5 fw-semibold">
-                Availability
-            </div>
-
-            <div class="py-3">
-                <a href="javascript:void(0)" class="nav-link p-2">
-                    In Stock
-                </a>
-                <a href="javascript:void(0)" class="nav-link p-2">
-                    Out of Stock
-                </a>
-                <a href="javascript:void(0)" class="nav-link p-2">
-                    Comming Soon
-                </a>
-            </div>
-
-            <div class="fs-5 fw-semibold">
-
-            </div>
-
         </div>
         <div class="shop-content">
 
@@ -85,7 +81,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid shop-product-content">
+            <div class="container-fluid shop-product-content inside-shadow">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                     <div class="product-single overflow-hidden">
                         <div class="item">
