@@ -81,7 +81,7 @@
         </div>
     </nav>
 
-    <div class="w-100 py-4">
+    <div class="w-100 py-4" style="background: url('/images/dots.png')">
         <div class="container">
             <router-view/>
         </div>

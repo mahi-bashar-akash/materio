@@ -60,7 +60,7 @@
         </div>
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-01.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
