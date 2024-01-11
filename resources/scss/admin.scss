@@ -1309,7 +1309,7 @@
         .btn-gear{
             width: 55px;
             height: 55px;
-            background-color: var(--bs-white);
+            background-color: var(--bs-white) !important;
             outline: none;
             border: none;
             display: flex;
@@ -1350,8 +1350,4 @@
 
     }
 
-}
-
-#logo {
-    transition: fill 0.3s ease;
 }
