@@ -78,23 +78,31 @@
 
     .blog-carousel{
 
-        .blog-item{
-            padding: 10px;
+        .item{
+            padding: 20px;
 
-            &:hover{
-                transition: 0.3s all ease-in-out;
-                .blog-image{
-                    transform: scale(1.5);
-                }
-            }
+            .blog-item{
+                padding: 10px;
 
-            .blog-item-top{
-                height: 250px;
-                overflow: hidden;
-
-                .blog-image{
-                    height: 250px;
+                &:hover{
                     transition: 0.3s all ease-in-out;
+                    box-shadow: 0 0 12px 0 var(--bs-border-color);
+
+                    .blog-image{
+                        transform: scale(1.5);
+                    }
+
+                }
+
+                .blog-item-top{
+                    height: 250px;
+                    overflow: hidden;
+
+                    .blog-image{
+                        height: 250px;
+                        transition: 0.3s all ease-in-out;
+                    }
+
                 }
 
             }

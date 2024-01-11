@@ -14,7 +14,7 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
 
             <div class="p-3">
-                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center">
+                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                     <i class="bi bi-truck fs-3 text-theme"></i>
                     <div class="ms-3">
                         <div class="text-secondary">Free Delivery</div>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="p-3">
-                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center">
+                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                 <i class="bi bi-cash-coin fs-3 text-theme"></i>
                 <div class="ms-3">
                     <div class="text-secondary">Money Guarantee</div>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="p-3">
-                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center">
+                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                 <i class="bi bi-credit-card-2-front fs-3 text-theme"></i>
                 <div class="ms-3">
                     <div class="text-secondary">Payment</div>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="p-3">
-                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center">
+                <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                 <i class="bi bi-telephone fs-3 text-theme"></i>
                 <div class="ms-3">
                     <div class="text-secondary">Online Support</div>
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-02.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-03.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-04.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -132,7 +132,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-05.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-06.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-07.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -237,7 +237,7 @@
         </div>
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-08.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -255,7 +255,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-09.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -273,7 +273,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-10.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -291,7 +291,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-11.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -309,7 +309,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-12.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -327,7 +327,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-13.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -345,7 +345,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="product-item">
+                <div class="product-item bg-white">
                     <img :src="`/images/product/image-14.jpg`" class="product-image img-fluid">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         category
@@ -372,80 +372,74 @@
         </div>
         <div class="blog-carousel owl-carousel owl-theme">
             <div class="item">
-                <div class="blog-item">
-                    <div class="mb-3">
-                        <div class="blog-item-top">
-                            <img :src="`/images/slider/banner-1.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
-                        </div>
-                        <div class="my-3 text-theme fw-semibold fs-4">
-                            Blog title
-                        </div>
-                        <div class="fw-semibold">
-                            Mahi Bashar Akash
-                        </div>
-                        <small class="d-block mb-3 text-secondary text-opacity-50">
-                            june 18, 2023
-                        </small>
-                        <div class="text-secondary text-opacity-50 fw-light mb-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
-                        </div>
-                        <div class="text-end">
-                            <button type="button" class="btn btn-theme">
-                                Read more
-                            </button>
-                        </div>
+                <div class="blog-item bg-white rounded-bottom-3">
+                    <div class="blog-item-top">
+                        <img :src="`/images/slider/banner-1.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
+                    </div>
+                    <div class="my-3 text-theme fw-semibold fs-4">
+                        Blog title
+                    </div>
+                    <div class="fw-semibold">
+                        Mahi Bashar Akash
+                    </div>
+                    <small class="d-block mb-3 text-secondary text-opacity-50">
+                        june 18, 2023
+                    </small>
+                    <div class="text-secondary text-opacity-50 fw-light mb-3">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-theme">
+                            Read more
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="blog-item">
-                    <div class="mb-3">
-                        <div class="blog-item-top">
-                            <img :src="`/images/slider/banner-2.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
-                        </div>
-                        <div class="my-3 text-theme fw-semibold fs-4">
-                            Blog title
-                        </div>
-                        <div class="fw-semibold">
-                            Mahi Bashar Akash
-                        </div>
-                        <small class="d-block mb-3 text-secondary text-opacity-50">
-                            june 18, 2023
-                        </small>
-                        <div class="text-secondary text-opacity-50 fw-light mb-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
-                        </div>
-                        <div class="text-end">
-                            <button type="button" class="btn btn-theme">
-                                Read more
-                            </button>
-                        </div>
+                <div class="blog-item bg-white rounded-bottom-3">
+                    <div class="blog-item-top">
+                        <img :src="`/images/slider/banner-2.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
+                    </div>
+                    <div class="my-3 text-theme fw-semibold fs-4">
+                        Blog title
+                    </div>
+                    <div class="fw-semibold">
+                        Mahi Bashar Akash
+                    </div>
+                    <small class="d-block mb-3 text-secondary text-opacity-50">
+                        june 18, 2023
+                    </small>
+                    <div class="text-secondary text-opacity-50 fw-light mb-3">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-theme">
+                            Read more
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="blog-item">
-                    <div class="mb-3">
-                        <div class="blog-item-top">
-                            <img :src="`/images/slider/banner-3.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
-                        </div>
-                        <div class="my-3 text-theme fw-semibold fs-4">
-                            Blog title
-                        </div>
-                        <div class="fw-semibold">
-                            Mahi Bashar Akash
-                        </div>
-                        <small class="d-block mb-3 text-secondary text-opacity-50">
-                            june 18, 2023
-                        </small>
-                        <div class="text-secondary text-opacity-50 fw-light mb-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
-                        </div>
-                        <div class="text-end">
-                            <button type="button" class="btn btn-theme">
-                                Read more
-                            </button>
-                        </div>
+                <div class="blog-item bg-white rounded-bottom-3">
+                    <div class="blog-item-top">
+                        <img :src="`/images/slider/banner-3.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
+                    </div>
+                    <div class="my-3 text-theme fw-semibold fs-4">
+                        Blog title
+                    </div>
+                    <div class="fw-semibold">
+                        Mahi Bashar Akash
+                    </div>
+                    <small class="d-block mb-3 text-secondary text-opacity-50">
+                        june 18, 2023
+                    </small>
+                    <div class="text-secondary text-opacity-50 fw-light mb-3">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-theme">
+                            Read more
+                        </button>
                     </div>
                 </div>
             </div>
@@ -453,10 +447,10 @@
     </section>
 
     <!-- brand area -->
-    <section class="container-fluid w-100 border mt-3">
+    <section class="container-fluid w-100 border mt-3 bg-white">
         <div class="brand-carousel owl-carousel owl-theme">
             <div class="p-3" v-for="each in brands">
-                <img :src="each.imageUrl" class="img-fluid" alt="">
+                <img :src="each.imageUrl" class="img-fluid" :alt="each.id">
             </div>
         </div>
     </section>
