@@ -33,16 +33,16 @@
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center">
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-twitter-x"></i>
                     </button>
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-linkedin"></i>
                     </button>
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-youtube"></i>
                     </button>
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-github"></i>
                     </button>
                 </div>
@@ -80,16 +80,16 @@
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center">
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-twitter-x"></i>
                     </button>
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-linkedin"></i>
                     </button>
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-youtube"></i>
                     </button>
-                    <button type="button" class="btn btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
                         <i class="bi bi-github"></i>
                     </button>
                 </div>
@@ -174,7 +174,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn btn-icon border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn-icon border-0" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">

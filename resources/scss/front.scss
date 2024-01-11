@@ -150,8 +150,12 @@
                 }
 
                 .btn-close{
-                    padding: 15px 20px !important;
-                    border-radius: 10px;
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
                     transition: 0.3s all ease-in-out;
 
                     &:hover{

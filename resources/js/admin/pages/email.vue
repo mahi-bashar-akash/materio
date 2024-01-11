@@ -7,9 +7,9 @@
         <div class="email-sidebar" :class="{active: emailSidebarActive}">
             <div class="email-sidebar-header">
                 MailBox
-                <a href="javascript:void(0)" class="email-sidebar-close" @click="emailSidebarController">
+                <button type="button" class="btn-close" @click="emailSidebarController">
                     <i class="bi bi-x-lg"></i>
-                </a>
+                </button>
             </div>
             <div class="email-sidebar-body">
                 <a href="javascript:void(0)" class="email-sidebar-link">
@@ -44,7 +44,7 @@
                 </a>
             </div>
             <div class="email-sidebar-footer">
-                <button type="button" @click="emailComposerController">
+                <button type="button" class="btn btn-theme w-100" @click="emailComposerController">
                     <i class="bi bi-plus-lg me-2"></i>
                     Composer
                 </button>
@@ -80,10 +80,10 @@
                     <!-- email btn group -->
                     <div class="email-btn-group d-flex justify-content-start align-items-center">
                         <input type="checkbox" class="form-check-input">
-                        <button type="button" class="btn btn-icon ms-2">
+                        <button type="button" class="btn-icon ms-2">
                             <i class="bi bi-trash2"></i>
                         </button>
-                        <button type="button" class="btn btn-icon ms-2">
+                        <button type="button" class="btn-icon ms-2">
                             <i class="bi bi-pencil-square"></i>
                         </button>
                     </div>
@@ -94,7 +94,7 @@
                         <div class="single-data row py-2 align-items-center cursor-content-menu" v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
                             <div class="col-12 col-xl-8 text-truncate d-flex align-items-center">
                                 <input type="checkbox" class="form-check-input">
-                                <button type="button" class="btn btn-icon me-2">
+                                <button type="button" class="btn-icon me-2">
                                     <i class="bi bi-star text-warning"></i>
                                 </button>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eligendi facilis id incidunt laborum modi, possimus, praesentium quis repudiandae sed sequi.
@@ -103,10 +103,10 @@
                                 <small class="me-2 text-theme">
                                     jan, 02
                                 </small>
-                                <button class="btn btn-icon me-2" @click="emailDetailsController">
+                                <button class="btn-icon me-2" @click="emailDetailsController">
                                     <i class="bi bi-envelope"></i>
                                 </button>
-                                <button class="btn btn-icon">
+                                <button class="btn-icon">
                                     <i class="bi bi-exclamation-octagon"></i>
                                 </button>
                             </div>
@@ -119,16 +119,16 @@
                 <div class="email-details-content p-4" :class="{'active' : emailDetailsActive}">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <div class="email-user-info d-flex align-items-center">
-                            <button type="button" class="btn btn-icon me-2" @click="emailDetailsController">
+                            <button type="button" class="btn-icon me-2" @click="emailDetailsController">
                                 <i class="bi bi-chevron-left"></i>
                             </button>
                             <img :src="'/images/avatar.png'" class="email-avatar" alt="avatar.png">
                             <span class="ms-2">
-                            <strong class="d-block fw-bold"> John Deo </strong>
-                            <small class="text-secondary">12:07 PM</small>
-                        </span>
+                                <strong class="d-block fw-bold"> John Deo </strong>
+                                <small class="text-secondary">12:07 PM</small>
+                            </span>
                         </div>
-                        <button type="button" class="btn btn-danger h-100">
+                        <button type="button" class="btn btn-danger">
                             <i class="bi bi-trash2"></i>
                         </button>
                     </div>
@@ -155,7 +155,7 @@
                 <!-- email composer content -->
                 <div class="email-composer p-4" :class="{'active' : emailComposerActive}">
                     <div class="d-flex justify-content-start align-items-center fw-semibold mb-3">
-                        <button type="button" class="btn btn-icon me-2" @click="emailComposerController">
+                        <button type="button" class="btn-icon me-2" @click="emailComposerController">
                             <i class="bi bi-chevron-left"></i>
                         </button>
                         Compose Mail
