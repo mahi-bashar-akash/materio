@@ -6,7 +6,7 @@
         <!-- owner details in left sidebar -->
         <div class="ownerDetails" :class="{'active' : ownerDetailsActive}">
             <div class="text-end">
-                <button type="button" class="btn btn-close" @click="remove"></button>
+                <button type="button" class="btn-close" @click="remove"></button>
             </div>
             <div class="d-flex flex-column justify-content-between content">
                 <div class="col-12">
@@ -53,7 +53,7 @@
         <!-- client details in left sidebar -->
         <div class="clientDetails" :class="{'active' : clientDetailsActive}">
             <div class="text-start">
-                <button type="button" class="btn btn-close" @click="remove"></button>
+                <button type="button" class="btn-close" @click="remove"></button>
             </div>
             <div class="d-flex flex-column justify-content-between content">
                 <div class="col-12">

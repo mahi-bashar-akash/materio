@@ -4,7 +4,7 @@
         <div class="shop-sidebar" :class="{'active' : shopSidebarActive}">
             <div class="inside-shadow">
                 <div class="sidebar-close">
-                    <button type="button" class="btn btn-close shadow-none" @click="sidebarController"></button>
+                    <button type="button" class="btn-close" @click="sidebarController"></button>
                 </div>
 
                 <div class="fs-5 fw-semibold mt-3">
