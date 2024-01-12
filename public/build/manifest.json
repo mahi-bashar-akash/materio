@@ -1,0 +1,48 @@
+{
+  "_tinycolor-!~{004}~.js": {
+    "file": "assets/tinycolor-sJBmbq85.css",
+    "src": "_tinycolor-!~{004}~.js"
+  },
+  "_tinycolor-OflStpjz.js": {
+    "assets": [
+      "assets/bootstrap-icons-2eO-ad8Y.woff2",
+      "assets/bootstrap-icons-NpS-Zr3P.woff"
+    ],
+    "css": [
+      "assets/tinycolor-sJBmbq85.css"
+    ],
+    "file": "assets/tinycolor-OflStpjz.js"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-NpS-Zr3P.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-2eO-ad8Y.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "resources/js/admin/app.js": {
+    "css": [
+      "assets/app-IRKSPvU3.css"
+    ],
+    "file": "assets/app-Y2NQUoAv.js",
+    "imports": [
+      "_tinycolor-OflStpjz.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/admin/app.js"
+  },
+  "resources/js/front/app.js": {
+    "file": "assets/app-sfwr8Gjz.js",
+    "imports": [
+      "_tinycolor-OflStpjz.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/front/app.js"
+  },
+  "resources/scss/basic.scss": {
+    "file": "assets/basic-ktg5ys6b.css",
+    "isEntry": true,
+    "src": "resources/scss/basic.scss"
+  }
+}
