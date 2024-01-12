@@ -1,7 +1,7 @@
 <template>
 
     <div class="container-fluid shop-wrapper">
-        <div class="shop-sidebar" :class="{'active' : shopSidebarActive}">
+        <div class="shop-sidebar bg-white" :class="{'active' : shopSidebarActive}">
             <div class="inside-shadow">
                 <div class="sidebar-close">
                     <button type="button" class="btn-close" @click="sidebarController"></button>
@@ -81,7 +81,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid shop-product-content inside-shadow">
+            <div class="container-fluid shop-product-content inside-shadow bg-white">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                     <div class="product-single overflow-hidden">
                         <div class="item">

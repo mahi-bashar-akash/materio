@@ -22,38 +22,22 @@
             <div class="col-xl-8 p-3">
 
                 <!-- button group -->
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="button p-3">
-                                    <button type="button" class="btn w-100" :class="{ 'btn-light-theme': tab !== 1, 'btn-theme': tab === 1 }" @click="setTab(1)">
-                                        OVERVIEW
-                                    </button>
-                                </th>
-                                <th class="button p-3">
-                                    <button type="button" class="btn w-100" :class="{ 'btn-light-theme': tab !== 2, 'btn-theme': tab === 2 }" @click="setTab(2)">
-                                        SECURITY
-                                    </button>
-                                </th>
-                                <th class="button p-3">
-                                    <button type="button" class="btn w-100" :class="{ 'btn-light-theme': tab !== 3, 'btn-theme': tab === 3 }" @click="setTab(3)">
-                                        BILLING & PLANS
-                                    </button>
-                                </th>
-                                <th class="button p-3">
-                                    <button type="button" class="btn w-100" :class="{ 'btn-light-theme': tab !== 4, 'btn-theme': tab === 4 }" @click="setTab(4)">
-                                        Notifications
-                                    </button>
-                                </th>
-                                <th class="button p-3">
-                                    <button type="button" class="btn w-100" :class="{ 'btn-light-theme': tab !== 5, 'btn-theme': tab === 5 }" @click="setTab(5)">
-                                        CONNECTIONS
-                                    </button>
-                                </th>
-                            </tr>
-                        </thead>
-                    </table>
+                <div class="d-flex justify-content-start align-items-center flex-wrap">
+                    <button type="button" class="btn btn-light rounded-pill fw-semibold mx-1 my-2" :class="{ 'btn-light-theme': tab !== 1, 'btn-theme': tab === 1 }" @click="setTab(1)">
+                        Overview
+                    </button>
+                    <button type="button" class="btn btn-light rounded-pill fw-semibold mx-1 my-2" :class="{ 'btn-light-theme': tab !== 2, 'btn-theme': tab === 2 }" @click="setTab(2)">
+                        Security
+                    </button>
+                    <button type="button" class="btn btn-light rounded-pill fw-semibold mx-1 my-2" :class="{ 'btn-light-theme': tab !== 3, 'btn-theme': tab === 3 }" @click="setTab(3)">
+                        Billing & Planning
+                    </button>
+                    <button type="button" class="btn btn-light rounded-pill fw-semibold mx-1 my-2" :class="{ 'btn-light-theme': tab !== 4, 'btn-theme': tab === 4 }" @click="setTab(4)">
+                        Notifications
+                    </button>
+                    <button type="button" class="btn btn-light rounded-pill fw-semibold mx-1 my-2" :class="{ 'btn-light-theme': tab !== 5, 'btn-theme': tab === 5 }" @click="setTab(5)">
+                        Connections
+                    </button>
                 </div>
 
                 <div class="mt-1">
@@ -272,7 +256,7 @@
                     </div>
 
                     <!-- notification content -->
-                    <div class="rounded-3 border p-3 bg-white" v-if="tab === 4">
+                    <div class="rounded-3 border p-3 bg-white shadow" v-if="tab === 4">
                         <div class="h5 mb-3 pt-3 ps-3 fw-bold">Notification</div>
                         <hr class="border">
                         <div class="ps-3">
@@ -369,7 +353,7 @@
                     </div>
 
                     <!-- connection with media content -->
-                    <div class="rounded-3 border p-3 bg-white" v-if="tab === 5">
+                    <div class="rounded-3 border p-3 bg-white shadow" v-if="tab === 5">
 
                         <div class="table-responsive">
                             <table class="table">
