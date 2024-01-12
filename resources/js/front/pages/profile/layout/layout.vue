@@ -3,19 +3,19 @@
     <div class="customer-wrapper cursor-content-menu">
         <div class="customer-sidebar">
             <div class="d-flex justify-content-center">
-                <label for="avatar" class="form-label customer-avatar" v-if="!url">
+                <label for="avatar" class="form-label customer-avatar cursor-pointer" v-if="!url">
                     <input id="avatar" type="file" name="avatar" class="d-none" @change="onFileChange">
                     <i class="bi bi-camera fs-1 text-theme"></i>
                 </label>
                 <div class="customer-avatar" v-if="url">
                     <img :src="url" alt="avatar">
-                    <div class="delete-icon" @click="url = null">
+                    <div class="delete-icon cursor-pointer" @click="url = null">
                         <i class="bi bi-trash2-fill text-danger"></i>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4 fs-4">
-                <a href="javascript:void(0)" class="text-theme text-decoration-none">Edit Profile</a>
+            <div class="text-center mt-4 fs-5">
+                <span class="text-theme">Edit Profile</span>
             </div>
             <div class="pt-4">
                 <div class="mb-3 fw-semibold">
