@@ -464,11 +464,31 @@ export default {
     data(){
 
         return{
+
             Sliders: [
                 { id: '1', imageUrl: '/images/slider/banner-1.jpg' },
                 { id: '2', imageUrl: '/images/slider/banner-2.jpg' },
                 { id: '3', imageUrl: '/images/slider/banner-3.jpg' },
             ],
+
+            productItem: [
+                {id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', category: 'Category Name'},
+                {id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '15', category: 'Category Name'},
+                {id: '3', file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '20', category: 'Category Name'},
+                {id: '4', file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '25', category: 'Category Name'},
+                {id: '5', file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '30', category: 'Category Name'},
+                {id: '6', file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '35', category: 'Category Name'},
+                {id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '40', category: 'Category Name'},
+                {id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name'},
+                {id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name'},
+                {id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name'},
+                {id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name'},
+                {id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name'},
+                {id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name'},
+                {id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name'},
+                {id: '15', file_path: '/images/product/image-15.jpg', name: 'Product Name', price: '80', category: 'Category Name'},
+            ],
+
             brands: [
                 { id: '1', imageUrl: '/images/brand/brand-1.jpg'},
                 { id: '2', imageUrl: '/images/brand/brand-2.jpg'},
@@ -477,6 +497,7 @@ export default {
                 { id: '5', imageUrl: '/images/brand/brand-5.jpg'},
                 { id: '6', imageUrl: '/images/brand/brand-6.jpg'},
             ]
+
         }
 
     },

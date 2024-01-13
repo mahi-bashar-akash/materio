@@ -59,13 +59,27 @@
                             </td>
                             <td class="status">
                                 <div class="text-truncate">
-                                    <span class="py-2 px-4 badge bg-warning" v-if="each.status === '1'">Pending</span>
-                                    <span class="py-2 px-4 badge bg-info" v-if="each.status === '2'">processing</span>
-                                    <span class="py-2 px-4 border border-success badge bg-success-subtle text-success" v-if="each.status === '3'">shipped</span>
-                                    <span class="py-2 px-4 badge bg-success" v-if="each.status === '4'">delivered</span>
-                                    <span class="py-2 px-4 badge bg-warning" v-if="each.status === '5'">undelivered</span>
-                                    <span class="py-2 px-4 border border-danger badge bg-danger-subtle text-danger" v-if="each.status === '6'">returned</span>
-                                    <span class="py-2 px-4 badge bg-danger" v-if="each.status === '7'">cancelled</span>
+                                    <span class="py-2 px-4 badge bg-warning" v-if="each.status === '1'">
+                                        Pending
+                                    </span>
+                                    <span class="py-2 px-4 badge bg-info" v-if="each.status === '2'">
+                                        Processing
+                                    </span>
+                                    <span class="py-2 px-4 border border-success badge bg-success-subtle text-success" v-if="each.status === '3'">
+                                        Shipped
+                                    </span>
+                                    <span class="py-2 px-4 badge bg-success" v-if="each.status === '4'">
+                                        Delivered
+                                    </span>
+                                    <span class="py-2 px-4 badge bg-warning" v-if="each.status === '5'">
+                                        Undelivered
+                                    </span>
+                                    <span class="py-2 px-4 border border-danger badge bg-danger-subtle text-danger" v-if="each.status === '6'">
+                                        Returned
+                                    </span>
+                                    <span class="py-2 px-4 badge bg-danger" v-if="each.status === '7'">
+                                        Cancelled
+                                    </span>
                                 </div>
                             </td>
                         </tr>
@@ -85,13 +99,13 @@ export default {
 
         return{
             submittedCartItem: [
-                {id: 1, file_path: '/images/product/image-01.jpg', name: '', price: '10', quantity: '1', status: '1' },
-                {id: 2, file_path: '/images/product/image-02.jpg', name: '', price: '20', quantity: '2', status: '2' },
-                {id: 3, file_path: '/images/product/image-03.jpg', name: '', price: '30', quantity: '3', status: '3' },
-                {id: 4, file_path: '/images/product/image-04.jpg', name: '', price: '40', quantity: '4', status: '4' },
-                {id: 5, file_path: '/images/product/image-05.jpg', name: '', price: '50', quantity: '5', status: '5' },
-                {id: 6, file_path: '/images/product/image-06.jpg', name: '', price: '60', quantity: '4', status: '6' },
-                {id: 7, file_path: '/images/product/image-07.jpg', name: '', price: '70', quantity: '3', status: '7' },
+                {id: 1, file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', quantity: '1', status: '1' },
+                {id: 2, file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '20', quantity: '2', status: '2' },
+                {id: 3, file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '30', quantity: '3', status: '3' },
+                {id: 4, file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '40', quantity: '4', status: '4' },
+                {id: 5, file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '50', quantity: '5', status: '5' },
+                {id: 6, file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '60', quantity: '4', status: '6' },
+                {id: 7, file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '70', quantity: '3', status: '7' },
             ]
         }
 
