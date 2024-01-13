@@ -39,10 +39,22 @@
                         +880 01645820007
                     </div>
                     <div class="mb-3 fw-semibold">
-                        Gender
+                        Selected Gender
+                    </div>
+                    <div class="mb-3 text-secondary">
+                        Male
+                    </div>
+                    <div class="mb-3 fw-semibold">
+                        Selected Country
+                    </div>
+                    <div class="mb-3 text-secondary">
+                        Bangladesh
+                    </div>
+                    <div class="mb-3 fw-semibold">
+                        Selected Language
                     </div>
                     <div class="text-secondary">
-                        Male
+                        English
                     </div>
                 </div>
 

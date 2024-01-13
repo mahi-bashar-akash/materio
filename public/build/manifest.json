@@ -33,7 +33,7 @@
     "src": "resources/js/admin/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-9uG0_b7N.js",
+    "file": "assets/app-oBrxN-lt.js",
     "imports": [
       "_tinycolor-OflStpjz.js"
     ],
@@ -41,7 +41,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-CGH3eg4_.css",
+    "file": "assets/basic-f6Ox-v47.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }

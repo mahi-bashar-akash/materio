@@ -324,7 +324,7 @@ body{
                 transition: 0.3s all ease-in-out;
                 color: var(--bs-secondary);
 
-                .face{
+                .face, .item{
                     width: 45px;
                     height: 45px;
                     border-radius: 50%;
@@ -345,7 +345,7 @@ body{
                     min-width: 300px;
                 }
 
-                &.payment{
+                &.payment, &.price, &.quantity{
                     width: 90px;
                     min-width: 90px;
                 }

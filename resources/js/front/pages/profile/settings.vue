@@ -16,12 +16,25 @@
                     <input id="phone-number" type="text" name="phone-number" class="form-control" required autocomplete="new-phone-number">
                 </div>
                 <div class="mb-3">
-                    <label for="select-gender" class="form-label">Select Gender [ Optional ]</label>
+                    <label for="select-gender" class="form-label">Select Gender [ Default ]</label>
                     <select name="select-gender" id="select-gender" class="form-select">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="children">Children</option>
                         <option value="other">Others</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="select-country" class="form-label">Select Country [ Default ]</label>
+                    <select name="select-country" id="select-country" class="form-select">
+                        <option value="bangladesh">Bangladesh</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="select-language" class="form-label">Select Language [ Default ]</label>
+                    <select name="select-language" id="select-language" class="form-select">
+                        <option value="english">English</option>
+                        <option value="bangla">Bangla</option>
                     </select>
                 </div>
                 <button type="submit" name="" class="btn btn-theme w-100">
