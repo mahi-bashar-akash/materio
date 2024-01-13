@@ -1,307 +1,64 @@
 <template>
 
-    <div class="container-fluid shop-wrapper">
-        <div class="shop-sidebar bg-white" :class="{'active' : shopSidebarActive}">
-            <div class="inside-shadow">
-                <div class="sidebar-close">
-                    <button type="button" class="btn-close" @click="sidebarController"></button>
-                </div>
+    <div class="container-fluid">
 
-                <div class="fs-5 fw-semibold mt-3">
-                    Category
-                </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 
-                <div class="py-3">
-                    <a href="javascript:void(0)" class="nav-link p-2">
-                        Fruits
-                    </a>
-                    <a href="javascript:void(0)" class="nav-link p-2">
-                        Vegetables
-                    </a>
-                    <a href="javascript:void(0)" class="nav-link p-2">
-                        Meats
-                    </a>
-                    <a href="javascript:void(0)" class="nav-link p-2">
-                        Fishes
-                    </a>
-                </div>
-
-                <div class="fs-5 fw-semibold">
-                    Price
-                </div>
-
-                <div class="row py-3">
-                    <div class="col-6 mb-3 px-1">
-                        <div class="form-group">
-                            <input type="text" name="" class="form-control" placeholder="Min:">
+            <div v-for="each in productItem">
+                <div class="product-single overflow-hidden bg-white">
+                    <div class="item">
+                        <div class="product-item">
+                            <img :src="each.file_path" class="product-image img-fluid">
+                            <div class="text-uppercase text-secondary text-opacity-50 text-center">
+                                {{ each.category }}
+                            </div>
+                            <div class="mt-2 fw-semibold text-center">{{ each.name }}</div>
+                            <div class="text-theme text-center mt-2">${{ each.price }} per Kg</div>
+                            <div class="product-active">
+                                <button type="button" class="btn btn-theme border-0 me-1">
+                                    <i class="bi bi-cart"></i>
+                                </button>
+                                <button type="button" class="btn btn-theme border-0">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 mb-3 px-1">
-                        <div class="form-group">
-                            <input type="text" name="" class="form-control" placeholder="Max:">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fs-5 fw-semibold">
-                    Availability
-                </div>
-
-                <div class="py-3">
-                    <a href="javascript:void(0)" class="nav-link p-2">
-                        In Stock
-                    </a>
-                    <a href="javascript:void(0)" class="nav-link p-2">
-                        Out of Stock
-                    </a>
-                    <a href="javascript:void(0)" class="nav-link p-2">
-                        Comming Soon
-                    </a>
                 </div>
             </div>
-        </div>
-        <div class="shop-content">
-
-            <div class="d-flex justify-content-between align-items-center p-3">
-                <button type="button" class="btn btn-controller" @click="sidebarController">
-                    <i class="bi bi-justify-left"></i>
-                </button>
-
-                <div class="col-6 col-md-4">
-                    <select name="" class="form-select">
-                        <option value="">Default Sorting</option>
-                        <option value="">Best Selling</option>
-                        <option value="">Alphabetic ( A - Z )</option>
-                        <option value="">Alphabetic ( Z - A )</option>
-                        <option value="">Date new to old</option>
-                        <option value="">Date old to new</option>
-                        <option value="">Price low to high</option>
-                        <option value="">Price high to low</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="container-fluid shop-product-content inside-shadow bg-white">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-01.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-02.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-03.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-04.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-05.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-06.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-07.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-08.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-single overflow-hidden">
-                        <div class="item">
-                            <div class="product-item">
-                                <img :src="`/images/product/image-09.jpg`" class="product-image img-fluid">
-                                <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                    category
-                                </div>
-                                <div class="mt-2 fw-semibold text-center">product name</div>
-                                <div class="text-theme text-center mt-2">$100.00</div>
-                                <div class="product-active">
-                                    <button type="button" class="btn btn-theme border-0 me-1">
-                                        <i class="bi bi-cart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-theme border-0">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center pt-3">
-                    <li class="page-item">
-                        <a class="page-link" href="javascript:void(0)">
-                            <i class="bi bi-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                            1
-                        </a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">
-                            2
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                            3
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                            <i class="bi bi-chevron-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
 
         </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center pt-3">
+                <li class="page-item">
+                    <a class="page-link" href="javascript:void(0)">
+                        <i class="bi bi-chevron-left"></i>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        1
+                    </a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">
+                        2
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        3
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
     </div>
 
 </template>
@@ -310,10 +67,28 @@
 
 export default {
 
-    data(){
+    data() {
 
-        return{
-            shopSidebarActive: false,
+        return {
+
+            productItem: [
+                {id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', category: 'Category Name'},
+                {id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '15', category: 'Category Name'},
+                {id: '3', file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '20', category: 'Category Name'},
+                {id: '4', file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '25', category: 'Category Name'},
+                {id: '5', file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '30', category: 'Category Name'},
+                {id: '6', file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '35', category: 'Category Name'},
+                {id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '40', category: 'Category Name'},
+                {id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name'},
+                {id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name'},
+                {id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name'},
+                {id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name'},
+                {id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name'},
+                {id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name'},
+                {id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name'},
+                {id: '15', file_path: '/images/product/image-15.jpg', name: 'Product Name', price: '80', category: 'Category Name'},
+            ]
+
         }
 
     },
@@ -321,14 +96,11 @@ export default {
     mounted() {
 
 
-
     },
 
     methods: {
 
-        sidebarController(){
-            this.shopSidebarActive = !this.shopSidebarActive
-        }
+
 
     }
 
