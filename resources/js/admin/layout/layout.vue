@@ -23,6 +23,10 @@
         <div class="color-selector">
             <button v-for="color in themeColors" :key="color" type="button" class="btn btn-circle-code p-1" :style="{ backgroundColor: color }" @click="updateThemeColor(color);"/>
         </div>
+        <div class="form-control-color-selector">
+            <div class="fw-semibold">Customize Theme color</div>
+            <input type="color" class="form-control form-control-color" v-model="selectedColor" @input="handleColorChange">
+        </div>
     </div>
 
     <!-- admin wrapper content -->
@@ -60,7 +64,9 @@
                 <router-link :to="{name: 'pricing'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-circle me-1"></i> Pricing
                 </router-link>
-                <hr>
+                <div class="d-flex justify-content-center">
+                    <hr class="col-6">
+                </div>
                 <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-sliders me-1"></i> Sliders
                 </a>
@@ -73,7 +79,9 @@
                 <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-bag me-1"></i> Products
                 </a>
-                <hr>
+                <div class="d-flex justify-content-center">
+                    <hr class="col-6">
+                </div>
                 <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-people me-1"></i> Customers
                 </a>
@@ -198,6 +206,10 @@ export default {
         lighten(color, amount) {
             const lightColor = tinyColor(color).lighten(amount).toString();
             return lightColor;
+        },
+
+        handleColorChange() {
+            this.updateThemeColor(this.selectedColor);
         },
 
     }
