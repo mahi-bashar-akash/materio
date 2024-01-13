@@ -60,6 +60,26 @@
                 <router-link :to="{name: 'pricing'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-circle me-1"></i> Pricing
                 </router-link>
+                <hr>
+                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                    <i class="bi bi-sliders me-1"></i> Sliders
+                </a>
+                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                    <i class="bi bi-boxes me-1"></i> Boxes
+                </a>
+                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                    <i class="bi bi-link-45deg me-1"></i> Categories
+                </a>
+                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                    <i class="bi bi-bag me-1"></i> Products
+                </a>
+                <hr>
+                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                    <i class="bi bi-people me-1"></i> Customers
+                </a>
+                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                    <i class="bi bi-cart me-1"></i> Orders
+                </a>
             </div>
         </div>
 
