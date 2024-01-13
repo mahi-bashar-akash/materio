@@ -226,65 +226,51 @@
     }
 
     .customer-wrapper{
-        display: flex;
 
-        .customer-sidebar{
-            width: 300px;
-            box-shadow: 0 0 8px 0 var(--bs-border-color);
-            padding: 15px 20px;
-            background-color: var(--bs-white);
-            border-radius: 10px;
+        .customer-avatar{
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            background-color: var(--bs-border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s all ease-in-out;
+            position: relative;
 
-            .customer-avatar{
+            &:hover{
+                transition: 0.3s all ease-in-out;
+                box-shadow: 0 0 8px 0 var(--bs-border-color);
+            }
+
+            img{
                 width: 175px;
                 height: 175px;
                 border-radius: 50%;
-                background-color: var(--bs-border-color);
+            }
+
+            .delete-icon{
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                z-index: 2;
+                background-color: var(--bs-light);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                box-shadow: 0 0 2px 0 var(--bs-gray);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 transition: 0.3s all ease-in-out;
-                position: relative;
 
                 &:hover{
                     transition: 0.3s all ease-in-out;
-                    box-shadow: 0 0 8px 0 var(--bs-border-color);
-                }
-
-                img{
-                    width: 175px;
-                    height: 175px;
-                    border-radius: 50%;
-                }
-
-                .delete-icon{
-                    position: absolute;
-                    bottom: 5px;
-                    right: 5px;
-                    z-index: 2;
-                    background-color: var(--bs-light);
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    box-shadow: 0 0 2px 0 var(--bs-gray);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: 0.3s all ease-in-out;
-
-                    &:hover{
-                        transition: 0.3s all ease-in-out;
-                        box-shadow: 0 0 8px 0 var(--bs-gray);
-                    }
-
+                    box-shadow: 0 0 8px 0 var(--bs-gray);
                 }
 
             }
 
-        }
-
-        .customer-content{
-            width: calc(100% - 300px);
         }
 
     }
