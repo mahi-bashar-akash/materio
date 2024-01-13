@@ -38,6 +38,18 @@ import profile from "../pages/profile.vue";
 
 import settings from "../pages/settings.vue";
 
+import slider from "../pages/slider.vue";
+
+import box from "../pages/box.vue";
+
+import category from "../pages/category.vue";
+
+import product from "../pages/product.vue";
+
+import customer from "../pages/customer.vue";
+
+import order from "../pages/order.vue";
+
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/admin";
@@ -87,6 +99,18 @@ const routes = [
             { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + ' - profile' } },
 
             { path: ROOT_URL + '/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings' } },
+
+            { path: ROOT_URL + '/slider', name: 'slider', component: slider, meta: { title: TITLE + ' - slider' } },
+
+            { path: ROOT_URL + '/box', name: 'box', component: box, meta: { title: TITLE + ' - box' } },
+
+            { path: ROOT_URL + '/category', name: 'category', component: category, meta: { title: TITLE + ' - category' } },
+
+            { path: ROOT_URL + '/product', name: 'product', component: product, meta: { title: TITLE + ' - product' } },
+
+            { path: ROOT_URL + '/customer', name: 'customer', component: customer, meta: { title: TITLE + ' - customer' } },
+
+            { path: ROOT_URL + '/order', name: 'order', component: order, meta: { title: TITLE + ' - order' } },
 
         ]
 

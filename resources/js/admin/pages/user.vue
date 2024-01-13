@@ -17,7 +17,7 @@
                 <div class="col-md-6 d-flex justify-content-end align-items-center p-2">
                     <button type="button" class="btn btn-theme px-4" @click="manageUserOpen">
                         <i class="bi bi-plus-lg me-2"></i>
-                        Add User
+                        Create New User
                     </button>
                 </div>
             </div>

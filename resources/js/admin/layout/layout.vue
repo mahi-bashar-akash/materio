@@ -67,27 +67,27 @@
                 <div class="d-flex justify-content-center">
                     <hr class="col-6">
                 </div>
-                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                <router-link :to="{name: 'slider'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-sliders me-1"></i> Sliders
-                </a>
-                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                </router-link>
+                <router-link :to="{name: 'box'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-boxes me-1"></i> Boxes
-                </a>
-                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                </router-link>
+                <router-link :to="{name: 'category'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-link-45deg me-1"></i> Categories
-                </a>
-                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                </router-link>
+                <router-link :to="{name: 'product'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-bag me-1"></i> Products
-                </a>
+                </router-link>
                 <div class="d-flex justify-content-center">
                     <hr class="col-6">
                 </div>
-                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                <router-link :to="{name: 'customer'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-people me-1"></i> Customers
-                </a>
-                <a href="javascript:void(0)" class="admin-sidebar-link" @click="remove">
+                </router-link>
+                <router-link :to="{name: 'order'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-cart me-1"></i> Orders
-                </a>
+                </router-link>
             </div>
         </div>
 

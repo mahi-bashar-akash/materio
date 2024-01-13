@@ -7,7 +7,7 @@
         <div class="calendar-sidebar" :class="{'active' : calendarSidebarActive}">
             <div class="calendar-sidebar-header mb-3">
                 <button type="button" class="btn btn-theme" @click="manageEventOpen">
-                    Add Event
+                    Create New Event
                 </button>
                 <button type="button" class="ms-2 btn-close" @click="remove"></button>
             </div>

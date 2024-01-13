@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\FrontController;
+
 use App\Http\Controllers\AdminController;
 
 /*
@@ -44,5 +46,3 @@ Route::get('/front', [FrontController::class, 'front'])->where('any', '.*')->nam
 Route::get('/front/{any}', [FrontController::class, 'front'])->where('any', '.*')->name('lvs.front.any');
 
 Route::get('/', function () { return redirect()->route('lvs.front.any', 'home'); } );
-
-

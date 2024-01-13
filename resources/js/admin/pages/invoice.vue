@@ -16,8 +16,7 @@
                 </div>
                 <div class="col-md-6 d-flex justify-content-end align-items-center p-2">
                     <router-link :to="{name: 'manageInvoice'}" class="btn btn-theme d-flex justify-content-center align-items-center px-4">
-                        <i class="bi bi-plus-lg me-2"></i>
-                        Add Invoice
+                        Create New Invoice
                     </router-link>
                 </div>
             </div>
