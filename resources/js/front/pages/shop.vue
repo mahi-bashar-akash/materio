@@ -5,9 +5,9 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 
             <div v-for="each in productItem">
-                <div class="product-single overflow-hidden bg-white">
+                <div class="product-single overflow-hidden">
                     <div class="item">
-                        <div class="product-item">
+                        <div class="product-item bg-white">
                             <img :src="each.file_path" class="product-image img-fluid">
                             <div class="text-uppercase text-secondary text-opacity-50 text-center">
                                 {{ each.category }}
