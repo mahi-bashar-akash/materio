@@ -2,6 +2,28 @@
 
     <div class="container-fluid">
 
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 justify-content-between">
+            <div class="p-3">
+                <select name="category" class="form-select">
+                    <option value="">Select Category</option>
+                    <option value="">Fruits</option>
+                    <option value="">Vegetables</option>
+                    <option value="">Meats</option>
+                    <option value="">Fishes</option>
+                </select>
+            </div>
+            <div class="p-3">
+                <select name="filter" class="form-select">
+                    <option value="">Select Filter</option>
+                    <option value="">alphabet, a - z</option>
+                    <option value="">price, lower to higher</option>
+                </select>
+            </div>
+            <div class="p-3">
+                <input type="text" name="search" class="form-control" placeholder="Search here" autocomplete="new-search">
+            </div>
+        </div>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 
             <div v-for="each in productItem">
