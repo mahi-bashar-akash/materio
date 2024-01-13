@@ -2,9 +2,9 @@
 
     <div class="col-12 col-lg-8">
         <div class="p-3">
-            <div class="fs-5 fw-semibold ps-3 pb-3">Cart Details</div>
+            <div class="fs-5 fw-semibold ps-3 pb-3">Order History</div>
             <div class="table-responsive">
-                <table class="table table-sm">
+                <table class="table">
                     <thead>
                         <tr>
                             <th class="default-width">
