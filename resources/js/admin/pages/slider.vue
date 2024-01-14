@@ -10,10 +10,19 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-xl-4" v-for="each in sliders">
-                <div class="slider border overflow-hidden">
+                <div class="slider border overflow-hidden position-relative">
                     <img :src="each.file_path" class="each-slider img-fluid w-100 h-100" alt="slider image">
+                    <div class="fw-semibold position-absolute top-50 start-0 translate-middle-y ps-5 text-white cursor-content-menu">
+                        <span class="d-block fs-3">{{each.topTitle}}</span>
+                        <span class="d-block fs-1">{{each.midTitle}}</span>
+                        <span class="d-block fs-3 text-end">{{each.bottomTitle}}</span>
+                    </div>
+                    <div class="fw-semibold position-absolute top-0 end-0 p-2">
+                        <div class="py-2 px-4 bg-white bg-opacity-75 rounded-start-5">
+                            {{each.discount}}
+                        </div>
+                    </div>
                 </div>
-                <div class="fw-semibold">{{each.title}}</div>
             </div>
         </div>
     </div>
@@ -56,9 +65,9 @@ export default {
 
         return{
             sliders: [
-                { id: '1', file_path: '/images/slider/banner-1.jpg', title: '', },
-                { id: '2', file_path: '/images/slider/banner-2.jpg', title: '', },
-                { id: '3', file_path: '/images/slider/banner-3.jpg', title: '', },
+                { id: '1', file_path: '/images/slider/banner-1.jpg', topTitle: 'Super', midTitle: 'Grocery', bottomTitle: 'sales', discount: '10%' },
+                { id: '2', file_path: '/images/slider/banner-2.jpg', topTitle: 'Super', midTitle: 'Grocery', bottomTitle: 'sales', discount: '15%' },
+                { id: '3', file_path: '/images/slider/banner-3.jpg', topTitle: 'Super', midTitle: 'Grocery', bottomTitle: 'sales', discount: '20%' },
             ]
         }
 
