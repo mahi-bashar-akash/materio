@@ -12,6 +12,22 @@ body{
     font-family: var(--roboto-slab-font) !important;
 }
 
+#preloader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bs-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1050;
+}
+
 // button area
 
 .btn-theme{
@@ -463,6 +479,44 @@ body{
             margin: 0 5px;
             border-radius: 6px;
             font-size: 12px;
+        }
+    }
+}
+
+// modal
+
+.modal{
+    .modal-dialog{
+        .modal-content{
+            padding: 15px;
+            .modal-header{
+                .modal-title{
+                    font-weight: 600;
+                }
+                .btn-close{
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    transition: 0.3s all ease-in-out;
+                    margin-right: 0;
+                    box-shadow: 0 0 0 0 !important;
+
+                    &:hover{
+                        transition: 0.3s all ease-in-out;
+                        background-color: var(--bs-border-color);
+                    }
+
+                }
+            }
+            .modal-body{
+
+            }
+            .modal-footer{
+                font-size: 14px;
+            }
         }
     }
 }

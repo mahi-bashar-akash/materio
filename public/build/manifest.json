@@ -25,7 +25,7 @@
     "css": [
       "assets/app-IRKSPvU3.css"
     ],
-    "file": "assets/app-98t8cdDi.js",
+    "file": "assets/app-1usX98Ux.js",
     "imports": [
       "_tinycolor-DgtsQEa8.js"
     ],
@@ -41,7 +41,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-J4TzGROe.css",
+    "file": "assets/basic-ulCzxhRB.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }

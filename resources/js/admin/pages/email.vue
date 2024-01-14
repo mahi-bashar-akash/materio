@@ -45,7 +45,6 @@
             </div>
             <div class="email-sidebar-footer">
                 <button type="button" class="btn btn-theme w-100" @click="emailComposerController">
-                    <i class="bi bi-plus-lg me-2"></i>
                     Composer
                 </button>
             </div>

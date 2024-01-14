@@ -1197,38 +1197,20 @@
 
             }
 
-            // modal
+            .slider{
+                height: 300px;
 
-            .modal{
-                .modal-dialog{
-                    .modal-content{
-                        padding: 15px;
-                        .modal-header{
-                            .btn-close{
-                                width: 35px;
-                                height: 35px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                border-radius: 50%;
-                                transition: 0.3s all ease-in-out;
-                                margin-right: 0;
-                                box-shadow: 0 0 0 0 !important;
+                .each-slider{
+                    width: 100%;
+                    object-fit: cover;
+                    transform: scale(1);
+                    transition: 0.3s all ease-in-out;
 
-                                &:hover{
-                                    transition: 0.3s all ease-in-out;
-                                    background-color: var(--bs-border-color);
-                                }
-
-                            }
-                        }
-                        .modal-body{
-
-                        }
-                        .modal-footer{
-
-                        }
+                    &:hover{
+                        transition: 0.3s all ease-in-out;
+                        transform: scale(1.3);
                     }
+
                 }
             }
 
@@ -1236,22 +1218,6 @@
 
     }
 
-}
-
-#preloader{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: var(--bs-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1050;
 }
 
 .color-wrapper{
