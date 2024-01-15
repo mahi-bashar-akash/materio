@@ -40,8 +40,6 @@ import settings from "../pages/settings.vue";
 
 import slider from "../pages/slider.vue";
 
-import box from "../pages/box.vue";
-
 import category from "../pages/category.vue";
 
 import product from "../pages/product.vue";
@@ -101,8 +99,6 @@ const routes = [
             { path: ROOT_URL + '/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings' } },
 
             { path: ROOT_URL + '/slider', name: 'slider', component: slider, meta: { title: TITLE + ' - slider' } },
-
-            { path: ROOT_URL + '/box', name: 'box', component: box, meta: { title: TITLE + ' - box' } },
 
             { path: ROOT_URL + '/category', name: 'category', component: category, meta: { title: TITLE + ' - category' } },
 

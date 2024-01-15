@@ -25,7 +25,7 @@
     "css": [
       "assets/app-IRKSPvU3.css"
     ],
-    "file": "assets/app-vZTcpKMZ.js",
+    "file": "assets/app-1ZZNx_-6.js",
     "imports": [
       "_tinycolor-DgtsQEa8.js"
     ],
@@ -33,7 +33,7 @@
     "src": "resources/js/admin/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-GBPd83-1.js",
+    "file": "assets/app-abLap_dE.js",
     "imports": [
       "_tinycolor-DgtsQEa8.js"
     ],
@@ -41,7 +41,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-ulCzxhRB.css",
+    "file": "assets/basic-mwGzY3G8.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }

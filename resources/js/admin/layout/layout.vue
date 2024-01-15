@@ -70,9 +70,6 @@
                 <router-link :to="{name: 'slider'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-sliders me-1"></i> Sliders
                 </router-link>
-                <router-link :to="{name: 'box'}" class="admin-sidebar-link" @click="remove">
-                    <i class="bi bi-boxes me-1"></i> Boxes
-                </router-link>
                 <router-link :to="{name: 'category'}" class="admin-sidebar-link" @click="remove">
                     <i class="bi bi-link-45deg me-1"></i> Categories
                 </router-link>

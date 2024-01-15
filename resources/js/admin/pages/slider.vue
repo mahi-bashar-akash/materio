@@ -9,7 +9,7 @@
     <!-- slider list -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-xl-4" v-for="each in sliders">
+            <div class="col-12 col-md-6 col-xl-4 mb-3" v-for="each in sliders">
                 <div class="slider border overflow-hidden position-relative">
                     <img :src="each.file_path" class="each-slider img-fluid w-100 h-100" alt="slider image">
                     <div class="fw-semibold position-absolute top-50 start-0 translate-middle-y ps-5 text-white cursor-content-menu">
@@ -44,12 +44,14 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <div class="form-group">
-                            <label for="slider" class="form-label w-100 bg-light-theme py-4 text-center rounded-3 cursor-pointer">
+                            <label for="slider" class="form-label w-100 bg-light-theme text-center rounded-3 cursor-pointer">
                                 <input id="slider" type="file" name="slider" class="d-none" required autocomplete="new-slider">
-                                <i class="bi bi-camera text-theme" style="font-size: 70px"></i>
-                                <span class="text-center d-block text-dark fw-semibold fs-5">
-                                Upload Slider
-                            </span>
+                                <span class="d-block py-4">
+                                    <i class="bi bi-clouds-fill text-theme" style="font-size: 30px"></i>
+                                    <span class="text-center d-block text-dark fw-semibold fs-6">
+                                        Upload Slider
+                                    </span>
+                                </span>
                             </label>
                         </div>
                     </div>
@@ -97,6 +99,7 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>

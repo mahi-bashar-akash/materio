@@ -4,7 +4,9 @@
     <section class="w-100 container-fluid">
         <div class="slider-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in Sliders">
-                <div class="slider-item" :style="{ background: 'url(' + each.imageUrl + ')' }"></div>
+                <div class="position-relative">
+                    <div class="slider-item" :style="{ background: 'url(' + each.file_path + ')' }"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -466,9 +468,9 @@ export default {
         return{
 
             Sliders: [
-                { id: '1', imageUrl: '/images/slider/banner-1.jpg' },
-                { id: '2', imageUrl: '/images/slider/banner-2.jpg' },
-                { id: '3', imageUrl: '/images/slider/banner-3.jpg' },
+                { id: '1', file_path: '/images/slider/banner-1.jpg' },
+                { id: '2', file_path: '/images/slider/banner-2.jpg' },
+                { id: '3', file_path: '/images/slider/banner-3.jpg' },
             ],
 
             productItem: [

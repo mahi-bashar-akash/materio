@@ -456,20 +456,6 @@
 
                         }
 
-                        .btn-icon{
-                            width: 45px;
-                            height: 45px;
-                            border-radius: 50%;
-                            transition: 0.3s all ease-in-out;
-                            background-color: transparent !important;
-
-                            &:hover{
-                                transition: 0.3s all ease-in-out;
-                                background-color: var(--bs-border-color) !important;
-                            }
-
-                        }
-
                     }
 
                     .chat-provider {
@@ -532,7 +518,7 @@
 
                 .email-sidebar {
                     width: 270px;
-                    height: calc(100vh - 145px);
+                    height: calc(100vh - 138px);
                     background-color: var(--bs-white);
                     border-right: 1px solid var(--bs-border-color);
                     overflow-y: hidden;
@@ -592,7 +578,7 @@
                     }
 
                     .email-sidebar-body {
-                        height: calc(100vh - 280px);
+                        height: calc(100vh - 270px);
                         padding: 10px;
                         overflow-y: scroll;
 
@@ -642,7 +628,7 @@
 
                 .email-body {
                     width: calc(100% - 270px);
-                    height: calc(100vh - 145px);
+                    height: calc(100vh - 138px);
                     background-color: var(--bs-white);
                     position: relative;
                     overflow-x: hidden;
@@ -685,25 +671,6 @@
 
                     .email-body-content{
                         font-size: 14px;
-
-                        .btn-icon{
-                            min-width: 35px;
-                            min-height: 35px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            border: none;
-                            outline: none;
-                            border-radius: 50%;
-                            background-color: transparent !important;
-                            transition: 0.3s all ease-in-out;
-
-                            &:hover{
-                                transition: 0.3s all ease-in-out;
-                                background-color: var(--bs-border-color) !important;
-                            }
-
-                        }
 
                         .email-content{
 

@@ -91,6 +91,28 @@ body{
     padding: 0 20px !important;
 }
 
+.btn-icon{
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: transparent !important;
+    transition: 0.3s all ease-in-out;
+    color: var(--bs-black);
+
+    &:hover{
+        transition: 0.3s all ease-in-out;
+        background-color: var(--bs-border-color) !important;
+    }
+
+}
+
 // form area
 
 .form-control{
@@ -460,8 +482,10 @@ body{
 
 .pagination {
     .page-item {
+        transition: 0.3s all ease-in-out;
 
         &.active .page-link {
+            transition: 0.3s all ease-in-out;
             background-color: var(--theme);
             border: 1px solid transparent;
             color: var(--bs-white);
@@ -517,6 +541,24 @@ body{
             .modal-footer{
                 font-size: 14px;
             }
+        }
+    }
+}
+
+// accordion
+
+.accordion{
+    .accordion-item{
+        .accordion-header{
+            .accordion-button{
+                box-shadow: 0 0 0 0 !important;
+                background-color: var(--theme-light) !important;
+            }
+        }
+    }
+    .accordion-collapse{
+        .accordion-body{
+
         }
     }
 }
