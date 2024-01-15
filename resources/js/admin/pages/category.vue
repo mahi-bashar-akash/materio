@@ -188,7 +188,7 @@ export default {
         },
 
         toggleCategory(categoryId) {
-            this.categoryExpanded = this.categoryExpanded === categoryId ? null : categoryId;
+            this.categoryExpanded = this.categoryExpanded !== categoryId ? categoryId : null;
         },
 
     }

@@ -553,6 +553,11 @@ body{
             .accordion-button{
                 box-shadow: 0 0 0 0 !important;
                 background-color: var(--theme-light) !important;
+
+                &::after{
+                    background-image: none !important;
+                }
+
             }
         }
     }
