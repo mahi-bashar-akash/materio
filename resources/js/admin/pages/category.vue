@@ -1,9 +1,22 @@
 <template>
 
-    <div class="text-end p-3">
-        <button class="btn btn-theme" @click="manageCategoryOpen">
-            Create new Category
-        </button>
+    <!-- search and create btn -->
+    <div class="p-3">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="position-relative">
+                    <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autocomplete="new-search">
+                    <div class="position-absolute top-50 start-0 ps-1 translate-middle-y">
+                        <i class="ps-3 bi bi-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3 text-end">
+                <button class="btn btn-theme" @click="manageCategoryOpen">
+                    Create new Category
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- category list -->
@@ -21,10 +34,10 @@
                             {{ subCategory.name }}
                         </div>
                         <div class="col-12 col-md-6 d-flex justify-content-end align-items-center">
-                            <button type="button" class="btn-icon">
+                            <button type="button" class="btn-icon" @click="manageCategoryOpen">
                                 <i class="bi bi-pencil-fill"></i>
                             </button>
-                            <button type="button" class="btn-icon">
+                            <button type="button" class="btn-icon" @click="deleteCategoryOpen">
                                 <i class="bi bi-trash2-fill"></i>
                             </button>
                         </div>
