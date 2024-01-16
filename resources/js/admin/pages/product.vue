@@ -19,6 +19,74 @@
         </div>
     </div>
 
+    <!-- product list -->
+    <div class="product-card-body bg-white border rounded-2 p-3">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="checkbox">
+                            <input type="checkbox" name="checkbox" class="form-check-input">
+                        </th>
+                        <th class="id">
+                            Id.
+                        </th>
+                        <th class="name">
+                            Name.
+                        </th>
+                        <th class="price">
+                            Price.
+                        </th>
+                        <th class="category">
+                            Category.
+                        </th>
+                        <th class="quantity">
+                            Quantity.
+                        </th>
+                        <th class="action text-end">
+                            Action.
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+                        <td class="checkbox">
+                            <input type="checkbox" name="checkbox" class="form-check-input">
+                        </td>
+                        <td class="id">
+                            1
+                        </td>
+                        <td class="name">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <img :src="`/images/product/image-01.jpg`" class="item me-2" alt="product">
+                                Product Name
+                            </div>
+                        </td>
+                        <td class="price">
+                            $100
+                        </td>
+                        <td class="category">
+                            Fruits
+                        </td>
+                        <td class="quantity">
+                            1
+                        </td>
+                        <td class="action">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <a href="javascript:void(0)" class="btn-icon">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </a>
+                                <a href="javascript:void(0)" class="btn-icon">
+                                    <i class="bi bi-trash2"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <!-- product manage modal -->
     <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
