@@ -4,23 +4,63 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 justify-content-between">
             <div class="p-3">
-                <select name="category" class="form-select">
-                    <option value="">Select Category</option>
-                    <option value="">Fruits</option>
-                    <option value="">Vegetables</option>
-                    <option value="">Meats</option>
-                    <option value="">Fishes</option>
-                </select>
-            </div>
-            <div class="p-3">
-                <select name="filter" class="form-select">
-                    <option value="">Select Filter</option>
-                    <option value="">alphabet, a - z</option>
-                    <option value="">price, lower to higher</option>
-                </select>
+                <button type="button" class="btn btn-theme" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="bi bi-funnel-fill"></i>
+                </button>
             </div>
             <div class="p-3">
                 <input type="text" name="search" class="form-control" placeholder="Search here" autocomplete="new-search">
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header border-bottom px-4">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter</h5>
+                <button type="button" class="btn-icon btn-close rounded-circle shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="p-4">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="form-group">
+                                <label for="price-range" class="form-label">Price</label>
+                                <input v-model="priceRange" type="range" name="price-range" class="form-range" autocomplete="new-price" :min="0" :max="maxPrice">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input v-model="minPrice" type="text" name="min-price" class="form-control" autocomplete="new-min-price" :min="0" :max="maxPrice" placeholder="Min Price">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input v-model="maxPrice" type="text" name="max-price" class="form-control" autocomplete="new-max-price" :max="maxPrice" placeholder="Max Price">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="fw-semibold mb-3 d-block">Category List</div>
+                        <div class="mb-3 d-block" v-for="category in categories" :key="category.id">
+                            <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block">
+                                {{category.name}}
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="fw-semibold mb-3 d-block">SubCategory List</div>
+                        <div v-for="category in categories" :key="category.id">
+                            <div class="mb-3 d-block" v-for="subCategory in category.subCategory" :key="subCategory.id">
+                                <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block">
+                                    {{subCategory.name}}
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
 
@@ -89,6 +129,15 @@
 
 export default {
 
+    watch: {
+        priceRange() {
+            this.minPrice = this.priceRange;
+            if (this.minPrice > this.maxPrice) {
+                this.minPrice = this.maxPrice;
+            }
+        }
+    },
+
     data() {
 
         return {
@@ -110,7 +159,48 @@ export default {
                 {id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name'},
                 {id: '15', file_path: '/images/product/image-15.jpg', name: 'Product Name', price: '80', category: 'Category Name'},
                 {id: '16', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '85', category: 'Category Name'},
-            ]
+            ],
+
+            categories: [
+                { id: '1', name: 'Food',
+                    subCategory: [
+                        { id: '1', name: 'Fruits' },
+                        { id: '2', name: 'Vegetables' },
+                        { id: '3', name: 'Meats' },
+                        { id: '4', name: 'Fishes' },
+                    ],
+                },
+                { id: '2', name: 'Dress',
+                    subCategory: [
+                        { id: '1', name: 'Male Collection' },
+                        { id: '2', name: 'Female Collection' },
+                        { id: '3', name: 'Accessories Collection' },
+                    ],
+                },
+                { id: '3', name: 'Shelter',
+                    subCategory: [
+                        { id: '1', name: 'Temporary Shelter' },
+                        { id: '2', name: 'Permanent Shelter' },
+                    ],
+                },
+                { id: '4', name: 'Education',
+                    subCategory: [
+                        { id: '1', name: 'Primary Education' },
+                        { id: '2', name: 'Secondary Education' },
+                        { id: '3', name: 'Higher Education' },
+                    ],
+                },
+                { id: '5', name: 'Treatment',
+                    subCategory: [
+                        { id: '1', name: 'Medical Treatment' },
+                        { id: '2', name: 'Therapeutic Treatment' },
+                    ],
+                }
+            ],
+
+            priceRange: 0,
+            minPrice: 0,
+            maxPrice: 100000
 
         }
 

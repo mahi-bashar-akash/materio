@@ -26,19 +26,6 @@
                     </a>
                 </div>
 
-                <div class="row align-items-center mt-4">
-                    <div class="col-6">
-                        <small>
-                            <i class="bi bi-currency-exchange text-theme me-2"></i> English
-                        </small>
-                    </div>
-                    <div class="col-6 text-end">
-                        <small>
-                            <i class="bi bi-geo-alt-fill text-theme me-2"></i> Bangladesh
-                        </small>
-                    </div>
-                </div>
-
             </div>
 
         </div>
