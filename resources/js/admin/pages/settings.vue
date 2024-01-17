@@ -26,7 +26,7 @@
                 <div class="mb-3 col-lg-6">
                     <div class="form-group">
                         <label for="phone-number" class="form-label">Phone number</label>
-                        <input id="phone-number" type="text" name="phone-number" value="+880 01645820007" class="form-control" required autocomplete="new-phone-number">
+                        <input id="phone-number" type="text" name="phone-number" value="+880 01400125289" class="form-control" required autocomplete="new-phone-number">
                     </div>
                 </div>
                 <div class="mb-3 col-lg-6">

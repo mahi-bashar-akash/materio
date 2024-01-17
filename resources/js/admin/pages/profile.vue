@@ -12,11 +12,15 @@
                         </div>
                     </div>
                     <div class="fw-bold mb-3"> Full name:</div>
-                    <div class="text-secondary mb-3"> Mahi Bashar Akash </div>
+                    <div class="text-secondary mb-3"> Mr. Mahi Bashar Akash </div>
                     <div class="fw-bold mb-3"> Contact number: </div>
-                    <div class="text-secondary mb-3"> +880 01645820007 </div>
+                    <div class="text-secondary mb-3"> +880 01400125289 </div>
                     <div class="fw-bold mb-3"> Email: </div>
-                    <div class="text-secondary"> mahibashar2023@gmail.com </div>
+                    <div class="text-secondary mb-3"> mahibashar2023@gmail.com </div>
+                    <div class="fw-bold mb-3"> Selected Country: </div>
+                    <div class="text-secondary mb-3"> Bangladesh </div>
+                    <div class="fw-bold mb-3"> Selected Language: </div>
+                    <div class="text-secondary"> English </div>
                 </div>
             </div>
             <div class="col-xl-8 p-3">

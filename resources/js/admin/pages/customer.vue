@@ -19,45 +19,58 @@
         <div class="table-responsive">
             <table class="table">
                 <thead>
-                <tr>
-                    <th class="checkbox">
-                        <input type="checkbox" name="checkbox" class="form-check-input">
-                    </th>
-                    <th class="id">
-                        Id.
-                    </th>
-                    <th class="default-width">
-                        Customer Name.
-                    </th>
-                    <th class="default-width">
-                        Customer Email.
-                    </th>
-                    <th class="default-width">
-                        Phone Number
-                    </th>
-                </tr>
+                    <tr>
+                        <th class="checkbox">
+                            <input type="checkbox" name="checkbox" class="form-check-input">
+                        </th>
+                        <th class="id">
+                            Id.
+                        </th>
+                        <th class="default-width">
+                            Customer Name.
+                        </th>
+                        <th class="default-width">
+                            Customer Email.
+                        </th>
+                        <th class="default-width">
+                            Phone Number
+                        </th>
+                        <th class="default-width text-end">
+                            Action
+                        </th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
-                    <td class="checkbox">
-                        <input type="checkbox" name="checkbox" class="form-check-input">
-                    </td>
-                    <td class="id">
-                        {{each}}
-                    </td>
-                    <td class="name">
-                        <div class="d-flex align-items-center justify-content-start">
-                            <img :src="`/images/clients/face-1.png`" class="img-fluid me-2 face" alt="avatar">
-                            Customer Name {{each}}
-                        </div>
-                    </td>
-                    <td class="default-width">
-                        Customer Email {{each}}
-                    </td>
-                    <td class="default-width">
-                        Phone number {{each}}
-                    </td>
-                </tr>
+                    <tr v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+                        <td class="checkbox">
+                            <input type="checkbox" name="checkbox" class="form-check-input">
+                        </td>
+                        <td class="id">
+                            {{each}}
+                        </td>
+                        <td class="name">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <img :src="`/images/clients/face-1.png`" class="img-fluid me-2 face" alt="avatar">
+                                Customer Name {{each}}
+                            </div>
+                        </td>
+                        <td class="default-width">
+                            Customer Email {{each}}
+                        </td>
+                        <td class="default-width">
+                            Phone number {{each}}
+                        </td>
+                        <td class="default-width">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <button class="btn-icon">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+                                <button class="btn-icon">
+                                    <i class="bi bi-trash2"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
