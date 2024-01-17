@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
 
             <div v-for="each in productItem">
                 <div class="product-single overflow-hidden">
@@ -109,6 +109,7 @@ export default {
                 {id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name'},
                 {id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name'},
                 {id: '15', file_path: '/images/product/image-15.jpg', name: 'Product Name', price: '80', category: 'Category Name'},
+                {id: '16', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '85', category: 'Category Name'},
             ]
 
         }
