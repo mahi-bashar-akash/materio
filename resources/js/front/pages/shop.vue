@@ -1,24 +1,16 @@
 <template>
 
-    <div class="container-fluid">
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 justify-content-between">
-            <div class="p-3">
-                <button type="button" class="btn btn-theme" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    <i class="bi bi-funnel-fill"></i>
+    <div class="shop-wrapper">
+        <div class="shop-sidebar" :class="{'active' : shopSidebarActive}">
+            <div class="shop-sidebar-header">
+                <span class="fw-semibold">
+                    Filter
+                </span>
+                <button type="button" class="btn-icon" @click="shopSidebarController">
+                    <i class="bi bi-x-lg"></i>
                 </button>
             </div>
-            <div class="p-3">
-                <input type="text" name="search" class="form-control" placeholder="Search here" autocomplete="new-search">
-            </div>
-        </div>
-
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header border-bottom px-4">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter</h5>
-                <button type="button" class="btn-icon btn-close rounded-circle shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
+            <div class="shop-sidebar-body">
                 <div class="p-4">
                     <div class="row">
                         <div class="col-12 mb-3">
@@ -63,64 +55,81 @@
                 </div>
             </div>
         </div>
+        <div class="shop-content">
+            <div class="shop-content-header">
+                <button type="button" class="btn-icon" @click="shopSidebarController">
+                    <i class="bi bi-justify"></i>
+                </button>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
+                <div class="col-8 col-md-6">
+                    <input type="text" name="" class="form-control" autocomplete="new-search" placeholder="Search here">
+                </div>
 
-            <div v-for="each in productItem">
-                <div class="product-single overflow-hidden">
-                    <div class="item">
-                        <div class="product-item bg-white">
-                            <img :src="each.file_path" class="product-image img-fluid">
-                            <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                {{ each.category }}
-                            </div>
-                            <div class="mt-2 fw-semibold text-center">{{ each.name }}</div>
-                            <div class="text-theme text-center mt-2">${{ each.price }} per Kg</div>
-                            <div class="product-active">
-                                <button type="button" class="btn btn-theme border-0 me-1">
-                                    <i class="bi bi-cart"></i>
-                                </button>
-                                <button type="button" class="btn btn-theme border-0">
-                                    <i class="bi bi-search"></i>
-                                </button>
+            </div>
+            <div class="shop-content-body">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+
+                    <div v-for="each in productItem">
+                        <div class="product-single overflow-hidden">
+                            <div class="item">
+                                <div class="product-item bg-white">
+                                    <img :src="each.file_path" class="product-image img-fluid">
+                                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
+                                        {{ each.category }}
+                                    </div>
+                                    <div class="mt-2 fw-semibold text-center">{{ each.name }}</div>
+                                    <div class="text-theme text-center mt-2">${{ each.price }} per Kg</div>
+                                    <div class="product-active">
+                                        <button type="button" class="btn btn-theme border-0 me-1">
+                                            <i class="bi bi-cart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-theme border-0">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
             </div>
+            <div class="shop-content-footer">
 
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                1
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">
+                                2
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                3
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
         </div>
-
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center pt-3">
-                <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)">
-                        <i class="bi bi-chevron-left"></i>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        1
-                    </a>
-                </li>
-                <li class="page-item active">
-                    <a class="page-link" href="#">
-                        2
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        3
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <i class="bi bi-chevron-right"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
     </div>
 
 </template>
@@ -158,7 +167,6 @@ export default {
                 {id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name'},
                 {id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name'},
                 {id: '15', file_path: '/images/product/image-15.jpg', name: 'Product Name', price: '80', category: 'Category Name'},
-                {id: '16', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '85', category: 'Category Name'},
             ],
 
             categories: [
@@ -200,7 +208,8 @@ export default {
 
             priceRange: 0,
             minPrice: 0,
-            maxPrice: 100000
+            maxPrice: 100000,
+            shopSidebarActive: false,
 
         }
 
@@ -213,7 +222,9 @@ export default {
 
     methods: {
 
-
+        shopSidebarController(){
+            this.shopSidebarActive = !this.shopSidebarActive
+        }
 
     }
 

@@ -41,7 +41,7 @@
     "src": "resources/js/auth/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-t9i1B7Mt.js",
+    "file": "assets/app-sCCGf7e8.js",
     "imports": [
       "_tinycolor-C7CMdLZ-.js"
     ],
@@ -49,7 +49,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-p2y-0QNx.css",
+    "file": "assets/basic-D8iuZwgB.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }
