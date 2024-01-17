@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontController;
-
 use App\Http\Controllers\AdminController;
 
 /*
@@ -16,6 +15,20 @@ use App\Http\Controllers\AdminController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+/*
+|
+|--------------------------------------------------------------------------
+| Auth Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/auth', [AuthController::class, 'auth'])->where('any', '.*')->name('lvs.auth');
+
+Route::get('/auth/{any}', [AuthController::class, 'auth'])->where('any', '.*')->name('lvs.auth.any');
+
+Route::get('/', function () { return redirect()->route('lvs.auth.any', 'login'); } );
 
 /*
 |

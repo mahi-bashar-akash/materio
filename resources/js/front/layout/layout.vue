@@ -45,9 +45,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name: 'login'}" class="nav-link">
+                        <a href="/auth/login" class="nav-link">
                             Login
-                        </router-link>
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -43,7 +43,7 @@
         </div>
         <div class="mb-3">
             <div class="form-group">
-                <button type="button" class="btn btn-theme w-100" @click="pushLink">
+                <button type="button" class="btn btn-theme w-100" @click="loginPush">
                     LOGIN
                 </button>
             </div>
@@ -85,8 +85,8 @@ export default {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
-        pushLink(){
-            route.push( { name: 'dashboard' } )
+        loginPush(){
+            window.location.href = '/admin/dashboard'
         }
 
     }

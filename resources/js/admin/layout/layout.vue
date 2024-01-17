@@ -112,9 +112,9 @@
                             </router-link>
                         </li>
                         <li>
-                            <button type="button" class="dropdown-item px-3 py-2" @click="pushLink">
+                            <a href="/auth/login" class="dropdown-item px-3 py-2">
                                 <i class="bi bi-box-arrow-right me-2"></i> Logout
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -175,10 +175,6 @@ export default {
 
         remove(){
             this.sidebarActive = false;
-        },
-
-        pushLink(){
-            route.push( { name: 'login' } )
         },
 
         colorController(){

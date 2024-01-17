@@ -2,10 +2,10 @@
 
     <!-- admin authentication content -->
     <div class="admin-authentication container-fluid" style="background: url('/images/dots.png')">
-        <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="d-flex justify-content-center align-items-center min-vh-100">
 
             <!-- form-content -->
-            <div class="form-content">
+            <div class="form-content my-4">
                 <div class="mb-3 h5 d-flex align-items-center justify-content-center">
 
                     <!-- logo image with name -->
@@ -15,6 +15,29 @@
                 </div>
 
                 <router-view/>
+
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <hr class="col-7 border">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <a href="/front/home" class="btn btn-theme d-flex justify-content-center align-items-center">
+                        Go to home
+                    </a>
+                </div>
+
+                <div class="row align-items-center mt-4">
+                    <div class="col-6">
+                        <small>
+                            <i class="bi bi-currency-exchange text-theme me-2"></i> English
+                        </small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <small>
+                            <i class="bi bi-geo-alt-fill text-theme me-2"></i> Bangladesh
+                        </small>
+                    </div>
+                </div>
 
             </div>
 
