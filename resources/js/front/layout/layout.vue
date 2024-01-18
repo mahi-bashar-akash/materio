@@ -206,7 +206,7 @@ export default {
             setTimeout(() => {
                 document.getElementById('front').removeChild(preloader)
             },1000)
-        },3000);
+        },1000);
 
         const savedColor = localStorage.getItem('themeColor');
         if (savedColor) {
