@@ -147,6 +147,10 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="product-description" class="form-label">Product Description</label>
+                        <textarea id="product-description" name="product-description" class="form-textarea" cols="30" rows="5" required autocomplete="new-product-description"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer border-top-0">
                     <button type="button" class="btn btn-light px-4 border me-2" @click="manageProductClose">
