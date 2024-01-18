@@ -1,5 +1,17 @@
 <template>
 
+    <!-- preloader content -->
+    <div id="preloader">
+        <div class="position-relative">
+            <div class="spinner-border text-secondary" role="status" style="width: 150px; height: 150px;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <img :src="`/images/svg/logo.svg`" class="img-fluid" style="width: 50px; height: 50px;" alt="logo">
+            </div>
+        </div>
+    </div>
+
     <!-- admin authentication content -->
     <div class="admin-authentication container-fluid" style="background: url('/images/dots.png')">
         <div class="d-flex justify-content-center align-items-center min-vh-100">
@@ -50,6 +62,13 @@ export default {
     },
 
     mounted() {
+
+        setTimeout(() =>{
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                document.getElementById('auth').removeChild(preloader)
+            },1000)
+        },3000);
 
         const savedColor = localStorage.getItem('themeColor');
         if (savedColor) {

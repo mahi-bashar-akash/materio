@@ -118,7 +118,7 @@
 
         .shop-sidebar{
             width: 300px;
-            height: 100vh;
+            height: calc(100vh - 180px);
             border: 1px solid var(--bs-border-color);
             background-color: var(--bs-white);
 
@@ -139,7 +139,7 @@
             }
 
             .shop-sidebar-header{
-                height: 64px;
+                height: 70px;
                 padding: 0 15px;
                 font-size: 22px;
                 border-bottom: 1px solid var(--bs-border-color);
@@ -164,7 +164,7 @@
 
             .shop-sidebar-body{
                 padding: 15px;
-                height: calc(100vh - 70px);
+                height: calc(100vh - 260px);
                 overflow-y: scroll;
 
                 &::-webkit-scrollbar {
@@ -183,7 +183,7 @@
 
         .shop-content{
             width: calc(100% - 300px);
-            height: 100vh;
+            height: calc(100vh - 180px);
             border: 1px solid var(--bs-border-color);
             background-color: var(--bs-white);
 
@@ -192,7 +192,7 @@
             }
 
             .shop-content-header{
-                height: 64px;
+                height: 70px;
                 padding: 0 15px;
                 border-bottom: 1px solid var(--bs-border-color);
                 display: flex;
@@ -212,9 +212,8 @@
 
             .shop-content-body{
                 padding: 15px;
-                height: calc(100vh - 145px);
+                height: calc(100vh - 327px);
                 overflow-y: scroll;
-                border-bottom: 1px solid var(--bs-border-color);
 
                 &::-webkit-scrollbar {
                     background-color: transparent;
