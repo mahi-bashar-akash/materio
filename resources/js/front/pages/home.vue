@@ -12,7 +12,7 @@
     </section>
 
     <!-- box area -->
-    <section class="w-100 container-fluid mt-4">
+    <section class="w-100 container-fluid mt-4 cursor-content-menu">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
 
             <div class="p-3">

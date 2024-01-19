@@ -65,11 +65,6 @@
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="{name: 'orderHistory'}" class="dropdown-item px-3 py-2">
-                                    Order history
-                                </router-link>
-                            </li>
-                            <li>
                                 <button type="button" class="dropdown-item px-3 py-2">
                                     Logout
                                 </button>

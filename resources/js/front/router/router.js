@@ -22,8 +22,6 @@ import profileLayout from "../pages/profile/layout/layout.vue";
 
 import dashboard from "../pages/profile/dashboard.vue";
 
-import orderHistory from "../pages/profile/order-history.vue";
-
 import settings from "../pages/profile/settings.vue";
 
 const TITLE = window.core.APP_NAME
@@ -51,8 +49,6 @@ const routes = [
                 children: [
 
                     { path: ROOT_URL + '/profile/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard ' } },
-
-                    { path: ROOT_URL + '/profile/order-history', name: 'orderHistory', component: orderHistory, meta: { title: TITLE + ' - order history ' } },
 
                     { path: ROOT_URL + '/profile/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings ' } },
 
