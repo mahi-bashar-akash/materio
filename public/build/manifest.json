@@ -3,7 +3,7 @@
     "file": "assets/tinycolor-sJBmbq85.css",
     "src": "_tinycolor-!~{005}~.js"
   },
-  "_tinycolor-C7CMdLZ-.js": {
+  "_tinycolor-fi5VoCTR.js": {
     "assets": [
       "assets/bootstrap-icons-2eO-ad8Y.woff2",
       "assets/bootstrap-icons-NpS-Zr3P.woff"
@@ -11,7 +11,7 @@
     "css": [
       "assets/tinycolor-sJBmbq85.css"
     ],
-    "file": "assets/tinycolor-C7CMdLZ-.js"
+    "file": "assets/tinycolor-fi5VoCTR.js"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
     "file": "assets/bootstrap-icons-NpS-Zr3P.woff",
@@ -25,31 +25,31 @@
     "css": [
       "assets/app-IRKSPvU3.css"
     ],
-    "file": "assets/app-tjpvMqqk.js",
+    "file": "assets/app-JsF_0ftz.js",
     "imports": [
-      "_tinycolor-C7CMdLZ-.js"
+      "_tinycolor-fi5VoCTR.js"
     ],
     "isEntry": true,
     "src": "resources/js/admin/app.js"
   },
   "resources/js/auth/app.js": {
-    "file": "assets/app-3azSVSgs.js",
+    "file": "assets/app-8RJ_FDit.js",
     "imports": [
-      "_tinycolor-C7CMdLZ-.js"
+      "_tinycolor-fi5VoCTR.js"
     ],
     "isEntry": true,
     "src": "resources/js/auth/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-mD5lpzjX.js",
+    "file": "assets/app-lIQPruT9.js",
     "imports": [
-      "_tinycolor-C7CMdLZ-.js"
+      "_tinycolor-fi5VoCTR.js"
     ],
     "isEntry": true,
     "src": "resources/js/front/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-hqhI0GMu.css",
+    "file": "assets/basic-s7ocxXWn.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }

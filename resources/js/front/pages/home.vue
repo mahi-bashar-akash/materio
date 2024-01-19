@@ -194,38 +194,35 @@
     <div class="w-100 container-fluid mt-4">
         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
             <div class="p-3">
-                <div class="w-100 coupon-box bg-white shadow" @click="pushType">
-                    <div class="d-flex justify-content-between align-items-center h-100 px-3">
+                <div class="w-100 coupon-box bg-white shadow object-fit-cover" @click="pushType" :style="{ background: 'url(' + OperationImageUrl1 + ')' }">
+                    <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
-                            <div class="fw-semibold text-secondary mb-2"> Best Selling </div>
-                            <div class="fw-bold fs-4 mb-2 text-theme"> 100% Naturals </div>
-                            <div class="text-secondary"> Up to 70% off </div>
+                            <div class="fw-semibold mb-2"> Best Selling </div>
+                            <div class="fw-bold fs-4 mb-2"> 100% Naturals </div>
+                            <div class="fw-semibold"> Up to 70% off </div>
                         </div>
-                        <img :src="`/images/product/p-01.jpg`" style="width: 100px; height: 100px;" class="img-fluid rounded-circle" alt="product-for-coupon-frame">
                     </div>
                 </div>
             </div>
             <div class="p-3">
-                <div class="w-100 coupon-box bg-white shadow" @click="pushType">
-                    <div class="d-flex justify-content-between align-items-center h-100 px-3">
+                <div class="w-100 coupon-box bg-white shadow object-fit-cover" @click="pushType" :style="{ background: 'url(' + OperationImageUrl2 + ')' }">
+                    <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
-                            <div class="fw-semibold text-secondary mb-2"> New Arrivals </div>
-                            <div class="fw-bold fs-4 mb-2 text-theme"> Vegetables </div>
-                            <div class="text-secondary"> Save $29.00 </div>
+                            <div class="fw-semibold mb-2"> New Arrivals </div>
+                            <div class="fw-bold fs-4 mb-2"> Vegetables </div>
+                            <div class="fw-semibold"> Save $29.00 </div>
                         </div>
-                        <img :src="`/images/product/p-02.jpg`" style="width: 100px; height: 100px;" class="img-fluid rounded-circle" alt="product-for-coupon-frame">
                     </div>
                 </div>
             </div>
             <div class="p-3">
-                <div class="w-100 coupon-box bg-white shadow" @click="pushType">
-                    <div class="d-flex justify-content-between align-items-center h-100 px-3">
+                <div class="w-100 coupon-box bg-white shadow object-fit-cover" @click="pushType" :style="{ background: 'url(' + OperationImageUrl3 + ')' }">
+                    <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
-                            <div class="fw-semibold text-secondary mb-2"> Trending </div>
-                            <div class="fw-bold fs-4 mb-2 text-theme"> Farm Foods </div>
-                            <div class="text-secondary"> Only $18.00 </div>
+                            <div class="fw-semibold mb-2"> Trending </div>
+                            <div class="fw-bold fs-4 mb-2"> Farm Foods </div>
+                            <div class="fw-semibold"> Only $18.00 </div>
                         </div>
-                        <img :src="`/images/product/p-03.jpg`" style="width: 100px; height: 100px;" class="img-fluid rounded-circle" alt="product-for-coupon-frame">
                     </div>
                 </div>
             </div>
@@ -500,7 +497,11 @@ export default {
                 { id: '4', imageUrl: '/images/brand/brand-4.jpg'},
                 { id: '5', imageUrl: '/images/brand/brand-5.jpg'},
                 { id: '6', imageUrl: '/images/brand/brand-6.jpg'},
-            ]
+            ],
+
+            OperationImageUrl1: '/images/slider/content-1.jpg',
+            OperationImageUrl2: '/images/slider/content-2.jpg',
+            OperationImageUrl3: '/images/slider/content-3.jpg',
 
         }
 

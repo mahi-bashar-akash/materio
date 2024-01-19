@@ -1,7 +1,7 @@
 <template>
 
     <div class="shop-wrapper">
-        <div class="shop-sidebar" :class="{'active' : shopSidebarActive}">
+        <div class="shop-sidebar h-100" :class="{'active' : shopSidebarActive}">
             <div class="shop-sidebar-header">
                 <span class="fw-semibold">
                     Filter
@@ -11,7 +11,8 @@
                 </button>
             </div>
             <div class="shop-sidebar-body">
-                <div class="p-4">
+
+                <div class="p-3 shop-sidebar-content border bg-white">
                     <div class="row">
                         <div class="col-12 mb-3">
                             <div class="form-group">
@@ -30,29 +31,89 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="mt-4">
-                        <div class="fw-semibold mb-3 d-block">Category List</div>
-                        <div class="mb-3 d-block" v-for="category in categories" :key="category.id">
-                            <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block">
-                                {{category.name}}
+                <div class="fw-semibold mb-3 d-block">Category List</div>
+                <div class="shop-sidebar-content border p-3 bg-white">
+                    <div v-for="category in categories" :key="category.id">
+                        <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                            {{category.name}}
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fw-semibold mb-3 d-block">SubCategory List</div>
+                <div class="shop-sidebar-content border p-3 bg-white">
+                    <div v-for="category in categories" :key="category.id">
+                        <div v-for="subCategory in category.subCategory" :key="subCategory.id">
+                            <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                                {{subCategory.name}}
                             </a>
                         </div>
                     </div>
-
-                    <div class="mt-4">
-                        <div class="fw-semibold mb-3 d-block">SubCategory List</div>
-                        <div v-for="category in categories" :key="category.id">
-                            <div class="mb-3 d-block" v-for="subCategory in category.subCategory" :key="subCategory.id">
-                                <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block">
-                                    {{subCategory.name}}
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
+
+                <div class="fw-semibold mb-3 d-block">Discount List</div>
+                <div class="shop-sidebar-content border p-3 bg-white">
+                    <div v-for="discount in discounts" :key="discount.id">
+                        <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                            {{discount.discountRate}}
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fw-semibold mb-3 d-block">Customer review</div>
+                <div class="shop-sidebar-content border p-3 bg-white">
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star ms-2 text-warning"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        <i class="bi bi-star-fill ms-2 text-warning"></i>
+                    </a>
+                </div>
+
+                <div class="fw-semibold mb-3 d-block">Availability</div>
+                <div class="shop-sidebar-content border p-3 bg-white">
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        In Stock
+                    </a>
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        Out of Stock
+                    </a>
+                    <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
+                        Coming Soon
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="shop-content">
@@ -62,7 +123,12 @@
                 </button>
 
                 <div class="col-8 col-md-6">
-                    <input type="text" name="" class="form-control" autocomplete="new-search" placeholder="Search here">
+                    <div class="position-relative">
+                        <input type="text" name="" class="form-control ps-5" autocomplete="new-search" placeholder="Search here">
+                        <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -204,6 +270,24 @@ export default {
                         { id: '2', name: 'Therapeutic Treatment' },
                     ],
                 }
+            ],
+
+            discounts: [
+                {id: '1', discountRate: '5% - 10%' },
+                {id: '2', discountRate: '10% - 15%' },
+                {id: '3', discountRate: '15% - 20%' },
+                {id: '4', discountRate: '20% - 25%' },
+                {id: '5', discountRate: '25% - 30%' },
+                {id: '6', discountRate: '30% - 35%' },
+                {id: '7', discountRate: '35% - 40%' },
+                {id: '8', discountRate: '40% - 45%' },
+                {id: '9', discountRate: '45% - 50%' },
+                {id: '10', discountRate: '50% - 55%' },
+                {id: '11', discountRate: '55% - 60%' },
+                {id: '12', discountRate: '60% - 65%' },
+                {id: '13', discountRate: '65% - 70%' },
+                {id: '14', discountRate: '70% - 75%' },
+                {id: '15', discountRate: '75% - above' },
             ],
 
             priceRange: 0,

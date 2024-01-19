@@ -81,7 +81,7 @@
         </div>
     </nav>
 
-    <div class="w-100 py-4" style="background: url('/images/dots.png')">
+    <div class="w-100 py-4" :style="{ background: 'url(' + imageUrl + ')' }">
         <div class="container">
             <router-view/>
         </div>
@@ -163,7 +163,7 @@
             <hr>
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
                 <div class="p-3">
-                    Copyright © 2020 <a href="javascript:void(0)" class="text-theme text-decoration-none"> Materio </a> all rights reserved.
+                    Copyright © 2025 <a href="javascript:void(0)" class="text-theme text-decoration-none"> Materio </a> all rights reserved.
                 </div>
                 <div class="p-3 d-flex justify-content-start flex-wrap">
                     <a href="javascript:void(0)" class="text-dark text-decoration-none me-3">
@@ -195,6 +195,7 @@ export default {
 
         return{
             app_name: window.core.APP_NAME,
+            imageUrl: '/images/dots.png',
         }
 
     },

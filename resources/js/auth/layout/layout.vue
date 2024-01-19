@@ -13,7 +13,7 @@
     </div>
 
     <!-- admin authentication content -->
-    <div class="admin-authentication container-fluid" style="background: url('/images/dots.png')">
+    <div class="admin-authentication container-fluid" :style="{ background: 'url(' + imageUrl + ')' }">
         <div class="d-flex justify-content-center align-items-center min-vh-100">
 
             <!-- form-content -->
@@ -57,6 +57,7 @@ export default {
             app_name: window.core.APP_NAME,
             themeColors: ["#8C57FF", "#0D9394", "#8A8D93", "#FF4C51", "#16B1FF"],
             selectedColor: null,
+            imageUrl: '/images/dots.png',
         }
 
     },
