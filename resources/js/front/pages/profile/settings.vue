@@ -1,7 +1,7 @@
 <template>
 
     <div class="col-12 col-lg-8">
-        <div class="p-3">
+        <div class="px-3">
 
             <!-- customer profile update form -->
             <form class="bg-white rounded-3 shadow p-4">

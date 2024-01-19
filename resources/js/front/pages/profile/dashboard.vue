@@ -4,7 +4,7 @@
 
         <!-- customer product performance -->
 
-        <div class="p-3">
+        <div class="px-3">
             <div class="row">
                 <div class="col-12 mb-3">
                     <div class="p-3 bg-white shadow rounded-3 text-success d-flex justify-content-between align-items-center">

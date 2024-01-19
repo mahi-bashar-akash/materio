@@ -70,6 +70,22 @@
                 <span class="badge bg-theme text-white">0</span>
             </button>
         </div>
+
+        <form class="mt-4" autocomplete="off">
+            <div class="d-flex justify-content-start align-items-start mb-3">
+                <img :src="`/images/clients/face-1.png`" style="width: 45px; height: 45px" class="overflow-hidden rounded-circle" alt="avatar">
+                <div class="ms-3">
+                    <div class="fw-semibold">John Smith</div>
+                    <div class="text-secondary">johnsmith@gmail.com</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <textarea name="" class="form-textarea" cols="30" rows="3" required autocomplete="off" placeholder="Typing Something..."></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-theme">Send</button>
+        </form>
     </div>
 
 </template>

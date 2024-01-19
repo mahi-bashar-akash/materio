@@ -3,11 +3,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 p-3 p-sm-4">
+
+                <!-- location description -->
                 <div class="fs-4 fw-semibold">
                     Find us here.
                 </div>
                 <div class="mt-4 d-flex justify-content-start align-items-center">
-                    <i class="bi bi-geo-alt py-2 px-3 border"></i>
+                    <i class="bi bi-geo-alt py-2 px-3 border bg-white rounded-3"></i>
                     <div class="ms-2">
                         <div class="fw-semibold d-block">
                             Address:
@@ -18,7 +20,7 @@
                     </div>
                 </div>
                 <div class="mt-4 d-flex justify-content-start align-items-center">
-                    <i class="bi bi-telephone py-2 px-3 border"></i>
+                    <i class="bi bi-telephone py-2 px-3 border bg-white rounded-3"></i>
                     <div class="ms-2">
                         <div class="fw-semibold d-block">
                             Phone Number:
@@ -29,7 +31,7 @@
                     </div>
                 </div>
                 <div class="mt-4 d-flex justify-content-start align-items-center">
-                    <i class="bi bi-geo-alt py-2 px-3 border"></i>
+                    <i class="bi bi-geo-alt py-2 px-3 border bg-white rounded-3"></i>
                     <div class="ms-2">
                         <div class="fw-semibold d-block">
                             Email:
@@ -39,14 +41,18 @@
                         </small>
                     </div>
                 </div>
+
+                <!-- small description -->
                 <div class="mt-4 text-secondary">
-                    <span class="fs-4"> {{app_name}} </span> is a premium Templates theme with advanced admin module. It’s extremely customizable, easy
+                    <span class="fs-4 text-dark fw-semibold"> {{app_name}} </span> is a premium Templates theme with advanced admin module. It’s extremely customizable, easy
                     to use and fully responsive and retina ready. Vel illum dolore eu feugiat nulla facilisis at vero
                     eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
                     dolore te feugait nulla facilisi.
                 </div>
             </div>
             <div class="col-lg-6 p-3 p-sm-4">
+
+                <!-- submit contact form -->
                 <form autocomplete="off" class="row">
                     <div class="mb-3 col-md-6">
                         <div class="form-group">
