@@ -12,6 +12,7 @@
         </div>
     </div>
 
+    <!-- header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container p-3">
             <router-link :to="{name: 'home'}" class="navbar-brand">
@@ -76,12 +77,14 @@
         </div>
     </nav>
 
+    <!-- router content view -->
     <div class="w-100 py-4" :style="{ background: 'url(' + imageUrl + ')' }">
         <div class="container">
             <router-view/>
         </div>
     </div>
 
+    <!-- footer -->
     <div class="w-100 footer bg-light">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3">

@@ -132,7 +132,6 @@
 
 <script>
 
-import route from "../router/router";
 import tinyColor from 'tinycolor2';
 
 export default {

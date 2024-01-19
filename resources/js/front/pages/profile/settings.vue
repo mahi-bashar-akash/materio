@@ -2,6 +2,8 @@
 
     <div class="col-12 col-lg-8">
         <div class="p-3">
+
+            <!-- customer profile update form -->
             <form class="bg-white rounded-3 shadow p-4">
                 <div class="mb-3">
                     <label for="full-name" class="form-label">Full Name</label>
@@ -44,6 +46,8 @@
         </div>
 
         <div class="p-3">
+
+            <!-- customer password update form -->
             <form class="bg-white rounded-3 shadow p-4">
                 <div class="mb-3">
                     <label for="current-password" class="form-label">Current Password</label>
@@ -61,6 +65,7 @@
                     SUBMIT
                 </button>
             </form>
+
         </div>
 
     </div>
