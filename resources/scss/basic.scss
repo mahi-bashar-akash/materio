@@ -44,6 +44,22 @@ body{
 
 }
 
+.btn-outline-theme{
+    background-color: var(--bs-white) !important;
+    color: var(--theme) !important;
+    border: 1px solid var(--theme) !important;
+    outline: none !important;
+    transition: 0.3s all ease-in-out !important;
+
+    &:hover{
+        transition: 0.3s all ease-in-out !important;
+        border: 1px solid var(--theme-dark) !important;
+        background-color: var(--theme-dark) !important;
+        color: var(--bs-white) !important;
+    }
+
+}
+
 .btn-light-theme{
     border:none !important;
     outline: none !important;

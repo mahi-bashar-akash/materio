@@ -147,10 +147,10 @@
                                     <div class="mt-2 fw-semibold text-center">{{ each.name }}</div>
                                     <div class="text-theme text-center mt-2">${{ each.price }} per Kg</div>
                                     <div class="product-active">
-                                        <button type="button" class="btn btn-theme border-0 me-1">
+                                        <button type="button" class="btn btn-theme me-1">
                                             <i class="bi bi-cart"></i>
                                         </button>
-                                        <button type="button" class="btn btn-theme border-0">
+                                        <button type="button" class="btn btn-theme" @click="productInfo">
                                             <i class="bi bi-search"></i>
                                         </button>
                                     </div>
@@ -201,6 +201,8 @@
 </template>
 
 <script>
+
+import router from "@/front/router/router.js";
 
 export default {
 
@@ -308,7 +310,11 @@ export default {
 
         shopSidebarController(){
             this.shopSidebarActive = !this.shopSidebarActive
-        }
+        },
+
+        productInfo(){
+            router.push( { name: 'productDetails' } )
+        },
 
     }
 

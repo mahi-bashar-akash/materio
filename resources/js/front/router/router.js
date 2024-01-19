@@ -14,6 +14,8 @@ import home from "../pages/home.vue";
 
 import shop from "../pages/shop.vue";
 
+import productDetails from "../pages/product-details.vue";
+
 import blog from "../pages/blog.vue";
 
 import contact from "../pages/contact.vue";
@@ -39,6 +41,8 @@ const routes = [
             { path: ROOT_URL + '/home', name: 'home', component: home, meta: { title: TITLE + ' - home' } },
 
             { path: ROOT_URL + '/shop', name: 'shop', component: shop, meta: { title: TITLE + ' - shop' } },
+
+            { path: ROOT_URL + '/product-details', name: 'productDetails', component: productDetails, meta: { title: TITLE + ' - product details' } },
 
             { path: ROOT_URL + '/blog', name: 'blog', component: blog, meta: { title: TITLE + ' - blog' } },
 

@@ -61,127 +61,19 @@
             Best Seller Products
         </div>
         <div class="product-carousel owl-carousel owl-theme">
-            <div class="item">
+            <div class="item" v-for="each in bestSellerProducts">
                 <div class="product-item bg-white">
-                    <img :src="`/images/product/image-01.jpg`" class="product-image img-fluid">
+                    <img :src="each.file_path" class="product-image img-fluid" :alt="each.name">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
+                        {{each.category}}
                     </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme border-0 me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme border-0">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-02.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
+                    <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1">
                             <i class="bi bi-cart"></i>
                         </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-03.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-04.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-05.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-06.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-07.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
+                        <button type="button" class="btn btn-theme" @click="productInfo">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
@@ -235,127 +127,19 @@
             Deals Of The Days
         </div>
         <div class="product-carousel owl-carousel owl-theme">
-            <div class="item">
+            <div class="item" v-for="each in dealOfTheDaysProduct">
                 <div class="product-item bg-white">
-                    <img :src="`/images/product/image-08.jpg`" class="product-image img-fluid">
+                    <img :src="each.file_path" class="product-image img-fluid" :alt="each.name">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
+                        {{each.category}}
                     </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
+                    <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1">
                             <i class="bi bi-cart"></i>
                         </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-09.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-10.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-11.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-12.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-13.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product-item bg-white">
-                    <img :src="`/images/product/image-14.jpg`" class="product-image img-fluid">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        category
-                    </div>
-                    <div class="mt-2 fw-semibold text-center">product name</div>
-                    <div class="text-theme text-center mt-2">$100.00</div>
-                    <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
-                            <i class="bi bi-cart"></i>
-                        </button>
-                        <button type="button" class="btn btn-theme">
+                        <button type="button" class="btn btn-theme" @click="productInfo">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
@@ -364,7 +148,7 @@
         </div>
     </section>
 
-    <!-- recent most viewer product  -->
+    <!-- latest blog post  -->
     <section class="w-100 container-fluid mt-4">
         <div class="fw-bold text-center fs-3">
             Latest Blog Posts
@@ -472,22 +256,24 @@ export default {
                 { id: '3', file_path: '/images/slider/banner-3.jpg' },
             ],
 
-            productItem: [
-                {id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', category: 'Category Name'},
-                {id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '15', category: 'Category Name'},
-                {id: '3', file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '20', category: 'Category Name'},
-                {id: '4', file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '25', category: 'Category Name'},
-                {id: '5', file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '30', category: 'Category Name'},
-                {id: '6', file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '35', category: 'Category Name'},
-                {id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '40', category: 'Category Name'},
-                {id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name'},
-                {id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name'},
-                {id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name'},
-                {id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name'},
-                {id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name'},
-                {id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name'},
-                {id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name'},
-                {id: '15', file_path: '/images/product/image-15.jpg', name: 'Product Name', price: '80', category: 'Category Name'},
+            bestSellerProducts: [
+                { id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', category: 'Category Name' },
+                { id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '15', category: 'Category Name' },
+                { id: '3', file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '20', category: 'Category Name' },
+                { id: '4', file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '25', category: 'Category Name' },
+                { id: '5', file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '30', category: 'Category Name' },
+                { id: '6', file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '35', category: 'Category Name' },
+                { id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '40', category: 'Category Name' },
+            ],
+
+            dealOfTheDaysProduct: [
+                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name' },
+                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name' },
+                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name' },
+                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name' },
+                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name' },
+                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name' },
+                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name' },
             ],
 
             brands: [
@@ -517,7 +303,11 @@ export default {
     methods: {
 
         pushType(){
-            router.push({ name: 'shop' })
+            router.push( { name: 'shop' } )
+        },
+
+        productInfo(){
+            router.push( { name: 'productDetails' } )
         },
 
         slider(){
@@ -595,7 +385,7 @@ export default {
                     }
                 }
             })
-        }
+        },
 
     }
 
