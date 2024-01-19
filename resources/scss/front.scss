@@ -71,9 +71,50 @@
     }
 
     .coupon-box{
-        height: 200px;
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
         box-shadow: 0 0 12px 0 var(--bs-border-color) !important;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+            transition: 0.5s all ease-in-out;
+            &::before{
+                left: 0;
+                bottom: 0;
+            }
+            &::after{
+                right: 0;
+                top: 0;
+            }
+        }
+
+        &::before{
+            transition: 0.5s all ease-in-out;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            bottom: -100%;
+            background-color: var(--bs-white);
+            opacity: 0.1;
+        }
+
+        &::after{
+            transition: 0.5s all ease-in-out;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            right: -100%;
+            top: -100%;
+            background-color: var(--bs-white);
+            opacity: 0.1;
+        }
+
     }
 
     .blog-carousel{
