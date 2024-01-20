@@ -49,7 +49,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+                    <tr v-for="each in productTableData">
                         <td class="checkbox">
                             <input type="checkbox" name="checkbox" class="form-check-input">
                         </td>
@@ -58,18 +58,18 @@
                         </td>
                         <td class="name">
                             <div class="d-flex align-items-center justify-content-start">
-                                <img :src="`/images/product/image-01.jpg`" class="item me-2" alt="product">
-                                Product Name
+                                <img :src="each.avatar" class="item me-2" alt="product">
+                                {{each.name}}
                             </div>
                         </td>
                         <td class="price">
-                            $100
+                            ${{each.price}}
                         </td>
                         <td class="category">
-                            Fruits
+                            {{each.category}}
                         </td>
                         <td class="quantity">
-                            1
+                            {{each.quantity}}
                         </td>
                         <td class="action">
                             <div class="d-flex justify-content-end align-items-center">
@@ -203,6 +203,25 @@ export default {
     data(){
 
         return{
+
+            productTableData: [
+                { id: '1', avatar: '/images/product/image-01.jpg', name: 'Product Name', price: '5', category: 'Category Name', quantity: '1' },
+                { id: '2', avatar: '/images/product/image-02.jpg', name: 'Product Name', price: '10', category: 'Category Name', quantity: '2' },
+                { id: '3', avatar: '/images/product/image-03.jpg', name: 'Product Name', price: '15', category: 'Category Name', quantity: '3' },
+                { id: '4', avatar: '/images/product/image-04.jpg', name: 'Product Name', price: '20', category: 'Category Name', quantity: '4' },
+                { id: '5', avatar: '/images/product/image-05.jpg', name: 'Product Name', price: '25', category: 'Category Name', quantity: '5' },
+                { id: '6', avatar: '/images/product/image-06.jpg', name: 'Product Name', price: '30', category: 'Category Name', quantity: '4' },
+                { id: '7', avatar: '/images/product/image-07.jpg', name: 'Product Name', price: '35', category: 'Category Name', quantity: '3' },
+                { id: '8', avatar: '/images/product/image-08.jpg', name: 'Product Name', price: '40', category: 'Category Name', quantity: '2' },
+                { id: '9', avatar: '/images/product/image-09.jpg', name: 'Product Name', price: '45', category: 'Category Name', quantity: '1' },
+                { id: '10', avatar: '/images/product/image-10.jpg', name: 'Product Name', price: '50', category: 'Category Name', quantity: '2' },
+                { id: '11', avatar: '/images/product/image-11.jpg', name: 'Product Name', price: '55', category: 'Category Name', quantity: '3' },
+                { id: '12', avatar: '/images/product/image-12.jpg', name: 'Product Name', price: '60', category: 'Category Name', quantity: '4' },
+                { id: '13', avatar: '/images/product/image-13.jpg', name: 'Product Name', price: '65', category: 'Category Name', quantity: '5' },
+                { id: '14', avatar: '/images/product/image-14.jpg', name: 'Product Name', price: '70', category: 'Category Name', quantity: '4' },
+                { id: '15', avatar: '/images/product/image-15.jpg', name: 'Product Name', price: '75', category: 'Category Name', quantity: '3' },
+            ],
+
             productParam: {
                 name: '',
                 price: '',
