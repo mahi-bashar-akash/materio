@@ -229,48 +229,6 @@
         </div>
     </section>
 
-    <!-- contact area -->
-    <section class="container-fluid w-100 mt-4">
-        <div class="fw-bold text-center fs-3 mb-3">
-            Contact Us
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form class="row" autocomplete="off">
-                    <div class="mb-3 col-md-6">
-                        <div class="form-group">
-                            <label for="full_name" class="form-label">Full Name</label>
-                            <input id="full_name" type="text" name="full_name" class="form-control" required autocomplete="new-email" placeholder="Enter your email" v-model="contactParam.fullName">
-                        </div>
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input id="email" type="text" name="email" class="form-control" required autocomplete="new-email" placeholder="Enter your email" v-model="contactParam.email">
-                        </div>
-                    </div>
-                    <div class="mb-3 col-md-12">
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input id="subject" type="text" name="subject" class="form-control" required autocomplete="new-subject" placeholder="Enter your subject" v-model="contactParam.subject">
-                        </div>
-                    </div>
-                    <div class="mb-3 col-md-12">
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea name="message" class="form-textarea" cols="30" rows="5" required autocomplete="new-message" placeholder="Enter your message" v-model="contactParam.message"></textarea>
-                        </div>
-                    </div>
-                    <div>
-                        <button type="button" class="btn btn-theme">
-                            SUBMIT
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- brand area -->
     <section class="container-fluid w-100 border mt-3 bg-white">
         <div class="brand-carousel owl-carousel owl-theme">
@@ -330,13 +288,6 @@ export default {
             OperationImageUrl1: '/images/slider/content-1.jpg',
             OperationImageUrl2: '/images/slider/content-2.jpg',
             OperationImageUrl3: '/images/slider/content-3.jpg',
-
-            contactParam: {
-                fullName: '',
-                email: '',
-                subject: '',
-                message: '',
-            },
 
         }
 
