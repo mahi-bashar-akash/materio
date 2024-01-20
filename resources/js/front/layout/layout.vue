@@ -1,16 +1,6 @@
 <template>
 
-    <!-- preloader content -->
-    <div id="preloader">
-        <div class="position-relative">
-            <div class="spinner-border text-secondary" role="status" style="width: 150px; height: 150px;">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="position-absolute top-50 start-50 translate-middle">
-                <img :src="`/images/svg/logo.svg`" class="img-fluid" style="width: 50px; height: 50px;" alt="logo">
-            </div>
-        </div>
-    </div>
+    <global/>
 
     <!-- header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
@@ -180,9 +170,13 @@
 
 <script>
 
-import tinyColor from "tinycolor2";
+import global from "../../global/global.vue";
 
 export default {
+
+    components: {
+        global
+    },
 
     data(){
 
@@ -193,46 +187,9 @@ export default {
 
     },
 
-    mounted() {
+    mounted() {  },
 
-        setTimeout(() =>{
-            const preloader = document.getElementById('preloader');
-            setTimeout(() => {
-                document.getElementById('front').removeChild(preloader)
-            },1000)
-        },1000);
-
-        const savedColor = localStorage.getItem('themeColor');
-        if (savedColor) {
-            this.selectedColor = savedColor;
-            this.updateThemeColor(savedColor);
-        }
-
-    },
-
-    methods: {
-
-        updateThemeColor(color) {
-            localStorage.setItem('themeColor', color);
-            document.documentElement.style.setProperty('--theme', color);
-            const darkenedColor = this.darken(color, 10);
-            document.documentElement.style.setProperty('--theme-dark', darkenedColor);
-            const lightenColor = this.lighten(color, 30);
-            document.documentElement.style.setProperty('--theme-light', lightenColor);
-            this.colorWrapperActive = false;
-        },
-
-        darken(color, amount) {
-            const darkColor = tinyColor(color).darken(amount).toString();
-            return darkColor;
-        },
-
-        lighten(color, amount) {
-            const lightColor = tinyColor(color).lighten(amount).toString();
-            return lightColor;
-        },
-
-    }
+    methods: {  }
 
 }
 

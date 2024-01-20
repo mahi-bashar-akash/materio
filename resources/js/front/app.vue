@@ -4,12 +4,12 @@
 <script>
 import { defineComponent } from 'vue'
 export default defineComponent({
-    name: 'front',
+    name: 'app',
     watch: {
         $route: {
             immediate: true,
             handler(to, from) {
-                document.title = to.meta.title || 'front';
+                document.title = to.meta.title || 'app';
             }
         },
     }

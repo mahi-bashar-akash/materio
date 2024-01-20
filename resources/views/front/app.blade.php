@@ -17,7 +17,7 @@
     @vite('resources/scss/basic.scss')
     @vite('resources/js/front/app.js')
 </head>
-<body class="front-portal" id="front"></body>
+<body class="front-portal" id="app"></body>
 <script>
     window.core = {
         APP_NAME: 'Materio ',

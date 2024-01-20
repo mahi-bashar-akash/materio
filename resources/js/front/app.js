@@ -14,4 +14,4 @@ import { createApp } from "vue";
 
 import router from "./router/router";
 
-createApp( app ).use( router,  axios ).mount('#front')
+createApp( app ).use( router,  axios ).mount('#app')
