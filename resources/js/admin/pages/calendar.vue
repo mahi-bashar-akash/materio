@@ -50,61 +50,29 @@
 
             <!-- calendar content body -->
             <div class="calendar-content-body">
-                <div class="calendar-data" v-for="each in [1,2,3,4,5,6,7,8,9,10]">
+                <div class="calendar-data" v-for="each in calendarTableData">
 
                     <!-- calendar single data show date with day -->
                     <div class="row bg-secondary-subtle border-bottom cursor-content-menu">
                         <div class="col-md-6 py-2 px-3">
-                            December 18, 2023
+                            {{each.date}}
                         </div>
                         <div class="col-md-6 py-2 px-3 text-end">
-                            Monday
+                            {{each.day}}
                         </div>
                     </div>
 
                     <!-- calendar sub single data show event -->
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                        <span class="col-md-6 py-2 px-3">
-                            <span class="bi bi-circle-fill text-secondary me-2"></span>
-                            Dart Game
-                        </span>
+                    <div v-for="insideEach in each.dayActivity">
+                        <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each.id)">
+                            <span class="col-md-6 py-2 px-3">
+                                {{insideEach.activity}}
+                            </span>
                             <span class="col-md-6 py-2 px-3 text-end">
-                            06:00 pm
-                        </span>
-                    </small>
-
-                    <!-- calendar sub single data show event -->
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                        <span class="col-md-6 py-2 px-3">
-                            <span class="bi bi-circle-fill text-warning me-2"></span>
-                            Dinner
-                        </span>
-                            <span class="col-md-6 py-2 px-3 text-end">
-                            12:00 pm
-                        </span>
-                    </small>
-
-                    <!-- calendar sub single data show event -->
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                        <span class="col-md-6 py-2 px-3">
-                            <span class="bi bi-circle-fill text-danger me-2"></span>
-                            Meditation
-                        </span>
-                            <span class="col-md-6 py-2 px-3 text-end">
-                            06:00 am
-                        </span>
-                    </small>
-
-                    <!-- calendar sub single data show event -->
-                    <small class="row bg-white text-secondary border-bottom cursor-pointer" @click="manageEventOpen(each)">
-                        <span class="col-md-6 py-2 px-3">
-                            <span class="bi bi-circle-fill text-theme me-2"></span>
-                            Product reviews
-                        </span>
-                            <span class="col-md-6 py-2 px-3 text-end">
-                            03:00 pm
-                        </span>
-                    </small>
+                                {{insideEach.time}}
+                            </span>
+                        </small>
+                    </div>
 
                 </div>
             </div>
@@ -187,6 +155,24 @@ export default {
 
         return {
             calendarSidebarActive: false,
+            calendarTableData: [
+                { id: '1', date: 'December 18, 2023', day: 'Monday',
+                    dayActivity: [
+                        { id: '1', activity: 'Dart Game', time: '06:00 pm' },
+                        { id: '2', activity: 'Dinner', time: '12:00 pm' },
+                        { id: '3', activity: 'Meditation', time: '06:00 am' },
+                        { id: '4', activity: 'Product reviews', time: '03:00 pm' }
+                    ]
+                },
+                { id: '2', date: 'December 21, 2023', day: 'Thursday',
+                    dayActivity: [
+                        { id: '1', activity: 'Board Meeting', time: '10:00 am' },
+                        { id: '2', activity: 'Break time', time: '12:00 pm' },
+                        { id: '3', activity: 'Meditation', time: '03:00 pm' },
+                        { id: '4', activity: 'conversation competition', time: '06:00 pm' }
+                    ]
+                },
+            ],
         }
 
     },
