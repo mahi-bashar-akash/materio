@@ -59,12 +59,12 @@
                     <div class="mb-3">
                         <div class="form-group">
                             <label for="category-name" class="form-label">Category Name</label>
-                            <input id="category-name" type="text" name="category-name" class="form-control">
+                            <input id="category-name" type="text" name="category-name" class="form-control" required autocomplete="new-category" v-model="categoryParam.name" placeholder="Enter your name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="parent-id" class="form-label">Parent Id</label>
-                        <select name="parent-id" id="parent-id" class="form-select">
+                        <select name="parent-id" id="parent-id" class="form-select" required autocomplete="new-parent-id" v-model="categoryParam.parentId">
                             <option value="0">Zero</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -84,12 +84,12 @@
         </div>
     </div>
 
-    <!-- slider delete modal -->
+    <!-- category delete modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-bottom-0">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Slider</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Category</h1>
                     <button type="button" class="btn-close" @click="deleteCategoryClose"></button>
                 </div>
                 <div class="modal-body">
@@ -165,7 +165,10 @@ export default {
                 }
             ],
             categoryExpanded: null,
-
+            categoryParam: {
+                name: '',
+                parentId: '0'
+            }
         }
 
     },

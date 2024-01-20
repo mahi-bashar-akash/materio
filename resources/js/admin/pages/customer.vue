@@ -15,7 +15,7 @@
     </div>
 
     <!-- customer list -->
-    <div class="customer-card-body bg-white border rounded-2 p-3">
+    <div class="customer-card-body bg-white border rounded-2 p-3 cursor-content-menu">
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -35,40 +35,38 @@
                         <th class="default-width">
                             Phone Number
                         </th>
-                        <th class="default-width text-end">
-                            Action
+                        <th class="default-width">
+                            status
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+                    <tr v-for="each in customerTable">
                         <td class="checkbox">
                             <input type="checkbox" name="checkbox" class="form-check-input">
                         </td>
                         <td class="id">
-                            {{each}}
+                            {{each.id}}
                         </td>
                         <td class="name">
                             <div class="d-flex align-items-center justify-content-start">
-                                <img :src="`/images/clients/face-1.png`" class="img-fluid me-2 face" alt="avatar">
-                                Customer Name {{each}}
+                                <img :src="each.avatar" class="img-fluid me-2 face" alt="avatar">
+                                {{each.name}}
                             </div>
                         </td>
                         <td class="default-width">
-                            Customer Email {{each}}
+                            {{each.email}}
                         </td>
                         <td class="default-width">
-                            Phone number {{each}}
+                            {{each.phoneNumber}}
                         </td>
                         <td class="default-width">
-                            <div class="d-flex justify-content-end align-items-center">
-                                <button class="btn-icon">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </button>
-                                <button class="btn-icon">
-                                    <i class="bi bi-trash2"></i>
-                                </button>
-                            </div>
+                            <span class="badge bg-success px-3 py-2 rounded-pill" v-if="each.status === '1'">
+                                Online
+                            </span>
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill" v-if="each.status === '2'">
+                                Offline
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -84,7 +82,20 @@ export default {
 
     data(){
 
-        return{}
+        return{
+
+            customerTable: [
+                { id: '1', avatar: '/images/clients/face-1.png', name: 'Andrew Burns', email: 'andrew@gmail.com', phoneNumber: '01230 456789', status: '1' },
+                { id: '2', avatar: '/images/clients/face-2.png', name: 'Dana Carey', email: 'dana@gmail.com', phoneNumber: '01011 121314', status: '1' },
+                { id: '3', avatar: '/images/clients/face-3.png', name: 'Tammy Sanchez', email: 'tammy@gmail.com', phoneNumber: '01516 171819', status: '2' },
+                { id: '4', avatar: '/images/clients/face-4.png', name: 'Lori Wells', email: 'lori@gmail.com', phoneNumber: '02021 222324', status: '1' },
+                { id: '5', avatar: '/images/clients/face-5.png', name: 'Richard Payne', email: 'richard@gmail.com', phoneNumber: '02526 272829', status: '2' },
+                { id: '6', avatar: '/images/clients/face-6.png', name: 'Jennifer Summers', email: 'jennifer@gmail.com', phoneNumber: '03031 323300', status: '2' },
+                { id: '7', avatar: '/images/clients/face-4.png', name: 'Justin Richardson', email: 'justin@gmail.com', phoneNumber: '03435 363700', status: '1' },
+                { id: '8', avatar: '/images/clients/face-2.png', name: 'Hossain Doe', email: 'hossain@gmail.com', phoneNumber: '03839 404142', status: '2' },
+            ],
+
+        }
 
     },
 

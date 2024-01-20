@@ -73,10 +73,10 @@
                         </td>
                         <td class="action">
                             <div class="d-flex justify-content-end align-items-center">
-                                <a href="javascript:void(0)" class="btn-icon">
+                                <a href="javascript:void(0)" class="btn-icon" @click="manageProductOpen(each)">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
-                                <a href="javascript:void(0)" class="btn-icon">
+                                <a href="javascript:void(0)" class="btn-icon" @click="deleteProductOpen(each)">
                                     <i class="bi bi-trash2"></i>
                                 </a>
                             </div>
@@ -99,41 +99,43 @@
                     <div class="mb-3">
                         <div class="form-group">
                             <label for="product-name" class="form-label">Product Name</label>
-                            <input id="product-name" type="text" name="product-name" class="form-control" required autocomplete="new-product-name">
+                            <input id="product-name" type="text" name="product-name" class="form-control" required autocomplete="new-product-name" v-model="productParam.name" placeholder="Enter your product name">
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label for="product-price" class="form-label">Product Price</label>
-                            <input id="product-price" type="text" name="product-price" class="form-control" required autocomplete="new-product-price">
+                            <input id="product-price" type="text" name="product-price" class="form-control" required autocomplete="new-product-price" v-model="productParam.price" placeholder="Enter your product price">
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
-                            <label for="product-quantity" class="form-label">Product Category</label>
-                            <select name="" id="" class="form-select" required autocomplete="new-product-category">
-                                <option value="">food</option>
-                                <option value="">fruits</option>
-                                <option value="">vegetables</option>
-                                <option value="">meats</option>
-                                <option value="">dress</option>
-                                <option value="">male collection</option>
-                                <option value="">female collection</option>
-                                <option value="">accessories collection</option>
-                                <option value="">shelter</option>
-                                <option value="">temporary shelter</option>
-                                <option value="">parmanent shelter</option>
-                                <option value="">Education</option>
-                                <option value="">Primary Education</option>
-                                <option value="">Secondary Education</option>
-                                <option value="">Higher Education</option>
+                            <label for="product-category" class="form-label">Product Category</label>
+                            <select name="product-category" id="product-category" class="form-select" required autocomplete="new-product-category" v-model="productParam.category">
+                                <option value="select-category">Select category option</option>
+                                <option value="food">food</option>
+                                <option value="fruits">fruits</option>
+                                <option value="vegetables">vegetables</option>
+                                <option value="meats">meats</option>
+                                <option value="dress">dress</option>
+                                <option value="male-collection">male collection</option>
+                                <option value="female-collection">female collection</option>
+                                <option value="accessories-collection">accessories collection</option>
+                                <option value="shelter">shelter</option>
+                                <option value="temporary-shelter">temporary shelter</option>
+                                <option value="permanent-shelter">permanent shelter</option>
+                                <option value="education">Education</option>
+                                <option value="primary-education">Primary Education</option>
+                                <option value="secondary-education">Secondary Education</option>
+                                <option value="higher-education">Higher Education</option>
                             </select>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label for="product-quantity" class="form-label">Product Quantity</label>
-                            <select name="product-quantity" id="product-quantity" class="form-select" required autocomplete="new-product-quantity">
+                            <select name="product-quantity" id="product-quantity" class="form-select" required autocomplete="new-product-quantity" v-model="productParam.quantity">
+                                <option value="select-quantity">Select quantity option</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -149,7 +151,7 @@
                     </div>
                     <div class="form-group">
                         <label for="product-description" class="form-label">Product Description</label>
-                        <textarea id="product-description" name="product-description" class="form-textarea" cols="30" rows="5" required autocomplete="new-product-description"></textarea>
+                        <textarea id="product-description" name="product-description" class="form-textarea" cols="30" rows="5" required autocomplete="new-product-description" placeholder="Enter your description" v-model="productParam.description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0">
@@ -169,7 +171,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-bottom-0">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Slider</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Product</h1>
                     <button type="button" class="btn-close" @click="deleteProductClose"></button>
                 </div>
                 <div class="modal-body">
@@ -200,7 +202,15 @@ export default {
 
     data(){
 
-        return{}
+        return{
+            productParam: {
+                name: '',
+                price: '',
+                category: 'select-category',
+                quantity: 'select-quantity',
+                description: '',
+            }
+        }
 
     },
 

@@ -24,8 +24,12 @@
                     </div>
                     <div class="position-absolute bottom-0 end-0 translate-middle-y pe-2">
                         <div class="d-flex justify-content-center align-items-center">
-                            <a href="javascript:void(0)" class="btn btn-light d-flex justify-content-center align-items-center" @click="manageSliderOpen">Edit</a>
-                            <a href="javascript:void(0)" class="btn btn-light d-flex justify-content-center align-items-center ms-3" @click="deleteSliderOpen">Delete</a>
+                            <a href="javascript:void(0)" class="btn btn-light d-flex justify-content-center align-items-center" @click="manageSliderOpen(each.id)">
+                                Edit
+                            </a>
+                            <a href="javascript:void(0)" class="btn btn-light d-flex justify-content-center align-items-center ms-3" @click="deleteSliderOpen(each.id)">
+                                Delete
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +49,7 @@
                     <div class="mb-3">
                         <div class="form-group">
                             <label for="slider" class="form-label w-100 bg-light-theme text-center rounded-3 cursor-pointer">
-                                <input id="slider" type="file" name="slider" class="d-none" required autocomplete="new-slider">
+                                <input id="slider" type="file" name="slider" class="d-none" required autocomplete="new-slider" @click="manageAvatar($event)">
                                 <span class="d-block py-4">
                                     <i class="bi bi-clouds-fill text-theme" style="font-size: 30px"></i>
                                     <span class="text-center d-block text-dark fw-semibold fs-6">
@@ -57,7 +61,7 @@
                     </div>
                     <div class="form-group">
                         <label for="discount" class="form-label">Discount Offer</label>
-                        <input type="text" name="discount" class="form-control" required autocomplete="new-discount">
+                        <input type="text" name="discount" class="form-control" required autocomplete="new-discount" placeholder="Enter your discount" v-model="sliderParam.discount">
                     </div>
                 </div>
                 <div class="modal-footer border-top-0">
@@ -78,7 +82,7 @@
             <div class="modal-content">
                 <div class="modal-header border-bottom-0">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Create Slider</h1>
-                    <button type="button" class="btn-close" @click="manageSliderClose"></button>
+                    <button type="button" class="btn-close" @click="deleteSliderClose"></button>
                 </div>
                 <div class="modal-body">
                     <div class="d-block text-center">
@@ -113,7 +117,11 @@ export default {
                 { id: '1', file_path: '/images/slider/banner-1.jpg', topTitle: 'Super', midTitle: 'Grocery', discount: '10%' },
                 { id: '2', file_path: '/images/slider/banner-2.jpg', topTitle: 'Super', midTitle: 'Grocery', discount: '15%' },
                 { id: '3', file_path: '/images/slider/banner-3.jpg', topTitle: 'Super', midTitle: 'Grocery', discount: '20%' },
-            ]
+            ],
+            sliderParam: {
+                avatar: null,
+                discount: '',
+            }
         }
 
     },
@@ -146,6 +154,10 @@ export default {
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
+        },
+
+        manageAvatar(e){
+            this.sliderParam.avatar = e.target.src
         },
 
     }

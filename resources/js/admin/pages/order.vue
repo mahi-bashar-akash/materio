@@ -16,7 +16,7 @@
     </div>
 
     <!-- order list -->
-    <div class="customer-card-body bg-white border rounded-2 p-3">
+    <div class="customer-card-body bg-white border rounded-2 p-3 cursor-content-menu">
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -45,30 +45,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+                    <tr v-for="each in customerOrderTable">
                         <td class="checkbox">
                             <input type="checkbox" name="checkbox" class="form-check-input">
                         </td>
                         <td class="id">
-                            {{ each }}
+                            {{ each.id }}
                         </td>
                         <td class="name">
                             <div class="d-flex align-items-center justify-content-start">
-                                <img :src="`/images/clients/face-1.png`" class="img-fluid me-2 face" alt="avatar">
-                                Customer Name {{ each }}
+                                <img :src="each.avatar" class="img-fluid me-2 face" alt="avatar">
+                                {{ each.name }}
                             </div>
                         </td>
                         <td class="default-width">
-                            Order Name
+                            {{each.orderItem}}
                         </td>
                         <td class="default-width">
-                            $100 * 3
+                            ${{each.price}} * {{each.quantity}}
                         </td>
                         <td class="default-width">
-                            $300
+                            ${{each.price * each.quantity}}
                         </td>
                         <td class="default-width">
-                            <select name="" id="" class="form-select">
+                            <select name="orderStatus" class="form-select" v-model="each.orderStatus">
                                 <option value="1">Pending</option>
                                 <option value="2">Processing</option>
                                 <option value="3">Shipped</option>
@@ -92,7 +92,18 @@ export default {
 
     data() {
 
-        return {}
+        return {
+            customerOrderTable: [
+                { id: '1', avatar: '/images/clients/face-1.png', name: 'Andrew Burns', orderItem: 'product name', price: '5', quantity: '1', orderStatus: '1' },
+                { id: '2', avatar: '/images/clients/face-2.png', name: 'Dana Carey', orderItem: 'product name', price: '10', quantity: '2', orderStatus: '1' },
+                { id: '3', avatar: '/images/clients/face-3.png', name: 'Tammy Sanchez', orderItem: 'product name', price: '15', quantity: '3', orderStatus: '1' },
+                { id: '4', avatar: '/images/clients/face-4.png', name: 'Lori Wells', orderItem: 'product name', price: '20', quantity: '4', orderStatus: '1' },
+                { id: '5', avatar: '/images/clients/face-5.png', name: 'Richard Payne', orderItem: 'product name', price: '25', quantity: '5', orderStatus: '1' },
+                { id: '6', avatar: '/images/clients/face-6.png', name: 'Jennifer Summers', orderItem: 'product name', price: '30', quantity: '4', orderStatus: '1' },
+                { id: '7', avatar: '/images/clients/face-4.png', name: 'Justin Richardson', orderItem: 'product name', price: '35', quantity: '3', orderStatus: '1' },
+                { id: '8', avatar: '/images/clients/face-2.png', name: 'Hossain Doe', orderItem: 'product name', price: '40', quantity: '2', orderStatus: '1' },
+            ],
+        }
 
     },
 
