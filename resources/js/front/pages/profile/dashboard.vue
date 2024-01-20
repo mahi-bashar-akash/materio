@@ -3,46 +3,41 @@
     <div class="col-12 col-lg-8">
 
         <!-- customer product performance -->
-
         <div class="px-3">
             <div class="row">
                 <div class="col-12 mb-3">
                     <div class="p-3 bg-white shadow rounded-3 text-success d-flex justify-content-between align-items-center">
-
                         <div class="d-flex justify-content-start align-items-center">
                             <i class="bi bi-check-all me-2 py-1 px-2 border rounded-3"></i>
                             Complete
                         </div>
-
-                        <span class="badge bg-success">1,00,000</span>
-
+                        <span class="badge bg-success">
+                            {{profileCountActivity.complete}}
+                        </span>
                     </div>
                 </div>
                 <div class="col-12 mb-3">
                     <div class="p-3 bg-white shadow rounded-3 text-warning d-flex justify-content-between align-items-center">
-
                         <div class="d-flex justify-content-start align-items-center">
                             <i class="bi bi-hourglass-split me-2 py-1 px-2 border rounded-3"></i>
                             Pending
                         </div>
-
-                        <span class="badge bg-warning">1,00,000</span>
-
+                        <span class="badge bg-warning text-dark">
+                            {{profileCountActivity.pending}}
+                        </span>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="p-3 bg-white shadow rounded-3 text-danger d-flex justify-content-between align-items-center">
-
                         <div class="d-flex justify-content-start align-items-center">
                             <i class="bi bi-trash2 me-2 py-1 px-2 border rounded-3"></i>
                             Cancellation
                         </div>
-
-                        <span class="badge bg-danger">1,00,000</span>
-
+                        <span class="badge bg-danger">
+                            {{profileCountActivity.cancellation}}
+                        </span>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -109,27 +104,27 @@
                                 </td>
                                 <td class="status">
                                     <div class="text-truncate">
-                                            <span class="py-2 px-4 badge bg-warning" v-if="each.status === '1'">
-                                                Pending
-                                            </span>
-                                        <span class="py-2 px-4 badge bg-info" v-if="each.status === '2'">
-                                                Processing
-                                            </span>
+                                        <span class="py-2 px-4 badge bg-warning text-dark" v-if="each.status === '1'">
+                                            Pending
+                                        </span>
+                                        <span class="py-2 px-4 badge bg-info text-dark" v-if="each.status === '2'">
+                                            Processing
+                                        </span>
                                         <span class="py-2 px-4 border border-success badge bg-success-subtle text-success" v-if="each.status === '3'">
-                                                Shipped
-                                            </span>
+                                            Shipped
+                                        </span>
                                         <span class="py-2 px-4 badge bg-success" v-if="each.status === '4'">
-                                                Delivered
-                                            </span>
-                                        <span class="py-2 px-4 badge bg-warning" v-if="each.status === '5'">
-                                                Undelivered
-                                            </span>
+                                            Delivered
+                                        </span>
+                                        <span class="py-2 px-4 badge bg-warning text-dark" v-if="each.status === '5'">
+                                            Undelivered
+                                        </span>
                                         <span class="py-2 px-4 border border-danger badge bg-danger-subtle text-danger" v-if="each.status === '6'">
-                                                Returned
-                                            </span>
+                                            Returned
+                                        </span>
                                         <span class="py-2 px-4 badge bg-danger" v-if="each.status === '7'">
-                                                Cancelled
-                                            </span>
+                                            Cancelled
+                                        </span>
                                     </div>
                                 </td>
                             </tr>
@@ -169,9 +164,7 @@
                 </nav>
 
             </div>
-
         </div>
-
     </div>
 
 </template>
@@ -183,6 +176,13 @@ export default {
     data(){
 
         return{
+
+            profileCountActivity: {
+                complete: '100',
+                pending: '25',
+                cancellation: '40',
+            },
+
             submittedCartItem: [
                 {id: 1, file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', quantity: '1', status: '1' },
                 {id: 2, file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '20', quantity: '2', status: '2' },

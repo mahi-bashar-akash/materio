@@ -8,7 +8,6 @@
             <div class="col-12 col-lg-4 rounded-3 bg-white shadow p-4 h-100">
 
                 <!-- customer avatar -->
-
                 <div class="d-flex justify-content-center">
                     <label for="avatar" class="form-label customer-avatar cursor-pointer" v-if="!url">
                         <input id="avatar" type="file" name="avatar" class="d-none" @change="onFileChange" accept="image/png, image/gif, image/jpeg">
@@ -23,7 +22,6 @@
                 </div>
 
                 <!-- customer profile details -->
-
                 <div class="py-4">
                     <div class="mb-3 fw-semibold">
                         Full Name:
@@ -41,7 +39,7 @@
                         Phone Number:
                     </div>
                     <div class="mb-3 text-secondary">
-                        +880 01645820007
+                        +880 01400125289
                     </div>
                     <div class="mb-3 fw-semibold">
                         Selected Gender

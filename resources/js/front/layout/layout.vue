@@ -33,11 +33,6 @@
                             Blog
                         </router-link>
                     </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'contact'}" class="nav-link">
-                            Contact
-                        </router-link>
-                    </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">

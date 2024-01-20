@@ -18,8 +18,6 @@ import productDetails from "../pages/product-details.vue";
 
 import blog from "../pages/blog.vue";
 
-import contact from "../pages/contact.vue";
-
 import profileLayout from "../pages/profile/layout/layout.vue";
 
 import dashboard from "../pages/profile/dashboard.vue";
@@ -45,8 +43,6 @@ const routes = [
             { path: ROOT_URL + '/product-details', name: 'productDetails', component: productDetails, meta: { title: TITLE + ' - product details' } },
 
             { path: ROOT_URL + '/blog', name: 'blog', component: blog, meta: { title: TITLE + ' - blog' } },
-
-            { path: ROOT_URL + '/contact', name: 'contact', component: contact, meta: { title: TITLE + ' - contact' } },
 
             { path: ROOT_URL, name: 'profileLayout', component: profileLayout,
 

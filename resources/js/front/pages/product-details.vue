@@ -55,23 +55,63 @@
         </div>
     </form>
 
+    <!-- recommended product area -->
+    <section class="w-100 container-fluid mt-4">
+        <div class="fw-bold text-center fs-3">
+            Recommended for sale
+        </div>
+        <div class="product-carousel owl-carousel owl-theme">
+            <div class="item" v-for="each in dealOfTheDaysProduct">
+                <div class="product-item bg-white">
+                    <img :src="each.file_path" class="product-image img-fluid" :alt="each.name">
+                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
+                        {{each.category}}
+                    </div>
+                    <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="text-theme text-center mt-2">${{each.price}}</div>
+                    <div class="product-active">
+                        <button type="button" class="btn btn-theme me-1">
+                            <i class="bi bi-cart"></i>
+                        </button>
+                        <button type="button" class="btn btn-theme" @click="productInfo">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <script>
+
+import router from "../router/router.js";
 
 export default {
 
     data(){
 
         return{
-            insertedImage: '/images/product/image-01.jpg'
+            insertedImage: '/images/product/image-01.jpg',
+
+            dealOfTheDaysProduct: [
+                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name' },
+                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name' },
+                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name' },
+                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name' },
+                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name' },
+                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name' },
+                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name' },
+            ],
+
         }
 
     },
 
     mounted() {
 
-
+        this.product();
 
     },
 
@@ -79,7 +119,30 @@ export default {
 
         insertImage(e){
             this.insertedImage = e.target.src;
-        }
+        },
+
+        product(){
+            $('.product-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:4
+                    }
+                }
+            })
+        },
+
+        productInfo(){
+            router.push( { name: 'productDetails' } )
+        },
 
     }
 
