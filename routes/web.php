@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SellerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,8 @@ Route::get('/auth/{any}', [AuthController::class, 'auth'])->where('any', '.*')->
 
 Route::get('/', function () { return redirect()->route('lvs.auth.any', 'login'); } );
 
+Route::get('/auth', function () { return redirect()->route('lvs.auth.any', 'login'); } );
+
 /*
 |
 |--------------------------------------------------------------------------
@@ -38,13 +41,25 @@ Route::get('/', function () { return redirect()->route('lvs.auth.any', 'login');
 |
 */
 
-Route::get('/admin/any/{any}', [AdminController::class, 'admin'])->where('any', '.*')->name('lvs.admin.auth');
-
 Route::get('/admin', [AdminController::class, 'admin'])->where('any', '.*')->name('lvs.admin');
 
 Route::get('/admin/{any}', [AdminController::class, 'admin'])->where('any', '.*')->name('lvs.admin.any');
 
 Route::get('/admin', function () { return redirect()->route('lvs.admin.any', 'dashboard'); } );
+
+/*
+|
+|--------------------------------------------------------------------------
+| Seller Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/seller', [SellerController::class, 'seller'])->where('any', '.*')->name('lvs.seller');
+
+Route::get('/seller/{any}', [SellerController::class, 'seller'])->where('any', '.*')->name('lvs.seller.any');
+
+Route::get('/seller', function () { return redirect()->route('lvs.seller.any', 'dashboard'); } );
 
 /*
 |
