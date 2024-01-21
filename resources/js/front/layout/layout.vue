@@ -25,15 +25,10 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                             Cart
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end p-0 m-0 overflow-hidden border-0 shadow cursor-content-menu" style="width: 340px;">
-                            <li class="py-5 text-center">
-                                <i class="bi bi-bag d-block fs-2 mb-3"></i> No product in the cart
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="/auth/login" class="nav-link">
@@ -66,6 +61,28 @@
             </div>
         </div>
     </nav>
+
+    <!-- right sidebar as offcanvasexample -->
+    <div class="offcanvas offcanvas-end p-3 cursor-content-menu" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Cart</h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <!-- no data text -->
+            <div class="d-flex justify-content-center align-items-center flex-column h-100">
+                <i class="bi bi-bag fs-1 mb-3 d-block"></i>
+                <small class="mb-3 fw-semibold">
+                    No product add in your cart
+                </small>
+                <router-link :to="{name: 'shop'}" class="btn btn-outline-theme d-flex justify-content-center align-items-center">
+                    Continue Shopping
+                </router-link>
+            </div>
+
+        </div>
+    </div>
 
     <!-- router content view -->
     <div class="w-100 py-4" :style="{ background: 'url(' + imageUrl + ')' }">
