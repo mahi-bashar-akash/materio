@@ -1,7 +1,7 @@
 <template>
 
     <!-- user wrapper -->
-    <div class="user-wrapper">
+    <div class="user-content-wrapper">
 
         <!-- user header -->
         <div class="user-header rounded-3">
