@@ -3,7 +3,7 @@
     <global/>
 
     <!-- admin authentication content -->
-    <div class="admin-authentication container-fluid" :style="{ background: 'url(' + imageUrl + ')' }">
+    <div class="user-authentication container-fluid" :style="{ background: 'url(' + imageUrl + ')' }">
         <div class="d-flex justify-content-center align-items-center min-vh-100">
 
             <!-- form-content -->

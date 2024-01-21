@@ -1,11 +1,11 @@
-// admin for management
+// user for management
 
-.admin-wrapper {
+.user-wrapper {
     display: flex;
 
-    // admin sidebar
+    // user sidebar
 
-    .admin-sidebar {
+    .user-sidebar {
         width: 250px;
         height: 100vh;
 
@@ -35,13 +35,13 @@
 
         }
 
-        .admin-sidebar-header {
+        .user-sidebar-header {
             height: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            .admin-sidebar-title {
+            .user-sidebar-title {
                 font-size: 20px;
                 text-decoration: none;
                 color: var(--bs-black);
@@ -69,7 +69,7 @@
 
         }
 
-        .admin-sidebar-body {
+        .user-sidebar-body {
             height: calc(100vh - 70px);
             padding: 0 10px 20px 0;
             overflow-y: scroll;
@@ -84,7 +84,7 @@
                 height: 5px !important;
             }
 
-            .admin-sidebar-link {
+            .user-sidebar-link {
                 text-decoration: none;
                 color: var(--bs-black);
                 padding: 10px 15px;
@@ -107,9 +107,9 @@
 
     }
 
-    // admin content
+    // user content
 
-    .admin-content {
+    .user-content {
         width: calc(100% - 250px);
         height: 100vh;
 
@@ -117,9 +117,9 @@
             width: 100%;
         }
 
-        // admin content header
+        // user content header
 
-        .admin-content-header {
+        .user-content-header {
             height: 70px;
             display: flex;
             justify-content: space-between;
@@ -151,7 +151,7 @@
                 outline: none;
                 height: 50px;
 
-                .admin-avatar {
+                .user-avatar {
                     width: 45px;
                     height: 45px;
                 }
@@ -160,9 +160,9 @@
 
         }
 
-        // admin content body
+        // user content body
 
-        .admin-content-body {
+        .user-content-body {
             height: calc(100vh - 70px);
             padding: 15px 20px;
             overflow-y: scroll;
@@ -1163,7 +1163,7 @@
 
             }
 
-            .product-card-body, .customer-card-body{
+            .product-card-body, .customer-card-body, .package-card-body{
                 height: calc(100vh - 250px);
                 overflow-y: scroll;
 

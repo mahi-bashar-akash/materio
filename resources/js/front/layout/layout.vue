@@ -35,6 +35,11 @@
                             Login
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/auth/login" class="nav-link">
+                            Become a seller
+                        </a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Mahi Bashar Akash

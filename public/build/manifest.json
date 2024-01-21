@@ -3,7 +3,7 @@
     "file": "assets/global-sJBmbq85.css",
     "src": "_global-!~{006}~.js"
   },
-  "_global-2aha2Ihl.js": {
+  "_global-AObI1Aj9.js": {
     "assets": [
       "assets/bootstrap-icons-2eO-ad8Y.woff2",
       "assets/bootstrap-icons-NpS-Zr3P.woff"
@@ -11,20 +11,7 @@
     "css": [
       "assets/global-sJBmbq85.css"
     ],
-    "file": "assets/global-2aha2Ihl.js"
-  },
-  "_vue-quill.snow-!~{007}~.js": {
-    "file": "assets/vue-quill-IRKSPvU3.css",
-    "src": "_vue-quill.snow-!~{007}~.js"
-  },
-  "_vue-quill.snow-v5v7nWWB.js": {
-    "css": [
-      "assets/vue-quill-IRKSPvU3.css"
-    ],
-    "file": "assets/vue-quill.snow-v5v7nWWB.js",
-    "imports": [
-      "_global-2aha2Ihl.js"
-    ]
+    "file": "assets/global-AObI1Aj9.js"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
     "file": "assets/bootstrap-icons-NpS-Zr3P.woff",
@@ -35,41 +22,42 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-0V6gVESY.js",
+    "css": [
+      "assets/app-IRKSPvU3.css"
+    ],
+    "file": "assets/app-rnj-HJqo.js",
     "imports": [
-      "_global-2aha2Ihl.js",
-      "_vue-quill.snow-v5v7nWWB.js"
+      "_global-AObI1Aj9.js"
     ],
     "isEntry": true,
     "src": "resources/js/admin/app.js"
   },
   "resources/js/auth/app.js": {
-    "file": "assets/app-KrkGQ9vq.js",
+    "file": "assets/app-92lZbBzb.js",
     "imports": [
-      "_global-2aha2Ihl.js"
+      "_global-AObI1Aj9.js"
     ],
     "isEntry": true,
     "src": "resources/js/auth/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-6M94RTEg.js",
+    "file": "assets/app-nMqvNTRP.js",
     "imports": [
-      "_global-2aha2Ihl.js"
+      "_global-AObI1Aj9.js"
     ],
     "isEntry": true,
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-d_FGjUwF.js",
+    "file": "assets/app-2Jf_Lx0j.js",
     "imports": [
-      "_global-2aha2Ihl.js",
-      "_vue-quill.snow-v5v7nWWB.js"
+      "_global-AObI1Aj9.js"
     ],
     "isEntry": true,
     "src": "resources/js/seller/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-LLVcbnR2.css",
+    "file": "assets/basic-0i8oaQPZ.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }
