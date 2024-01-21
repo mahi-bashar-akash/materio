@@ -25,15 +25,15 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Cart
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/auth/login" class="nav-link">
-                            Login
-                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end p-0 m-0 overflow-hidden border-0 shadow cursor-content-menu" style="width: 340px;">
+                            <li class="py-5 text-center">
+                                <i class="bi bi-bag d-block fs-2 mb-3"></i> No product in the cart
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="/auth/login" class="nav-link">
