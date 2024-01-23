@@ -76,9 +76,9 @@
                 <small class="mb-3 fw-semibold">
                     No product add in your cart
                 </small>
-                <router-link :to="{name: 'shop'}" class="btn btn-outline-theme d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-outline-theme d-flex justify-content-center align-items-center" data-bs-dismiss="offcanvas" @click="goRoute">
                     Continue Shopping
-                </router-link>
+                </button>
             </div>
 
         </div>
@@ -211,7 +211,13 @@ export default {
 
     mounted() {  },
 
-    methods: {  }
+    methods: {
+
+        goRoute(){
+            this.$router.push( {name: 'shop'} )
+        }
+
+    }
 
 }
 

@@ -17,28 +17,57 @@
                 </div>
             </div>
             <div class="col-12 col-lg-7 h-100">
-                <div class="bg-white p-3 border">
+                <div class="bg-white p-3">
                     <div class="p-2">
-                        Fresh broccoli
+                        Fresh organic fruit
                     </div>
                     <div class="p-2">
-                        Food : Vegetables
+                        <i class="bi bi-star-fill text-warning me-2"></i>
+                        <i class="bi bi-star-fill text-warning me-2"></i>
+                        <i class="bi bi-star-fill text-warning me-2"></i>
+                        <i class="bi bi-star-fill text-warning me-2"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
                     <div class="p-2">
-                        <div class="mb-2">Description</div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid consequuntur dolorem
-                        dolores ex exercitationem fugiat id illum labore, laborum magni maiores minima nisi numquam
-                        odit pariatur placeat provident quaerat quibusdam, quidem, reiciendis sit tenetur ut
-                        veritatis vero. Ab corporis expedita id nobis non veniam.
-                    </div>
-                    <div class="p-2">
-                        Currently Available
-                    </div>
-                    <div class="p-2">
-                        Weight: 1 kg
+                        Availability: <span class="text-success"> 11 in stock </span>
                     </div>
                     <div class="p-2">
                         Price: $10
+                    </div>
+                    <div class="p-2">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                    </div>
+                    <div class="p-2">
+                        Size: {{kgText}}
+                        <div class="mt-2 d-flex justify-content-start align-items-center flex-wrap">
+                            <button class="btn btn-light me-2" type="button" @click="insertKg($event)" :class="{ 'border-success': kgText === '1 kg' }">
+                                1 kg
+                            </button>
+                            <button class="btn btn-light me-2" type="button" @click="insertKg($event)" :class="{ 'border-success': kgText === '2 kg' }">
+                                2 kg
+                            </button>
+                            <button class="btn btn-light me-2" type="button" @click="insertKg($event)" :class="{ 'border-success': kgText === '3 kg' }">
+                                3 kg
+                            </button>
+                            <button class="btn btn-light me-2" type="button" @click="insertKg($event)" :class="{ 'border-success': kgText === '4 kg' }">
+                                4 kg
+                            </button>
+                            <button class="btn btn-light" type="button" @click="insertKg($event)" :class="{ 'border-success': kgText === '5 kg' }">
+                                5 kg
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="d-flex align-items-center border rounded-3" style="width: 170px;">
+                            <button class="btn border-0" type="button" @click="decreaseQuantity">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                                <input type="text" disabled class="form-control cursor-content-menu text-center border-0 bg-transparent mx-2" v-model="quantity" min="1" max="5" />
+                            <button class="btn border-0" type="button" @click="increaseQuantity">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="p-2">
                         <button type="submit" class="btn btn-theme me-2 mb-3">
@@ -54,6 +83,95 @@
             </div>
         </div>
     </form>
+
+    <div class="w-100 h-100 container-fluid cursor-content-menu mt-4 bg-white p-3">
+
+        <div class="fw-bold text-center fs-3">
+            Reviews
+        </div>
+
+        <div class="fw-semibold mb-3">
+            Customer reviews
+        </div>
+
+        <div class="d-flex justify-content-start align-items-center mb-3">
+            <i class="bi bi-star-fill text-warning me-2"></i>
+            <i class="bi bi-star-fill text-warning me-2"></i>
+            <i class="bi bi-star-fill text-warning me-2"></i>
+            <i class="bi bi-star-fill text-warning me-2"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+        </div>
+
+        <div class="fw-semibold mb-3">
+            based on 1 review
+        </div>
+
+        <div class="mb-3">
+            this is good and fresh fruit organic product see like look
+        </div>
+
+        <div class="fw-semibold mb-3">
+            kelin patel on Jul 31, 2020
+        </div>
+
+        <button type="button" class="btn border-0 text-decoration-underline text-warning-emphasis px-0 mb-3" @click="reviewController">
+            Write a review
+        </button>
+
+        <div class="px-4 py-3 border rounded-3" v-if="review === true">
+            <div class="fw-semibold mb-3">Write a review</div>
+            <form autocomplete="off" class="row">
+                <div class="mb-3 col-12 col-md-6">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" type="text" name="name" class="form-control" required autocomplete="new-name" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="mb-3 col-12 col-md-6">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" type="email" name="email" class="form-control" required autocomplete="new-email" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="mb-3 col-12 col-md-6">
+                    <div class="form-group">
+                        <label class="form-label"> Rating </label>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <input type="checkbox" id="star1" class="form-check-input d-none" v-model="rating" value="1" />
+                            <label for="star1" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('1'), 'bi bi-star': !rating.includes('1') }"></label>
+
+                            <input type="checkbox" id="star2" class="form-check-input d-none" v-model="rating" value="2" />
+                            <label for="star2" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('2'), 'bi bi-star': !rating.includes('2') }"></label>
+
+                            <input type="checkbox" id="star3" class="form-check-input d-none" v-model="rating" value="3" />
+                            <label for="star3" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('3'), 'bi bi-star': !rating.includes('3') }"></label>
+
+                            <input type="checkbox" id="star4" class="form-check-input d-none" v-model="rating" value="4" />
+                            <label for="star4" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('4'), 'bi bi-star': !rating.includes('4') }"></label>
+
+                            <input type="checkbox" id="star5" class="form-check-input d-none" v-model="rating" value="5" />
+                            <label for="star5" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('5'), 'bi bi-star': !rating.includes('5') }"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 col-12 col-md-6">
+                    <div class="form-group">
+                        <label for="review-title" class="form-label">Review Title</label>
+                        <input id="review-title" type="text" name="review-title" class="form-control" required autocomplete="new-review-title" placeholder="Enter a review title">
+                    </div>
+                </div>
+                <div class="mb-3 col-12">
+                    <div class="form-group">
+                        <label for="review-description" class="form-label">Review Description</label>
+                        <textarea name="review-description" id="review-description" cols="30" rows="5" class="form-textarea" required autocomplete="new-review-description" placeholder="Write your comment here"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-theme">
+                    Review Submit
+                </button>
+            </form>
+        </div>
+    </div>
 
     <!-- recommended product area -->
     <section class="w-100 container-fluid mt-4">
@@ -105,6 +223,11 @@ export default {
                 { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name' },
             ],
 
+            kgText: '1 kg',
+            quantity: 1,
+            rating: [],
+            review: false,
+
         }
 
     },
@@ -116,6 +239,25 @@ export default {
     },
 
     methods: {
+
+        reviewController(){
+            this.review = !this.review
+        },
+
+        increaseQuantity() {
+            if (this.quantity < 5) {
+                this.quantity++;
+            }
+        },
+        decreaseQuantity() {
+            if (this.quantity > 1) {
+                this.quantity--;
+            }
+        },
+
+        insertKg(e){
+            this.kgText = e.target.innerText;
+        },
 
         insertImage(e){
             this.insertedImage = e.target.src;
