@@ -166,9 +166,11 @@
                         <textarea name="review-description" id="review-description" cols="30" rows="5" class="form-textarea" required autocomplete="new-review-description" placeholder="Write your comment here"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-theme">
-                    Review Submit
-                </button>
+                <div>
+                    <button type="submit" class="btn btn-theme">
+                        Review Submit
+                    </button>
+                </div>
             </form>
         </div>
     </div>
