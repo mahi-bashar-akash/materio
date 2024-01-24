@@ -68,6 +68,43 @@
                         {{each.category}}
                     </div>
                     <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="mt-2 text-center">
+                        <span v-if="each.review === '1'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '2'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '3'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '4'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '5'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                        </span>
+                    </div>
                     <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1">
@@ -134,6 +171,43 @@
                         {{each.category}}
                     </div>
                     <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="mt-2 text-center">
+                        <span v-if="each.review === '1'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '2'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '3'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '4'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '5'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                        </span>
+                    </div>
                     <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1">
@@ -257,23 +331,23 @@ export default {
             ],
 
             bestSellerProducts: [
-                { id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', category: 'Category Name' },
-                { id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '15', category: 'Category Name' },
-                { id: '3', file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '20', category: 'Category Name' },
-                { id: '4', file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '25', category: 'Category Name' },
-                { id: '5', file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '30', category: 'Category Name' },
-                { id: '6', file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '35', category: 'Category Name' },
-                { id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '40', category: 'Category Name' },
+                { id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', category: 'Category Name', review: '4' },
+                { id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '15', category: 'Category Name', review: '5' },
+                { id: '3', file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '20', category: 'Category Name', review: '3' },
+                { id: '4', file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '25', category: 'Category Name', review: '4' },
+                { id: '5', file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '30', category: 'Category Name', review: '5' },
+                { id: '6', file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '35', category: 'Category Name', review: '3' },
+                { id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '40', category: 'Category Name', review: '3' },
             ],
 
             dealOfTheDaysProduct: [
-                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name' },
-                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name' },
-                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name' },
-                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name' },
-                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name' },
-                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name' },
-                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name' },
+                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name', review: '1' },
+                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name', review: '2' },
+                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name', review: '3' },
+                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name', review: '1' },
+                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name', review: '4' },
+                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name', review: '2' },
+                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name', review: '1' },
             ],
 
             brands: [

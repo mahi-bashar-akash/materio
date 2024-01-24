@@ -18,9 +18,10 @@
             </div>
             <div class="col-12 col-lg-7 h-100">
                 <div class="bg-white p-3">
-                    <div class="p-2">
+                    <div class="p-2 fs-4">
                         Fresh organic fruit
                     </div>
+                    <hr class="border">
                     <div class="p-2">
                         <i class="bi bi-star-fill text-warning me-2"></i>
                         <i class="bi bi-star-fill text-warning me-2"></i>
@@ -175,10 +176,10 @@
         </div>
     </div>
 
-    <!-- recommended product area -->
+    <!-- related product area -->
     <section class="w-100 container-fluid mt-4">
         <div class="fw-bold text-center fs-3">
-            Recommended for sale
+            Related Products
         </div>
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in dealOfTheDaysProduct">
@@ -188,6 +189,43 @@
                         {{each.category}}
                     </div>
                     <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="mt-2 text-center">
+                        <span v-if="each.review === '1'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '2'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '3'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '4'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '5'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                        </span>
+                    </div>
                     <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1">
@@ -215,13 +253,13 @@ export default {
             insertedImage: '/images/product/image-01.jpg',
 
             dealOfTheDaysProduct: [
-                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name' },
-                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name' },
-                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name' },
-                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name' },
-                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name' },
-                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name' },
-                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name' },
+                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name', review: '1' },
+                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name', review: '2' },
+                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name', review: '3' },
+                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name', review: '4' },
+                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name', review: '5' },
+                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name', review: '3' },
+                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name', review: '2' },
             ],
 
             kgText: '1 kg',

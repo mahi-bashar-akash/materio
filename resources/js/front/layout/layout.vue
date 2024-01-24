@@ -18,6 +18,11 @@
                             Shop
                         </router-link>
                     </li>
+                    <li>
+                        <router-link :to="{name: 'contact'}" class="nav-link">
+                            Contact
+                        </router-link>
+                    </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'blog'}" class="nav-link">
                             Blog
