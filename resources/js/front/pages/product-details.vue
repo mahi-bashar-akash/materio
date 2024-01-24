@@ -3,7 +3,7 @@
     <form class="w-100 h-100 container-fluid cursor-content-menu">
         <div class="row">
             <div class="col-12 col-lg-5 p-0">
-                <img :src="insertedImage" class="img-fluid border w-100 object-fit-cover" alt="product 1">
+                <img :src="insertedImage" class="img-fluid border w-100 object-fit-cover product-single-image" alt="product 1">
                 <div class="row">
                     <div class="col-4 mt-3 mb-3">
                         <img :src="`/images/product/image-01.jpg`" class="img-fluid border cursor-pointer" alt="product 2" @click="insertImage($event)">
@@ -206,7 +206,6 @@
 
 <script>
 
-import router from "../router/router.js";
 
 export default {
 
@@ -229,6 +228,7 @@ export default {
             quantity: 1,
             rating: [],
             review: false,
+            isZoomed: false,
 
         }
 
@@ -285,7 +285,7 @@ export default {
         },
 
         productInfo(){
-            router.push( { name: 'productDetails' } )
+            this.$router.push( { name: 'productDetails' } )
         },
 
     }
