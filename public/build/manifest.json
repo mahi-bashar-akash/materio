@@ -41,7 +41,7 @@
     "src": "resources/js/auth/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-Eie4xOE4.js",
+    "file": "assets/app-6IEUx1lA.js",
     "imports": [
       "_global-AObI1Aj9.js"
     ],
@@ -57,7 +57,7 @@
     "src": "resources/js/seller/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-oV_iAiDP.css",
+    "file": "assets/basic-4UiceCwi.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }
