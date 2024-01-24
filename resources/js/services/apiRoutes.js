@@ -96,7 +96,7 @@ const apiRoutes = {
 
     contactDelete: api + 'contact/delete',
 
-    // 
+    //
 
 }
 
