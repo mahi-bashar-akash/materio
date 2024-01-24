@@ -72,6 +72,32 @@ const apiRoutes = {
 
     orderDelete: api + 'order/delete',
 
+    // blog
+
+    blogCreate: api + 'blog/create',
+
+    blogList: api + 'blog/list',
+
+    blogSingle: api + 'blog/single',
+
+    blogUpdate: api + 'blog/update',
+
+    blogDelete: api + 'blog/delete',
+
+    // contact
+
+    contactCreate: api + 'contact/create',
+
+    contactList: api + 'contact/create',
+
+    contactSingle: api + 'contact/create',
+
+    contactUpdate: api + 'contact/create',
+
+    contactDelete: api + 'contact/delete',
+
+    // 
+
 }
 
 export default apiRoutes;
