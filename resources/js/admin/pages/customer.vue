@@ -64,7 +64,7 @@
                             <span class="badge bg-success px-3 py-2 rounded-pill" v-if="each.status === '1'">
                                 Online
                             </span>
-                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill" v-if="each.status === '2'">
+                            <span class="badge bg-warning px-3 py-2 rounded-pill" v-if="each.status === '2'">
                                 Offline
                             </span>
                         </td>

@@ -57,7 +57,7 @@
                                 Editor
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success px-4 py-2">
+                                <div class="badge bg-success px-3 py-2">
                                     Active
                                 </div>
                             </td>
@@ -106,7 +106,7 @@
                                 Admin
                             </td>
                             <td class="status">
-                                <div class="badge bg-danger-subtle text-danger px-4 py-2">
+                                <div class="badge bg-danger px-3 py-2">
                                     InActive
                                 </div>
                             </td>
@@ -155,7 +155,7 @@
                                 Maintainer
                             </td>
                             <td class="status">
-                                <div class="badge bg-warning-subtle text-warning px-4 py-2">
+                                <div class="badge bg-warning px-3 py-2">
                                     Pending
                                 </div>
                             </td>
@@ -204,7 +204,7 @@
                                 Author
                             </td>
                             <td class="status">
-                                <div class="badge bg-warning-subtle text-warning px-4 py-2">
+                                <div class="badge bg-warning px-3 py-2">
                                     Pending
                                 </div>
                             </td>
@@ -253,7 +253,7 @@
                                 Subscriber
                             </td>
                             <td class="status">
-                                <div class="badge bg-danger-subtle text-danger px-4 py-2">
+                                <div class="badge bg-danger px-3 py-2">
                                     InActive
                                 </div>
                             </td>
@@ -302,7 +302,7 @@
                                 Team manager
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success px-4 py-2">
+                                <div class="badge bg-success px-3 py-2">
                                     Active
                                 </div>
                             </td>
@@ -353,7 +353,7 @@
                                 academic coordinator
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success px-4 py-2">
+                                <div class="badge bg-success px-3 py-2">
                                     Active
                                 </div>
                             </td>
@@ -404,7 +404,7 @@
                                 Security manager
                             </td>
                             <td class="status">
-                                <div class="badge bg-success-subtle text-success px-4 py-2">
+                                <div class="badge bg-success px-3 py-2">
                                     Active
                                 </div>
                             </td>

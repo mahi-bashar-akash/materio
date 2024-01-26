@@ -179,7 +179,7 @@
                                             </div>
                                         </td>
                                         <td class="status">
-                                            <div class="badge bg-warning-subtle text-warning border border-warning-subtle px-3">
+                                            <div class="badge bg-warning px-3 py-2">
                                                 Business
                                             </div>
                                         </td>
@@ -195,7 +195,7 @@
                                             </div>
                                         </td>
                                         <td class="status">
-                                            <div class="badge bg-success-subtle text-success border border-success-subtle px-3">
+                                            <div class="badge bg-success px-3 py-2">
                                                 Meditation
                                             </div>
                                         </td>
@@ -211,7 +211,7 @@
                                             </div>
                                         </td>
                                         <td class="status">
-                                            <div class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-3">
+                                            <div class="badge bg-secondary px-3 py-2">
                                                 Meetup
                                             </div>
                                         </td>
@@ -227,7 +227,7 @@
                                             </div>
                                         </td>
                                         <td class="status">
-                                            <div class="badge bg-danger-subtle text-danger border border-danger-subtle px-3">
+                                            <div class="badge bg-danger px-3 py-2">
                                                 Play
                                             </div>
                                         </td>
@@ -243,7 +243,7 @@
                                             </div>
                                         </td>
                                         <td class="status">
-                                            <div class="badge bg-info-subtle text-info border border-info-subtle px-3">
+                                            <div class="badge bg-info px-3 py-2">
                                                 Family
                                             </div>
                                         </td>
@@ -284,7 +284,7 @@
                                 </td>
                                 <td class="payment">$4372</td>
                                 <td class="status">
-                                    <div class="badge bg-success-subtle text-success border border-success-subtle px-3">
+                                    <div class="badge bg-success py-2 px-3">
                                         paid
                                     </div>
                                 </td>
@@ -302,7 +302,7 @@
                                 </td>
                                 <td class="payment">$2771</td>
                                 <td class="status">
-                                    <div class="badge bg-success-subtle text-success border border-success-subtle px-3">
+                                    <div class="badge bg-success py-2 px-3">
                                         paid
                                     </div>
                                 </td>
@@ -320,7 +320,7 @@
                                 </td>
                                 <td class="payment">$3171</td>
                                 <td class="status">
-                                    <div class="badge bg-success-subtle text-success border border-success-subtle px-3">
+                                    <div class="badge bg-success py-2 px-3">
                                         paid
                                     </div>
                                 </td>
@@ -338,7 +338,7 @@
                                 </td>
                                 <td class="payment">$3904</td>
                                 <td class="status">
-                                    <div class="badge bg-success-subtle text-success border border-success-subtle px-3">
+                                    <div class="badge bg-success py-2 px-3">
                                         paid
                                     </div>
                                 </td>
@@ -356,7 +356,7 @@
                                 </td>
                                 <td class="payment">$2060</td>
                                 <td class="status">
-                                    <div class="badge bg-danger-subtle text-danger border border-danger-subtle px-3">
+                                    <div class="badge bg-danger py-2 px-3">
                                         unpaid
                                     </div>
                                 </td>

@@ -25,7 +25,7 @@
     "css": [
       "assets/app-IRKSPvU3.css"
     ],
-    "file": "assets/app-xZEwpuY3.js",
+    "file": "assets/app-nk7A6M4B.js",
     "imports": [
       "_global--T6u_5a2.js"
     ],
@@ -57,7 +57,7 @@
     "src": "resources/js/seller/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-NtIWx0Gu.css",
+    "file": "assets/basic-i3jqyF7R.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }
