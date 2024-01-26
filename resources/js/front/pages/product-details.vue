@@ -115,11 +115,11 @@
             kelin patel on Jul 31, 2020
         </div>
 
-        <button type="button" class="btn border-0 text-decoration-underline text-warning-emphasis px-0 mb-3" @click="reviewController">
+        <button type="button" class="btn btn-theme" @click="reviewController">
             Write a review
         </button>
 
-        <div class="px-4 py-3 border rounded-3" v-if="review === true">
+        <div class="px-4 py-3 border rounded-3 mt-3" v-if="review === true">
             <div class="fw-semibold mb-3">Write a review</div>
             <form autocomplete="off" class="row">
                 <div class="mb-3 col-12 col-md-6">
@@ -169,7 +169,7 @@
                 </div>
                 <div>
                     <button type="submit" class="btn btn-theme">
-                        Review Submit
+                        Submit
                     </button>
                 </div>
             </form>

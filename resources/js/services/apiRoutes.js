@@ -2,7 +2,7 @@ const api = "/api/";
 
 const apiRoutes = {
 
-    // authentication for users
+    // authentication
 
     login: api + 'auth/login',
 
@@ -48,6 +48,18 @@ const apiRoutes = {
 
     productDelete: api + 'product/delete',
 
+    // product review
+
+    productReviewCreate: api + 'review/create',
+
+    productReviewList: api + 'review/list',
+
+    productReviewSingle: api + 'review/single',
+
+    productReviewUpdate: api + 'review/update',
+
+    productReviewDelete: api + 'review/delete',
+
     // package
 
     packageCreate: api + 'package/create',
@@ -84,19 +96,29 @@ const apiRoutes = {
 
     blogDelete: api + 'blog/delete',
 
+    // blog review
+
+    blogReviewCreate: api + 'blog/review/create',
+
+    blogReviewList: api + 'blog/review/list',
+
+    blogReviewSingle: api + 'blog/review/single',
+
+    blogReviewUpdate: api + 'blog/review/update',
+
+    blogReviewDelete: api + 'blog/review/delete',
+
     // contact
 
     contactCreate: api + 'contact/create',
 
-    contactList: api + 'contact/create',
+    contactList: api + 'contact/list',
 
-    contactSingle: api + 'contact/create',
+    contactSingle: api + 'contact/single',
 
-    contactUpdate: api + 'contact/create',
+    contactUpdate: api + 'contact/update',
 
     contactDelete: api + 'contact/delete',
-
-    //
 
 }
 
