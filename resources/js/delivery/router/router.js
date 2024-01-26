@@ -3,22 +3,18 @@ import {createRouter, createWebHistory} from "vue-router";
 /*
 |
 |--------------------------------------------------------------------------
-| Auth Pages
+| Delivery Pages
 |--------------------------------------------------------------------------
 |
 */
 
 import layout from "../layout/layout.vue";
 
-import login from "../pages/login.vue";
-
-import register from "../pages/register.vue";
-
-import forget from "../pages/forget.vue";
+import dashboard from "../pages/dashboard.vue";
 
 const TITLE = window.core.APP_NAME
 
-const ROOT_URL = "/auth";
+const ROOT_URL = "/delivery";
 
 const routes = [
 
@@ -28,11 +24,7 @@ const routes = [
 
         children: [
 
-            { path: ROOT_URL + '/login', name: 'login', component: login, meta: { title: TITLE + ' - login' } },
-
-            { path: ROOT_URL + '/register', name: 'register', component: register, meta: { title: TITLE + ' - registration' } },
-
-            { path: ROOT_URL + '/forget', name: 'forget', component: forget, meta: { title: TITLE + ' - forget' } },
+            { path: ROOT_URL + '/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard' } },
 
         ]
 

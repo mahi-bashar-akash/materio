@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\DeliveryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,20 @@ Route::get('/seller', [SellerController::class, 'seller'])->where('any', '.*')->
 Route::get('/seller/{any}', [SellerController::class, 'seller'])->where('any', '.*')->name('lvs.seller.any');
 
 Route::get('/seller', function () { return redirect()->route('lvs.seller.any', 'dashboard'); } );
+
+/*
+|
+|--------------------------------------------------------------------------
+| delivery Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/delivery', [DeliveryController::class, 'delivery'])->where('any', '.*')->name('lvs.delivery');
+
+Route::get('/delivery/{any}', [DeliveryController::class, 'delivery'])->where('any', '.*')->name('lvs.delivery.any');
+
+Route::get('/delivery', function () { return redirect()->route('lvs.delivery.any', 'dashboard'); } );
 
 /*
 |
