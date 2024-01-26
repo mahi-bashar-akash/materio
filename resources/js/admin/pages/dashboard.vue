@@ -113,7 +113,7 @@
                 <!-- revenue increase -->
                 <div class="col-12 col-sm-6">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
-                        <div class="bg-danger border-0 rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center" style="width: 55px; height: 55px">
+                        <div class="bg-danger border-0 text-white rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center" style="width: 55px; height: 55px">
                             <i class="bi bi-truck"></i>
                         </div>
                         <div class="my-3">Logistics</div>
@@ -147,7 +147,7 @@
                 <!-- new visitors -->
                 <div class="col-12">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
-                        <div class="bg-theme border-0 rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center" style="width: 55px; height: 55px">
+                        <div class="bg-theme text-white border-0 rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center" style="width: 55px; height: 55px">
                             <i class="bi bi-people"></i>
                         </div>
                         <div class="my-3">Reports</div>
