@@ -287,6 +287,19 @@ body{
 
 // table
 
+.table-responsive{
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--bs-border-color);
+        height: 5px !important;
+    }
+}
+
 .table {
     width: 100%;
     border-spacing: 0;
@@ -525,6 +538,14 @@ body{
             margin: 0 5px;
             border-radius: 6px;
             font-size: 12px;
+
+            &:hover {
+                transition: 0.3s all ease-in-out;
+                background-color: var(--theme);
+                border: 1px solid transparent;
+                color: var(--bs-white);
+            }
+
         }
     }
 }

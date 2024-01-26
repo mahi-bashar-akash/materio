@@ -46,6 +46,38 @@
                 </div>
             </div>
 
+            <div class="mt-4">
+                <nav aria-label="Page navigation example">
+                    <div class="pagination justify-content-center d-flex align-items-center">
+                        <div class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                <i class="bi bi-chevron-bar-left"></i>
+                            </a>
+                        </div>
+                        <div class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                1
+                            </a>
+                        </div>
+                        <div class="page-item active">
+                            <a class="page-link" href="javascript:void(0)">
+                                2
+                            </a>
+                        </div>
+                        <div class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                3
+                            </a>
+                        </div>
+                        <div class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                <i class="bi bi-chevron-bar-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
         </div>
 
     </div>
