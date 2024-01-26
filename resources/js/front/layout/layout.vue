@@ -40,7 +40,12 @@
                             Become a seller
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a href="/auth/login" class="nav-link" v-if="!userInfo">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown" v-if="userInfo">
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Mahi Bashar Akash
                         </a>
@@ -48,6 +53,11 @@
                             <li>
                                 <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2">
                                     Dashboard
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2">
+                                    Product Review
                                 </router-link>
                             </li>
                             <li>
@@ -210,6 +220,7 @@ export default {
         return{
             app_name: window.core.APP_NAME,
             imageUrl: '/images/dots.png',
+            userInfo: false,
         }
 
     },

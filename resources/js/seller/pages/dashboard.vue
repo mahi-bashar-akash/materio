@@ -5,7 +5,7 @@
 
             <div class="shadow rounded-3 overflow-hidden">
 
-                <div class="bg-light-theme p-4 d-flex justify-content-between">
+                <div class="bg-light-theme p-0 p-sm-4 d-flex justify-content-between">
                     <div class="d-flex flex-wrap align-items-center justify-content-start">
                         <div class="p-3">
                             <img :src="`/images/seller/seller.png`" class="img-fluid bg-white rounded-3 me-3 shadow" style="width: 150px; height: 150px;" alt="seller">
@@ -17,22 +17,18 @@
                             <div class="fw-semibold mb-3">
                                 3891 Ranchview Dr. Richardson, California 62639
                             </div>
-                            <button type="button" class="btn bg-white border-0 shadow me-2">
+                            <button type="button" class="btn bg-white border-0 shadow me-2" tabindex="0" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-title="Broadcast">
                                 <i class="bi bi-broadcast"></i>
                             </button>
-                            <span @click="statusController">
-                                <button type="button" class="btn border-0 shadow" style="background-color: #34C38F2D;" v-if="status === false">
-                                <i class="bi bi-lightbulb-fill" style="color: #34c38f;"></i>
+                            <button type="button" class="btn bg-white border-0 shadow" tabindex="0" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-title="Online Status" @click="statusController">
+                                <i class="bi bi-lightbulb-fill" style="color: #34c38f;" v-if="status === false"></i>
+                                <i class="bi bi-lightbulb-off-fill" style="color: #f46a6a;" v-if="status === true"></i>
                             </button>
-                            <button type="button" class="btn border-0 shadow" style="background-color: #F46A6A2D;" v-if="status === true">
-                                <i class="bi bi-lightbulb-off-fill" style="color: #f46a6a;"></i>
-                            </button>
-                            </span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white w-100 p-4">
+                <div class="bg-white w-100 p-0 p-sm-4">
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="p-3 border rounded-3">
@@ -69,18 +65,20 @@
 
             <div class="mt-4">
                 <div class="bg-white shadow rounded-3 p-4 cursor-content-menu">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="position-relative">
-                            <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
-                                <i class="bi bi-search"></i>
+                    <div class="d-md-flex justify-content-between align-items-center">
+                        <div class="mb-3 w-100">
+                            <div class="position-relative">
+                                <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                                <input type="text" name="keyword" class="form-control ps-5" required autocomplete="new-search" placeholder="Search Here">
                             </div>
-                            <input type="text" name="keyword" class="form-control ps-5" required autocomplete="new-search" placeholder="Search Here">
                         </div>
-                        <div class="fs-6 fw-semibold mb-3">
+                        <router-link :to="{name: 'order'}" class="fs-6 w-100 d-block fw-semibold mb-3 text-end text-theme text-decoration-none">
                             Latest Order
-                        </div>
+                        </router-link>
                     </div>
-                    <div class="table-responsive mt-4">
+                    <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -91,18 +89,18 @@
                                         Order Id.
                                     </th>
                                     <th class="default-width">
-                                        Billing Name.
+                                        Customer Name.
                                     </th>
-                                    <th class="date">
+                                    <th class="default-width">
                                         Date.
                                     </th>
-                                    <th class="payment">
+                                    <th class="default-width">
                                         Total.
                                     </th>
-                                    <th class="status">
+                                    <th class="default-width">
                                         Payment Status.
                                     </th>
-                                    <th class="payment">
+                                    <th class="default-width">
                                         Payment Method.
                                     </th>
                                 </tr>
@@ -118,18 +116,18 @@
                                     <td class="default-width">
                                         {{each.name}}
                                     </td>
-                                    <td class="date">
+                                    <td class="default-width">
                                         {{each.date}}
                                     </td>
-                                    <td class="payment">
+                                    <td class="default-width">
                                         {{each.total}}
                                     </td>
-                                    <td class="status">
+                                    <td class="default-width">
                                         <span class="badge px-3 py-2" :style="`background-color: `+each.backgroundColor +`; color:` +each.color">
                                             {{each.status}}
                                         </span>
                                     </td>
-                                    <td class="payment">
+                                    <td class="default-width">
                                         {{each.payment_method}}
                                     </td>
                                 </tr>
@@ -164,13 +162,20 @@ export default {
 
     },
 
-    mounted() {  },
+    mounted() {
+        this.tooltips();
+    },
 
     methods: {
 
-        statusController(){
+        statusController() {
             this.status = !this.status
         },
+
+        tooltips() {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        }
 
     }
 

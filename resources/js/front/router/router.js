@@ -24,6 +24,8 @@ import profileLayout from "../pages/profile/layout/layout.vue";
 
 import dashboard from "../pages/profile/dashboard.vue";
 
+import productReview from "../pages/profile/product-review.vue";
+
 import settings from "../pages/profile/settings.vue";
 
 const TITLE = window.core.APP_NAME
@@ -53,6 +55,8 @@ const routes = [
                 children: [
 
                     { path: ROOT_URL + '/profile/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard ' } },
+
+                    { path: ROOT_URL + '/profile/product-review', name: 'productReview', component: productReview, meta: { title: TITLE + ' - product review ' } },
 
                     { path: ROOT_URL + '/profile/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings ' } },
 

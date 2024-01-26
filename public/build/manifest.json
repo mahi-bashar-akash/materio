@@ -41,7 +41,7 @@
     "src": "resources/js/auth/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-n8Js0P4e.js",
+    "file": "assets/app-dpdQYNKH.js",
     "imports": [
       "_global--T6u_5a2.js"
     ],
@@ -49,7 +49,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-a0jMnAbw.js",
+    "file": "assets/app-0ncHAAix.js",
     "imports": [
       "_global--T6u_5a2.js"
     ],
