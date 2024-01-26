@@ -9,7 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 class DeliveryController extends BaseController
 {
 
-    public function index(){
+    public function delivery(){
         return view('delivery.app');
     }
 
