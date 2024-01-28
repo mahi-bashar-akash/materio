@@ -1,7 +1,7 @@
 {
-  "_global-!~{006}~.js": {
+  "_global-!~{007}~.js": {
     "file": "assets/global-sJBmbq85.css",
-    "src": "_global-!~{006}~.js"
+    "src": "_global-!~{007}~.js"
   },
   "_global--T6u_5a2.js": {
     "assets": [
@@ -39,6 +39,14 @@
     ],
     "isEntry": true,
     "src": "resources/js/auth/app.js"
+  },
+  "resources/js/delivery/app.js": {
+    "file": "assets/app-h7e3XibJ.js",
+    "imports": [
+      "_global--T6u_5a2.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/delivery/app.js"
   },
   "resources/js/front/app.js": {
     "file": "assets/app-ZYUXwkhu.js",

@@ -11,7 +11,8 @@ export default defineConfig({
                 'resources/js/auth/app.js',
                 'resources/js/admin/app.js',
                 'resources/js/front/app.js',
-                'resources/js/seller/app.js'
+                'resources/js/seller/app.js',
+                'resources/js/delivery/app.js'
             ],
             refresh: true,
         }),
