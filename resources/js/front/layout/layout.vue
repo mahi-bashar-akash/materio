@@ -3,7 +3,7 @@
     <global/>
 
     <!-- header -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" @click="windowContent">
         <div class="container p-3">
             <router-link :to="{name: 'home'}" class="navbar-brand">
                 {{app_name}}
@@ -231,6 +231,10 @@ export default {
 
         goRoute(){
             this.$router.push( {name: 'shop'} )
+        },
+
+        windowContent(){
+            window.scrollTo(0, 0);;
         }
 
     }
