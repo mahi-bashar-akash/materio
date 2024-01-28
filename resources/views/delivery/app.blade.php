@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="{{asset('/images/svg/logo.svg')}}" type="image/x-icon">
     <title> materio </title>
     @vite('resources/scss/basic.scss')
-    @vite('resources/js/auth/app.js')
+    @vite('resources/js/delivery/app.js')
 </head>
 <body class="delivery-portal" id="app"></body>
 <script>
