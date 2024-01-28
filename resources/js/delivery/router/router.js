@@ -12,6 +12,14 @@ import layout from "../layout/layout.vue";
 
 import dashboard from "../pages/dashboard.vue";
 
+import order from "../pages/order.vue";
+
+import notification from "../pages/notification.vue";
+
+import profile from "../pages/profile.vue";
+
+import settings from "../pages/settings.vue";
+
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/delivery";
@@ -25,6 +33,14 @@ const routes = [
         children: [
 
             { path: ROOT_URL + '/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard' } },
+
+            { path: ROOT_URL + '/order', name: 'order', component: order, meta: { title: TITLE + ' - order' } },
+
+            { path: ROOT_URL + '/notification', name: 'notification', component: notification, meta: { title: TITLE + ' - notification' } },
+
+            { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + ' - profile' } },
+
+            { path: ROOT_URL + '/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings' } },
 
         ]
 
