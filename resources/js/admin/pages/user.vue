@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-6 p-2">
                     <div class="position-relative">
-                        <input type="text" name="" class="form-control ps-5" required autocomplete="new-search" placeholder="Search Here">
+                        <input type="text" name="keyword" class="form-control ps-5" required autocomplete="new-search" placeholder="Search Here" v-model="formData.keyword">
                         <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
                             <i class="bi bi-search"></i>
                         </div>
@@ -46,7 +46,7 @@
                             <td class="id">1</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <img :src="`/images/clients/face-1.png`" class="img-fluid rounded-circle" style="width: 45px; height: 45px;" alt="client-avatar">
+                                    <img :src="`/images/clients/face-1.png`" class="img-fluid rounded-circle wpx-45 hpx-45" alt="client-avatar">
                                     <div class="ms-2">
                                         <div class="fw-bold">Andrew Burns</div>
                                         <small class="text-secondary">andrew@gmail.com</small>
@@ -95,7 +95,7 @@
                             <td class="id">2</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <img :src="`/images/clients/face-2.png`" class="img-fluid rounded-circle" style="width: 45px; height: 45px;" alt="client-avatar">
+                                    <img :src="`/images/clients/face-2.png`" class="img-fluid rounded-circle wpx-45 hpx-45" alt="client-avatar">
                                     <div class="ms-2">
                                         <div class="fw-bold">Dana Carey</div>
                                         <small class="text-secondary">dana@gmail.com</small>
@@ -144,7 +144,7 @@
                             <td class="id">3</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <img :src="`/images/clients/face-3.png`" class="img-fluid rounded-circle" style="width: 45px; height: 45px;" alt="client-avatar">
+                                    <img :src="`/images/clients/face-3.png`" class="img-fluid rounded-circle wpx-45 hpx-45" alt="client-avatar">
                                     <div class="ms-2">
                                         <div class="fw-bold">Tammy Sanchez</div>
                                         <small class="text-secondary">tammy@gmail.com</small>
@@ -193,7 +193,7 @@
                             <td class="id">4</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <img :src="`/images/clients/face-4.png`" class="img-fluid rounded-circle" style="width: 45px; height: 45px;" alt="client-avatar">
+                                    <img :src="`/images/clients/face-4.png`" class="img-fluid rounded-circle wpx-45 hpx-45" alt="client-avatar">
                                     <div class="ms-2">
                                         <div class="fw-bold">Lori Wells</div>
                                         <small class="text-secondary">lori@gmail.com</small>
@@ -242,7 +242,7 @@
                             <td class="id">5</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <img :src="`/images/clients/face-5.png`" class="img-fluid rounded-circle" style="width: 45px; height: 45px;" alt="client-avatar">
+                                    <img :src="`/images/clients/face-5.png`" class="img-fluid rounded-circle wpx-45 hpx-45" alt="client-avatar">
                                     <div class="ms-2">
                                         <div class="fw-bold">Richard Payne</div>
                                         <small class="text-secondary">richard@gmail.com</small>
@@ -291,7 +291,7 @@
                             <td class="id">6</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <img :src="`/images/clients/face-6.png`" class="img-fluid rounded-circle" style="width: 45px; height: 45px;" alt="client-avatar">
+                                    <img :src="`/images/clients/face-6.png`" class="img-fluid rounded-circle wpx-45 hpx-45" alt="client-avatar">
                                     <div class="ms-2">
                                         <div class="fw-bold">Jennifer Summers</div>
                                         <small class="text-secondary">jennifer@gmail.com</small>
@@ -340,7 +340,7 @@
                             <td class="id">7</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="text-secondary bg-secondary-subtle rounded-circle fs-5 d-flex justify-content-center align-items-center" style="width: 45px; height: 45px;">
+                                    <div class="text-secondary bg-secondary-subtle rounded-circle fs-5 d-flex justify-content-center align-items-center wpx-45 hpx-45">
                                         JR
                                     </div>
                                     <div class="ms-2">
@@ -391,7 +391,7 @@
                             <td class="id">8</td>
                             <td class="name">
                                 <div class="d-flex align-items-center justify-content-start">
-                                    <div class="text-primary bg-primary-subtle rounded-circle fs-5 d-flex justify-content-center align-items-center" style="width: 45px; height: 45px;">
+                                    <div class="text-primary bg-primary-subtle rounded-circle fs-5 d-flex justify-content-center align-items-center wpx-45 hpx-45">
                                         HD
                                     </div>
                                     <div class="ms-2">
@@ -452,59 +452,59 @@
                         <div class="mb-3">
                             <div class="form-group">
                                 <label for="full-name" class="form-label">Full name</label>
-                                <input id="full-name" type="text" name="full-name" class="form-control" required autocomplete="new-full-name">
+                                <input id="full-name" type="text" name="full-name" v-model="userParam.fullName" class="form-control" required placeholder="Enter your full name" autocomplete="new-full-name">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
                                 <label for="user-name" class="form-label">Username</label>
-                                <input id="user-name" type="text" name="user-name" class="form-control" required autocomplete="new-user-name">
+                                <input id="user-name" type="text" name="user-name" v-model="userParam.userName" class="form-control" required placeholder="Enter your user name" autocomplete="new-user-name">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
                                 <label for="email" class="form-label">Email</label>
-                                <input id="email" type="email" name="email" class="form-control" required autocomplete="new-email">
+                                <input id="email" type="email" name="email" v-model="userParam.email" class="form-control" required placeholder="Enter your email" autocomplete="new-email">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
-                                <label for="company" class="form-label">Company</label>
-                                <input id="company" type="text" name="company" class="form-control" required autocomplete="new-company">
+                                <label for="companyName" class="form-label">Company Name</label>
+                                <input id="companyName" type="text" name="companyName" v-model="userParam.companyName" class="form-control" required placeholder="Enter your company name" autocomplete="new-company-name">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
-                                <label for="country" class="form-label">Country</label>
-                                <input id="country" type="text" name="country" class="form-control" required autocomplete="new-country">
+                                <label for="countryName" class="form-label">Country Name</label>
+                                <input id="countryName" type="text" name="countryName" v-model="userParam.countryName" class="form-control" required placeholder="Enter your country name" autocomplete="new-country-name">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
                                 <label for="contact" class="form-label">Contact</label>
-                                <input id="contact" type="text" name="contact" class="form-control" required autocomplete="new-contact">
+                                <input id="contact" type="text" name="contact" v-model="userParam.contact" class="form-control" required placeholder="Enter your contact" autocomplete="new-contact">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
                                 <label for="role" class="form-label">Role</label>
-                                <select name="role" id="role" class="form-select">
-                                    <option value="">Select Role</option>
-                                    <option value="">Admin</option>
-                                    <option value="">Author</option>
-                                    <option value="">Editor</option>
-                                    <option value="">Maintainer</option>
-                                    <option value="">Subscriber</option>
+                                <select name="role" id="role" class="form-select" v-model="userParam.role" required autocomplete="new-role">
+                                    <option value="select-role">Select Role</option>
+                                    <option value="0">Admin</option>
+                                    <option value="1">Author</option>
+                                    <option value="2">Editor</option>
+                                    <option value="3">Maintainer</option>
+                                    <option value="4">Subscriber</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="role" class="form-label">Status</label>
-                            <select name="role" id="role" class="form-select">
-                                <option value="">Select Status</option>
-                                <option value="">Active</option>
-                                <option value="">Inactive</option>
-                                <option value="">Pending</option>
+                            <label for="status" class="form-label">Status</label>
+                            <select name="status" id="status" class="form-select" v-model="userParam.status" required autocomplete="new-status">
+                                <option value="select-status">Select Status</option>
+                                <option value="0">Active</option>
+                                <option value="1">Inactive</option>
+                                <option value="2">Pending</option>
                             </select>
                         </div>
                     </div>
@@ -531,7 +531,19 @@ export default {
     data(){
 
         return{
-
+            formData: {
+                keyword: '',
+            },
+            userParam: {
+                fullName: '',
+                userName: '',
+                email: '',
+                company: '',
+                country: '',
+                contact: '',
+                role: 'select-role',
+                status: 'select-status',
+            }
         }
 
     },

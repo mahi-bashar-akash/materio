@@ -40,7 +40,7 @@
                 </button>
                 <div class="col-md-6">
                     <div class="position-relative">
-                        <input type="text" name="" class="form-control ps-5" required placeholder="Search here" autocomplete="new-keyword">
+                        <input type="text" name="keyword" class="form-control ps-5" required placeholder="Search here" autocomplete="new-keyword" v-model="formData.keyword">
                         <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
                             <i class="bi bi-search"></i>
                         </div>
@@ -82,7 +82,7 @@
     <!-- event manage modal of calendar -->
     <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <form class="modal-content" autocomplete="off">
                 <div class="modal-header border-bottom-0">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Create Event</h1>
                     <button type="button" class="btn-close" @click="manageEventClose"></button>
@@ -90,47 +90,47 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <div class="form-group">
-                            <input id="" type="text" class="form-control" placeholder="Title" required autocomplete="new-title">
+                            <input id="new-title" type="text" name="title" v-model="eventParam.title" class="form-control" placeholder="Title" required autocomplete="new-title">
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
-                            <select name="" id="" class="form-select">
-                                <option value="">Select Category</option>
-                                <option value="">Personal</option>
-                                <option value="">Business</option>
-                                <option value="">Family</option>
-                                <option value="">Holiday</option>
+                            <select name="category" id="category" v-model="eventParam.category" class="form-select" required autocomplete="new-category">
+                                <option value="select-category">Select Category</option>
+                                <option value="personal">Personal</option>
+                                <option value="business">Business</option>
+                                <option value="family">Family</option>
+                                <option value="holiday">Holiday</option>
                             </select>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
-                            <input id="" type="text" class="form-control" placeholder="Start Date" required autocomplete="">
+                            <input id="startDate" type="text" name="startDate" v-model="eventParam.startDate" class="form-control" placeholder="Start Date" required autocomplete="new-start-date">
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
-                            <input id="" type="text" class="form-control" placeholder="End Date" required autocomplete="">
+                            <input id="endDate" type="text" name="endDate" v-model="eventParam.endDate" class="form-control" placeholder="End Date" required autocomplete="new-end-date">
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
-                            <input id="" type="text" class="form-control" placeholder="Event Url" required autocomplete="">
+                            <input id="websiteUrl" type="url" name="websiteUrl" v-model="eventParam.websiteUrl" class="form-control" placeholder="Event Url" required autocomplete="new-event-url">
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
-                            <input id="" type="text" class="form-control" placeholder="Guest" required autocomplete="">
+                            <input id="guest" type="text" name="guest" v-model="eventParam.guest" class="form-control" placeholder="Guest" required autocomplete="new-guest">
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
-                            <input id="" type="text" class="form-control" placeholder="Location" required autocomplete="">
+                            <input id="location" type="text" name="location" v-model="eventParam.location" class="form-control" placeholder="Location" required autocomplete="new-location">
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea name="" class="form-textarea" cols="30" rows="5" placeholder="Description"></textarea>
+                        <textarea id="description" name="description" v-model="eventParam.description" class="form-textarea" cols="30" rows="5" placeholder="Description" required autocomplete="new-description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0">
@@ -141,7 +141,7 @@
                         SUBMIT
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -173,6 +173,18 @@ export default {
                     ]
                 },
             ],
+            formData: {
+                keyword: '',
+            },
+            eventParam: {
+                title: '',
+                category: 'select-category',
+                startDate: '',
+                websiteUrl: '',
+                guest: '',
+                location: '',
+                description: '',
+            },
         }
 
     },

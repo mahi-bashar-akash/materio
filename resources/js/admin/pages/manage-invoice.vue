@@ -12,7 +12,7 @@
                         <!-- admin company details -->
                         <div class="company-details">
                             <div class="d-flex justify-content-start align-items-center fs-4">
-                                <img :src="`/images/svg/logo.svg`" class="img-fluid me-3" style="width: 45px; height: 45px;" alt="logo">
+                                <img :src="`/images/svg/logo.svg`" class="img-fluid me-3 wpx-45 hpx-45" alt="logo">
                                 {{app_name}}
                             </div>
                             <div class="col-12 col-sm-10 col-md-8 col-lg-5 mt-3 text-secondary">
@@ -28,15 +28,15 @@
                     <div class="col-md-5 p-3">
                         <div class="input-group input-group-sm mb-2 row">
                             <span class="input-group-text col-6 col-xl-4" id="inputGroup-sizing-sm">Invoice</span>
-                            <input type="text" class="form-control col-6 col-xl-8 text-secondary text-opacity-75" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="#5304">
+                            <input type="text" name="invoiceNo" v-model="invoiceParam.invoiceNo" class="form-control col-6 col-xl-8 text-secondary text-opacity-75" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                         <div class="input-group input-group-sm mb-2 row">
                             <span class="input-group-text col-6 col-xl-4" id="inputGroup-sizing-sm">Date Issued</span>
-                            <input type="text" class="form-control col-6 col-xl-8" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" name="dateIssue" v-model="invoiceParam.dateIssue" class="form-control col-6 col-xl-8" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                         <div class="input-group input-group-sm mb-2 row">
                             <span class="input-group-text col-6 col-xl-4" id="inputGroup-sizing-sm">Due Date</span>
-                            <input type="text" class="form-control col-6 col-xl-8" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" name="dueDate" v-model="invoiceParam.dueDate" class="form-control col-6 col-xl-8" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
                 </div>
@@ -46,8 +46,8 @@
 
                         <!-- select client -->
                         <div class="form-group">
-                            <select name="" class="form-select">
-                                <option value="">Select Client</option>
+                            <select name="client" class="form-select" autocomplete="new-client" v-model="invoiceParam.client">
+                                <option value="select-client">Select Client</option>
                                 <option value="">Dana Carey</option>
                                 <option value="">Tammy Sanchez</option>
                                 <option value="">Lori Wells</option>
@@ -113,7 +113,7 @@
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4 p-3">
                         <div class="mb-3">
                             <div class="form-group">
-                                <select name="serviceCategory" class="form-select" v-model="each.serviceCategory" autocomplete="new-category">
+                                <select name="serviceCategory" class="form-select" v-model="each.serviceCategory" autocomplete="new-category" required>
                                     <option value="">App Design</option>
                                     <option value="">App Development</option>
                                 </select>
@@ -126,24 +126,24 @@
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4 p-3">
                         <div class="mb-3">
                             <div class="form-group">
-                                <input type="text" name="serviceCost" class="form-control" v-model="each.serviceCost" placeholder="Amount of cost">
+                                <input type="text" name="serviceCost" class="form-control" v-model="each.serviceCost" placeholder="Amount of cost" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
-                                <input type="text" name="serviceHour" class="form-control" v-model="each.serviceHour" placeholder="Amount of hour">
+                                <input type="text" name="serviceHour" class="form-control" v-model="each.serviceHour" placeholder="Amount of hour" required>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4 p-3">
                         <div class="mb-3">
                             <div class="form-group">
-                                <input type="text" name="serviceTotal" v-model="each.serviceTotal" class="form-control" placeholder="Amount of total">
+                                <input type="text" name="serviceTotal" v-model="each.serviceTotal" class="form-control" placeholder="Amount of total" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-group">
-                                <select name="serviceDiscount" class="form-select" v-model="each.serviceDiscount">
+                                <select name="serviceDiscount" class="form-select" v-model="each.serviceDiscount" required>
                                     <option value="">Select Discount</option>
                                     <option value="">0%</option>
                                     <option value="">5%</option>
@@ -198,7 +198,7 @@
                 <div class="mb-3">
                     <div class="form-group">
                         <label class="form-label">Notes:</label>
-                        <textarea name="" class="form-textarea" cols="30" rows="4" required placeholder="[ Optional ] Add some notes" autocomplete="new-notes"></textarea>
+                        <textarea v-model="invoiceParam.notes" name="" class="form-textarea" cols="30" rows="4" required placeholder="[ Optional ] Add some notes" autocomplete="new-notes"></textarea>
                     </div>
                 </div>
 
@@ -240,6 +240,13 @@ export default {
                     }
                 ],
             },
+            invoiceParam: {
+                invoiceNo: '#5304',
+                dateIssue: '',
+                dueDate: '',
+                client: 'select-client',
+                notes: '',
+            }
         }
 
     },

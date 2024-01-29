@@ -147,7 +147,7 @@
                             Moruth Doole,
                         </div>
                     </div>
-                    <QuillEditor contentType="html" theme="snow" toolbar="full" style="height: 190px"/>
+                    <QuillEditor class="hpx-190" contentType="html" theme="snow" toolbar="full"/>
                     <button type="submit" name="" class="btn btn-theme mt-3 px-5">Send</button>
                 </div>
 
@@ -163,13 +163,13 @@
                     <!-- email composer form action -->
                     <form>
                         <div class="form-group">
-                            <input type="text" name="composer-email-to" class="email-form-control rounded-0 shadow-none border-bottom-0" placeholder="To:" required autocomplete="new-to">
+                            <input type="text" name="composerEmailTo" v-model="composerParam.composerEmailTo" class="email-form-control rounded-0 shadow-none border-bottom-0" placeholder="To:" required autocomplete="new-to">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="composer-email-from" class="email-form-control rounded-0 shadow-none border-bottom-0" placeholder="Subject:" required autocomplete="new-subject">
+                            <input type="text" name="composerEmailFrom" v-model="composerParam.composerEmailFrom" class="email-form-control rounded-0 shadow-none border-bottom-0" placeholder="Subject:" required autocomplete="new-subject">
                         </div>
                         <div class="form-group">
-                            <textarea name="composer-email-message" class="email-form-textarea rounded-0 shadow-none" cols="30" rows="10" required placeholder="Message" autocomplete="new-message"></textarea>
+                            <textarea name="composerEmailMessage" v-model="composerParam.composerEmailMessage" class="email-form-textarea rounded-0 shadow-none" cols="30" rows="10" required placeholder="Message" autocomplete="new-message"></textarea>
                         </div>
                         <div class="mt-2">
                             <button type="button" class="btn btn-theme">
@@ -205,6 +205,11 @@ export default {
             emailDetailsActive: false,
             emailComposerActive: false,
             selectText: 'All',
+            composerParam: {
+                composerEmailTo: '',
+                composerEmailFrom: '',
+                composerEmailMessage: '',
+            }
         }
 
     },

@@ -51,7 +51,7 @@
                             <label for="slider" class="form-label w-100 bg-light-theme text-center rounded-3 cursor-pointer">
                                 <input id="slider" type="file" name="slider" class="d-none" required autocomplete="new-slider" @click="manageAvatar($event)">
                                 <span class="d-block py-4">
-                                    <i class="bi bi-clouds-fill text-theme" style="font-size: 30px"></i>
+                                    <i class="bi bi-clouds-fill text-theme font-30"></i>
                                     <span class="text-center d-block text-dark fw-semibold fs-6">
                                         Upload Slider
                                     </span>

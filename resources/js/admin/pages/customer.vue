@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-6 mb-3">
                 <div class="position-relative">
-                    <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autocomplete="new-search">
+                    <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autocomplete="new-search" v-model="formData.keyword">
                     <div class="position-absolute top-50 start-0 ps-1 translate-middle-y">
                         <i class="ps-3 bi bi-search"></i>
                     </div>
@@ -94,6 +94,10 @@ export default {
                 { id: '7', avatar: '/images/clients/face-4.png', name: 'Justin Richardson', email: 'justin@gmail.com', phoneNumber: '03435 363700', status: '1' },
                 { id: '8', avatar: '/images/clients/face-2.png', name: 'Hossain Doe', email: 'hossain@gmail.com', phoneNumber: '03839 404142', status: '2' },
             ],
+
+            formData: {
+                keyword: '',
+            }
 
         }
 

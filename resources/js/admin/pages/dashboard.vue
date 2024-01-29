@@ -41,8 +41,8 @@
                                 <td class="default-width">290/500</td>
                                 <td class="default-width">
                                     58%
-                                    <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                        <div class="progress-bar bg-warning-subtle" style="width: 58%"></div>
+                                    <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-warning-subtle wPercentage-58"></div>
                                     </div>
                                 </td>
                                 <td class="default-width">
@@ -54,8 +54,8 @@
                                 <td class="default-width">320/500</td>
                                 <td class="default-width">
                                     64%
-                                    <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                        <div class="progress-bar bg-warning-subtle" style="width: 64%"></div>
+                                    <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-warning-subtle wPercentage-64"></div>
                                     </div>
                                 </td>
                                 <td class="default-width">
@@ -67,8 +67,8 @@
                                 <td class="default-width">420/500</td>
                                 <td class="default-width">
                                     84%
-                                    <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                        <div class="progress-bar bg-success-subtle" style="width: 84%"></div>
+                                    <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success-subtle wPercentage-84"></div>
                                     </div>
                                 </td>
                                 <td class="default-width">
@@ -80,8 +80,8 @@
                                 <td class="default-width">310/500</td>
                                 <td class="default-width">
                                     62%
-                                    <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                        <div class="progress-bar bg-warning-subtle" style="width: 62%"></div>
+                                    <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-warning-subtle wPercentage-62"></div>
                                     </div>
                                 </td>
                                 <td class="default-width">
@@ -93,8 +93,8 @@
                                 <td class="default-width">200/500</td>
                                 <td class="default-width">
                                     40%
-                                    <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                        <div class="progress-bar bg-danger-subtle" style="width: 40%"></div>
+                                    <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-danger-subtle wPercentage-40"></div>
                                     </div>
                                 </td>
                                 <td class="default-width">
@@ -113,7 +113,7 @@
                 <!-- revenue increase -->
                 <div class="col-12 col-sm-6">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
-                        <div class="bg-danger border-0 text-white rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center" style="width: 55px; height: 55px">
+                        <div class="bg-danger border-0 text-white rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center wpx-55 hpx-55">
                             <i class="bi bi-truck"></i>
                         </div>
                         <div class="my-3">Logistics</div>
@@ -130,7 +130,7 @@
                 <!-- reports -->
                 <div class="col-12 col-sm-6">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
-                        <div class="bg-warning border-0 rounded-circle fs-3 cursor-content-menu d-flex justify-content-center align-items-center" style="width: 55px; height: 55px">
+                        <div class="bg-warning border-0 rounded-circle fs-3 cursor-content-menu d-flex justify-content-center align-items-center wpx-55 hpx-55">
                             <i class="bi bi-check-lg"></i>
                         </div>
                         <div class="my-3">Reports</div>
@@ -147,7 +147,7 @@
                 <!-- new visitors -->
                 <div class="col-12">
                     <div class="bg-white p-3 shadow rounded-3 mb-3">
-                        <div class="bg-theme text-white border-0 rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center" style="width: 55px; height: 55px">
+                        <div class="bg-theme text-white border-0 rounded-circle fs-4 cursor-content-menu d-flex justify-content-center align-items-center wpx-55 hpx-55">
                             <i class="bi bi-people"></i>
                         </div>
                         <div class="my-3">Reports</div>

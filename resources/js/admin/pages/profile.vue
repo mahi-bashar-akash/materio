@@ -6,7 +6,7 @@
             <div class="col-xl-4 p-3 h-100">
                 <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu h-100">
                     <div class="d-flex justify-content-center align-items-center flex-column mb-3">
-                        <img :src="`/images/avatar.png`" class="rounded-circle overflow-hidden" style="width: 144px; height: 144px" alt="admin avatar">
+                        <img :src="`/images/avatar.png`" class="rounded-circle overflow-hidden wpx-144 hpx-144" alt="admin avatar">
                         <div class="badge bg-success-subtle text-secondary py-2 px-4 mt-3">
                             Frontend Developer (intern)
                         </div>
@@ -65,8 +65,8 @@
                                     <td class="default-width">290/500</td>
                                     <td class="default-width">
                                         58%
-                                        <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                            <div class="progress-bar bg-warning-subtle" style="width: 58%"></div>
+                                        <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning-subtle wPercentage-58"></div>
                                         </div>
                                     </td>
                                     <td class="default-width">
@@ -78,8 +78,8 @@
                                     <td class="default-width">320/500</td>
                                     <td class="default-width">
                                         64%
-                                        <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                            <div class="progress-bar bg-warning-subtle" style="width: 64%"></div>
+                                        <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning-subtle wPercentage-64"></div>
                                         </div>
                                     </td>
                                     <td class="default-width">
@@ -91,8 +91,8 @@
                                     <td class="default-width">420/500</td>
                                     <td class="default-width">
                                         84%
-                                        <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                            <div class="progress-bar bg-success-subtle" style="width: 84%"></div>
+                                        <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                            <div class="progress-bar bg-success-subtle wPercentage-84"></div>
                                         </div>
                                     </td>
                                     <td class="default-width">
@@ -104,8 +104,8 @@
                                     <td class="default-width">310/500</td>
                                     <td class="default-width">
                                         62%
-                                        <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                            <div class="progress-bar bg-warning-subtle" style="width: 62%"></div>
+                                        <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning-subtle wPercentage-62"></div>
                                         </div>
                                     </td>
                                     <td class="default-width">
@@ -117,8 +117,8 @@
                                     <td class="default-width">200/500</td>
                                     <td class="default-width">
                                         40%
-                                        <div class="progress me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
-                                            <div class="progress-bar bg-danger-subtle" style="width: 40%"></div>
+                                        <div class="progress hpx-5 me-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                            <div class="progress-bar bg-danger-subtle wPercentage-40"></div>
                                         </div>
                                     </td>
                                     <td class="default-width">
@@ -132,20 +132,20 @@
 
                     <!-- change password form action -->
                     <div class="rounded-3 p-3 bg-white shadow" v-if="tab === 2">
-                        <form>
+                        <form autocomplete="off">
                             <div class="h5 mb-3 pt-3 ps-3 fw-bold">Change Password</div>
                             <div class="p-3">
                                 <div class="mb-3">
                                     <div class="form-group">
                                         <label for="current-password" class="form-label">Current Password</label>
-                                        <input id="current-password" type="password" name="current-password" class="form-control" placeholder="Enter your current password" required autocomplete="new-current-password">
+                                        <input id="current-password" type="password" name="current-password" v-model="passwordParam.currentPassword" class="form-control" placeholder="Enter your current password" required autocomplete="new-current-password">
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-group">
                                         <label for="password" class="form-label">Password</label>
                                         <div class="position-relative">
-                                            <input id="password" :type="passwordFieldType" name="password" class="form-control" placeholder="Enter your password" required autocomplete="new-password">
+                                            <input id="password" :type="passwordFieldType" name="password" class="form-control" v-model="passwordParam.password" placeholder="Enter your password" required autocomplete="new-password">
                                             <div class="me-3 border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer" @click="passwordVisibility">
                                                 <i class="bi bi-eye" v-if="passwordFieldType === 'text'"></i>
                                                 <i class="bi bi-eye-slash" v-if="passwordFieldType === 'password'"></i>
@@ -157,7 +157,7 @@
                                     <div class="mb-3 form-group">
                                         <label for="password_confirm" class="form-label">Confirm password</label>
                                         <div class="position-relative">
-                                            <input id="password_confirm" :type="passwordConfirmationFieldType" name="password_confirm" class="form-control" placeholder="Enter your confirm password" required autocomplete="new-confirm-password">
+                                            <input id="password_confirm" :type="passwordConfirmationFieldType" name="password_confirm" v-model="passwordParam.passwordConfirm" class="form-control" placeholder="Enter your confirm password" required autocomplete="new-confirm-password">
                                             <div class="me-3 border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer" @click="passwordConfirmVisibility">
                                                 <i class="bi bi-eye" v-if="passwordConfirmationFieldType === 'text'"></i>
                                                 <i class="bi bi-eye-slash" v-if="passwordConfirmationFieldType === 'password'"></i>
@@ -179,7 +179,9 @@
                             <div class="p-3">
                                 <small class="text-secondary text-opacity-75">
                                     <div class="mb-3">
-                                        Your Current Plan is <span class="fw-semibold text-dark"> Basic </span> <br>
+                                        Your Current Plan is
+                                        <span class="fw-semibold text-dark"> Basic </span>
+                                        <br>
                                         A simple start for everyone
                                     </div>
 
@@ -192,7 +194,8 @@
 
                                     <div class="mb-3">
                                         <div class="d-flex justify-content-start align-items-center fw-semibold text-dark">
-                                            $199 Per Month <span class="ms-3 badge bg-light-theme text-theme px-3 py-2"> popular </span>
+                                            $199 Per Month
+                                            <span class="ms-3 badge bg-light-theme text-theme px-3 py-2"> popular </span>
                                         </div>
                                     </div>
                                     Standard plan for small to medium businesses
@@ -211,7 +214,9 @@
                         <!-- billing address action -->
                         <div class="mt-3">
                             <div class="rounded-3 shadow p-3 bg-white">
-                                <div class="h5 mb-3 pt-3 ps-3 fw-bold">Billing Address</div>
+                                <div class="h5 mb-3 pt-3 ps-3 fw-bold">
+                                    Billing Address
+                                </div>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <tbody>
@@ -292,7 +297,7 @@
                                             New for you
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="type" class="form-check-input" checked>
                                         </td>
                                         <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
@@ -309,7 +314,7 @@
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-check-input" checked>
                                         </td>
                                         <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
@@ -326,7 +331,7 @@
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-check-input" checked>
                                         </td>
                                     </tr>
                                     <tr>
@@ -337,7 +342,7 @@
                                             <input type="checkbox" name="" class="form-check-input">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-check-input" checked>
                                         </td>
                                         <td class="text-secondary default-width text-center">
                                             <input type="checkbox" name="" class="form-check-input">
@@ -470,6 +475,11 @@ export default {
             password: '',
             passwordFieldType: 'password',
             passwordConfirmationFieldType: 'password',
+            passwordParam: {
+                currentPassword: '',
+                password: '',
+                passwordConfirm: '',
+            }
         }
 
     },

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-6 mb-3">
                 <div class="position-relative">
-                    <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autocomplete="new-search">
+                    <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autocomplete="new-search" v-model="formData.keyword">
                     <div class="position-absolute top-50 start-0 ps-1 translate-middle-y">
                         <i class="ps-3 bi bi-search"></i>
                     </div>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="d-block text-center">
-                        <i class="text-danger bi bi-trash2" style="font-size: 70px"></i>
+                        <i class="text-danger bi bi-trash2 delete-font-size"></i>
                     </div>
                     <div class="text-center fs-5 fw-semibold mb-4">
                         Are you sure?
@@ -168,6 +168,10 @@ export default {
             categoryParam: {
                 name: '',
                 parentId: '0'
+            },
+            formData: {
+                keyword: '',
+
             }
         }
 

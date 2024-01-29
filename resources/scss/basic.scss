@@ -294,6 +294,14 @@ body {
     font-size: 14px !important;
 }
 
+.delete-font-size{
+    font-size: 70px !important;
+}
+
+.font-30 {
+    font-size: 30px !important;
+}
+
 // cursor
 
 .cursor-pointer {
@@ -676,6 +684,30 @@ body {
         background-color: #DCF2F1!important;
         color: #7FC7D9 !important;
     }
+}
+
+// width and height
+
+$iteration: 2560;
+
+$base-value: 1px;
+
+$base-percentage: 1%;
+
+@for $i from 1 through $iteration {
+
+    .wpx-#{$i} {
+        width: $base-value * $i !important;
+    }
+
+    .hpx-#{$i} {
+        height: $base-value * $i !important;
+    }
+
+    .wPercentage-#{$i} {
+        width: $base-percentage * $i !important;
+    }
+
 }
 
 @import "auth";
