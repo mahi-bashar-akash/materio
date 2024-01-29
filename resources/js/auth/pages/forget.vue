@@ -10,11 +10,11 @@
         </div>
 
         <!-- forget password form action -->
-        <form>
+        <form autocomplete="off">
             <div class="mb-3">
                 <div class="form-group">
-                    <label for="" class="form-label">Email</label>
-                    <input type="text" name="" class="form-control" placeholder="Enter your email" required autocomplete="new-email">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" v-model="forgetParam.email" class="form-control" placeholder="Enter your email" required autocomplete="new-email">
                 </div>
             </div>
             <div class="mb-3">
@@ -42,24 +42,24 @@
         </div>
 
         <!-- reset password form action -->
-        <form>
+        <form autocomplete="off">
             <div class="mb-3">
                 <div class="form-group">
-                    <label for="" class="form-label">Email</label>
-                    <input type="text" name="" class="form-control shadow-none border" placeholder="Enter your email" required autocomplete="new-email">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" type="email" name="email" v-model="resetParam.email" class="form-control shadow-none border" placeholder="Enter your email" required autocomplete="new-email">
                 </div>
             </div>
             <div class="mb-3">
                 <div class="form-group">
-                    <label for="" class="form-label">Code</label>
-                    <input type="text" name="" class="form-control shadow-none border" placeholder="Enter your otp code" required autocomplete="new-otp-code">
+                    <label for="code" class="form-label">Code</label>
+                    <input id="code" type="text" name="code" v-model="resetParam.code" class="form-control shadow-none border" placeholder="Enter your otp code" required autocomplete="new-otp-code">
                 </div>
             </div>
             <div class="mb-3">
                 <div class="form-group">
                     <label for="password" class="form-label">Password</label>
                     <div class="position-relative">
-                        <input id="password" :type="passwordFieldType" name="password" class="form-control" placeholder="Enter your password" required autocomplete="new-password">
+                        <input id="password" :type="passwordFieldType" name="password" v-model="resetParam.password" class="form-control" placeholder="Enter your password" required autocomplete="new-password">
                         <div class="me-3 border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer" @click="passwordVisibility">
                             <i class="bi bi-eye" v-if="passwordFieldType === 'text'"></i>
                             <i class="bi bi-eye-slash" v-if="passwordFieldType === 'password'"></i>
@@ -71,7 +71,7 @@
                 <div class="mb-3 form-group">
                     <label for="password_confirm" class="form-label">Confirm password</label>
                     <div class="position-relative">
-                        <input id="password_confirm" :type="passwordConfirmationFieldType" name="password_confirm" class="form-control" placeholder="Enter your confirm password" required autocomplete="new-confirm-password">
+                        <input id="password_confirm" :type="passwordConfirmationFieldType" name="password_confirm" v-model="resetParam.passwordConfirm" class="form-control" placeholder="Enter your confirm password" required autocomplete="new-confirm-password">
                         <div class="me-3 border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer" @click="passwordConfirmVisibility">
                             <i class="bi bi-eye" v-if="passwordConfirmationFieldType === 'text'"></i>
                             <i class="bi bi-eye-slash" v-if="passwordConfirmationFieldType === 'password'"></i>
@@ -107,6 +107,15 @@ export default {
             password: '',
             passwordFieldType: 'password',
             passwordConfirmationFieldType: 'password',
+            forgetParam: {
+                email: '',
+            },
+            resetParam: {
+                email: '',
+                code: '',
+                password: '',
+                passwordConfirm: '',
+            }
         }
 
     },
