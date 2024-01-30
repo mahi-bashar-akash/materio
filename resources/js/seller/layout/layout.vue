@@ -65,11 +65,6 @@
                             </router-link>
                         </li>
                         <li>
-                            <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2">
-                                <i class="bi bi-gear me-2"></i> Settings
-                            </router-link>
-                        </li>
-                        <li>
                             <a href="/auth/login" class="dropdown-item px-3 py-2">
                                 <i class="bi bi-box-arrow-right me-2"></i> Logout
                             </a>

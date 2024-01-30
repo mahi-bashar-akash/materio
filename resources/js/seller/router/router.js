@@ -16,8 +16,6 @@ import chat from "../pages/chat.vue";
 
 import profile from "../pages/profile.vue";
 
-import settings from "../pages/settings.vue";
-
 import slider from "../pages/slider.vue";
 
 import category from "../pages/category.vue";
@@ -45,8 +43,6 @@ const routes = [
             { path: ROOT_URL + '/chat', name: 'chat', component: chat, meta: { title: TITLE + ' - chat' } },
 
             { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + ' - profile' } },
-
-            { path: ROOT_URL + '/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings' } },
 
             { path: ROOT_URL + '/slider', name: 'slider', component: slider, meta: { title: TITLE + ' - slider' } },
 
