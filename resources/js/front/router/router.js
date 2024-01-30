@@ -20,6 +20,8 @@ import productDetails from "../pages/product-details.vue";
 
 import blog from "../pages/blog.vue";
 
+import cart from "../pages/cart.vue";
+
 import profileLayout from "../pages/profile/layout/layout.vue";
 
 import dashboard from "../pages/profile/dashboard.vue";
@@ -49,6 +51,8 @@ const routes = [
             { path: ROOT_URL + '/product-details', name: 'productDetails', component: productDetails, meta: { title: TITLE + ' - product details' } },
 
             { path: ROOT_URL + '/blog', name: 'blog', component: blog, meta: { title: TITLE + ' - blog' } },
+
+            { path: ROOT_URL + '/cart', name: 'cart', component: cart, meta: { title: TITLE + ' - cart' } },
 
             { path: ROOT_URL, name: 'profileLayout', component: profileLayout,
 
