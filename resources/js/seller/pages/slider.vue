@@ -13,9 +13,15 @@
                 <div class="slider border overflow-hidden position-relative">
                     <img :src="each.file_path" class="each-slider img-fluid w-100 h-100" alt="slider image">
                     <div class="fw-semibold position-absolute top-50 start-0 translate-middle-y ps-5 text-white cursor-content-menu">
-                        <span class="d-block fs-3">{{each.topTitle}}</span>
-                        <span class="d-block fs-1">{{each.midTitle}}</span>
-                        <span class="d-block fs-3 text-end">Sales</span>
+                        <span class="d-block fs-3">
+                            {{each.topTitle}}
+                        </span>
+                        <span class="d-block fs-1">
+                            {{each.midTitle}}
+                        </span>
+                        <span class="d-block fs-3 text-end">
+                            Sales
+                        </span>
                     </div>
                     <div class="fw-semibold position-absolute top-0 end-0 p-2">
                         <div class="py-2 px-4 bg-white bg-opacity-75 rounded-start-5">
@@ -51,7 +57,7 @@
                             <label for="slider" class="form-label w-100 bg-light-theme text-center rounded-3 cursor-pointer">
                                 <input id="slider" type="file" name="slider" class="d-none" required autocomplete="new-slider" @click="manageAvatar($event)">
                                 <span class="d-block py-4">
-                                    <i class="bi bi-clouds-fill text-theme" style="font-size: 30px"></i>
+                                    <i class="bi bi-clouds-fill text-theme font-30"></i>
                                     <span class="text-center d-block text-dark fw-semibold fs-6">
                                         Upload Slider
                                     </span>
@@ -86,7 +92,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="d-block text-center">
-                        <i class="text-danger bi bi-trash2" style="font-size: 70px"></i>
+                        <i class="text-danger bi bi-trash2 delete-font-size"></i>
                     </div>
                     <div class="text-center fs-5 fw-semibold mb-4">
                         Are you sure?

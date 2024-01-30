@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-md-6 mb-3">
                 <div class="position-relative">
-                    <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required
-                           autoComplete="new-search">
+                    <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autoComplete="new-search">
                     <div class="position-absolute top-50 start-0 ps-1 translate-middle-y">
                         <i class="ps-3 bi bi-search"></i>
                     </div>

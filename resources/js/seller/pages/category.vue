@@ -94,7 +94,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="d-block text-center">
-                        <i class="text-danger bi bi-trash2" style="font-size: 70px"></i>
+                        <i class="text-danger bi bi-trash2 delete-font-size"></i>
                     </div>
                     <div class="text-center fs-5 fw-semibold mb-4">
                         Are you sure?

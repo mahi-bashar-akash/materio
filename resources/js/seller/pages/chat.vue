@@ -11,7 +11,7 @@
             <div class="d-flex flex-column justify-content-between content">
                 <div class="col-12">
                     <div class="text-center">
-                        <img :src="`/images/avatar.png`" class="img-fluid mb-3" style="width: 100px; height: 100px; border-radius: 50%;" alt="avatar">
+                        <img :src="`/images/avatar.png`" class="img-fluid mb-3 wpx-100 hpx-100 rounded-circle" alt="avatar">
                         <div class="h5">John Deo</div>
                         <small class="text-secondary text-opacity-50">Admin</small>
                     </div>
@@ -33,16 +33,16 @@
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center">
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-twitter-x"></i>
                     </button>
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-linkedin"></i>
                     </button>
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-youtube"></i>
                     </button>
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-github"></i>
                     </button>
                 </div>
@@ -58,7 +58,7 @@
             <div class="d-flex flex-column justify-content-between content">
                 <div class="col-12">
                     <div class="text-center">
-                        <img :src="`/images/clients/face-1.png`" class="img-fluid mb-3" style="width: 100px; height: 100px; border-radius: 50%;" alt="client-avatar">
+                        <img :src="`/images/clients/face-1.png`" class="img-fluid mb-3 wpx-100 hpx-100 rounded-circle" alt="client-avatar">
                         <div class="h5">Harriet McBride</div>
                         <small class="text-secondary text-opacity-50">Frontend Developer</small>
                     </div>
@@ -80,16 +80,16 @@
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center">
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-twitter-x"></i>
                     </button>
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-linkedin"></i>
                     </button>
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-youtube"></i>
                     </button>
-                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center" style="width: 35px; height: 35px;">
+                    <button type="button" class="border-0 btn-light mx-1 rounded-circle d-flex justify-content-center align-items-center wpx-35 hpx-35">
                         <i class="bi bi-github"></i>
                     </button>
                 </div>
@@ -100,7 +100,7 @@
         <!-- chat sidebar -->
         <div class="chat-sidebar" :class="{active: chatSidebarActive}">
             <div class="chat-sidebar-header">
-                <img :src="`/images/avatar.png`" class="img-fluid rounded-circle me-2 cursor-pointer" style="width: 45px; height: 45px;" alt="avatar" @click="ownerDetails">
+                <img :src="`/images/avatar.png`" class="img-fluid rounded-circle me-2 cursor-pointer wpx-45 hpx-45" alt="avatar" @click="ownerDetails">
                 <div class="position-relative">
                     <input type="text" name="" class="form-control shadow-none ps-5" placeholder="Search Here">
                     <div class="position-absolute start-0 top-50 translate-middle-y ps-3">
@@ -165,7 +165,7 @@
                         <i class="bi bi-justify-left"></i>
                     </a>
                     <div class="d-flex align-items-center cursor-pointer font-14" @click="clientDetails">
-                        <img :src="'/images/clients/'+select.ClientImage" class="img-fluid rounded-circle me-2" style="width: 45px; height: 45px;" alt="client-avatar">
+                        <img :src="'/images/clients/'+select.ClientImage" class="img-fluid rounded-circle me-2 wpx-45 hpx-45" alt="client-avatar">
                         <span>
                             <strong> {{select.clientName}} </strong>
                             <br>
@@ -218,12 +218,12 @@
                         <div class="py-2 px-3 bg-theme text-white rounded-3 shadow-sm">
                             How can we help? We're here for you!
                         </div>
-                        <img :src="`/images/avatar.png`" class="rounded-circle ms-2" style="width: 45px; height: 45px;" alt="avatar">
+                        <img :src="`/images/avatar.png`" class="rounded-circle ms-2 wpx-45 hpx-45" alt="avatar">
                     </div>
 
                     <!-- client chat -->
                     <div class="d-flex justify-content-start align-items-center mb-3">
-                        <img :src="'/images/clients/face-1.png'" class="img-fluid rounded-circle me-2" style="width: 45px; height: 45px;" alt="client-avatar">
+                        <img :src="'/images/clients/face-1.png'" class="img-fluid rounded-circle me-2 wpx-45 hpx-45" alt="client-avatar">
                         <div class="py-2 px-3 bg-white text-secondary rounded-3 shadow-sm">
                             Hey John, I am looking for the best admin template. Could you please help me to find it out?
                         </div>
@@ -235,7 +235,7 @@
                     <div class="position-relative">
                         <input type="text" name="" class="form-control" placeholder="Type you message" required>
                         <div class="position-absolute top-50 end-0 translate-middle-y me-1">
-                            <button type="button" class="btn btn-theme d-flex justify-content-center align-items-center rounded-1" style="height: 38px;">
+                            <button type="button" class="btn btn-theme d-flex justify-content-center align-items-center rounded-1 hpx-38">
                                 <i class="bi bi-send me-2"></i>
                                 Send
                             </button>

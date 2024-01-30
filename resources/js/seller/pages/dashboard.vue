@@ -17,10 +17,10 @@
                             <div class="fw-semibold mb-3">
                                 3891 Ranchview Dr. Richardson, California 62639
                             </div>
-                            <button type="button" class="btn bg-white border-0 shadow me-2" tabindex="0" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-title="Broadcast">
+                            <button type="button" class="btn bg-white border-0 shadow me-2">
                                 <i class="bi bi-broadcast"></i>
                             </button>
-                            <button type="button" class="btn bg-white border-0 shadow" tabindex="0" data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-title="Online Status" @click="statusController">
+                            <button type="button" class="btn bg-white border-0 shadow" @click="statusController">
                                 <i class="bi bi-lightbulb-fill" style="color: #34c38f;" v-if="status === false"></i>
                                 <i class="bi bi-lightbulb-off-fill" style="color: #f46a6a;" v-if="status === true"></i>
                             </button>

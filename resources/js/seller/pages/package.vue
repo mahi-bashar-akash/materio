@@ -38,7 +38,7 @@
                         <td class="default-width">{{each.name}}</td>
                         <td class="price">{{each.price}}</td>
                         <td class="default-width">
-                            <div class="text-truncate" style="width: 200px;">
+                            <div class="text-truncate wpx-200">
                                 {{each.description}}
                             </div>
                         </td>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="d-block text-center">
-                        <i class="text-danger bi bi-trash2" style="font-size: 70px"></i>
+                        <i class="text-danger bi bi-trash2 delete-font-size"></i>
                     </div>
                     <div class="text-center fs-5 fw-semibold mb-4">
                         Are you sure?
