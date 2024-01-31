@@ -6,7 +6,7 @@
                 <div class="p-4 d-flex justify-content-center align-items-center flex-column">
                     <label for="avatar" class="form-label wpx-175 hpx-175 d-flex justify-content-center align-items-center shadow rounded-circle cursor-pointer" v-if="!url">
                         <input id="avatar" type="file" name="upload-image" class="d-none" accept="image/png, image/gif, image/jpeg" @change="onFileChange">
-                        <i class="bi bi-person-plus font-30"></i>
+                        <i class="bi bi-person-fill font-50 text-theme"></i>
                     </label>
                     <div class="wpx-175 hpx-175 position-relative" v-if="url">
                         <img :src="url" class="img-fluid object-fit-cover wpx-175 hpx-175 rounded-circle" alt="avatar">

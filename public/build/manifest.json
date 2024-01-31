@@ -57,7 +57,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-zN0QfU71.js",
+    "file": "assets/app-CHGFCimS.js",
     "imports": [
       "_global-jvb6_f9B.js"
     ],
@@ -65,7 +65,7 @@
     "src": "resources/js/seller/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-4EKeiGpc.css",
+    "file": "assets/basic-lE4rG703.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }
