@@ -1,7 +1,17 @@
 <template>
 
-    <div class="my-3 fs-4 fw-semibold">
-        Cart Details
+    <div class="my-3 d-flex justify-content-start align-items-center">
+        <span class="fs-4 fw-semibold p-2">
+            Cart Details
+        </span>
+        <span class="ms-3 d-flex justify-content-start align-items-center" v-if="cartDetails.length > 0 && selected.length > 0">
+            <button type="button" class="btn-icon me-2">
+                <i class="bi bi-trash2"></i>
+            </button>
+            <button type="button" class="btn-icon" v-if="selected.length === 1">
+                <i class="bi bi-pencil-fill"></i>
+            </button>
+        </span>
     </div>
 
     <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu">
@@ -10,18 +20,18 @@
                 <thead>
                     <tr>
                         <th class="checkbox">
-                            <input type="checkbox" name="" class="form-check-input">
+                            <input type="checkbox" name="" class="form-check-input" :checked="cartDetails.length > 0 && cartDetails.length === selected.length" @change="toggleCheckAll($event)">
                         </th>
                         <th class="name">
                             Name.
                         </th>
-                        <th class="price">
+                        <th class="price text-center">
                             Price.
                         </th>
-                        <th class="quantity">
+                        <th class="quantity text-center">
                             Quantity.
                         </th>
-                        <th class="default-width">
+                        <th class="default-width text-center">
                             Subtotal
                         </th>
                     </tr>
@@ -29,7 +39,7 @@
                 <tbody>
                     <tr v-for="each in cartDetails">
                         <td class="checkbox">
-                            <input type="checkbox" name="" class="form-check-input">
+                            <input type="checkbox" name="" class="form-check-input" :checked="CheckIfChecked(each.id)" @change="toggleCheck($event,each.id)">
                         </td>
                         <td class="name">
                             <div class="d-flex align-items-center justify-content-start">
@@ -39,13 +49,13 @@
                                 </span>
                             </div>
                         </td>
-                        <td class="price">
+                        <td class="price text-center">
                             ${{ each.price }}
                         </td>
-                        <td class="quantity">
+                        <td class="quantity text-center">
                             {{ each.quantity }}
                         </td>
-                        <td class="default-width">
+                        <td class="default-width text-center">
                             ${{ each.price * each.quantity }}
                         </td>
                     </tr>
@@ -54,9 +64,9 @@
                     <tr>
                         <th colspan="3"></th>
                         <th>
-                            Total
+                            Amount of subtotal
                         </th>
-                        <th>
+                        <th class="text-center">
                             ${{totalAmount}}
                         </th>
                     </tr>
@@ -65,10 +75,11 @@
         </div>
     </div>
 
-    <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu col-lg-6 mt-3">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
+    <div class="d-flex justify-content-end">
+        <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu col-lg-6 mt-3">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
                     <tr>
                         <th class="default-width">
                             Description
@@ -77,14 +88,14 @@
                             Amount
                         </th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td class="default-width">
-                            Product Total Expense
+                            Amount of subtotal
                         </td>
                         <td class="default-width">
-                            $500
+                            ${{totalAmount}}
                         </td>
                     </tr>
                     <tr>
@@ -92,14 +103,23 @@
                             shipping fees
                         </td>
                         <td class="default-width">
-                            <select name="shipping-fees" class="form-select">
-                                <option value="">Inside Country - $50</option>
-                                <option value="">Outside Country - $120</option>
+                            <select name="shipping-fees" class="form-select" v-model="selectedShippingFee">
+                                <option value="50">Inside Country - $50</option>
+                                <option value="120">Outside Country - $120</option>
                             </select>
                         </td>
                     </tr>
-                </tbody>
-            </table>
+                    <tr>
+                        <td class="default-width">
+                            total
+                        </td>
+                        <td class="default-width">
+                            ${{ totalAmountWithShipping }}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -112,7 +132,10 @@ export default {
     computed: {
         totalAmount() {
             return this.cartDetails.reduce((acc, curr) => acc + (parseInt(curr.price) * parseInt(curr.quantity)), 0);
-        }
+        },
+        totalAmountWithShipping() {
+            return this.totalAmount + parseInt(this.selectedShippingFee);
+        },
     },
 
     data() {
@@ -121,12 +144,9 @@ export default {
             cartDetails: [
                 {id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '5', quantity: '1'},
                 {id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '10', quantity: '2'},
-                {id: '3', file_path: '/images/product/image-03.jpg', name: 'Product Name', price: '15', quantity: '3'},
-                {id: '4', file_path: '/images/product/image-04.jpg', name: 'Product Name', price: '20', quantity: '4'},
-                {id: '5', file_path: '/images/product/image-05.jpg', name: 'Product Name', price: '25', quantity: '5'},
-                {id: '6', file_path: '/images/product/image-06.jpg', name: 'Product Name', price: '30', quantity: '4'},
-                {id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '35', quantity: '3'},
-            ]
+            ],
+            selectedShippingFee: 50,
+            selected: [],
         }
 
     },
@@ -136,7 +156,34 @@ export default {
 
     },
 
-    methods: {}
+    methods: {
+
+        toggleCheckAll(e) {
+            if (e.target.checked) {
+                this.cartDetails.forEach((v) => {
+                    this.selected.push(v.id);
+                });
+            } else {
+                this.selected = [];
+            }
+        },
+
+        toggleCheck(e, id) {
+            if (e.target.checked) {
+                this.selected.push(id);
+            } else {
+                let index = this.selected.indexOf(id);
+                this.selected.splice(index, 1);
+            }
+        },
+
+        CheckIfChecked(id) {
+            return this.selected.map(function (id) {
+                return id
+            }).indexOf(id) > -1;
+        },
+
+    }
 
 }
 

@@ -388,4 +388,22 @@
 
     }
 
+    .cart-body{
+        height: calc(100vh - 169px);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding: 5px;
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--bs-border-color);
+            height: 5px !important;
+        }
+
+    }
+
 }

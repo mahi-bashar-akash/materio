@@ -77,16 +77,16 @@
         </div>
     </nav>
 
-    <!-- right sidebar as offcanvasexample -->
+    <!-- right sidebar as offcanvas -->
     <div class="offcanvas offcanvas-end p-3 cursor-content-menu" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Cart</h5>
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body p-0">
 
             <!-- no data text -->
-            <div class="d-flex justify-content-center align-items-center flex-column h-100">
+            <div class="d-flex justify-content-center align-items-center flex-column h-100" v-if="cartItem.length === 0 ">
                 <i class="bi bi-bag fs-1 mb-3 d-block"></i>
                 <small class="mb-3 fw-semibold">
                     No product add in your cart
@@ -94,6 +94,45 @@
                 <button type="button" class="btn btn-outline-theme d-flex justify-content-center align-items-center" data-bs-dismiss="offcanvas" @click="goRoute">
                     Continue Shopping
                 </button>
+            </div>
+
+            <div class="cart-body" v-if="cartItem.length !== 0">
+
+                <!-- cart item -->
+                <div class="cart-item rounded-3 p-1 d-flex align-items-center" v-for="each in cartItem">
+                    <img :src="each.file_path" class="img-fluid wpx-105 hpx-105 shadow rounded-3" alt="cart product image">
+                    <div class="ms-3">
+                        <div class="fw-semibold">{{each.name}} (1Kg)</div>
+                        <div class="text-secondary d-flex justify-content-between font-14 my-2"><span>Price: ${{each.price}}</span> <span>Total: ${{each.price * each.quantity}}</span></div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center border rounded-3 wpx-170">
+                                <button class="btn border-0" type="button" @click="decreaseQuantity(each)">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <input type="text" disabled class="form-control cursor-content-menu text-center border-0 bg-transparent mx-2" v-model="each.quantity" min="1" max="5" />
+                                <button class="btn border-0" type="button" @click="increaseQuantity(each)">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="px-3" v-if="cartItem.length !== 0">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-theme w-100">
+                            Cart Details
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-outline-theme w-100">
+                            Checkout
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -221,6 +260,7 @@ export default {
             app_name: window.core.APP_NAME,
             imageUrl: '/images/dots.png',
             userInfo: false,
+            cartItem: [],
         }
 
     },
@@ -234,8 +274,19 @@ export default {
         },
 
         windowContent(){
-            window.scrollTo(0, 0);;
-        }
+            window.scrollTo(0, 0);
+        },
+
+        increaseQuantity(item) {
+            if (item.quantity < 5) {
+                item.quantity++;
+            }
+        },
+        decreaseQuantity(item) {
+            if (item.quantity > 1) {
+                item.quantity--;
+            }
+        },
 
     }
 

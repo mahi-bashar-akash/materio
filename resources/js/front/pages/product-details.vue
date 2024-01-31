@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="p-2">
-                        <div class="d-flex align-items-center border rounded-3" style="width: 170px;">
+                        <div class="d-flex align-items-center border rounded-3 wpx-170">
                             <button class="btn border-0" type="button" @click="decreaseQuantity">
                                 <i class="bi bi-dash"></i>
                             </button>
