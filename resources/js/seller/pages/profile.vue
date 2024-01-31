@@ -3,24 +3,19 @@
     <div class="row justify-content-center">
         <div class="col-lg-3 p-3">
             <div class="p-3 bg-white shadow rounded-4">
-                <div class="p-3 d-flex justify-content-center align-items-center flex-column">
-                    <label for="avatar" class="form-label wpx-150 hpx-150 d-flex justify-content-center align-items-center shadow rounded-circle cursor-pointer" v-if="!url">
+                <div class="p-4 d-flex justify-content-center align-items-center flex-column">
+                    <label for="avatar" class="form-label wpx-175 hpx-175 d-flex justify-content-center align-items-center shadow rounded-circle cursor-pointer" v-if="!url">
                         <input id="avatar" type="file" name="upload-image" class="d-none" accept="image/png, image/gif, image/jpeg" @change="onFileChange">
                         <i class="bi bi-person-plus font-30"></i>
                     </label>
-                    <div class="wpx-150 hpx-150 position-relative" v-if="url">
-                        <img :src="url" class="img-fluid object-fit-cover wpx-150 hpx-150 rounded-circle" alt="avatar">
+                    <div class="wpx-175 hpx-175 position-relative" v-if="url">
+                        <img :src="url" class="img-fluid object-fit-cover wpx-175 hpx-175 rounded-circle" alt="avatar">
                         <div class="position-absolute bottom-0 end-0 translate-middle-y cursor-pointer bg-light shadow wpx-35 hpx-35 d-flex justify-content-center align-items-center rounded-circle" @click="url = null">
                             <i class="bi bi-trash2-fill text-danger"></i>
                         </div>
                     </div>
-                    <div class="mt-3">
-                        <div class="badge bg-success-subtle text-success px-4 py-2">
-                            Mahi Bashar Akash
-                        </div>
-                    </div>
                 </div>
-                <div class="font-14">
+                <div class="font-14 py-3">
                     <div class="mt-3">
                         <div class="mb-2 fw-semibold">Full Name</div>
                         <div class="text-secondary">Mahi Bashar Akash</div>
