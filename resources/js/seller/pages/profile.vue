@@ -45,8 +45,11 @@
                 <button type="button" class="btn mb-3 me-2" :class="{ 'btn-light-theme': tab !== 1, 'btn-theme': tab === 1 }" @click="setTab(1)">
                     Edit Profile
                 </button>
-                <button type="button" class="btn mb-3" :class="{ 'btn-light-theme': tab !== 2, 'btn-theme': tab === 2 }" @click="setTab(2)">
+                <button type="button" class="btn mb-3 me-2" :class="{ 'btn-light-theme': tab !== 2, 'btn-theme': tab === 2 }" @click="setTab(2)">
                     Edit Password
+                </button>
+                <button type="button" class="btn mb-3" :class="{ 'btn-light-theme': tab !== 3, 'btn-theme': tab === 3 }" @click="setTab(3)">
+                    Edit Organization Info
                 </button>
             </div>
 
@@ -115,6 +118,39 @@
                     Update Password
                 </button>
             </form>
+
+            <form class="p-4 bg-white shadow rounded-4" v-if="tab === 3">
+                <div class="form-group mb-3">
+                    <label for="organization-name" class="form-label">Business name</label>
+                    <input id="organization-name" type="text" name="organization-name" class="form-control" placeholder="Enter your organization name" v-model="organizationInfoParam.organizationName" required autocomplete="new-organization-name">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="organization-location" class="form-label">Organization location</label>
+                    <input id="organization-location" type="text" name="organization-location" class="form-control" placeholder="Enter your organization location" v-model="organizationInfoParam.organizationLocation" required autocomplete="new-organization-name">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="organization-email" class="form-label">Organization email</label>
+                    <input id="organization-email" type="email" name="organization-email" class="form-control" placeholder="Enter your organization email" v-model="organizationInfoParam.organizationEmail" required autocomplete="new-organization-email">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="organization-license" class="form-label">Organization license no</label>
+                    <input id="organization-license" type="text" name="organization-license" class="form-control" placeholder="Enter your organization license" v-model="organizationInfoParam.organizationLicense" required autocomplete="new-organization-license">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="organization-license" class="form-label">Organization license prove</label>
+                    <label for="avatar" class="w-100 bg-white border hpx-175 d-flex justify-content-center align-items-center flex-column rounded-3 cursor-pointer text-theme">
+                        <input id="avatar" type="file" name="organization-avatar" class="d-none">
+                        <i class="bi bi-clouds-fill font-50"></i>
+                        Upload picture
+                    </label>
+                </div>
+                <div class="w-100">
+                    <button type="submit" class="btn btn-theme">
+                        Update Organization Info
+                    </button>
+                </div>
+            </form>
+
         </div>
     </div>
 
@@ -139,6 +175,12 @@ export default {
                 currentPassword: '',
                 password: '',
                 passwordConfirm: '',
+            },
+            organizationInfoParam: {
+                organizationName: '',
+                organizationLocation: '',
+                organizationEmail: '',
+                organizationLicense: '',
             },
             tab: 1,
             password: '',

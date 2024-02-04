@@ -259,7 +259,7 @@ export default {
         return{
             app_name: window.core.APP_NAME,
             imageUrl: '/images/dots.png',
-            userInfo: false,
+            userInfo: true,
             cartItem: [],
         }
 

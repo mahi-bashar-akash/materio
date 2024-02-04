@@ -4,7 +4,7 @@
         <div class="px-3">
 
             <!-- customer profile update form -->
-            <form class="bg-white rounded-3 shadow p-4">
+            <form autocomplete="off" class="bg-white rounded-3 shadow p-4">
                 <div class="mb-3">
                     <div class="fs-5 fw-semibold">
                         Edit Profile

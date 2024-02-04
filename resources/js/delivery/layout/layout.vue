@@ -20,10 +20,10 @@
                     <i class="bi bi-circle me-1"></i> CRM - Dashboard
                 </router-link>
                 <router-link :to="{name: 'order'}" class="user-sidebar-link" @click="remove">
-                    <i class="bi bi-cart-fill me-1"></i> Orders
+                    <i class="bi bi-cart me-1"></i> Orders
                 </router-link>
                 <router-link :to="{name: 'notification'}" class="user-sidebar-link" @click="remove">
-                    <i class="bi bi-bell-fill me-1"></i> Notifications
+                    <i class="bi bi-bell me-1"></i> Notifications
                 </router-link>
             </div>
         </div>
