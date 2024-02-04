@@ -306,6 +306,13 @@ body {
     font-size: 50px !important;
 }
 
+.truncate-to-2-lines{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 // cursor
 
 .cursor-pointer {

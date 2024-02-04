@@ -3,11 +3,11 @@
     <!-- preloader content -->
     <div id="preloader">
         <div class="position-relative">
-            <div class="spinner-border text-secondary" role="status" style="width: 150px; height: 150px;">
+            <div class="spinner-border text-secondary hpx-150 wpx-150" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
             <div class="position-absolute top-50 start-50 translate-middle">
-                <img :src="`/images/svg/logo.svg`" class="img-fluid" style="width: 50px; height: 50px;" alt="logo">
+                <img :src="`/images/svg/logo.svg`" class="img-fluid wpx-50 hpx-50" alt="logo">
             </div>
         </div>
     </div>

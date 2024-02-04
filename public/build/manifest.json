@@ -3,7 +3,7 @@
     "file": "assets/global-sJBmbq85.css",
     "src": "_global-!~{007}~.js"
   },
-  "_global-jvb6_f9B.js": {
+  "_global-sIBKVi1T.js": {
     "assets": [
       "assets/bootstrap-icons-2eO-ad8Y.woff2",
       "assets/bootstrap-icons-NpS-Zr3P.woff"
@@ -11,7 +11,7 @@
     "css": [
       "assets/global-sJBmbq85.css"
     ],
-    "file": "assets/global-jvb6_f9B.js"
+    "file": "assets/global-sIBKVi1T.js"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
     "file": "assets/bootstrap-icons-NpS-Zr3P.woff",
@@ -25,47 +25,47 @@
     "css": [
       "assets/app-IRKSPvU3.css"
     ],
-    "file": "assets/app-uINcaG2N.js",
+    "file": "assets/app-5jkiaheD.js",
     "imports": [
-      "_global-jvb6_f9B.js"
+      "_global-sIBKVi1T.js"
     ],
     "isEntry": true,
     "src": "resources/js/admin/app.js"
   },
   "resources/js/auth/app.js": {
-    "file": "assets/app-bgjPsbf1.js",
+    "file": "assets/app-qzdDh66y.js",
     "imports": [
-      "_global-jvb6_f9B.js"
+      "_global-sIBKVi1T.js"
     ],
     "isEntry": true,
     "src": "resources/js/auth/app.js"
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-VtBEYPEb.js",
+    "file": "assets/app-Tm9nvicV.js",
     "imports": [
-      "_global-jvb6_f9B.js"
+      "_global-sIBKVi1T.js"
     ],
     "isEntry": true,
     "src": "resources/js/delivery/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-pvYedTU4.js",
+    "file": "assets/app-p8uyCXKE.js",
     "imports": [
-      "_global-jvb6_f9B.js"
+      "_global-sIBKVi1T.js"
     ],
     "isEntry": true,
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-GDCHT5Tb.js",
+    "file": "assets/app-9ALiM0zR.js",
     "imports": [
-      "_global-jvb6_f9B.js"
+      "_global-sIBKVi1T.js"
     ],
     "isEntry": true,
     "src": "resources/js/seller/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-lE4rG703.css",
+    "file": "assets/basic-xWwnTdwb.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }
