@@ -2,7 +2,7 @@
     <div class="manage-icon-position">
         <div class="spinner-loading-animation"></div>
         <div class="logo">
-            <img src="{{asset('/images/svg/logo.svg')}}" class="wpx-65 hpx-65" alt="preloader">
+            <img src="{{asset('/images/svg/logo.svg')}}" class="wpx-55 hpx-55" alt="preloader">
         </div>
     </div>
 </div>
