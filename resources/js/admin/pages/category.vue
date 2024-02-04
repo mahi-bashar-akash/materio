@@ -29,7 +29,7 @@
             </h2>
             <div :id="'collapse' + category.id" class="accordion-collapse collapse" :class="{ show: categoryExpanded === category.id }" :aria-labelledby="'heading' + category.id" data-bs-parent="#categoryAccordion" >
                 <div class="accordion-body">
-                    <div class="row" v-for="subCategory in category.subCategory" :key="subCategory.id">
+                    <div class="row align-items-center" v-for="subCategory in category.subCategory" :key="subCategory.id">
                         <div class="col-12 col-md-6">
                             {{ subCategory.name }}
                         </div>
