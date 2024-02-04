@@ -38,7 +38,7 @@
                     <td class="name">
                         <div class="d-flex align-items-center justify-content-start">
                             <button type="button" class="btn-icon me-2" @click="removeFromCart(cartItem)">
-                                <i class="bi bi-trash2 text-theme"></i>
+                                <i class="bi bi-trash2 text-danger"></i>
                             </button>
                             <img :src="cartItem.file_path" class="wpx-45 hpx-45 rounded-circle" alt="avatar">
                             <span class="ms-2">
