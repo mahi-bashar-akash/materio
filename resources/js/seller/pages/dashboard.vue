@@ -43,16 +43,16 @@
                                 <div class="col-md-6">
                                     <div class="p-3">
                                         <div class="fw-semibold mb-2">Contacts</div>
-                                        <div class="text-secondary">Manager: Jerome Bell</div>
-                                        <div class="text-secondary">info@example.com</div>
+                                        <div class="text-secondary mb-1">Manager: Jerome Bell</div>
+                                        <div class="text-secondary mb-1">info@example.com</div>
                                         <div class="text-secondary">(229) 555-0109, (808) 555-0111</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="p-3">
                                         <div class="fw-semibold mb-2">Address</div>
-                                        <div class="text-secondary">Country: California</div>
-                                        <div class="text-secondary">Address: Ranchview Dr. Richardson</div>
+                                        <div class="text-secondary mb-1">Country: California</div>
+                                        <div class="text-secondary mb-1">Address: Ranchview Dr. Richardson</div>
                                         <div class="text-secondary">Postal code: 62639</div>
                                     </div>
                                 </div>

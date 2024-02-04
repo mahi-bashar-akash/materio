@@ -5,7 +5,7 @@
             <div class="p-3 bg-white shadow rounded-4">
                 <div class="p-4 d-flex justify-content-center align-items-center flex-column">
                     <label for="avatar" class="form-label wpx-175 hpx-175 d-flex justify-content-center align-items-center shadow rounded-circle cursor-pointer" v-if="!url">
-                        <input id="avatar" type="file" name="upload-image" class="d-none" accept="image/png, image/gif, image/jpeg" @change="onFileChange">
+                        <input id="avatar" type="file" name="upload-image" class="d-none" accept="image/png, image/gif, image/jpeg" @change="onFileChange($event)">
                         <i class="bi bi-person-fill font-50 text-theme"></i>
                     </label>
                     <div class="wpx-175 hpx-175 position-relative" v-if="url">
@@ -138,11 +138,12 @@
                 </div>
                 <div class="form-group mb-3">
                     <label for="organization-license" class="form-label">Organization license prove</label>
-                    <label for="avatar" class="w-100 bg-white border hpx-175 d-flex justify-content-center align-items-center flex-column rounded-3 cursor-pointer text-theme">
-                        <input id="avatar" type="file" name="organization-avatar" class="d-none">
+                    <label for="license-avatar" id="organization-license" class="w-100 bg-white border hpx-175 d-flex justify-content-center align-items-center flex-column rounded-3 cursor-pointer text-theme" v-if="!organizationInfoParam.licenseUrl">
+                        <input id="license-avatar" type="file" name="organization-avatar" class="d-none" @change="onFileChangeLicenseUrl($event)">
                         <i class="bi bi-clouds-fill font-50"></i>
                         Upload picture
                     </label>
+                    <img :src="organizationInfoParam.licenseUrl" class="w-100 bg-white border hpx-175 rounded-3" v-if="organizationInfoParam.licenseUrl"/>
                 </div>
                 <div class="w-100">
                     <button type="submit" class="btn btn-theme">
@@ -181,6 +182,7 @@ export default {
                 organizationLocation: '',
                 organizationEmail: '',
                 organizationLicense: '',
+                licenseUrl: null,
             },
             tab: 1,
             password: '',
@@ -202,6 +204,11 @@ export default {
         onFileChange(e) {
             const file = e.target.files[0];
             this.url = URL.createObjectURL(file);
+        },
+
+        onFileChangeLicenseUrl(e) {
+            const licenseUrlFile = e.target.files[0];
+            this.organizationInfoParam.licenseUrl = URL.createObjectURL(licenseUrlFile);
         },
 
         setTab(tab){

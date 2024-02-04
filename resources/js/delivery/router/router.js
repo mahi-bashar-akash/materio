@@ -18,8 +18,6 @@ import notification from "../pages/notification.vue";
 
 import profile from "../pages/profile.vue";
 
-import settings from "../pages/settings.vue";
-
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/delivery";
@@ -39,8 +37,6 @@ const routes = [
             { path: ROOT_URL + '/notification', name: 'notification', component: notification, meta: { title: TITLE + ' - notification' } },
 
             { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + ' - profile' } },
-
-            { path: ROOT_URL + '/settings', name: 'settings', component: settings, meta: { title: TITLE + ' - settings' } },
 
         ]
 

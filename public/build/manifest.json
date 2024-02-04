@@ -25,7 +25,7 @@
     "css": [
       "assets/app-IRKSPvU3.css"
     ],
-    "file": "assets/app-VeyVA5_J.js",
+    "file": "assets/app-bYvMUmid.js",
     "imports": [
       "_global-wLKcKM3T.js"
     ],
@@ -41,7 +41,7 @@
     "src": "resources/js/auth/app.js"
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-Tn19Iw1r.js",
+    "file": "assets/app-rk5Mx3oV.js",
     "imports": [
       "_global-wLKcKM3T.js"
     ],
@@ -57,7 +57,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-xvvbGBdN.js",
+    "file": "assets/app-RPAaAL9i.js",
     "imports": [
       "_global-wLKcKM3T.js"
     ],

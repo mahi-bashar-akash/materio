@@ -145,6 +145,15 @@
                     <label for="vehicle-license" class="form-label">Vehicle license</label>
                     <input id="vehicle-license" type="text" class="form-control" v-model="necessaryParam.vehicleLicense" placeholder="Enter your vehicle license" required autocomplete="new-Vehicle-license">
                 </div>
+                <div class="form-group mb-3">
+                    <label for="organization-license" class="form-label">Organization license prove</label>
+                    <label for="license-avatar" id="organization-license" class="w-100 bg-white border hpx-175 d-flex justify-content-center align-items-center flex-column rounded-3 cursor-pointer text-theme" v-if="!necessaryParam.licenseUrl">
+                        <input id="license-avatar" type="file" name="organization-avatar" class="d-none" @change="onFileChangeLicenseUrl($event)">
+                        <i class="bi bi-clouds-fill font-50"></i>
+                        Upload picture
+                    </label>
+                    <img :src="necessaryParam.licenseUrl" class="w-100 bg-white border hpx-175 rounded-3" v-if="necessaryParam.licenseUrl"/>
+                </div>
                 <button type="submit" class="btn btn-theme">
                     Update Necessary Info
                 </button>
@@ -179,6 +188,7 @@ export default {
                 vehiclesType: '1',
                 areaLocation: 'dhaka',
                 vehicleLicense: '',
+                licenseUrl: null,
             },
             tab: 1,
             password: '',
@@ -200,6 +210,11 @@ export default {
         onFileChange(e) {
             const file = e.target.files[0];
             this.url = URL.createObjectURL(file);
+        },
+
+        onFileChangeLicenseUrl(e) {
+            const licenseUrlFile = e.target.files[0];
+            this.necessaryParam.licenseUrl = URL.createObjectURL(licenseUrlFile);
         },
 
         setTab(tab){
