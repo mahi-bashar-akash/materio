@@ -9,7 +9,10 @@
     @vite('resources/scss/basic.scss')
     @vite('resources/js/admin/app.js')
 </head>
-<body class="admin-portal" id="app"></body>
+<body class="admin-portal">
+    <div id="app"></div>
+    @include('components/preloader')
+</body>
 <script>
     window.core = {
         APP_NAME: 'Materio ',

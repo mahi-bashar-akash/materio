@@ -9,7 +9,10 @@
     @vite('resources/scss/basic.scss')
     @vite('resources/js/delivery/app.js')
 </head>
-<body class="delivery-portal" id="app"></body>
+
+<body class="delivery-portal">
+    <div id="app"></div>
+</body>
 <script>
     window.core = {
         APP_NAME: 'Materio ',
