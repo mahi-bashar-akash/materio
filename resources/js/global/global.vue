@@ -1,17 +1,5 @@
 <template>
 
-    <!-- preloader content -->
-    <div id="preloader">
-        <div class="position-relative">
-            <div class="spinner-border text-secondary hpx-150 wpx-150" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="position-absolute top-50 start-50 translate-middle">
-                <img :src="`/images/svg/logo.svg`" class="img-fluid wpx-50 hpx-50" alt="logo">
-            </div>
-        </div>
-    </div>
-
     <!--  color select content  -->
     <div class="color-wrapper" :class="{'active': colorWrapperActive}">
         <div class="color-controller">
@@ -48,13 +36,6 @@ export default {
     },
 
     mounted() {
-
-        setTimeout(() =>{
-            const preloader = document.getElementById('preloader');
-            setTimeout(() => {
-                document.getElementById('app').removeChild(preloader)
-            },1000)
-        },1000);
 
         const savedColor = localStorage.getItem('themeColor');
         if (savedColor) {
