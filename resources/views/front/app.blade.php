@@ -17,9 +17,9 @@
     @vite('resources/scss/basic.scss')
     @vite('resources/js/front/app.js')
 </head>
-
 <body class="front-portal">
     <div id="app"></div>
+    @include('components/preloader')
 </body>
 <script>
     window.core = {

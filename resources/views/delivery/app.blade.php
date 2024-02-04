@@ -9,9 +9,9 @@
     @vite('resources/scss/basic.scss')
     @vite('resources/js/delivery/app.js')
 </head>
-
 <body class="delivery-portal">
     <div id="app"></div>
+    @include('components/preloader')
 </body>
 <script>
     window.core = {

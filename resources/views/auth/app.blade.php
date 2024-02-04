@@ -9,9 +9,9 @@
     @vite('resources/scss/basic.scss')
     @vite('resources/js/auth/app.js')
 </head>
-
 <body class="auth-portal">
     <div id="app"></div>
+    @include('components/preloader')
 </body>
 <script>
     window.core = {
