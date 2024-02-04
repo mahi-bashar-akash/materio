@@ -114,6 +114,70 @@
         </div>
     </div>
 
+    <!-- related product area -->
+    <section class="w-100 container-fluid mt-4">
+        <div class="fw-bold text-center fs-3">
+            Related Products
+        </div>
+        <div class="product-carousel owl-carousel owl-theme">
+            <div class="item" v-for="each in dealOfTheDaysProduct">
+                <div class="product-item bg-white">
+                    <img :src="each.file_path" class="product-image img-fluid" :alt="each.name">
+                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
+                        {{each.category}}
+                    </div>
+                    <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="mt-2 text-center">
+                        <span v-if="each.review === '1'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '2'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '3'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '4'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star text-warning mx-1"></i>
+                        </span>
+                        <span v-if="each.review === '5'">
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                            <i class="bi bi-star-fill text-warning mx-1"></i>
+                        </span>
+                    </div>
+                    <div class="text-theme text-center mt-2">${{each.price}}</div>
+                    <div class="product-active">
+                        <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
+                            <i class="bi bi-cart"></i>
+                        </button>
+                        <button type="button" class="btn btn-theme" @click="productInfo">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <script>
@@ -143,12 +207,22 @@ export default {
         return {
             selectedShippingFee: 50,
             selected: [],
+            dealOfTheDaysProduct: [
+                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name', review: '1' },
+                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name', review: '2' },
+                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name', review: '3' },
+                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name', review: '4' },
+                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name', review: '5' },
+                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name', review: '3' },
+                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name', review: '2' },
+            ],
         }
 
     },
 
     mounted() {
 
+        this.product();
 
     },
 
@@ -160,6 +234,33 @@ export default {
 
         removeFromCart(cartItem) {
             store.dispatch('removeFromCart', cartItem)
+        },
+
+        product(){
+            $('.product-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:4
+                    }
+                }
+            })
+        },
+
+        productInfo(){
+            this.$router.push( { name: 'productDetails' } )
+        },
+
+        addToCart(product) {
+            store.dispatch('addToCart', product)
         },
 
     }
