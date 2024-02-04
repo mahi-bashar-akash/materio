@@ -22,6 +22,12 @@
                 <router-link :to="{name: 'chat'}" class="user-sidebar-link" @click="remove">
                     <i class="bi bi-circle me-1"></i> Chat
                 </router-link>
+                <router-link :to="{name: 'calendar'}" class="user-sidebar-link" @click="remove">
+                    <i class="bi bi-circle me-1"></i> Calendar
+                </router-link>
+                <router-link :to="{name: 'email'}" class="user-sidebar-link" @click="remove">
+                    <i class="bi bi-circle me-1"></i> Email
+                </router-link>
                 <div class="d-flex justify-content-center">
                     <hr class="col-6">
                 </div>
