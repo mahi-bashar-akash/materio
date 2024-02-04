@@ -107,10 +107,10 @@
                     </div>
                     <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
+                        <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
                             <i class="bi bi-cart"></i>
                         </button>
-                        <button type="button" class="btn btn-theme" @click="productInfo">
+                        <button type="button" class="btn btn-theme" @click="productInfo(each)">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
@@ -210,10 +210,10 @@
                     </div>
                     <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
+                        <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
                             <i class="bi bi-cart"></i>
                         </button>
-                        <button type="button" class="btn btn-theme" @click="productInfo">
+                        <button type="button" class="btn btn-theme" @click="productInfo(each)">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
@@ -316,7 +316,7 @@
 
 <script>
 
-import router from "./../router/router";
+import store from "../../store/index.js";
 
 export default {
 
@@ -363,6 +363,8 @@ export default {
             OperationImageUrl2: '/images/slider/content-2.jpg',
             OperationImageUrl3: '/images/slider/content-3.jpg',
 
+            cart: [],
+
         }
 
     },
@@ -376,12 +378,16 @@ export default {
 
     methods: {
 
+        addToCart(product) {
+            store.dispatch('addToCart', product)
+        },
+
         pushType(){
-            router.push( { name: 'shop' } )
+            this.$router.push( { name: 'shop' } )
         },
 
         productInfo(){
-            router.push( { name: 'productDetails' } )
+            this.$router.push( { name: 'productDetails' } )
         },
 
         slider(){
@@ -389,6 +395,7 @@ export default {
                 loop: true,
                 margin: 10,
                 nav: false,
+                autoplay: true,
                 responsive:{
                     0:{
                         items:1
@@ -408,6 +415,8 @@ export default {
                 loop:true,
                 margin:10,
                 nav:false,
+                dots: false,
+                autoplay: true,
                 responsive:{
                     0:{
                         items:1
@@ -427,6 +436,8 @@ export default {
                 loop:true,
                 margin:10,
                 nav:false,
+                dots: false,
+                autoplay: true,
                 responsive:{
                     0:{
                         items:1
@@ -447,6 +458,7 @@ export default {
                 margin: 10,
                 nav: false,
                 dots: false,
+                autoplay: true,
                 responsive:{
                     0:{
                         items:2

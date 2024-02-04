@@ -1,35 +1,30 @@
 <template>
 
-    <div class="my-3 d-flex justify-content-start align-items-center">
+    <div class="my-3">
         <span class="fs-4 fw-semibold p-2">
             Cart Details
-        </span>
-        <span class="ms-3 d-flex justify-content-start align-items-center" v-if="cartDetails.length > 0 && selected.length > 0">
-            <button type="button" class="btn-icon me-2">
-                <i class="bi bi-trash2"></i>
-            </button>
-            <button type="button" class="btn-icon" v-if="selected.length === 1">
-                <i class="bi bi-pencil-fill"></i>
-            </button>
         </span>
     </div>
 
     <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu">
-        <div class="table-responsive">
+        <div class="d-flex justify-content-center align-items-center flex-column hpx-450 w-100" v-if="products.length === 0">
+            <i class="bi bi-bag fs-1 mb-3 d-block"></i>
+            <small class="mb-3 fw-semibold">
+                No product add in your cart
+            </small>
+            <button type="button" class="btn btn-outline-theme d-flex justify-content-center align-items-center" data-bs-dismiss="offcanvas" @click="goRoute">
+                Continue Shopping
+            </button>
+        </div>
+        <div class="table-responsive" v-if="products.length !== 0">
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="checkbox">
-                            <input type="checkbox" name="" class="form-check-input" :checked="cartDetails.length > 0 && cartDetails.length === selected.length" @change="toggleCheckAll($event)">
-                        </th>
                         <th class="name">
                             Name.
                         </th>
-                        <th class="price text-center">
-                            Price.
-                        </th>
-                        <th class="quantity text-center">
-                            Quantity.
+                        <th class="default-width text-center">
+                            Price * Quantity
                         </th>
                         <th class="default-width text-center">
                             Subtotal
@@ -37,33 +32,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="each in cartDetails">
-                        <td class="checkbox">
-                            <input type="checkbox" name="" class="form-check-input" :checked="CheckIfChecked(each.id)" @change="toggleCheck($event,each.id)">
-                        </td>
+                    <tr v-for="(cartItem, index) in products" :key="index">
                         <td class="name">
                             <div class="d-flex align-items-center justify-content-start">
-                                <img :src="each.file_path" class="wpx-45 hpx-45 rounded-circle" alt="avatar">
+                                <button type="button" class="btn-icon me-2" @click="removeFromCart(cartItem)">
+                                    <i class="bi bi-trash2 text-theme"></i>
+                                </button>
+                                <img :src="cartItem.file_path" class="wpx-45 hpx-45 rounded-circle" alt="avatar">
                                 <span class="ms-2">
-                                    {{ each.name }}
+                                    {{ cartItem.name }}
                                 </span>
                             </div>
                         </td>
-                        <td class="price text-center">
-                            ${{ each.price }}
-                        </td>
-                        <td class="quantity text-center">
-                            {{ each.quantity }}
+                        <td class="default-width text-center">
+                            ${{ cartItem.price }} * {{ cartItem.quantity }}
                         </td>
                         <td class="default-width text-center">
-                            ${{ each.price * each.quantity }}
+                            ${{ cartItem.price * cartItem.quantity }}
                         </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th colspan="3"></th>
-                        <th>
+                        <th colspan="2">
                             Amount of subtotal
                         </th>
                         <th class="text-center">
@@ -127,24 +118,29 @@
 
 <script>
 
+import store from "../../store/index.js";
+
 export default {
 
     computed: {
+
         totalAmount() {
-            return this.cartDetails.reduce((acc, curr) => acc + (parseInt(curr.price) * parseInt(curr.quantity)), 0);
+            return this.products.reduce((acc, curr) => acc + (parseInt(curr.price) * parseInt(curr.quantity)), 0);
         },
+
         totalAmountWithShipping() {
             return this.totalAmount + parseInt(this.selectedShippingFee);
         },
+
+        products: function() {
+            return store.state.products
+        },
+
     },
 
     data() {
 
         return {
-            cartDetails: [
-                {id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '5', quantity: '1'},
-                {id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '10', quantity: '2'},
-            ],
             selectedShippingFee: 50,
             selected: [],
         }
@@ -158,29 +154,12 @@ export default {
 
     methods: {
 
-        toggleCheckAll(e) {
-            if (e.target.checked) {
-                this.cartDetails.forEach((v) => {
-                    this.selected.push(v.id);
-                });
-            } else {
-                this.selected = [];
-            }
+        goRoute(){
+            this.$router.push( {name: 'shop'} )
         },
 
-        toggleCheck(e, id) {
-            if (e.target.checked) {
-                this.selected.push(id);
-            } else {
-                let index = this.selected.indexOf(id);
-                this.selected.splice(index, 1);
-            }
-        },
-
-        CheckIfChecked(id) {
-            return this.selected.map(function (id) {
-                return id
-            }).indexOf(id) > -1;
+        removeFromCart(cartItem) {
+            store.dispatch('removeFromCart', cartItem)
         },
 
     }
