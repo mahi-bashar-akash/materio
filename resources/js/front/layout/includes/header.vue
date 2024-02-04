@@ -10,12 +10,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-lg-0">
                     <li class="nav-item">
                         <router-link :to="{name: 'shop'}" class="nav-link" @click="windowContent">
                             Shop
                         </router-link>
                     </li>
+                </ul>
+                <ul class="navbar-nav m-auto mb-lg-0">
                     <li>
                         <router-link :to="{name: 'contact'}" class="nav-link" @click="windowContent">
                             Contact
@@ -25,13 +27,6 @@
                         <router-link :to="{name: 'blog'}" class="nav-link" @click="windowContent">
                             Blog
                         </router-link>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                            <i class="bi bi-cart me-2"></i> <span class="badge bg-theme text-white py-1 px-2">{{products.length}}</span>
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="/auth/login" class="nav-link">
@@ -43,10 +38,28 @@
                             Login
                         </a>
                     </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item me-2 mb-2 mb-lg-0">
+                        <form class="position-relative" role="search">
+                            <input class="form-control ps-5" type="search" placeholder="Search Here" aria-label="Search">
+                            <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="nav-item me-2 mb-2 mb-lg-0">
+                        <button type="button" class="nav-link bg-white border shadow px-3 hpx-45 rounded-3 position-relative" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                            <i class="bi bi-cart-fill text-theme"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                                {{products.length}}
+                            </span>
+                        </button>
+                    </li>
                     <li class="nav-item dropdown" v-if="userInfo">
-                        <a class="nav-link" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            mahi bashar akash
-                        </a>
+                        <button type="button" class="nav-link bg-white border shadow px-3 hpx-45 rounded-3" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle text-theme"></i>
+                        </button>
                         <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
                             <li>
                                 <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2" @click="windowContent">
