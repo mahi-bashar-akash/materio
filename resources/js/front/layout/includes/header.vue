@@ -44,8 +44,8 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown" v-if="userInfo">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mahi Bashar Akash
+                        <a class="nav-link" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
                             <li>
@@ -89,7 +89,7 @@
                 <small class="mb-3 fw-semibold">
                     No product add in your cart
                 </small>
-                <button type="button" class="btn btn-outline-theme d-flex justify-content-center align-items-center" data-bs-dismiss="offcanvas" @click="goRoute">
+                <button type="button" class="btn btn-outline-theme d-flex justify-content-center align-items-center" data-bs-dismiss="offcanvas" @click="goRoute;windowContent">
                     Continue Shopping
                 </button>
             </div>
@@ -128,12 +128,12 @@
             <div class="px-3 mt-3" v-if="products.length !== 0">
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" class="btn btn-theme w-100" @click="goCartDetails">
+                        <button type="button" class="btn btn-theme w-100" @click="goCartDetails;windowContent">
                             Cart Details
                         </button>
                     </div>
                     <div class="col-6">
-                        <button type="button" class="btn btn-outline-theme w-100">
+                        <button type="button" class="btn btn-outline-theme w-100" @click="windowContent">
                             Checkout
                         </button>
                     </div>
