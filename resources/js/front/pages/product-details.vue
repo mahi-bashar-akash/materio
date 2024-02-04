@@ -228,7 +228,7 @@
                     </div>
                     <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
-                        <button type="button" class="btn btn-theme me-1">
+                        <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
                             <i class="bi bi-cart"></i>
                         </button>
                         <button type="button" class="btn btn-theme" @click="productInfo">
@@ -244,6 +244,7 @@
 
 <script>
 
+import store from "../../store/index.js";
 
 export default {
 
@@ -324,6 +325,10 @@ export default {
 
         productInfo(){
             this.$router.push( { name: 'productDetails' } )
+        },
+
+        addToCart(product) {
+            store.dispatch('addToCart', product)
         },
 
     }

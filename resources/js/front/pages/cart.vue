@@ -206,7 +206,6 @@ export default {
 
         return {
             selectedShippingFee: 50,
-            selected: [],
             dealOfTheDaysProduct: [
                 { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name', review: '1' },
                 { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name', review: '2' },

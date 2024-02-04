@@ -184,15 +184,17 @@ export default {
         decrementQuantity(cartItem) {
             if (cartItem.quantity > 1) {
                 cartItem.quantity--;
+                this.subTotal -= cartItem.price
+                store.dispatch('decrementCartItem', cartItem)
             }
-            this.subTotal -= cartItem.price
-            store.dispatch('decrementCartItem', cartItem)
         },
 
         incrementQuantity(cartItem) {
-            cartItem.quantity++;
-            this.subTotal += cartItem.price
-            store.dispatch('addToCart', cartItem)
+            if (cartItem.quantity < 5) {
+                cartItem.quantity++;
+                this.subTotal += cartItem.price
+                store.dispatch('addToCart', cartItem)
+            }
         },
 
         removeFromCart(cartItem) {
