@@ -2,7 +2,7 @@ const api = "/api/";
 
 const apiRoutes = {
 
-    // authentication
+    // authentication api
 
     login: api + 'auth/login',
 
@@ -12,7 +12,7 @@ const apiRoutes = {
 
     reset: api + 'auth/reset',
 
-    // slider
+    // slider api
 
     sliderCreate: api + 'slider/create',
 
@@ -24,7 +24,7 @@ const apiRoutes = {
 
     sliderDelete: api + 'slider/delete',
 
-    // category
+    // category api
 
     categoryCreate: api + 'category/create',
 
@@ -36,7 +36,7 @@ const apiRoutes = {
 
     categoryDelete: api + 'category/delete',
 
-    // product
+    // product api
 
     productCreate: api + 'product/create',
 
@@ -48,7 +48,7 @@ const apiRoutes = {
 
     productDelete: api + 'product/delete',
 
-    // product review
+    // product review api
 
     productReviewCreate: api + 'review/create',
 
@@ -60,7 +60,7 @@ const apiRoutes = {
 
     productReviewDelete: api + 'review/delete',
 
-    // package
+    // package api
 
     packageCreate: api + 'package/create',
 
@@ -72,7 +72,7 @@ const apiRoutes = {
 
     packageDelete: api + 'package/delete',
 
-    // order
+    // order api
 
     orderCreate: api + 'order/create',
 
@@ -84,7 +84,7 @@ const apiRoutes = {
 
     orderDelete: api + 'order/delete',
 
-    // blog
+    // blog api
 
     blogCreate: api + 'blog/create',
 
@@ -96,7 +96,7 @@ const apiRoutes = {
 
     blogDelete: api + 'blog/delete',
 
-    // blog review
+    // blog review api
 
     blogReviewCreate: api + 'blog/review/create',
 
@@ -108,7 +108,7 @@ const apiRoutes = {
 
     blogReviewDelete: api + 'blog/review/delete',
 
-    // contact
+    // contact api
 
     contactCreate: api + 'contact/create',
 
