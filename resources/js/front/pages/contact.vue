@@ -5,9 +5,8 @@
     </div>
 
     <div class="map mb-3">
-        <div id="canvas-for-googlemap" style="height:100%; width:100%;max-width:100%;">
-            <iframe style="height:100%;width:100%;border:0;" frameborder="0"
-                    src="https://www.google.com/maps/embed/v1/place?q=Jessore+sadar+upazila.+Jessore,+Jashore,+Bangladesh&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+        <div id="canvas-for-googlemap" class="w-100 h-100">
+            <iframe class="h-100 w-100 border-0" src="https://www.google.com/maps/embed/v1/place?q=Jessore+sadar+upazila.+Jessore,+Jashore,+Bangladesh&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
         </div>
     </div>
 

@@ -125,46 +125,42 @@
                 <div class="mb-3 col-12 col-md-6">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input id="name" type="text" name="name" class="form-control" required autocomplete="new-name" placeholder="Enter your name">
+                        <input id="name" type="text" name="name" class="form-control" required autocomplete="new-name" v-model="productReviewParam.name" placeholder="Enter your name">
                     </div>
                 </div>
                 <div class="mb-3 col-12 col-md-6">
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input id="email" type="email" name="email" class="form-control" required autocomplete="new-email" placeholder="Enter your email">
+                        <input id="email" type="email" name="email" class="form-control" required autocomplete="new-email" v-model="productReviewParam.email" placeholder="Enter your email">
                     </div>
                 </div>
                 <div class="mb-3 col-12 col-md-6">
                     <div class="form-group">
                         <label class="form-label"> Rating </label>
                         <div class="d-flex justify-content-start align-items-center">
-                            <input type="checkbox" id="star1" class="form-check-input d-none" v-model="rating" value="1" />
-                            <label for="star1" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('1'), 'bi bi-star': !rating.includes('1') }"></label>
-
-                            <input type="checkbox" id="star2" class="form-check-input d-none" v-model="rating" value="2" />
-                            <label for="star2" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('2'), 'bi bi-star': !rating.includes('2') }"></label>
-
-                            <input type="checkbox" id="star3" class="form-check-input d-none" v-model="rating" value="3" />
-                            <label for="star3" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('3'), 'bi bi-star': !rating.includes('3') }"></label>
-
-                            <input type="checkbox" id="star4" class="form-check-input d-none" v-model="rating" value="4" />
-                            <label for="star4" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('4'), 'bi bi-star': !rating.includes('4') }"></label>
-
-                            <input type="checkbox" id="star5" class="form-check-input d-none" v-model="rating" value="5" />
-                            <label for="star5" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': rating.includes('5'), 'bi bi-star': !rating.includes('5') }"></label>
+                            <input type="checkbox" id="star1" class="form-check-input d-none" v-model="productReviewParam.rating" value="1" @click="updateRating(1)" />
+                            <label for="star1" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('1'), 'bi bi-star': !productReviewParam.rating.includes('1') }"></label>
+                            <input type="checkbox" id="star2" class="form-check-input d-none" v-model="productReviewParam.rating" value="2" @click="updateRating(2)" />
+                            <label for="star2" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('2'), 'bi bi-star': !productReviewParam.rating.includes('2') }"></label>
+                            <input type="checkbox" id="star3" class="form-check-input d-none" v-model="productReviewParam.rating" value="3" @click="updateRating(3)" />
+                            <label for="star3" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('3'), 'bi bi-star': !productReviewParam.rating.includes('3') }"></label>
+                            <input type="checkbox" id="star4" class="form-check-input d-none" v-model="productReviewParam.rating" value="4" @click="updateRating(4)" />
+                            <label for="star4" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('4'), 'bi bi-star': !productReviewParam.rating.includes('4') }"></label>
+                            <input type="checkbox" id="star5" class="form-check-input d-none" v-model="productReviewParam.rating" value="5" @click="updateRating(5)" />
+                            <label for="star5" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('5'), 'bi bi-star': !productReviewParam.rating.includes('5') }"></label>
                         </div>
                     </div>
                 </div>
                 <div class="mb-3 col-12 col-md-6">
                     <div class="form-group">
                         <label for="review-title" class="form-label">Review Title</label>
-                        <input id="review-title" type="text" name="review-title" class="form-control" required autocomplete="new-review-title" placeholder="Enter a review title">
+                        <input id="review-title" type="text" name="review-title" class="form-control" required autocomplete="new-review-title" v-model="productReviewParam.title" placeholder="Enter a review title">
                     </div>
                 </div>
                 <div class="mb-3 col-12">
                     <div class="form-group">
                         <label for="review-description" class="form-label">Review Description</label>
-                        <textarea name="review-description" id="review-description" cols="30" rows="5" class="form-textarea" required autocomplete="new-review-description" placeholder="Write your comment here"></textarea>
+                        <textarea name="review-description" id="review-description" cols="30" rows="5" class="form-textarea" required autocomplete="new-review-description" v-model="productReviewParam.description" placeholder="Write your comment here"></textarea>
                     </div>
                 </div>
                 <div>
@@ -265,9 +261,16 @@ export default {
 
             kgText: '1 kg',
             quantity: 1,
-            rating: [],
             review: false,
             isZoomed: false,
+
+            productReviewParam: {
+                name: '',
+                email: '',
+                rating: [],
+                title: '',
+                description: '',
+            },
 
         }
 
@@ -281,8 +284,16 @@ export default {
 
     methods: {
 
+        updateRating(selectedRating) {
+            this.productReviewParam.rating = [];
+            for (let i = 1; i <= selectedRating; i++) {
+                this.productReviewParam.rating.push(i.toString());
+            }
+        },
+
         reviewController(){
-            this.review = !this.review
+            this.review = !this.review;
+            this.productReviewParam = { name: '', email: '', rating: [], title: '', description: '' };
         },
 
         increaseQuantity() {
