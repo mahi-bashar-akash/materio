@@ -52,7 +52,7 @@
     "src": "resources/js/auth/app.js"
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-gpeJxkgc.js",
+    "file": "assets/app-ZcMC1OOZ.js",
     "imports": [
       "_global-wa3kxYq5.js"
     ],
@@ -68,7 +68,7 @@
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-BilwAcon.js",
+    "file": "assets/app-i_syugn-.js",
     "imports": [
       "_global-wa3kxYq5.js",
       "_vue-quill.snow-YPjYz2Ox.js"

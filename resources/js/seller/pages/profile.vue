@@ -143,7 +143,14 @@
                         <i class="bi bi-clouds-fill font-50"></i>
                         Upload picture
                     </label>
-                    <img :src="organizationInfoParam.licenseUrl" class="w-100 bg-white border hpx-175 rounded-3" v-if="organizationInfoParam.licenseUrl"/>
+                    <div class="position-relative" v-if="organizationInfoParam.licenseUrl">
+                        <img :src="organizationInfoParam.licenseUrl" class="w-100 bg-white border hpx-175 rounded-3"/>
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <button type="button" class="btn bg-white d-flex justify-content-center border-0 align-items-center shadow wpx-45 hpx-45" @click="organizationInfoParam.licenseUrl = null">
+                                <i class="bi bi-trash2 text-danger"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="w-100">
                     <button type="submit" class="btn btn-theme">
