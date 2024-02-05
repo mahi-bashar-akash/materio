@@ -54,7 +54,7 @@
                             <input type="checkbox" name="checkbox" class="form-check-input">
                         </td>
                         <td class="id">
-                            1
+                            {{each.id}}
                         </td>
                         <td class="name">
                             <div class="d-flex align-items-center justify-content-start">

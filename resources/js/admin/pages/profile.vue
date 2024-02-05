@@ -3,10 +3,21 @@
     <!-- profile wrapper -->
     <div class="profile-wrapper">
         <div class="row">
-            <div class="col-xl-4 p-3 h-100">
+            <div class="col-lg-5 col-xl-3 p-3 h-100">
                 <div class="bg-white p-3 shadow rounded-3 mb-3 cursor-content-menu h-100">
+
+                    <!-- admin -->
                     <div class="d-flex justify-content-center align-items-center flex-column mb-3">
-                        <img :src="`/images/avatar.png`" class="rounded-circle overflow-hidden wpx-144 hpx-144" alt="admin avatar">
+                        <label for="avatar" class="form-label wpx-150 hpx-150 rounded-circle d-flex justify-content-center align-items-center cursor-pointer border" v-if="!url">
+                            <input id="avatar" type="file" name="avatar" class="d-none" @change="onFileChange" accept="image/png, image/gif, image/jpeg">
+                            <i class="bi bi-camera fs-1 text-theme"></i>
+                        </label>
+                        <div class="position-relative" v-if="url">
+                            <img :src="url" class="img-fluid object-fit-cover wpx-150 hpx-150 rounded-circle overflow-hidden" alt="avatar">
+                            <div class="position-absolute bottom-0 end-0 wpx-45 hpx-45 rounded-circle bg-white shadow d-flex justify-content-center align-items-center cursor-pointer" @click="url = null">
+                                <i class="bi bi-trash2-fill text-danger"></i>
+                            </div>
+                        </div>
                         <div class="badge bg-success-subtle text-secondary py-2 px-4 mt-3">
                             Frontend Developer (intern)
                         </div>
@@ -25,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8 p-3">
+            <div class="col-lg-7 col-xl-9 p-3">
 
                 <!-- button group -->
                 <div class="d-flex justify-content-start align-items-center flex-wrap">
@@ -481,7 +492,8 @@ export default {
                 currentPassword: '',
                 password: '',
                 passwordConfirm: '',
-            }
+            },
+            url: null,
         }
 
     },
@@ -505,6 +517,11 @@ export default {
         passwordConfirmVisibility() {
             this.passwordConfirmationFieldType = this.passwordConfirmationFieldType === "password" ? "text" : "password";
         },
+
+        onFileChange(e) {
+            const file = e.target.files[0];
+            this.url = URL.createObjectURL(file);
+        }
 
     }
 

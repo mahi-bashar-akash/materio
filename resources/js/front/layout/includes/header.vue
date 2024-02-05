@@ -16,8 +16,6 @@
                             Shop
                         </router-link>
                     </li>
-                </ul>
-                <ul class="navbar-nav m-auto mb-lg-0">
                     <li>
                         <router-link :to="{name: 'contact'}" class="nav-link" @click="windowContent">
                             Contact
@@ -27,11 +25,6 @@
                         <router-link :to="{name: 'blog'}" class="nav-link" @click="windowContent">
                             Blog
                         </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/auth/login" class="nav-link">
-                            Become a seller
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="/auth/login" class="nav-link" v-if="!userInfo">
@@ -56,7 +49,7 @@
                             </span>
                         </button>
                     </li>
-                    <li class="nav-item dropdown" v-if="userInfo">
+                    <li class="nav-item dropdown me-2" v-if="userInfo">
                         <button type="button" class="nav-link bg-white border shadow px-3 hpx-45 rounded-3" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle text-theme"></i>
                         </button>
@@ -82,6 +75,11 @@
                                 </button>
                             </li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/auth/login" class="nav-link">
+                            Become a seller
+                        </a>
                     </li>
                 </ul>
             </div>

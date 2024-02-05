@@ -35,7 +35,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-bkfEfEDt.js",
+    "file": "assets/app-2isNCezw.js",
     "imports": [
       "_global-wa3kxYq5.js",
       "_vue-quill.snow-YPjYz2Ox.js"
@@ -60,7 +60,7 @@
     "src": "resources/js/delivery/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-ANjt-P4o.js",
+    "file": "assets/app-o_EihBtw.js",
     "imports": [
       "_global-wa3kxYq5.js"
     ],
