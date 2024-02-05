@@ -42,7 +42,7 @@
                         </form>
                     </li>
                     <li class="nav-item me-2 mb-2 mb-lg-0">
-                        <button type="button" class="nav-link bg-white border shadow px-3 hpx-45 rounded-3 position-relative" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <button type="button" class="nav-link bg-white border px-3 hpx-45 rounded-3 position-relative" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                             <i class="bi bi-cart-fill text-theme"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
                                 {{products.length}}
@@ -50,7 +50,7 @@
                         </button>
                     </li>
                     <li class="nav-item dropdown me-2" v-if="userInfo">
-                        <button type="button" class="nav-link bg-white border shadow px-3 hpx-45 rounded-3" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button type="button" class="nav-link bg-white border px-3 hpx-45 rounded-3" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle text-theme"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
