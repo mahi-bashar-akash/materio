@@ -22,6 +22,8 @@ import blog from "../pages/blog.vue";
 
 import cart from "../pages/cart.vue";
 
+import checkout from "../pages/checkout.vue";
+
 import profileLayout from "../pages/profile/layout/layout.vue";
 
 import dashboard from "../pages/profile/dashboard.vue";
@@ -53,6 +55,8 @@ const routes = [
             { path: ROOT_URL + '/blog', name: 'blog', component: blog, meta: { title: TITLE + ' - blog' } },
 
             { path: ROOT_URL + '/cart', name: 'cart', component: cart, meta: { title: TITLE + ' - cart' } },
+
+            { path: ROOT_URL + '/checkout', name: 'checkout', component: checkout, meta: { title: TITLE + ' - checkout' } },
 
             { path: ROOT_URL, name: 'profileLayout', component: profileLayout,
 
