@@ -74,23 +74,22 @@
                 </div>
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-start">
-                        <a href="javascript:void(0)" class="nav-link p-2 p-lg-3">
+                        <router-link :to="{name: 'home'}" class="nav-link p-2 p-lg-3">
                             Home
-                        </a>
-                        <a href="javascript:void(0)" class="nav-link p-2 p-lg-3">
+                        </router-link>
+                        <router-link :to="{name: 'about'}" class="nav-link p-2 p-lg-3">
                             About us
-                        </a>
-                        <a href="javascript:void(0)" class="nav-link p-2 p-lg-3">
-                            Contact us
-                        </a>
-                        <a href="javascript:void(0)" class="nav-link p-2 p-lg-3">
+                        </router-link>
+                        <router-link :to="{name: 'contact'}" class="nav-link p-2 p-lg-3">
+                            Contact
+                        </router-link>
+                        <router-link :to="{name: 'shop'}" class="nav-link p-2 p-lg-3">
                             Shop
-                        </a>
-                        <a href="javascript:void(0)" class="nav-link p-2 p-lg-3">
+                        </router-link>
+                        <router-link :to="{name: 'blog'}" class="nav-link p-2 p-lg-3">
                             Blog
-                        </a>
+                        </router-link>
                     </div>
-                    <div class=""></div>
                 </div>
             </div>
         </div>
