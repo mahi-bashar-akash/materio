@@ -60,7 +60,7 @@
     "src": "resources/js/delivery/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-V1_VzcCc.js",
+    "file": "assets/app-Zdnfj-_1.js",
     "imports": [
       "_global-wa3kxYq5.js"
     ],
@@ -77,7 +77,7 @@
     "src": "resources/js/seller/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-t8UzV-iq.css",
+    "file": "assets/basic-iDApGNfP.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }

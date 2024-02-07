@@ -1,15 +1,15 @@
 <template>
 
     <!-- header -->
-    <div class="w-100 bg-light sticky-top">
+    <div class="w-100 bg-white sticky-top shadow-sm">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 p-2 p-lg-4">
+                <div class="col-lg-2 col-4 p-3 p-lg-4 order-1">
                     <router-link :to="{name: 'home'}" class="fw-bold fs-3 text-decoration-none text-dark">
                         {{app_name}}
                     </router-link>
                 </div>
-                <div class="col-lg-5 p-2 p-lg-4">
+                <div class="col-lg-5 p-3 p-lg-4 order-2">
                     <div class="position-relative">
                         <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autocomplete="new-search">
                         <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
@@ -17,14 +17,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 p-2 p-lg-4 d-flex justify-content-end align-items-center">
+                <div class="col-lg-5 col-8 p-3 p-lg-4 d-flex justify-content-end align-items-center order-lg-3 order-1">
                     <div class="d-flex align-items-center justify-content-start">
                         <a href="javascript:void(0)" class="btn bg-white border me-3 d-flex justify-content-center align-items-center">
-                            <span class="d-inline-block d-sm-none">
+                            <span class="d-inline-block d-lg-none">
                                 <i class="bi bi-shop-window"></i>
                             </span>
-                            <span class="d-none d-sm-inline-block">
-                                Become a seller <i class="ms-2 bi bi-arrow-right-short"></i>
+                            <span class="d-none d-lg-inline-block">
+                                Become a seller
+                                <i class="ms-2 bi bi-arrow-right-short"></i>
                             </span>
                         </a>
                         <button type="button" class="btn bg-white border position-relative me-3" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -72,8 +73,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-start">
+                <div class="col-12 order-4">
+                    <div class="d-none d-lg-flex align-items-center justify-content-start">
                         <router-link :to="{name: 'home'}" class="nav-link p-2 p-lg-3">
                             Home
                         </router-link>

@@ -222,6 +222,45 @@
         </div>
     </section>
 
+    <!-- operation area  -->
+    <div class="w-100 container-fluid mt-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="p-3">
+                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl4 + ')' }">
+                    <div class="h-100 px-3">
+                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
+                            <div class="fw-semibold mb-2"> Best Selling </div>
+                            <div class="fw-bold fs-4 mb-2"> 100% Naturals </div>
+                            <div class="fw-semibold"> Up to 70% off </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3">
+                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl5 + ')' }">
+                    <div class="h-100 px-3">
+                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
+                            <div class="fw-semibold mb-2"> New Arrivals </div>
+                            <div class="fw-bold fs-4 mb-2"> Vegetables </div>
+                            <div class="fw-semibold"> Save $29.00 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3">
+                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl6 + ')' }">
+                    <div class="h-100 px-3">
+                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
+                            <div class="fw-semibold mb-2"> Trending </div>
+                            <div class="fw-bold fs-4 mb-2"> Farm Foods </div>
+                            <div class="fw-semibold"> Only $18.00 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- latest blog post  -->
     <section class="w-100 container-fluid mt-4">
         <div class="fw-bold text-center fs-3">
@@ -362,6 +401,9 @@ export default {
             OperationImageUrl1: '/images/slider/content-1.jpg',
             OperationImageUrl2: '/images/slider/content-2.jpg',
             OperationImageUrl3: '/images/slider/content-3.jpg',
+            OperationImageUrl4: '/images/slider/box-1.jpg',
+            OperationImageUrl5: '/images/slider/box-2.jpg',
+            OperationImageUrl6: '/images/slider/box-3.jpg',
 
             cart: [],
 
