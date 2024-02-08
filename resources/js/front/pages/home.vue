@@ -121,8 +121,8 @@
 
     <!-- operation area  -->
     <div class="w-100 container-fluid mt-4">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="p-3">
+        <div class="coupon-carousel owl-carousel owl-theme">
+            <div class="item p-3">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl1 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="p-3">
+            <div class="item p-3">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl2 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -144,8 +144,41 @@
                     </div>
                 </div>
             </div>
-            <div class="p-3">
+            <div class="item p-3">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl3 + ')' }">
+                    <div class="h-100 px-3">
+                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
+                            <div class="fw-semibold mb-2"> Trending </div>
+                            <div class="fw-bold fs-4 mb-2"> Farm Foods </div>
+                            <div class="fw-semibold"> Only $18.00 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item p-3">
+                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl4 + ')' }">
+                    <div class="h-100 px-3">
+                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
+                            <div class="fw-semibold mb-2"> Best Selling </div>
+                            <div class="fw-bold fs-4 mb-2"> 100% Naturals </div>
+                            <div class="fw-semibold"> Up to 70% off </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item p-3">
+                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl5 + ')' }">
+                    <div class="h-100 px-3">
+                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
+                            <div class="fw-semibold mb-2"> New Arrivals </div>
+                            <div class="fw-bold fs-4 mb-2"> Vegetables </div>
+                            <div class="fw-semibold"> Save $29.00 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item p-3">
+                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl6 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
                             <div class="fw-semibold mb-2"> Trending </div>
@@ -221,45 +254,6 @@
             </div>
         </div>
     </section>
-
-    <!-- operation area  -->
-    <div class="w-100 container-fluid mt-4">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="p-3">
-                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl4 + ')' }">
-                    <div class="h-100 px-3">
-                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
-                            <div class="fw-semibold mb-2"> Best Selling </div>
-                            <div class="fw-bold fs-4 mb-2"> 100% Naturals </div>
-                            <div class="fw-semibold"> Up to 70% off </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="p-3">
-                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl5 + ')' }">
-                    <div class="h-100 px-3">
-                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
-                            <div class="fw-semibold mb-2"> New Arrivals </div>
-                            <div class="fw-bold fs-4 mb-2"> Vegetables </div>
-                            <div class="fw-semibold"> Save $29.00 </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="p-3">
-                <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl6 + ')' }">
-                    <div class="h-100 px-3">
-                        <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
-                            <div class="fw-semibold mb-2"> Trending </div>
-                            <div class="fw-bold fs-4 mb-2"> Farm Foods </div>
-                            <div class="fw-semibold"> Only $18.00 </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- latest blog post  -->
     <section class="w-100 container-fluid mt-4">
@@ -416,6 +410,7 @@ export default {
         this.product();
         this.blog();
         this.brand();
+        this.coupon();
     },
 
     methods: {
@@ -463,10 +458,10 @@ export default {
                     0:{
                         items:1
                     },
-                    600:{
+                    900:{
                         items:2
                     },
-                    1000:{
+                    1400:{
                         items:4
                     }
                 }
@@ -484,10 +479,10 @@ export default {
                     0:{
                         items:1
                     },
-                    600:{
+                    900:{
                         items:2
                     },
-                    1000:{
+                    1400:{
                         items:3
                     }
                 }
@@ -505,15 +500,36 @@ export default {
                     0:{
                         items:2
                     },
-                    600:{
+                    900:{
                         items:3
                     },
-                    1000:{
+                    1400:{
                         items:5
                     }
                 }
             })
         },
+
+        coupon(){
+            $('.coupon-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    900:{
+                        items:2
+                    },
+                    1400:{
+                        items:3
+                    }
+                }
+            })
+        }
 
     }
 
