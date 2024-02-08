@@ -4,13 +4,12 @@
     <div class="w-100 bg-white d-none d-xl-inline-block">
         <div class="container">
             <div class="row">
-                <div class="col-12"></div>
                 <div class="col-lg-2 col-4 p-3 p-lg-4">
                     <router-link :to="{name: 'home'}" class="fw-bold fs-3 text-decoration-none text-dark">
                         {{app_name}}
                     </router-link>
                 </div>
-                <div class="col-lg-6 p-3 p-lg-4">
+                <div class="col-lg-10 p-3 p-lg-4">
                     <div class="position-relative">
                         <input type="text" name="keyword" class="form-control ps-5" placeholder="Search Here" required autocomplete="new-search">
                         <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
@@ -18,61 +17,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 p-3 p-lg-4 d-flex justify-content-end align-items-center">
-                    <div class="d-flex align-items-center justify-content-start">
-                        <a href="javascript:void(0)" class="btn bg-white border me-3 d-flex justify-content-center align-items-center">
-                            Become a seller
-                        </a>
-                        <button type="button" class="btn bg-white border position-relative me-3" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                            <i class="bi bi-cart-fill"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
-                                {{products.length}}
-                            </span>
-                        </button>
-                        <div class="dropdown">
-                            <button type="button" class="btn bg-white border" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-fill"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
-                                <li v-if="!userInfo">
-                                    <a href="/auth/login" class="dropdown-item px-3 py-2">
-                                        Login
-                                    </a>
-                                </li>
-                                <li v-if="!userInfo">
-                                    <a href="/auth/register" class="dropdown-item px-3 py-2">
-                                        Registration
-                                    </a>
-                                </li>
-                                <li v-if="userInfo">
-                                    <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2" @click="windowContent">
-                                        Dashboard
-                                    </router-link>
-                                </li>
-                                <li v-if="userInfo">
-                                    <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2" @click="windowContent">
-                                        Product Review
-                                    </router-link>
-                                </li>
-                                <li v-if="userInfo">
-                                    <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2" @click="windowContent">
-                                        Settings
-                                    </router-link>
-                                </li>
-                                <li v-if="userInfo">
-                                    <button type="button" class="dropdown-item px-3 py-2" @click="windowContent">
-                                        Logout
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <div class="bg-white w-100 sticky-top">
-        <nav class="navbar navbar-expand-xl container px-2 py-4 p-xl-2">
+        <nav class="navbar navbar-expand-xl container px-2 py-2 py-lg-4">
             <div class="container-fluid">
                 <router-link class="navbar-brand fw-bold d-inline-block d-xl-none fs-3" :to="{name: 'home'}">Materio</router-link>
                 <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -160,6 +109,56 @@
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
+                        <ul class="navbar-nav d-none d-xl-flex">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a href="/auth/login" class="btn bg-white border me-3 d-flex justify-content-center align-items-center">
+                                    Become a seller <i class="bi bi-arrow-right-short ms-2"></i>
+                                </a>
+                                <button type="button" class="btn bg-white border position-relative me-3" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                                    <i class="bi bi-cart-fill"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                                {{products.length}}
+                            </span>
+                                </button>
+                                <div class="dropdown">
+                                    <button type="button" class="btn bg-white border" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-person-fill"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden shadow border-0">
+                                        <li v-if="!userInfo">
+                                            <a href="/auth/login" class="dropdown-item px-3 py-2">
+                                                Login
+                                            </a>
+                                        </li>
+                                        <li v-if="!userInfo">
+                                            <a href="/auth/register" class="dropdown-item px-3 py-2">
+                                                Registration
+                                            </a>
+                                        </li>
+                                        <li v-if="userInfo">
+                                            <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2" @click="windowContent">
+                                                Dashboard
+                                            </router-link>
+                                        </li>
+                                        <li v-if="userInfo">
+                                            <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2" @click="windowContent">
+                                                Product Review
+                                            </router-link>
+                                        </li>
+                                        <li v-if="userInfo">
+                                            <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2" @click="windowContent">
+                                                Settings
+                                            </router-link>
+                                        </li>
+                                        <li v-if="userInfo">
+                                            <button type="button" class="dropdown-item px-3 py-2" @click="windowContent">
+                                                Logout
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
                     </div>
                 </div>
             </nav>
