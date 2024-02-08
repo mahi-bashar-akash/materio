@@ -1,22 +1,24 @@
 <template>
 
     <form class="w-100 h-100 container-fluid cursor-content-menu">
-        <div class="row">
-            <div class="col-12 col-lg-5 p-0">
-                <img :src="insertedImage" class="img-fluid border w-100 object-fit-cover product-single-image" alt="product 1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-md-4 p-0">
+                <figure class="zoom shadow" @mousemove="zoom" :style="{ background: 'url(' + insertedImage + ')' }">
+                    <img :src="insertedImage" />
+                </figure>
                 <div class="row">
                     <div class="col-4 mt-3 mb-3">
-                        <img :src="`/images/product/image-01.jpg`" class="img-fluid border cursor-pointer" alt="product 2" @click="insertImage($event)">
+                        <img :src="`/images/product/image-01.jpg`" class="img-fluid shadow cursor-pointer" alt="product 2" @click="insertImage($event)">
                     </div>
                     <div class="col-4 mt-3 mb-3">
-                        <img :src="`/images/product/image-02.jpg`" class="img-fluid border cursor-pointer" alt="product 3" @click="insertImage($event)">
+                        <img :src="`/images/product/image-02.jpg`" class="img-fluid shadow cursor-pointer" alt="product 3" @click="insertImage($event)">
                     </div>
                     <div class="col-4 mt-3 mb-3">
-                        <img :src="`/images/product/image-03.jpg`" class="img-fluid border cursor-pointer" alt="product 4" @click="insertImage($event)">
+                        <img :src="`/images/product/image-03.jpg`" class="img-fluid shadow cursor-pointer" alt="product 4" @click="insertImage($event)">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-7 h-100">
+            <div class="col-md-8 h-100">
                 <div class="bg-white p-3">
                     <div class="p-2 fs-4">
                         Fresh organic fruit
@@ -341,6 +343,16 @@ export default {
         addToCart(product) {
             store.dispatch('addToCart', product)
         },
+
+        zoom(event) {
+            var zoomer = event.currentTarget;
+            var offsetX = event.offsetX ? event.offsetX : event.touches[0].pageX;
+            var offsetY = event.offsetY ? event.offsetY : event.touches[0].pageY;
+            var x = offsetX / zoomer.offsetWidth * 100;
+            var y = offsetY / zoomer.offsetHeight * 100;
+            zoomer.style.backgroundPosition = x + '% ' + y + '%';
+        }
+
 
     }
 

@@ -406,4 +406,24 @@
 
     }
 
+    .zoom {
+        background-position: 100% 100%;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        cursor: zoom-in;
+
+        img{
+            transition: opacity .3s;
+            display: block;
+            width: 100%;
+
+            &:hover {
+                opacity: 0;
+            }
+
+        }
+
+    }
+
 }
