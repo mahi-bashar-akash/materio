@@ -34,9 +34,14 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <a class="nav-link" href="/auth/login">
+                                Become a seller
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                                 Cart
-                                <span class="badge bg-theme text-white ms-2">
+                                <span class="badge bg-light-theme border-theme text-theme ms-2">
                                     {{products.length}}
                                 </span>
                             </a>
