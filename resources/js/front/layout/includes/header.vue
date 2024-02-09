@@ -12,8 +12,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'home'}">
-                                Home
+                            <router-link class="nav-link" :to="{name: 'shop'}">
+                                Shop
                             </router-link>
                         </li>
                         <li class="nav-item">
@@ -22,7 +22,7 @@
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'about'}">
+                            <router-link class="nav-link" :to="{name: 'contact'}">
                                 Contact
                             </router-link>
                         </li>
@@ -37,7 +37,7 @@
                             <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                                 Cart
                                 <span class="badge bg-theme text-white ms-2">
-                                    0
+                                    {{products.length}}
                                 </span>
                             </a>
                         </li>
