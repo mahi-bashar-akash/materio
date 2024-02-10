@@ -14,6 +14,8 @@ import dashboard from "../pages/dashboard.vue";
 
 import order from "../pages/order.vue";
 
+import chat from "../pages/chat.vue";
+
 import notification from "../pages/notification.vue";
 
 import profile from "../pages/profile.vue";
@@ -31,6 +33,8 @@ const routes = [
         children: [
 
             { path: ROOT_URL + '/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard' } },
+
+            { path: ROOT_URL + '/chat', name: 'chat', component: chat, meta: { title: TITLE + ' - chat' } },
 
             { path: ROOT_URL + '/order', name: 'order', component: order, meta: { title: TITLE + ' - order' } },
 

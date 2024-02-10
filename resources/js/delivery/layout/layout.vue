@@ -17,7 +17,10 @@
             </div>
             <div class="user-sidebar-body">
                 <router-link :to="{name: 'dashboard'}" class="user-sidebar-link" @click="remove">
-                    <i class="bi bi-circle me-1"></i> CRM - Dashboard
+                    <i class="bi bi-circle me-1"></i> Dashboard
+                </router-link>
+                <router-link :to="{name: 'chat'}" class="user-sidebar-link" @click="remove">
+                    <i class="bi bi-circle me-1"></i> Chat
                 </router-link>
                 <router-link :to="{name: 'order'}" class="user-sidebar-link" @click="remove">
                     <i class="bi bi-cart me-1"></i> Orders
