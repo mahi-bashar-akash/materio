@@ -9,7 +9,7 @@
 
                 <!-- customer avatar -->
                 <div class="d-flex justify-content-center">
-                    <label for="avatar" class="form-label wpx-200 hpx-200 d-flex justify-content-center align-items-center shadow rounded-circle cursor-pointer bg-light-theme" v-if="!url">
+                    <label for="avatar" class="form-label wpx-175 hpx-175 d-flex justify-content-center align-items-center shadow rounded-circle cursor-pointer" v-if="!url">
                         <input id="avatar" type="file" name="avatar" class="d-none" @change="onFileChange" accept="image/png, image/gif, image/jpeg">
                         <i class="bi bi-camera fs-1 text-theme"></i>
                     </label>
