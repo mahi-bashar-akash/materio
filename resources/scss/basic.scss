@@ -13,8 +13,7 @@ body {
 }
 
 // preloader
-
-#preloader{
+#preloader {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -31,26 +30,26 @@ body {
     .loader {
         width: 90px;
         aspect-ratio: 2;
-        --_g: no-repeat radial-gradient(circle closest-side,var(--theme) 90%,#0000);
-        background:
-            var(--_g) 0 50%,
-            var(--_g) 50% 50%,
-            var(--_g) 100% 50%;
-        background-size: calc(100%/3) 50%;
+        --_g: no-repeat radial-gradient(circle closest-side, var(--theme) 90%, #0000);
+        background: var(--_g) 0 50%,
+        var(--_g) 50% 50%,
+        var(--_g) 100% 50%;
+        background-size: calc(100% / 3) 50%;
         animation: l3 1s infinite linear;
     }
+
     @keyframes l3 {
-        20%{
-            background-position:0 0, 50%  50%,100% 50%
+        20% {
+            background-position: 0 0, 50% 50%, 100% 50%
         }
-        40%{
-            background-position:0 100%, 50% 0,100% 50%
+        40% {
+            background-position: 0 100%, 50% 0, 100% 50%
         }
-        60%{
-            background-position:0 50%, 50% 100%,100% 0
+        60% {
+            background-position: 0 50%, 50% 100%, 100% 0
         }
-        80%{
-            background-position:0 50%, 50% 50%,100% 100%
+        80% {
+            background-position: 0 50%, 50% 50%, 100% 100%
         }
     }
 
@@ -290,7 +289,7 @@ body {
     font-size: 14px !important;
 }
 
-.delete-font-size{
+.delete-font-size {
     font-size: 70px !important;
 }
 
@@ -302,7 +301,7 @@ body {
     font-size: 50px !important;
 }
 
-.truncate-to-2-lines{
+.truncate-to-2-lines {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -683,12 +682,14 @@ body {
         background-color: #F1B44C2D !important;
         color: #f1b44c !important;
     }
+
     &.bg-secondary {
         background-color: #EEEDEB !important;
         color: #607274 !important;
     }
+
     &.bg-info {
-        background-color: #DCF2F1!important;
+        background-color: #DCF2F1 !important;
         color: #7FC7D9 !important;
     }
 }
