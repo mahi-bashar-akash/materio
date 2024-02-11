@@ -1,5 +1,5 @@
 <div id="preloader">
-    <div class="loading" data-loading-text="Materio"></div>
+    <div class="loader"></div>
 </div>
 
 <script>
