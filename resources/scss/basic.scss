@@ -26,36 +26,43 @@ body {
     z-index: 999999999;
     background-color: var(--bs-white);
 
-    .manage-icon-position{
-        position: relative;
+    .loading {
+        left: 50%;
+        top: 50%;
+        font-size: 45px;
+        font-family: serif;
+        font-weight: bold;
+        letter-spacing: 4.4px;
+        text-transform: capitalize;
+        position: absolute;
+        overflow: hidden;
+        transform: translate(-50%, -60%);
 
-        .spinner-loading-animation {
-            width: 175px;
-            height: 175px;
-            border: 5px solid #888888;
-            border-bottom-color: transparent;
-            border-radius: 50%;
-            display: inline-block;
-            box-sizing: border-box;
-            animation: rotation 1s linear infinite;
+        &:before {
+            color: var(--theme-light);
+            content: attr(data-loading-text);
         }
 
-        @keyframes rotation {
+        &:after {
+            top: 0;
+            left: 0;
+            width: 0;
+            opacity: 1;
+            color: var(--theme);
+            overflow: hidden;
+            position: absolute;
+            content: attr(data-loading-text);
+            animation: loading 5s infinite;
+        }
+
+        @keyframes loading {
             0% {
-                transform: rotate(0deg);
+                width: 0;
             }
             100% {
-                transform: rotate(360deg);
+                width: 100%;
             }
         }
-
-        .logo{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-29px, -29px);
-        }
-
     }
 
 }

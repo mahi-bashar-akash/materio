@@ -1,6 +1,6 @@
 <template>
 
-    <header class="sticky-top w-100 bg-light p-3">
+    <header class="sticky-top w-100 bg-light">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
                 <router-link class="navbar-brand" :to="{name: 'home'}">
