@@ -7,6 +7,6 @@
     window.addEventListener("load", function () {
         setTimeout(() => {
             loader.style.display = "none";
-        },1500)
+        },3000)
     })
 </script>
