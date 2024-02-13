@@ -26,9 +26,7 @@ import customer from "../pages/customer.vue";
 import order from "../pages/order.vue";
 
 const TITLE = window.core.APP_NAME
-
 const ROOT_URL = "/admin";
-
 const routes = [
     {
         path: ROOT_URL, name: 'layout', component: layout,
