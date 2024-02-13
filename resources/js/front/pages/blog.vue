@@ -1,5 +1,6 @@
 <template>
 
+    <!-- blog list -->
     <div class="container-fluid cursor-pointer-menu mb-4 blogs" v-if="singleData === null">
         <div class="row">
             <div class="col-md-6 col-lg-4 p-3 mb-3" v-for="each in blogList">
@@ -23,6 +24,7 @@
     </div>
 
     <div class="container-fluid cursor-content-menu mb-4" v-if="singleData !== null">
+        <!-- blog single data -->
         <div class="mb-3">
             <button type="button" class="btn btn-outline-theme" @click="singleData = null">
                 <i class="bi bi-chevron-left"></i>
@@ -55,6 +57,7 @@
             </button>
         </div>
 
+        <!-- blog feedback from customer -->
         <form class="mt-4" autocomplete="off">
             <div class="d-flex justify-content-start align-items-start mb-3">
                 <img :src="`/images/clients/face-1.png`" style="width: 45px; height: 45px" class="overflow-hidden rounded-circle" alt="avatar">

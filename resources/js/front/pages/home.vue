@@ -415,18 +415,22 @@ export default {
 
     methods: {
 
+        /* function to push product add to cart */
         addToCart(product) {
             store.dispatch('addToCart', product)
         },
 
+        /* function to go route to shop */
         pushType(){
             this.$router.push( { name: 'shop' } )
         },
 
+        /* function to go show product info */
         productInfo(){
             this.$router.push( { name: 'productDetails' } )
         },
 
+        /* function to show slider owl carousel */
         slider(){
             $('.slider-carousel').owlCarousel({
                 loop: true,
@@ -447,6 +451,7 @@ export default {
             })
         },
 
+        /* function to show product owl carousel */
         product(){
             $('.product-carousel').owlCarousel({
                 loop:true,
@@ -468,6 +473,7 @@ export default {
             })
         },
 
+        /* function to show blog owl carousel */
         blog(){
             $('.blog-carousel').owlCarousel({
                 loop:true,
@@ -489,6 +495,7 @@ export default {
             })
         },
 
+        /* function to show brand owl carousel */
         brand(){
             $('.brand-carousel').owlCarousel({
                 loop: true,
@@ -510,6 +517,7 @@ export default {
             })
         },
 
+        /* function to show coupon owl carousel */
         coupon(){
             $('.coupon-carousel').owlCarousel({
                 loop: true,
@@ -529,7 +537,7 @@ export default {
                     }
                 }
             })
-        }
+        },
 
     }
 

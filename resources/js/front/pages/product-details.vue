@@ -1,11 +1,16 @@
 <template>
 
+    <!-- product details -->
     <form class="w-100 h-100 container-fluid cursor-content-menu">
         <div class="row justify-content-center">
+
+            <!-- single image -->
             <div class="col-12 col-sm-8 col-md-4 p-0">
                 <figure class="zoom shadow" @mousemove="zoom" :style="{ background: 'url(' + insertedImage + ')' }">
                     <img :src="insertedImage" />
                 </figure>
+
+                <!-- image array -->
                 <div class="row">
                     <div class="col-4 mt-3 mb-3">
                         <img :src="`/images/product/image-01.jpg`" class="img-fluid shadow cursor-pointer" alt="product 2" @click="insertImage($event)">
@@ -18,12 +23,17 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-8 h-100">
                 <div class="bg-white p-3">
+
+                    <!-- name -->
                     <div class="p-2 fs-4">
                         Fresh organic fruit
                     </div>
                     <hr class="border">
+
+                    <!-- review star -->
                     <div class="p-2">
                         <i class="bi bi-star-fill text-warning me-2"></i>
                         <i class="bi bi-star-fill text-warning me-2"></i>
@@ -31,16 +41,24 @@
                         <i class="bi bi-star-fill text-warning me-2"></i>
                         <i class="bi bi-star-fill text-warning"></i>
                     </div>
+
+                    <!-- availability -->
                     <div class="p-2">
                         Availability: <span class="text-success"> 11 in stock </span>
                     </div>
+
+                    <!-- price -->
                     <div class="p-2">
                         Price: $10
                     </div>
+
+                    <!-- description -->
                     <div class="p-2">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s.
                     </div>
+
+                    <!-- weight -->
                     <div class="p-2">
                         Size: {{kgText}}
                         <div class="mt-2 d-flex justify-content-start align-items-center flex-wrap">
@@ -61,22 +79,34 @@
                             </button>
                         </div>
                     </div>
+
                     <div class="p-2">
                         <div class="d-flex align-items-center border rounded-3 wpx-170">
+
+                            <!-- decrease -->
                             <button class="btn border-0" type="button" @click="decreaseQuantity">
                                 <i class="bi bi-dash"></i>
                             </button>
-                                <input type="text" disabled class="form-control cursor-content-menu text-center border-0 bg-transparent mx-2" v-model="quantity" min="1" max="5" />
+
+                            <!-- number of value -->
+                            <input type="text" disabled class="form-control cursor-content-menu text-center border-0 bg-transparent mx-2" v-model="quantity" min="1" max="5" />
+
+                            <!-- increase -->
                             <button class="btn border-0" type="button" @click="increaseQuantity">
                                 <i class="bi bi-plus"></i>
                             </button>
+
                         </div>
                     </div>
                     <div class="p-2">
+
+                        <!-- add to cart -->
                         <button type="submit" class="btn btn-theme me-2 mb-3">
                             <i class="bi bi-cart me-2"></i>
                             Add to cart
                         </button>
+
+                        <!-- Buy now -->
                         <button type="submit" class="btn btn-outline-theme mb-3">
                             <i class="bi bi-bag-fill me-2"></i>
                             Buy now
@@ -87,16 +117,19 @@
         </div>
     </form>
 
+    <!-- customer review -->
     <div class="w-100 h-100 container-fluid cursor-content-menu mt-4 bg-white p-3">
 
         <div class="fw-bold text-center fs-3">
             Reviews
         </div>
 
+        <!-- review list -->
         <div class="fw-semibold mb-3">
             Customer reviews
         </div>
 
+        <!-- review star -->
         <div class="d-flex justify-content-start align-items-center mb-3">
             <i class="bi bi-star-fill text-warning me-2"></i>
             <i class="bi bi-star-fill text-warning me-2"></i>
@@ -105,18 +138,22 @@
             <i class="bi bi-star-fill text-warning"></i>
         </div>
 
+        <!-- count of review -->
         <div class="fw-semibold mb-3">
             based on 1 review
         </div>
 
+        <!-- comment -->
         <div class="mb-3">
             this is good and fresh fruit organic product see like look
         </div>
 
+        <!-- review date -->
         <div class="fw-semibold mb-3">
             kelin patel on Jul 31, 2020
         </div>
 
+        <!-- comment area button to show review form for feedback -->
         <button type="button" class="btn btn-theme" @click="reviewController">
             Write a review
         </button>
@@ -286,6 +323,7 @@ export default {
 
     methods: {
 
+        /* function of update rating of product review */
         updateRating(selectedRating) {
             this.productReviewParam.rating = [];
             for (let i = 1; i <= selectedRating; i++) {
@@ -293,30 +331,37 @@ export default {
             }
         },
 
+        /* function to show or hide of review form */
         reviewController(){
             this.review = !this.review;
             this.productReviewParam = { name: '', email: '', rating: [], title: '', description: '' };
         },
 
+        /* function of increase quantity */
         increaseQuantity() {
             if (this.quantity < 5) {
                 this.quantity++;
             }
         },
+
+        /* function of decrease quantity */
         decreaseQuantity() {
             if (this.quantity > 1) {
                 this.quantity--;
             }
         },
 
+        /* function of insert kg as single */
         insertKg(e){
             this.kgText = e.target.innerText;
         },
 
+        /* function of insert image as single from array */
         insertImage(e){
             this.insertedImage = e.target.src;
         },
 
+        /* function of product as carousel */
         product(){
             $('.product-carousel').owlCarousel({
                 loop:true,
@@ -336,14 +381,17 @@ export default {
             })
         },
 
+        /* function of route to push product details */
         productInfo(){
             this.$router.push( { name: 'productDetails' } )
         },
 
+        /* function of route to push product details */
         addToCart(product) {
             store.dispatch('addToCart', product)
         },
 
+        /* function of zoom effect */
         zoom(event) {
             var zoomer = event.currentTarget;
             var offsetX = event.offsetX ? event.offsetX : event.touches[0].pageX;

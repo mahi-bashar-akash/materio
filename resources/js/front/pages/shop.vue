@@ -1,6 +1,9 @@
 <template>
 
+    <!-- shop wrapper -->
     <div class="shop-wrapper">
+
+        <!-- shop sidebar -->
         <div class="shop-sidebar h-100" :class="{'active' : shopSidebarActive}">
             <div class="shop-sidebar-header">
                 <span class="fw-semibold">
@@ -116,12 +119,17 @@
 
             </div>
         </div>
+
+        <!-- shop content -->
         <div class="shop-content">
             <div class="shop-content-header">
+
+                <!-- shop sidebar controller -->
                 <button type="button" class="btn-icon" @click="shopSidebarController">
                     <i class="bi bi-justify"></i>
                 </button>
 
+                <!-- shop search product -->
                 <div class="col-8 col-md-6">
                     <div class="position-relative">
                         <input type="text" name="" class="form-control ps-5" autocomplete="new-search" placeholder="Search here">
@@ -136,6 +144,7 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
 
+                    <!-- shop show product list -->
                     <div v-for="each in productItem">
                         <div class="product-single overflow-hidden">
                             <div class="item">
@@ -199,6 +208,8 @@
                 </div>
 
             </div>
+
+            <!-- shop pagination for product -->
             <div class="shop-content-footer">
 
                 <nav aria-label="Page navigation example">
@@ -347,14 +358,17 @@ export default {
 
     methods: {
 
+        /* function of shop sidebar controller */
         shopSidebarController(){
             this.shopSidebarActive = !this.shopSidebarActive
         },
 
+        /* function of product information */
         productInfo(){
             this.$router.push( { name: 'productDetails' } )
         },
 
+        /* function of add to cart */
         addToCart(product) {
             store.dispatch('addToCart', product)
         },

@@ -1,5 +1,6 @@
 <template>
 
+    <!-- cart details -->
     <div class="my-3">
         <span class="fs-4 fw-semibold p-2">
             Cart Details
@@ -7,8 +8,9 @@
     </div>
 
     <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu">
-        <div class="d-flex justify-content-center align-items-center flex-column hpx-450 w-100"
-             v-if="products.length === 0">
+        <div class="d-flex justify-content-center align-items-center flex-column hpx-450 w-100" v-if="products.length === 0">
+
+            <!-- if cart item length 0 -->
             <i class="bi bi-bag fs-1 mb-3 d-block"></i>
             <small class="mb-3 fw-semibold">
                 No product add in your cart
@@ -19,6 +21,8 @@
             </button>
         </div>
         <div class="table-responsive" v-if="products.length !== 0">
+
+            <!-- if cart item greater then 0 -->
             <table class="table">
                 <thead>
                 <tr>
@@ -68,6 +72,7 @@
         </div>
     </div>
 
+    <!-- total amount to cost -->
     <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu col-lg-6 mt-3" v-if="products.length !== 0">
         <div class="table-responsive">
             <table class="table">

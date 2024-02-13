@@ -1,9 +1,11 @@
 <template>
 
+    <!-- contact section -->
     <div class="fw-bold text-center fs-3 mb-3">
         Contact Us
     </div>
 
+    <!-- map -->
     <div class="map mb-3">
         <div id="canvas-for-googlemap" class="w-100 h-100">
             <iframe class="h-100 w-100 border-0" src="https://www.google.com/maps/embed/v1/place?q=Jessore+sadar+upazila.+Jessore,+Jashore,+Bangladesh&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
@@ -12,7 +14,9 @@
 
     <div class="container-fluid bg-white">
         <div class="row px-2 py-1">
-            <div class="col-md-6 mb-3 p-3">
+            <form class="col-md-6 mb-3 p-3" autocomplete="off">
+
+                <!-- message form for customer needed as asking question or confusion -->
                 <div class="fw-semibold fs-4 mb-3">
                     Drop us message
                 </div>
@@ -33,8 +37,10 @@
                         Submit
                     </button>
                 </div>
-            </div>
+            </form>
             <div class="col-md-6 mb-3 p-3">
+
+                <!-- company information for identification -->
                 <div class="fw-semibold fs-4 mb-3">
                     Get in touch
                 </div>
@@ -76,18 +82,9 @@
 <script>
 
 export default {
-
-    data() {
-
-        return {}
-
-    },
-
-    mounted() {
-    },
-
-    methods: {}
-
+    data() { return {  } },
+    mounted() {  },
+    methods: {  }
 }
 
 </script>

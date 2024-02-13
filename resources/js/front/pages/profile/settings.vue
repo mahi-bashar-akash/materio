@@ -3,16 +3,17 @@
     <div class="col-12 col-lg-8">
         <div class="px-3">
 
+            <!-- group buttons for profile edit and password edit -->
             <div class="d-flex justify-content-start align-items-center">
-                <button type="button" class="btn me-2 mb-3" :class="{ 'btn-light-theme': tab !== 1, 'btn-theme': tab === 1 }" @click="setTab(1)">
+                <button type="button" class="btn me-2 mb-3" :class="{ 'btn-light-theme': tab !== 'profile-update', 'btn-theme': tab === 'profile-update' }" @click="setTab('profile-update')">
                     Edit Profile
                 </button>
-                <button type="button" class="btn mb-3" :class="{ 'btn-light-theme': tab !== 2, 'btn-theme': tab === 2 }" @click="setTab(2)">
+                <button type="button" class="btn mb-3" :class="{ 'btn-light-theme': tab !== 'password-update', 'btn-theme': tab === 'password-update' }" @click="setTab('password-update')">
                     Edit Password
                 </button>
             </div>
 
-            <div v-if="tab === 1">
+            <div v-if="tab === 'profile-update'">
 
                 <!-- customer profile update form -->
                 <form autocomplete="off" class="bg-white rounded-3 shadow p-4">
@@ -59,7 +60,7 @@
                 </form>
             </div>
 
-        <div v-if="tab === 2">
+        <div v-if="tab === 'password-update'">
 
             <!-- customer password update form -->
             <form autocomplete="off" class="bg-white rounded-3 shadow p-4">
@@ -109,7 +110,7 @@ export default {
                 newPassword: '',
                 confirmPassword: '',
             },
-            tab: 1,
+            tab: 'profile-update',
         }
 
     },
