@@ -1,15 +1,43 @@
 <template>
 
+    <!-- header top -->
+    <header class="w-100 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-lg-3 pt-3 pb-2 pb-lg-0 order-0 order-lg-0">
+                    <div class="fs-3 fw-semibold">
+                        {{app_name}}
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 pt-3 pb-4 pb-lg-0 order-2 order-lg-1">
+                    <div class="position-relative">
+                        <input type="text" name="keyword" class="form-control ps-5" required autocomplete="new-search" placeholder="Search here">
+                        <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-3 pt-3 pb-2 pb-lg-0 order-1 order-lg-2">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <i class="bi bi-headset me-2 fs-1"></i>
+                        <div class="ms-2">
+                            <div class="fs-6 fw-semibold">Hotline</div>
+                            <div class="text-theme">01400125289</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- header -->
     <header class="sticky-top w-100 bg-light">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
-                <router-link class="navbar-brand" :to="{name: 'home'}">
-                    Materio
+                <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}">
+                    {{app_name}}
                 </router-link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -35,7 +63,7 @@
                             </router-link>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="/auth/login">
                                 Become a seller
@@ -50,9 +78,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-item dropdown mb-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Mahi Bashar Akash
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden">
@@ -67,20 +94,17 @@
                                     </a>
                                 </li>
                                 <li v-if="userInfo">
-                                    <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2"
-                                                 @click="windowContent">
+                                    <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2" @click="windowContent">
                                         Dashboard
                                     </router-link>
                                 </li>
                                 <li v-if="userInfo">
-                                    <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2"
-                                                 @click="windowContent">
+                                    <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2" @click="windowContent">
                                         Product Review
                                     </router-link>
                                 </li>
                                 <li v-if="userInfo">
-                                    <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2"
-                                                 @click="windowContent">
+                                    <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2" @click="windowContent">
                                         Settings
                                     </router-link>
                                 </li>
