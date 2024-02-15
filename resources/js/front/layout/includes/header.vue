@@ -4,12 +4,14 @@
     <header class="w-100 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-4 col-lg-3 pt-3 pb-2 pb-lg-0 order-0 order-lg-0">
+                <div class="col-lg-3 pt-3 pb-2 pb-lg-0 px-3 d-none d-lg-inline-block">
+                    <!-- logo show in large screen -->
                     <div class="fs-3 fw-semibold">
                         {{app_name}}
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 pt-3 pb-4 pb-lg-0 order-2 order-lg-1">
+                <div class="col-12 col-lg-6 pt-3 pb-4 px-3">
+                    <!-- search product global -->
                     <div class="position-relative">
                         <input type="text" name="keyword" class="form-control ps-5" required autocomplete="new-search" placeholder="Search here">
                         <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
@@ -17,7 +19,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 col-lg-3 pt-3 pb-2 pb-lg-0 order-1 order-lg-2">
+                <div class="col-lg-3 pt-3 pb-2 pb-lg-0 px-3 d-none d-lg-inline-block">
+                    <!-- help center -->
                     <div class="d-flex align-items-center justify-content-end">
                         <i class="bi bi-headset me-2 fs-1"></i>
                         <div class="ms-2">
@@ -30,10 +33,11 @@
         </div>
     </header>
 
-    <!-- header -->
+    <!-- header content menu -->
     <header class="sticky-top w-100 bg-light">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
+                <!-- logo show in small screen -->
                 <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}">
                     {{app_name}}
                 </router-link>
@@ -41,6 +45,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- menu list left corner -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <router-link class="nav-link" :to="{name: 'shop'}">
@@ -63,6 +68,8 @@
                             </router-link>
                         </li>
                     </ul>
+
+                    <!-- menu list right corner -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="/auth/login">
@@ -79,6 +86,7 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
+                            <!-- profile dropdown menu -->
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Mahi Bashar Akash
                             </a>
@@ -146,31 +154,35 @@
             <div class="cart-body" v-if="products.length !== 0">
 
                 <!-- cart item -->
-                <div class="cart-item rounded-3 p-1 d-flex align-items-center" v-for="(cartItem, index) in products"
-                     :key="index">
+                <div class="cart-item rounded-3 p-1 d-flex align-items-center" v-for="(cartItem, index) in products" :key="index">
                     <div class="position-relative">
-                        <img :src="cartItem.file_path" class="img-fluid wpx-105 hpx-105 shadow rounded-3"
-                             alt="cart product image">
+                        <img :src="cartItem.file_path" class="img-fluid wpx-105 hpx-105 shadow rounded-3" alt="cart product image">
                         <div class="position-absolute end-0 bottom-0 p-1">
-                            <button type="button" class="border-0 bg-theme text-white rounded-3"
-                                    @click="removeFromCart(cartItem)">
+                            <button type="button" class="border-0 bg-theme text-white rounded-3" @click="removeFromCart(cartItem)">
                                 <i class="bi bi-trash2"></i>
                             </button>
                         </div>
                     </div>
                     <div class="ms-3">
-                        <div class="fw-semibold">{{ cartItem.name }} (1Kg)</div>
+                        <div class="fw-semibold">
+                            {{ cartItem.name }} (1Kg)
+                        </div>
                         <div class="text-secondary d-flex justify-content-between font-14 my-2">
-                            <span>Price: ${{ cartItem.price }}</span>
-                            <span>Total: ${{ cartItem.price * cartItem.quantity }}</span></div>
+                            <span>
+                                Price:
+                                ${{ cartItem.price }}
+                            </span>
+                            <span>
+                                Total:
+                                ${{ cartItem.price * cartItem.quantity }}
+                            </span>
+                        </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center border rounded-3 wpx-170">
                                 <button class="btn border-0" type="button" @click="decrementQuantity(cartItem)">
                                     <i class="bi bi-dash"></i>
                                 </button>
-                                <input type="text" disabled
-                                       class="form-control cursor-content-menu text-center border-0 bg-transparent mx-2"
-                                       v-model="cartItem.quantity" min="1" max="5"/>
+                                <input type="text" disabled class="form-control cursor-content-menu text-center border-0 bg-transparent mx-2" v-model="cartItem.quantity" min="1" max="5"/>
                                 <button class="btn border-0" type="button" @click="incrementQuantity(cartItem)">
                                     <i class="bi bi-plus"></i>
                                 </button>
@@ -185,14 +197,12 @@
             <div class="px-3 mt-3" v-if="products.length !== 0">
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" class="btn btn-theme w-100" data-bs-dismiss="offcanvas"
-                                @click="goCartDetails">
+                        <button type="button" class="btn btn-theme w-100" data-bs-dismiss="offcanvas" @click="goCartDetails">
                             Cart Details
                         </button>
                     </div>
                     <div class="col-6">
-                        <button type="button" class="btn btn-outline-theme w-100" data-bs-dismiss="offcanvas"
-                                @click="getCheckout">
+                        <button type="button" class="btn btn-outline-theme w-100" data-bs-dismiss="offcanvas" @click="getCheckout">
                             Checkout
                         </button>
                     </div>
@@ -236,10 +246,12 @@ export default {
 
     methods: {
 
+        /* Function to get cart item */
         getCartItems() {
             store.dispatch('getCartItems')
         },
 
+        /* Function to decrease quantity of product */
         decrementQuantity(cartItem) {
             if (cartItem.quantity > 1) {
                 cartItem.quantity--;
@@ -248,6 +260,7 @@ export default {
             }
         },
 
+        /* Function to increase quantity of product */
         incrementQuantity(cartItem) {
             if (cartItem.quantity < 5) {
                 cartItem.quantity++;
@@ -256,24 +269,29 @@ export default {
             }
         },
 
+        /* Function to remove of product */
         removeFromCart(cartItem) {
             store.dispatch('removeFromCart', cartItem)
         },
 
+        /* Function to redirect shop */
         goRoute() {
             this.windowContent();
             this.$router.push({name: 'shop'})
         },
 
+        /* Function to go top of screen */
         windowContent() {
             window.scrollTo(0, 0);
         },
 
+        /* Function to redirect cart */
         goCartDetails() {
             this.windowContent();
             this.$router.push({name: 'cart'});
         },
 
+        /* Function to redirect checkout */
         getCheckout() {
             this.windowContent();
             this.$router.push({name: 'checkout'})

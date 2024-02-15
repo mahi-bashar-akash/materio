@@ -4,6 +4,8 @@
     <div class="w-100 footer bg-light">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3">
+
+                <!-- Company details -->
                 <div class="p-4">
                     <div class="h5 fw-semibold mb-4">
                         ABOUT STORE
@@ -27,6 +29,8 @@
                         Offices
                     </a>
                 </div>
+
+                <!-- Show to Categories -->
                 <div class="p-4">
                     <div class="h5 fw-semibold mb-4">
                         TOP CATEGORIES
@@ -50,6 +54,8 @@
                         Sale off
                     </a>
                 </div>
+
+                <!-- Store location -->
                 <div class="p-4">
                     <div class="h5 fw-semibold mb-4">
                         OUR STORE
@@ -75,9 +81,15 @@
                 </div>
             </div>
             <hr>
+
+            <!-- necessary resources -->
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
                 <div class="p-3">
-                    Copyright © 2025 <a href="javascript:void(0)" class="text-theme text-decoration-none"> Materio </a> all rights reserved.
+                    Copyright © 2025
+                    <a href="javascript:void(0)" class="text-theme text-decoration-none">
+                        Materio
+                    </a>
+                    all rights reserved.
                 </div>
                 <div class="p-3 d-flex justify-content-start flex-wrap">
                     <a href="javascript:void(0)" class="text-dark text-decoration-none me-3">
@@ -102,27 +114,9 @@
 <script>
 
 export default {
-
-    data(){
-
-        return{
-
-        }
-
-    },
-
-    mounted() {
-
-
-
-    },
-
-    methods: {
-
-
-
-    }
-
+    data(){ return{  } },
+    mounted() {  },
+    methods: {  }
 }
 
 </script>
