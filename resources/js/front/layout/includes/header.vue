@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-3 pt-3 pb-2 pb-lg-0 px-3 d-none d-lg-inline-block">
                     <!-- logo show in large screen -->
-                    <router-link :to="{name: 'home'}" class="fs-3 fw-semibold text-decoration-none text-theme">
+                    <router-link :to="{name: 'home'}" class="fs-3 fw-semibold text-decoration-none text-dark">
                         {{app_name}}
                     </router-link>
                 </div>
