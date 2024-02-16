@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-3 pt-3 pb-2 pb-lg-0 px-3 d-none d-lg-inline-block">
                     <!-- logo show in large screen -->
-                    <router-link :to="{name: 'home'}" class="fs-3 fw-semibold text-decoration-none text-dark">
+                    <router-link :to="{name: 'home'}" class="fs-3 fw-semibold text-decoration-none text-dark" @click="windowContent">
                         {{app_name}}
                     </router-link>
                 </div>
@@ -38,7 +38,7 @@
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
                 <!-- logo show in small screen -->
-                <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}">
+                <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}" @click="windowContent">
                     {{app_name}}
                 </router-link>
                 <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,22 +48,22 @@
                     <!-- menu list left corner -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'shop'}">
+                            <router-link class="nav-link" :to="{name: 'shop'}" @click="windowContent">
                                 Shop
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'about'}">
+                            <router-link class="nav-link" :to="{name: 'about'}" @click="windowContent">
                                 About
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'contact'}">
+                            <router-link class="nav-link" :to="{name: 'contact'}" @click="windowContent">
                                 Contact
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'blog'}">
+                            <router-link class="nav-link" :to="{name: 'blog'}" @click="windowContent">
                                 Blog
                             </router-link>
                         </li>
@@ -72,7 +72,7 @@
                     <!-- menu list right corner -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/auth/login">
+                            <a class="nav-link" href="/auth/login" @click="windowContent">
                                 Become a seller
                             </a>
                         </li>
@@ -92,12 +92,12 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden">
                                 <li v-if="!userInfo">
-                                    <a href="/auth/login" class="dropdown-item px-3 py-2">
+                                    <a href="/auth/login" class="dropdown-item px-3 py-2" @click="windowContent">
                                         Login
                                     </a>
                                 </li>
                                 <li v-if="!userInfo">
-                                    <a href="/auth/register" class="dropdown-item px-3 py-2">
+                                    <a href="/auth/register" class="dropdown-item px-3 py-2" @click="windowContent">
                                         Registration
                                     </a>
                                 </li>
