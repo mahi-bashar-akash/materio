@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-lg-3 pt-3 pb-2 pb-lg-0 px-3 d-none d-lg-inline-block">
                     <!-- logo show in large screen -->
-                    <div class="fs-3 fw-semibold">
+                    <router-link :to="{name: 'home'}" class="fs-3 fw-semibold text-decoration-none text-theme">
                         {{app_name}}
-                    </div>
+                    </router-link>
                 </div>
                 <div class="col-12 col-lg-6 pt-3 pb-4 px-3">
                     <!-- search product global -->
@@ -139,14 +139,12 @@
         <div class="offcanvas-body p-0">
 
             <!-- no data text -->
-            <div class="d-flex justify-content-center align-items-center flex-column h-100"
-                 v-if="products.length === 0">
+            <div class="d-flex justify-content-center align-items-center flex-column h-100" v-if="products.length === 0">
                 <i class="bi bi-bag fs-1 mb-3 d-block"></i>
                 <small class="mb-3 fw-semibold">
                     No product add in your cart
                 </small>
-                <button type="button" class="btn btn-outline-theme d-flex justify-content-center align-items-center"
-                        data-bs-dismiss="offcanvas" @click="goRoute">
+                <button type="button" class="btn btn-outline-theme d-flex justify-content-center align-items-center" data-bs-dismiss="offcanvas" @click="goRoute">
                     Continue Shopping
                 </button>
             </div>
