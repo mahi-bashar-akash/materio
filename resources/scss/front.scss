@@ -1,5 +1,60 @@
 .front-portal {
 
+    /* --- --- --- --- --- header as navbar custom --- --- --- --- --- */
+
+    .navbar{
+        .navbar-brand{  }
+        .collapse,.collapsing{
+            @media screen and (max-width: 991px) {
+                position: fixed;
+                top: 0;
+                right: -400px !important;
+                width: 360px;
+                height: 100%;
+                background-color: var(--bs-light);
+                padding: 30px;
+                box-shadow: 0 0 8px 0 var(--bs-border-color);
+                transition: 0.3s all ease-in-out;
+
+                &.show{
+                    transition: 0.3s all ease-in-out;
+                    right: 0 !important;
+                }
+
+            }
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+
+                    }
+                    .icon-close{
+                        background-color: var(--bs-white);
+                        box-shadow: 0 0 8px 0 var(--bs-border-color);
+                        transition: 0.3s all ease-in-out;
+
+                        &:hover{
+                            transition: 0.3s all ease-in-out;
+                            box-shadow: 0 0 12px 0 var(--bs-border-color);
+                        }
+
+                    }
+                }
+            }
+        }
+        .navbar-toggler{
+            background-color: var(--bs-white);
+            box-shadow: 0 0 8px 0 var(--bs-border-color);
+            transition: 0.3s all ease-in-out;
+
+            &:hover{
+                transition: 0.3s all ease-in-out;
+                box-shadow: 0 0 12px 0 var(--bs-border-color);
+            }
+        }
+    }
+
+    /* --- --- --- --- --- body scrollbar custom --- --- --- --- --- */
+
     &::-webkit-scrollbar {
         background-color: transparent;
         width: 5px;
@@ -9,6 +64,8 @@
         background: var(--bs-border-color);
         height: 5px !important;
     }
+
+    /* --- --- --- --- --- slider owl carousel custom --- --- --- --- --- */
 
     .slider-carousel {
         .slider-item {
@@ -20,6 +77,8 @@
             }
         }
     }
+
+    /* --- --- --- --- --- product owl carousel custom --- --- --- --- --- */
 
     .product-carousel, .product-single {
         position: relative;
@@ -60,6 +119,8 @@
             }
         }
     }
+
+    /* --- --- --- --- --- coupon box owl carousel custom --- --- --- --- --- */
 
     .coupon-box {
         height: 250px;
@@ -109,6 +170,8 @@
         }
     }
 
+    /* --- --- --- --- --- blog owl carousel custom --- --- --- --- --- */
+
     .blog-carousel {
         .item {
             padding: 20px;
@@ -137,6 +200,8 @@
             }
         }
     }
+
+    /* --- --- --- --- --- shop wrapper custom --- --- --- --- --- */
 
     .shop-wrapper {
         display: flex;
@@ -277,6 +342,8 @@
         }
     }
 
+    /* --- --- --- --- --- customer wrapper custom --- --- --- --- --- */
+
     .customer-wrapper {
         .customer-avatar {
             width: 175px;
@@ -328,6 +395,8 @@
         height: 350px;
     }
 
+    /* --- --- --- --- --- blogs custom --- --- --- --- --- */
+
     .blogs {
         .blog-content {
             transition: 0.3s all ease-in-out;
@@ -349,6 +418,8 @@
         }
     }
 
+    /* --- --- --- --- --- cart body custom where show cart items --- --- --- --- --- */
+
     .cart-body {
         height: calc(100vh - 169px);
         overflow-x: hidden;
@@ -365,6 +436,8 @@
             height: 5px !important;
         }
     }
+
+    /* --- --- --- --- --- single product details show effect in image --- --- --- --- --- */
 
     .zoom {
         background-position: 100% 100%;

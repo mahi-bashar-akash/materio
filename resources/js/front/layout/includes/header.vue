@@ -34,19 +34,27 @@
     </header>
 
     <!-- header content menu -->
-    <header class="sticky-top w-100 bg-light">
+    <header class="sticky-top w-100 bg-light pb-2 pb-lg-0">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
                 <!-- logo show in small screen -->
                 <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}" @click="windowContent">
                     {{app_name}}
                 </router-link>
-                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- menu list left corner -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item text-end d-inline-block d-lg-none">
+                            <button type="button" class="btn btn-close border-0 p-3 icon-close" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" :to="{name: 'home'}" @click="windowContent">
+                                Home
+                            </router-link>
+                        </li>
                         <li class="nav-item">
                             <router-link class="nav-link" :to="{name: 'shop'}" @click="windowContent">
                                 Shop
