@@ -34,7 +34,7 @@
     </header>
 
     <!-- header content menu -->
-    <header class="sticky-top w-100 bg-light pb-2 pb-lg-0">
+    <header class="sticky-top w-100 bg-light pb-2 px-2 pb-lg-0">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
                 <!-- logo show in small screen -->
@@ -311,15 +311,13 @@ export default {
         },
 
         collapse() {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse.classList.contains('show')) {
-                setTimeout(() => {
+            if(window.innerWidth < 991){
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
                     navbarCollapse.classList.remove('show');
-                }, 300);
-            } else {
-                setTimeout(() => {
+                } else {
                     navbarCollapse.classList.add('show');
-                }, 300);
+                }
             }
         }
 

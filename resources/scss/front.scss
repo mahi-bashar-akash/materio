@@ -3,26 +3,28 @@
     /* --- --- --- --- --- header as navbar custom --- --- --- --- --- */
 
     .navbar{
-        .navbar-brand{  }
+        .navbar-brand{}
         .collapse,.collapsing{
             @media screen and (max-width: 991px) {
                 position: fixed;
                 top: 0;
-                right: -400px !important;
+                bottom: 0;
+                right: -400px;
                 width: 360px;
                 height: 100%;
                 background-color: var(--bs-light);
                 padding: 30px;
                 box-shadow: 0 0 8px 0 var(--bs-border-color);
-                transition: 0.3s all ease-in-out;
+                display: block !important;
+                transition: 0.3s all ease-in-out !important;
                 &.show {
-                    transition: 0.3s all ease-in-out;
-                    right: 0 !important;
+                    transition: 0.3s all ease-in-out !important;
+                    right: 0;
                 }
             }
             .navbar-nav{
                 .nav-item{
-                    .nav-link{  }
+                    .nav-link{}
                     .icon-close{
                         background-color: var(--bs-white);
                         box-shadow: 0 0 8px 0 var(--bs-border-color);
