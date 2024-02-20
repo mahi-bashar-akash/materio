@@ -15,39 +15,31 @@
                 padding: 30px;
                 box-shadow: 0 0 8px 0 var(--bs-border-color);
                 transition: 0.3s all ease-in-out;
-
-                &.show{
+                &.show {
                     transition: 0.3s all ease-in-out;
                     right: 0 !important;
                 }
-
             }
             .navbar-nav{
                 .nav-item{
-                    .nav-link{
-
-                    }
+                    .nav-link{  }
                     .icon-close{
                         background-color: var(--bs-white);
                         box-shadow: 0 0 8px 0 var(--bs-border-color);
                         transition: 0.3s all ease-in-out;
-
                         &:hover{
                             transition: 0.3s all ease-in-out;
                             box-shadow: 0 0 12px 0 var(--bs-border-color);
                         }
-
                     }
                 }
             }
         }
-        .navbar-toggler{
+        .navbar-toggler {
             background-color: var(--bs-white);
             box-shadow: 0 0 8px 0 var(--bs-border-color);
-            transition: 0.3s all ease-in-out;
-
-            &:hover{
-                transition: 0.3s all ease-in-out;
+            transition: box-shadow 0.3s ease-in-out;
+            &:hover {
                 box-shadow: 0 0 12px 0 var(--bs-border-color);
             }
         }

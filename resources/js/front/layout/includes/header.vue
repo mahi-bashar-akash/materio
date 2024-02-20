@@ -38,40 +38,40 @@
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
                 <!-- logo show in small screen -->
-                <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}" @click="windowContent">
+                <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}" @click="collapse">
                     {{app_name}}
                 </router-link>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler border-0" type="button" @click="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- menu list left corner -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item text-end d-inline-block d-lg-none">
-                            <button type="button" class="btn btn-close border-0 p-3 icon-close" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+                            <button type="button" class="btn btn-close border-0 p-3 icon-close" @click="collapse"></button>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'home'}" @click="windowContent">
+                            <router-link class="nav-link" :to="{name: 'home'}" @click="collapse">
                                 Home
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'shop'}" @click="windowContent">
+                            <router-link class="nav-link" :to="{name: 'shop'}" @click="collapse">
                                 Shop
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'about'}" @click="windowContent">
+                            <router-link class="nav-link" :to="{name: 'about'}" @click="collapse">
                                 About
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'contact'}" @click="windowContent">
+                            <router-link class="nav-link" :to="{name: 'contact'}" @click="collapse">
                                 Contact
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'blog'}" @click="windowContent">
+                            <router-link class="nav-link" :to="{name: 'blog'}" @click="collapse">
                                 Blog
                             </router-link>
                         </li>
@@ -80,7 +80,7 @@
                     <!-- menu list right corner -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/auth/login" @click="windowContent">
+                            <a class="nav-link" href="/auth/login" @click="collapse">
                                 Become a seller
                             </a>
                         </li>
@@ -100,32 +100,32 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden">
                                 <li v-if="!userInfo">
-                                    <a href="/auth/login" class="dropdown-item px-3 py-2" @click="windowContent">
+                                    <a href="/auth/login" class="dropdown-item px-3 py-2" @click="collapse">
                                         Login
                                     </a>
                                 </li>
                                 <li v-if="!userInfo">
-                                    <a href="/auth/register" class="dropdown-item px-3 py-2" @click="windowContent">
+                                    <a href="/auth/register" class="dropdown-item px-3 py-2" @click="collapse">
                                         Registration
                                     </a>
                                 </li>
                                 <li v-if="userInfo">
-                                    <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2" @click="windowContent">
+                                    <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2" @click="collapse">
                                         Dashboard
                                     </router-link>
                                 </li>
                                 <li v-if="userInfo">
-                                    <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2" @click="windowContent">
+                                    <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2" @click="collapse">
                                         Product Review
                                     </router-link>
                                 </li>
                                 <li v-if="userInfo">
-                                    <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2" @click="windowContent">
+                                    <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2" @click="collapse">
                                         Settings
                                     </router-link>
                                 </li>
                                 <li v-if="userInfo">
-                                    <button type="button" class="dropdown-item px-3 py-2" @click="windowContent">
+                                    <button type="button" class="dropdown-item px-3 py-2" @click="collapse">
                                         Logout
                                     </button>
                                 </li>
@@ -240,6 +240,13 @@ export default {
             app_name: window.core.APP_NAME,
             userInfo: true,
             cartItem: [],
+            navbarToggle: {
+                'data-bs-toggle' :  'collapse',
+                'data-bs-target' :  '#navbarSupportedContent',
+                'aria-controls'  :  'navbarSupportedContent',
+                'aria-expanded'  :  'false',
+                'aria-label'     :  'Toggle navigation',
+            },
         }
 
     },
@@ -301,6 +308,19 @@ export default {
         getCheckout() {
             this.windowContent();
             this.$router.push({name: 'checkout'})
+        },
+
+        collapse() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                setTimeout(() => {
+                    navbarCollapse.classList.remove('show');
+                }, 300);
+            } else {
+                setTimeout(() => {
+                    navbarCollapse.classList.add('show');
+                }, 300);
+            }
         }
 
     }
