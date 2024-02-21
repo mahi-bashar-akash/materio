@@ -6,7 +6,7 @@
     "file": "assets/global-sJBmbq85.css",
     "src": "_global-!~{007}~.js"
   },
-  "_global-qxdaYMwq.js": {
+  "_global-OGyRk9aw.js": {
     "assets": [
       "assets/bootstrap-icons-2eO-ad8Y.woff2",
       "assets/bootstrap-icons-NpS-Zr3P.woff"
@@ -14,19 +14,19 @@
     "css": [
       "assets/global-sJBmbq85.css"
     ],
-    "file": "assets/global-qxdaYMwq.js"
+    "file": "assets/global-OGyRk9aw.js"
   },
   "_vue-quill.snow-!~{009}~.js": {
     "file": "assets/vue-quill-IRKSPvU3.css",
     "src": "_vue-quill.snow-!~{009}~.js"
   },
-  "_vue-quill.snow-eUbOm3az.js": {
+  "_vue-quill.snow-0tFuCKcx.js": {
     "css": [
       "assets/vue-quill-IRKSPvU3.css"
     ],
-    "file": "assets/vue-quill.snow-eUbOm3az.js",
+    "file": "assets/vue-quill.snow-0tFuCKcx.js",
     "imports": [
-      "_global-qxdaYMwq.js"
+      "_global-OGyRk9aw.js"
     ]
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
@@ -38,47 +38,50 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-ZTAGISI4.js",
+    "file": "assets/app-_1uNaODF.js",
     "imports": [
-      "_global-qxdaYMwq.js",
+      "_global-OGyRk9aw.js",
       "_axios-kMxbiGYq.js",
-      "_vue-quill.snow-eUbOm3az.js"
+      "_vue-quill.snow-0tFuCKcx.js"
     ],
     "isEntry": true,
     "src": "resources/js/admin/app.js"
   },
   "resources/js/auth/app.js": {
-    "file": "assets/app-d7PP80b4.js",
+    "css": [
+      "assets/app-9I-rx6nE.css"
+    ],
+    "file": "assets/app-MAYKx4rU.js",
     "imports": [
-      "_global-qxdaYMwq.js",
+      "_global-OGyRk9aw.js",
       "_axios-kMxbiGYq.js"
     ],
     "isEntry": true,
     "src": "resources/js/auth/app.js"
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-Cqkx_xjX.js",
+    "file": "assets/app-o5WOsZTa.js",
     "imports": [
-      "_global-qxdaYMwq.js",
+      "_global-OGyRk9aw.js",
       "_axios-kMxbiGYq.js"
     ],
     "isEntry": true,
     "src": "resources/js/delivery/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-bbQf7OZB.js",
+    "file": "assets/app-S0THkbYv.js",
     "imports": [
-      "_global-qxdaYMwq.js"
+      "_global-OGyRk9aw.js"
     ],
     "isEntry": true,
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-7WE_El5B.js",
+    "file": "assets/app-Ddj7Gu6v.js",
     "imports": [
-      "_global-qxdaYMwq.js",
+      "_global-OGyRk9aw.js",
       "_axios-kMxbiGYq.js",
-      "_vue-quill.snow-eUbOm3az.js"
+      "_vue-quill.snow-0tFuCKcx.js"
     ],
     "isEntry": true,
     "src": "resources/js/seller/app.js"

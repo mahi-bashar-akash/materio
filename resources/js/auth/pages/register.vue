@@ -9,17 +9,19 @@
     </div>
 
     <!-- registration form action -->
-    <form autocomplete="off">
+    <form @submit.prevent="register" autocomplete="off">
         <div class="mb-3">
             <div class="form-group">
-                <label for="full_name" class="form-label">Full name</label>
-                <input id="full_name" type="text" name="full_name" v-model="registerParam.fullName" class="form-control" placeholder="Enter your full name" required autocomplete="new-full-name">
+                <label for="name" class="form-label">Full name</label>
+                <input id="name" type="text" name="name" v-model="registerParam.name" class="form-control" placeholder="Enter your full name" required autocomplete="new-full-name">
+                <div class="error-report"></div>
             </div>
         </div>
         <div class="mb-3">
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
                 <input id="email" type="email" name="email" class="form-control" v-model="registerParam.email" placeholder="Enter your email" required autocomplete="new-email">
+                <div class="error-report"></div>
             </div>
         </div>
         <div class="mb-3">
@@ -32,6 +34,7 @@
                         <i class="bi bi-eye-slash" v-if="passwordFieldType === 'password'"></i>
                     </div>
                 </div>
+                <div class="error-report"></div>
             </div>
         </div>
         <div class="mb-3">
@@ -44,6 +47,7 @@
                         <i class="bi bi-eye-slash" v-if="passwordConfirmationFieldType === 'password'"></i>
                     </div>
                 </div>
+                <div class="error-report"></div>
             </div>
         </div>
         <div class="mb-3">
@@ -57,8 +61,11 @@
         </div>
         <div class="mb-3">
             <div class="form-group">
-                <button type="button" class="btn btn-theme w-100" :disabled="!agreeChecked">
+                <button type="submit" class="btn btn-theme w-100" :disabled="!agreeChecked" v-if="!loading">
                     SIGN UP
+                </button>
+                <button type="button" class="btn btn-theme w-100" v-if="loading">
+                    Loading ...
                 </button>
             </div>
         </div>
@@ -73,22 +80,31 @@
 </template>
 
 <script>
+import apiServices from "../../services/apiServices";
+import apiRoutes from "../../services/apiRoutes.js";
+import {createToaster} from "@meforma/vue-toaster";
+import axios from "axios";
+
+const toaster = createToaster({ position: 'top-left' } );
 
 export default {
 
     data(){
 
         return{
+            /* Data properties for the component */
             password: '',
             passwordFieldType: 'password',
             passwordConfirmationFieldType: 'password',
             agreeChecked: false,
             registerParam: {
-                fullName: '',
+                name: '',
                 email: '',
                 password: '',
                 passwordConfirm: '',
-            }
+                role: '',
+            },
+            loading: false,
         }
 
     },
@@ -101,17 +117,52 @@ export default {
 
     methods: {
 
+        /* Function to password visibility --- */
         passwordVisibility() {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
+        /* Function to password confirm visibility --- */
         passwordConfirmVisibility() {
             this.passwordConfirmationFieldType = this.passwordConfirmationFieldType === "password" ? "text" : "password";
         },
 
-        checkController() {
-            this.isCheckedPrivacy = !this.isCheckedPrivacy
-        }
+        /* Function to switch condition work for domain */
+        emailDomainSwitch(){
+            const emailDomain = this.registerParam.email.split('@')[1];
+            switch (emailDomain) {
+                case 'admin.com':
+                    this.registerParam.role = 'admin';
+                    break;
+                case 'seller.com':
+                    this.registerParam.role = 'seller';
+                    break;
+                case 'delivery.com':
+                    this.registerParam.role = 'delivery';
+                    break;
+                default:
+                    this.registerParam.role = 'customer';
+                    break;
+            }
+        },
+
+        /* Function to call authentication of registration */
+        register() {
+            this.emailDomainSwitch()
+            apiServices.ClearErrorHandler()
+            this.loading = true;
+            axios.post(apiRoutes.registration, this.registerParam, {headers: apiServices.headerContent}).then((response) => {
+                this.loading = false;
+            }).catch(err => {
+                this.loading = false;
+                let res = err.response;
+                if (res?.data?.errors !== undefined) {
+                    apiServices.ErrorHandler(res?.data?.errors);
+                } else {
+                    toaster.error('Server error!')
+                }
+            })
+        },
 
     }
 
