@@ -222,15 +222,16 @@
         .shop-sidebar {
             width: 300px;
             @media screen and (max-width: 991px) {
-                position: absolute;
+                position: fixed;
                 top: 0;
-                left: -300px;
                 bottom: 0;
+                left: -310px;
                 height: 100%;
-                z-index: 5;
+                z-index: 1025;
                 transition: 0.3s all ease-in-out;
                 background-color: var(--bs-white);
                 border: 1px solid var(--bs-border-color);
+                overflow-y: scroll;
                 &.active {
                     left: 0;
                     transition: 0.3s all ease-in-out;

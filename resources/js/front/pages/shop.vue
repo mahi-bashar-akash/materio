@@ -130,7 +130,7 @@
                 </button>
 
                 <!-- shop search product -->
-                <div class="col-8 col-md-6">
+                <div class="col-10 col-md-6">
                     <div class="position-relative">
                         <input type="text" name="" class="form-control ps-5" autocomplete="new-search" placeholder="Search here">
                         <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
