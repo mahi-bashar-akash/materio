@@ -86,7 +86,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                               aria-controls="offcanvasExample">
+                               aria-controls="offcanvasExample" @click="collapse">
                                 Cart
                                 <span class="badge bg-light-theme border-theme text-theme ms-2">
                                     {{ products.length }}
