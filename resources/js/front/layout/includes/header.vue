@@ -70,18 +70,23 @@
                                 Contact
                             </router-link>
                         </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link" :to="{name: 'blog'}" @click="collapse">
-                                Blog
-                            </router-link>
-                        </li>
                     </ul>
 
                     <!-- menu list right corner -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
+                            <router-link class="nav-link" :to="{name: 'blog'}" @click="collapse">
+                                Blog
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/auth/register" @click="collapse">
+                                Create new account
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/auth/login" @click="collapse">
-                                Become a seller
+                                Login
                             </a>
                         </li>
                         <li class="nav-item">
@@ -93,38 +98,28 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" v-if="userInfo">
                             <!-- profile dropdown menu -->
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Mahi Bashar Akash
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end p-0 mt-2 overflow-hidden">
-                                <li v-if="!userInfo">
-                                    <a href="/auth/login" class="dropdown-item px-3 py-2" @click="collapse">
-                                        Login
-                                    </a>
-                                </li>
-                                <li v-if="!userInfo">
-                                    <a href="/auth/register" class="dropdown-item px-3 py-2" @click="collapse">
-                                        Registration
-                                    </a>
-                                </li>
-                                <li v-if="userInfo">
+                                <li>
                                     <router-link :to="{name: 'dashboard'}" class="dropdown-item px-3 py-2" @click="collapse">
                                         Dashboard
                                     </router-link>
                                 </li>
-                                <li v-if="userInfo">
+                                <li>
                                     <router-link :to="{name: 'productReview'}" class="dropdown-item px-3 py-2" @click="collapse">
                                         Product Review
                                     </router-link>
                                 </li>
-                                <li v-if="userInfo">
+                                <li>
                                     <router-link :to="{name: 'settings'}" class="dropdown-item px-3 py-2" @click="collapse">
                                         Settings
                                     </router-link>
                                 </li>
-                                <li v-if="userInfo">
+                                <li>
                                     <button type="button" class="dropdown-item px-3 py-2" @click="collapse">
                                         Logout
                                     </button>
@@ -238,7 +233,7 @@ export default {
 
         return {
             app_name: window.core.APP_NAME,
-            userInfo: true,
+            userInfo: false,
             cartItem: [],
             navbarToggle: {
                 'data-bs-toggle' :  'collapse',

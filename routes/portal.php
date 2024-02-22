@@ -20,5 +20,6 @@ Route::group(
     ['middleware' => ['PortalAuth'], 'prefix' => 'auth'],
     function () {
         Route::post('/register', [AuthController::class, 'register'])->name('Auth.Register');
+        Route::post('/login', [AuthController::class, 'login'])->name('Auth.Login');
     }
 );

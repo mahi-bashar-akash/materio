@@ -51,7 +51,7 @@
     "css": [
       "assets/app-9I-rx6nE.css"
     ],
-    "file": "assets/app-MAYKx4rU.js",
+    "file": "assets/app-4XoUOwzo.js",
     "imports": [
       "_global-OGyRk9aw.js",
       "_axios-kMxbiGYq.js"
@@ -69,7 +69,7 @@
     "src": "resources/js/delivery/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-S0THkbYv.js",
+    "file": "assets/app-9ElwqD1o.js",
     "imports": [
       "_global-OGyRk9aw.js"
     ],
@@ -87,7 +87,7 @@
     "src": "resources/js/seller/app.js"
   },
   "resources/scss/basic.scss": {
-    "file": "assets/basic-mWisaw5l.css",
+    "file": "assets/basic-NCSS9CSJ.css",
     "isEntry": true,
     "src": "resources/scss/basic.scss"
   }

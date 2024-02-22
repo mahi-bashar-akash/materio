@@ -27,41 +27,30 @@ class AuthController extends BaseController
      ***/
     public function register(Request $request): JsonResponse
     {
+        /* Validator */
         $validator = Validator::make($request->all(), [
             'role' => 'required|in:admin,seller,delivery,customer',
             'name' => 'required|min:3',
             'email' => 'required|unique:users,email',
-            'password' => 'required|min:6',
+            'password' => 'required|confirmed|min:6',
             'mobile' => 'nullable|numeric',
         ]);
 
+        /* Validator error message */
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
-        switch ($request->role) {
-            case 'admin':
-                $email = $request->email . '@admin.com';
-                break;
-            case 'seller':
-                $email = $request->email . '@seller.com';
-                break;
-            case 'delivery':
-                $email = $request->email . '@delivery.com';
-                break;
-            case 'customer':
-                $email = $request->email . '@gmail.com';
-                break;
-        }
-
+        /* User create insert or save */
         $user = User::create([
             'name' => $request->name,
-            'email' => $email,
+            'email' => $request->email,
             'password' => bcrypt($request->password),
             'mobile' => $request->mobile,
             'role' => $request->role,
         ]);
 
+        /* User switch role as domain system with route */
         switch ($request->role) {
             case 'admin':
                 $redirectRoute = 'lvs.admin.any';
@@ -77,6 +66,7 @@ class AuthController extends BaseController
                 break;
         }
 
+        /* User success message to show redirect route success message */
         return response()->json(['message' => 'Registration successful', 'redirect_route' => $redirectRoute], 200);
     }
 

@@ -13,14 +13,14 @@
         <div class="mb-3">
             <div class="form-group">
                 <label for="name" class="form-label">Full name</label>
-                <input id="name" type="text" name="name" v-model="registerParam.name" class="form-control" placeholder="Enter your full name" required autocomplete="new-full-name">
+                <input id="name" type="text" name="name" v-model="registerParam.name" class="form-control" placeholder="Enter your full name" autocomplete="new-full-name">
                 <div class="error-report"></div>
             </div>
         </div>
         <div class="mb-3">
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input id="email" type="email" name="email" class="form-control" v-model="registerParam.email" placeholder="Enter your email" required autocomplete="new-email">
+                <input id="email" type="email" name="email" class="form-control" v-model="registerParam.email" placeholder="Enter your email" autocomplete="new-email">
                 <div class="error-report"></div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="form-group">
                 <label for="password" class="form-label">Password</label>
                 <div class="position-relative">
-                    <input id="password" :type="passwordFieldType" name="password" class="form-control" v-model="registerParam.password" placeholder="Enter your password" required autocomplete="new-password">
+                    <input id="password" :type="passwordFieldType" name="password" class="form-control" v-model="registerParam.password" placeholder="Enter your password" autocomplete="new-password">
                     <div class="me-3 border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer" @click="passwordVisibility">
                         <i class="bi bi-eye" v-if="passwordFieldType === 'text'"></i>
                         <i class="bi bi-eye-slash" v-if="passwordFieldType === 'password'"></i>
@@ -41,7 +41,7 @@
             <div class="mb-3 form-group">
                 <label for="password_confirm" class="form-label">Confirm password</label>
                 <div class="position-relative">
-                    <input id="password_confirm" :type="passwordConfirmationFieldType" name="password_confirm" v-model="registerParam.passwordConfirm" class="form-control" placeholder="Enter your confirm password" required autocomplete="new-confirm-password">
+                    <input id="password_confirm" :type="passwordConfirmationFieldType" name="password_confirm" v-model="registerParam.passwordConfirm" class="form-control" placeholder="Enter your confirm password" autocomplete="new-confirm-password">
                     <div class="me-3 border-0 bg-transparent position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer" @click="passwordConfirmVisibility">
                         <i class="bi bi-eye" v-if="passwordConfirmationFieldType === 'text'"></i>
                         <i class="bi bi-eye-slash" v-if="passwordConfirmationFieldType === 'password'"></i>
@@ -152,6 +152,7 @@ export default {
             apiServices.ClearErrorHandler()
             this.loading = true;
             axios.post(apiRoutes.registration, this.registerParam, {headers: apiServices.headerContent}).then((response) => {
+                this.registerParam = { name: '', email: '', password: '', passwordConfirm: '', role: '' };
                 this.loading = false;
             }).catch(err => {
                 this.loading = false;
