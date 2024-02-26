@@ -227,6 +227,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             app_name: window.core.APP_NAME,
             multipleParam: {
                 services: [
@@ -251,14 +252,11 @@ export default {
 
     },
 
-    mounted() {
-
-
-
-    },
+    mounted() {  },
 
     methods: {
 
+        /* Function to add service */
         addService() {
             this.multipleParam.services.push(
                 {
@@ -272,6 +270,7 @@ export default {
             )
         },
 
+        /* Function to remove service */
         removeService(index) {
             this.multipleParam.services.splice(index, 1)
         },

@@ -484,6 +484,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             tab: 1,
             password: '',
             passwordFieldType: 'password',
@@ -498,26 +499,26 @@ export default {
 
     },
 
-    mounted() {
-
-
-
-    },
+    mounted() {  },
 
     methods: {
 
+        /* Function to set tab */
         setTab(tab){
             this.tab = tab
         },
 
+        /* Function to password visibility */
         passwordVisibility() {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
+        /* Function to password confirm visibility */
         passwordConfirmVisibility() {
             this.passwordConfirmationFieldType = this.passwordConfirmationFieldType === "password" ? "text" : "password";
         },
 
+        /* Function to on file change */
         onFileChange(e) {
             const file = e.target.files[0];
             this.url = URL.createObjectURL(file);

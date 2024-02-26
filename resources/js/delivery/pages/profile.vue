@@ -3,6 +3,8 @@
     <div class="row justify-content-center">
         <div class="col-lg-3 p-3">
             <div class="p-3 bg-white shadow rounded-4">
+
+                <!-- avatar control -->
                 <div class="p-4 d-flex justify-content-center align-items-center flex-column">
                     <label for="avatar" class="form-label wpx-175 hpx-175 d-flex justify-content-center align-items-center shadow rounded-circle cursor-pointer" v-if="!url">
                         <input id="avatar" type="file" name="upload-image" class="d-none" accept="image/png, image/gif, image/jpeg" @change="onFileChange">
@@ -15,23 +17,34 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="font-14 py-3">
+
+                    <!-- full name -->
                     <div class="mt-3">
                         <div class="mb-2 fw-semibold">Full Name</div>
                         <div class="text-secondary">Mahi Bashar Akash</div>
                     </div>
+
+                    <!-- contact -->
                     <div class="mt-3">
                         <div class="mb-2 fw-semibold">Contact</div>
                         <div class="text-secondary">+880 01645820007</div>
                     </div>
+
+                    <!-- email -->
                     <div class="mt-3">
                         <div class="mb-2 fw-semibold">Email</div>
                         <div class="text-secondary">mahibashar2023@gmail.com</div>
                     </div>
+
+                    <!-- country -->
                     <div class="mt-3">
                         <div class="mb-2 fw-semibold">Selected Country</div>
                         <div class="text-secondary">Bangladesh</div>
                     </div>
+
+                    <!-- language -->
                     <div class="mt-3">
                         <div class="mb-2 fw-semibold">Selected Language</div>
                         <div class="text-secondary">English</div>
@@ -41,6 +54,7 @@
         </div>
         <div class="col-lg-6 p-3 font-14">
 
+            <!-- group button -->
             <div class="d-flex justify-content-start align-items-center flex-wrap">
                 <button type="button" class="btn mb-3 me-2" :class="{ 'btn-light-theme': tab !== 1, 'btn-theme': tab === 1 }" @click="setTab(1)">
                     Edit Profile
@@ -54,6 +68,9 @@
             </div>
 
             <form class="p-4 bg-white shadow rounded-4" v-if="tab === 1">
+
+                <!-- Edit Profile -->
+
                 <div class="form-group mb-3">
                     <label for="full-name" class="form-label">Full Name</label>
                     <input type="text" name="full-name" class="form-control" required autocomplete="new-full-name" v-model="profileEditParam.fullName">
@@ -84,6 +101,9 @@
             </form>
 
             <form class="p-4 bg-white shadow rounded-4" v-if="tab === 2">
+
+                <!-- Edit Password -->
+
                 <div class="form-group mb-3">
                     <label for="current-password" class="form-label">Current Password</label>
                     <div class="position-relative">
@@ -120,6 +140,9 @@
             </form>
 
             <form class="p-4 bg-white shadow rounded-4" v-if="tab === 3">
+
+                <!-- Edit Necessary -->
+
                 <div class="form-group mb-3">
                     <label for="vehicles-type" class="form-label">Select vehicles</label>
                     <select name="vehicles-type" class="form-select" id="vehicles-type" v-model="necessaryParam.vehiclesType" required autocomplete="new-select-vehicles">
@@ -178,6 +201,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             url: null,
             profileEditParam: {
                 fullName: 'Mahi Bashar Akash',
@@ -206,36 +230,38 @@ export default {
 
     },
 
-    mounted() {
-
-
-
-    },
+    mounted() {  },
 
     methods: {
 
+        /* Function to on file change for user avatar */
         onFileChange(e) {
             const file = e.target.files[0];
             this.url = URL.createObjectURL(file);
         },
 
+        /* Function to on file change for lisense */
         onFileChangeLicenseUrl(e) {
             const licenseUrlFile = e.target.files[0];
             this.necessaryParam.licenseUrl = URL.createObjectURL(licenseUrlFile);
         },
 
+        /* Function to set tab to change */
         setTab(tab){
             this.tab = tab
         },
 
+        /* Function to current password visibility */
         currentPasswordVisibility() {
             this.currentPasswordFieldType = this.currentPasswordFieldType === "password" ? "text" : "password";
         },
 
+        /* Function to password visibility */
         passwordVisibility() {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
+        /* Function to password confirm visibility */
         passwordConfirmVisibility() {
             this.passwordConfirmationFieldType = this.passwordConfirmationFieldType === "password" ? "text" : "password";
         },

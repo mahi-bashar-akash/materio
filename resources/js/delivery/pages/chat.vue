@@ -256,6 +256,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             chatSidebarActive: false,
             clientDetailsActive: false,
             ownerDetailsActive: false,
@@ -278,24 +279,28 @@ export default {
 
     methods: {
 
+        /* Function to chat sidebar controller */
         chatSidebarController(){
             this.chatSidebarActive = true;
             this.clientDetailsActive = false;
             this.ownerDetailsActive = false;
         },
 
+        /* Function to client details */
         clientDetails(){
             this.clientDetailsActive = true;
             this.chatSidebarActive = false;
             this.ownerDetailsActive = false;
         },
 
+        /* Function to owner details */
         ownerDetails(){
             this.ownerDetailsActive = true;
             this.chatSidebarActive = false;
             this.clientDetailsActive = false
         },
 
+        /* Function to remove sidebar */
         remove(){
             this.chatSidebarActive = false;
             this.clientDetailsActive = false;

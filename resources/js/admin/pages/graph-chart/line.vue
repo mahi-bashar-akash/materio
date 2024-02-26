@@ -5,7 +5,7 @@
         <div class="card-header border-bottom-0 bg-white py-3">
             <strong class="h5 mb-3 fw-bold">Growth Chart</strong>
         </div>
-        <div class="card-body" style="height: 307px">
+        <div class="card-body hpx-307">
             <Bar :data="data" :options="options"/>
         </div>
     </div>
@@ -14,24 +14,18 @@
 
 
 <script>
-import {
-    Chart as ChartJS,
-    Title,
-    Tooltip,
-    Legend,
-    BarElement,
-    CategoryScale,
-    LinearScale
-} from 'chart.js'
-import {Bar} from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import { Bar } from 'vue-chartjs'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 export default {
     components: {
+        /* components for bar */
         Bar
     },
     data() {
         return {
+            /* Data properties for the component */
             core: window.core,
             data: {
                 labels: [
@@ -71,11 +65,8 @@ export default {
             }
         };
     },
-    methods: {},
-    created() {
-
-    },
-    mounted() {
-    }
+    methods: {  },
+    created() {  },
+    mounted() {  }
 };
 </script>

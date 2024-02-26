@@ -36,7 +36,7 @@
 
             <!-- user content header -->
             <div class="user-content-header">
-                <button type="button" class="btn btn-controller" @click="btnController()">
+                <button type="button" class="btn btn-controller" @click="sideBarController()">
                     <i class="bi bi-justify-left"></i>
                 </button>
                 <div class="dropdown">
@@ -81,6 +81,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             imageUrl: '/images/dots.png',
             app_name: window.core.APP_NAME,
             sidebarActive: false,
@@ -92,10 +93,12 @@ export default {
 
     methods: {
 
-        btnController(){
+        /* Function to sidebar controller */
+        sideBarController(){
             this.sidebarActive = !this.sidebarActive;
         },
 
+        /* Function to remove sidebar as inactive sidebar */
         remove(){
             this.sidebarActive = false;
         },

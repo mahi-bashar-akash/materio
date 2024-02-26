@@ -350,21 +350,13 @@ export default {
 
     data(){
 
-        return{}
+        return{  }
 
     },
 
-    mounted() {
+    mounted() {  },
 
-
-
-    },
-
-    methods: {
-
-
-
-    }
+    methods: {  }
 
 }
 

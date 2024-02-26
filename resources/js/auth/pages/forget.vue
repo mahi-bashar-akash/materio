@@ -103,6 +103,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             step: 'forget-password',
             password: '',
             passwordFieldType: 'password',
@@ -128,14 +129,17 @@ export default {
 
     methods: {
 
+        /* Function to call email push content */
         emailPush(){
             this.step = 'reset-password'
         },
 
+        /* Function to password visibility */
         passwordVisibility() {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
+        /* Function to confirm password visibility */
         passwordConfirmVisibility() {
             this.passwordConfirmationFieldType = this.passwordConfirmationFieldType === "password" ? "text" : "password";
         },

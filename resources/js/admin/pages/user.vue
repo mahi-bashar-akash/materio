@@ -527,10 +527,9 @@
 <script>
 
 export default {
-
     data(){
-
         return{
+            /* Data properties for the component */
             formData: {
                 keyword: '',
             },
@@ -545,22 +544,18 @@ export default {
                 status: 'select-status',
             }
         }
-
     },
-
-    mounted() {
-
-
-
-    },
+    mounted() {  },
 
     methods: {
 
+        /* Function to manage user open */
         manageUserOpen(){
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to manage user close */
         manageUserClose(){
             let myModalEl = document.getElementById('manageModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)

@@ -101,6 +101,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             invoiceTableData: [
                 { invoiceNo: '#5031', clientImage: '/images/clients/face-1.png', clientName: 'Andrew Burns', clientEmail: 'andrew_burns@gmail.com',  date: 'December, 13, 2023', due: '$3171' },
                 { invoiceNo: '#5032', clientImage: '/images/clients/face-2.png', clientName: 'Dana Carey', clientEmail: 'dana_carey@gmail.com', date: 'December, 15, 2023', due: '$4263' },
@@ -116,17 +117,9 @@ export default {
 
     },
 
-    mounted() {
+    mounted() {  },
 
-
-
-    },
-
-    methods: {
-
-
-
-    }
+    methods: {  }
 
 }
 

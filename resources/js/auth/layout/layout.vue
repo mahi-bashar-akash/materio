@@ -42,12 +42,14 @@ import global from "../../global/global.vue";
 export default {
 
     components: {
+        /* components for uses purpose */
         global
     },
 
     data(){
 
         return{
+            /* Data properties for the component */
             app_name: window.core.APP_NAME,
             imageUrl: '/images/dots.png',
         }

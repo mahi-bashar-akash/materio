@@ -38,7 +38,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-_1uNaODF.js",
+    "file": "assets/app-fHYpBJkO.js",
     "imports": [
       "_global-OGyRk9aw.js",
       "_axios-kMxbiGYq.js",
@@ -60,7 +60,7 @@
     "src": "resources/js/auth/app.js"
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-o5WOsZTa.js",
+    "file": "assets/app-AqqpauxF.js",
     "imports": [
       "_global-OGyRk9aw.js",
       "_axios-kMxbiGYq.js"

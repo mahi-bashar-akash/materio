@@ -127,7 +127,7 @@ export default {
     data(){
 
         return{
-
+            /* Data properties for the component */
             categories: [
                 { id: '1', name: 'Food',
                     subCategory: [
@@ -177,36 +177,37 @@ export default {
 
     },
 
-    mounted() {
-
-
-
-    },
+    mounted() {  },
 
     methods: {
 
+        /* Function to manage category modal open */
         manageCategoryOpen(){
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to manage category modal close */
         manageCategoryClose(){
             let myModalEl = document.getElementById('manageModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to delete category modal open */
         deleteCategoryOpen(){
             const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to delete category modal close */
         deleteCategoryClose(){
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to toggle category */
         toggleCategory(categoryId) {
             this.categoryExpanded = this.categoryExpanded !== categoryId ? categoryId : null;
         },

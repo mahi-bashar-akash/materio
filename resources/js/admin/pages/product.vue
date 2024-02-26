@@ -203,7 +203,7 @@ export default {
     data(){
 
         return{
-
+            /* Data properties for the component */
             productTableData: [
                 { id: '1', avatar: '/images/product/image-01.jpg', name: 'Product Name', price: '5', category: 'Category Name', quantity: '1' },
                 { id: '2', avatar: '/images/product/image-02.jpg', name: 'Product Name', price: '10', category: 'Category Name', quantity: '2' },
@@ -221,7 +221,6 @@ export default {
                 { id: '14', avatar: '/images/product/image-14.jpg', name: 'Product Name', price: '70', category: 'Category Name', quantity: '4' },
                 { id: '15', avatar: '/images/product/image-15.jpg', name: 'Product Name', price: '75', category: 'Category Name', quantity: '3' },
             ],
-
             productParam: {
                 name: '',
                 price: '',
@@ -229,38 +228,38 @@ export default {
                 quantity: 'select-quantity',
                 description: '',
             },
-
             formData: {
                 keyword: '',
             }
+
         }
 
     },
 
-    mounted() {
-
-
-
-    },
+    mounted() {  },
 
     methods: {
 
+        /* Function to manage product modal open */
         manageProductOpen(){
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to manage product modal close */
         manageProductClose(){
             let myModalEl = document.getElementById('manageModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to delete product modal open */
         deleteProductOpen(){
             const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to delete product modal close */
         deleteProductClose(){
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)

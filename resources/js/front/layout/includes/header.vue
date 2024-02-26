@@ -232,6 +232,7 @@ export default {
     data() {
 
         return {
+            /* Data properties for the component */
             app_name: window.core.APP_NAME,
             userInfo: false,
             cartItem: [],
@@ -247,9 +248,7 @@ export default {
     },
 
     mounted() {
-
         this.getCartItems();
-
     },
 
     methods: {
@@ -305,6 +304,7 @@ export default {
             this.$router.push({name: 'checkout'})
         },
 
+        /* Function to collapse in navbar responsive */
         collapse() {
             if(window.innerWidth < 991){
                 const navbarCollapse = document.querySelector('.navbar-collapse');

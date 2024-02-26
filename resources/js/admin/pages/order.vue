@@ -93,6 +93,7 @@ export default {
     data() {
 
         return {
+            /* Data properties for the component */
             customerOrderTable: [
                 { id: '1', avatar: '/images/clients/face-1.png', name: 'Andrew Burns', orderItem: 'product name', price: '5', quantity: '1', orderStatus: '1' },
                 { id: '2', avatar: '/images/clients/face-2.png', name: 'Dana Carey', orderItem: 'product name', price: '10', quantity: '2', orderStatus: '1' },
@@ -107,36 +108,9 @@ export default {
 
     },
 
-    mounted() {
+    mounted() {  },
 
-
-    },
-
-    methods: {
-
-        manageProductOpen() {
-            const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
-            myModal.show();
-        },
-
-        manageProductClose() {
-            let myModalEl = document.getElementById('manageModal');
-            let modal = bootstrap.Modal.getInstance(myModalEl)
-            modal.hide();
-        },
-
-        deleteProductOpen() {
-            const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false, backdrop: 'static'});
-            myModal.show();
-        },
-
-        deleteProductClose() {
-            let myModalEl = document.getElementById('deleteModal');
-            let modal = bootstrap.Modal.getInstance(myModalEl)
-            modal.hide();
-        },
-
-    }
+    methods: {  }
 
 }
 

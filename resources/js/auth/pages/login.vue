@@ -59,13 +59,13 @@
 </template>
 
 <script>
-import route from "../router/router";
 
 export default {
 
     data(){
 
         return{
+            /* Data properties for the component */
             app_name: window.core.APP_NAME,
             password: '',
             passwordFieldType: 'password',
@@ -86,10 +86,12 @@ export default {
 
     methods: {
 
+        /* Function to password visibility */
         passwordVisibility() {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
+        /* Function to push login in dashboard of admin only */
         loginPush(){
             window.location.href = '/admin/dashboard'
         }

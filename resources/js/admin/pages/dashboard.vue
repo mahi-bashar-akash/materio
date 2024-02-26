@@ -379,6 +379,7 @@ import lineChart from "./graph-chart/line.vue";
 export default {
 
     components: {
+        /* components for line chart */
         lineChart
     },
 

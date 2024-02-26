@@ -130,27 +130,14 @@
 <script>
 
 export default {
-
     data(){
-
         return{
+            /* Data properties for the component */
             isConfirmed: false,
         }
-
     },
-
-    mounted() {
-
-
-
-    },
-
-    methods: {
-
-
-
-    }
-
+    mounted() {  },
+    methods: {  }
 }
 
 </script>

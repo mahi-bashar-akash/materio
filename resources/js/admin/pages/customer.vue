@@ -83,7 +83,7 @@ export default {
     data(){
 
         return{
-
+            /* Data properties for the component */
             customerTable: [
                 { id: '1', avatar: '/images/clients/face-1.png', name: 'Andrew Burns', email: 'andrew@gmail.com', phoneNumber: '01230 456789', status: '1' },
                 { id: '2', avatar: '/images/clients/face-2.png', name: 'Dana Carey', email: 'dana@gmail.com', phoneNumber: '01011 121314', status: '1' },
@@ -94,46 +94,16 @@ export default {
                 { id: '7', avatar: '/images/clients/face-4.png', name: 'Justin Richardson', email: 'justin@gmail.com', phoneNumber: '03435 363700', status: '1' },
                 { id: '8', avatar: '/images/clients/face-2.png', name: 'Hossain Doe', email: 'hossain@gmail.com', phoneNumber: '03839 404142', status: '2' },
             ],
-
             formData: {
                 keyword: '',
             }
-
         }
 
     },
 
-    mounted() {
+    mounted() {  },
 
-
-
-    },
-
-    methods: {
-
-        manageProductOpen(){
-            const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
-            myModal.show();
-        },
-
-        manageProductClose(){
-            let myModalEl = document.getElementById('manageModal');
-            let modal = bootstrap.Modal.getInstance(myModalEl)
-            modal.hide();
-        },
-
-        deleteProductOpen(){
-            const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false, backdrop: 'static'});
-            myModal.show();
-        },
-
-        deleteProductClose(){
-            let myModalEl = document.getElementById('deleteModal');
-            let modal = bootstrap.Modal.getInstance(myModalEl)
-            modal.hide();
-        },
-
-    }
+    methods: {  }
 
 }
 

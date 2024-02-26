@@ -113,6 +113,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             sliders: [
                 { id: '1', file_path: '/images/slider/banner-1.jpg', topTitle: 'Super', midTitle: 'Grocery', discount: '10%' },
                 { id: '2', file_path: '/images/slider/banner-2.jpg', topTitle: 'Super', midTitle: 'Grocery', discount: '15%' },
@@ -126,36 +127,37 @@ export default {
 
     },
 
-    mounted() {
-
-
-
-    },
+    mounted() {  },
 
     methods: {
 
+        /* Function to manage slider open */
         manageSliderOpen(){
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to manage slider close */
         manageSliderClose(){
             let myModalEl = document.getElementById('manageModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to delete slider open */
         deleteSliderOpen(){
             const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to delete slider close */
         deleteSliderClose(){
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to manage avatar as dummy */
         manageAvatar(e){
             this.sliderParam.avatar = e.target.src
         },

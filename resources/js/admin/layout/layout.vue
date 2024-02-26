@@ -66,7 +66,7 @@
 
             <!-- user content header -->
             <div class="user-content-header">
-                <button type="button" class="btn btn-controller" @click="btnController()">
+                <button type="button" class="btn btn-controller" @click="sidebarController()">
                     <i class="bi bi-justify-left"></i>
                 </button>
                 <div class="dropdown">
@@ -110,12 +110,14 @@ import global from "../../global/global.vue";
 export default {
 
     components: {
+        /* components for global */
         global
     },
 
     data(){
 
         return{
+            /* Data properties for the component */
             imageUrl: '/images/dots.png',
             app_name: window.core.APP_NAME,
             sidebarActive: false,
@@ -127,10 +129,12 @@ export default {
 
     methods: {
 
-        btnController(){
+        /* Function to sidebar controller */
+        sidebarController(){
             this.sidebarActive = !this.sidebarActive;
         },
 
+        /* Function to remove sidebar active */
         remove(){
             this.sidebarActive = false;
         },

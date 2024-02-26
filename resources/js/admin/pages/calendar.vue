@@ -182,6 +182,7 @@ export default {
     data() {
 
         return {
+            /* Data properties for the component */
             calendarSidebarActive: false,
             calendarTableData: [
                 { id: '1', date: 'December 18, 2023', day: 'Monday',
@@ -224,35 +225,39 @@ export default {
 
     methods: {
 
+        /* Function to delete event modal open */
         deleteEventOpen(){
             const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to delete event modal close */
         deleteEventClose(){
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to manage event modal open */
         manageEventOpen(){
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to manage event modal close */
         manageEventClose(){
             let myModalEl = document.getElementById('manageModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to calendar sidebar controller */
         calendarSidebarController(){
             this.calendarSidebarActive = true;
-            this.calendarModalActive = false;
         },
 
+        /* Function to remove sidebar active  */
         remove(){
-            this.calendarModalActive = false;
             this.calendarSidebarActive = false;
         }
 

@@ -194,12 +194,14 @@ import '@vueup/vue-quill/dist/vue-quill.snow.css';
 export default {
 
     components: {
+        /* components for quill editor */
         QuillEditor
     },
 
     data(){
 
         return{
+            /* Data properties for the component */
             emailDropdownActive: false,
             emailSidebarActive: false,
             emailDetailsActive: false,
@@ -218,17 +220,20 @@ export default {
 
     methods: {
 
+        /* Function to email sidebar controller */
         emailSidebarController(){
             this.emailSidebarActive = !this.emailSidebarActive;
             this.emailComposerActive = false;
             this.emailDetailsActive = false;
         },
 
+        /* Function to email details controller */
         emailDetailsController(){
             this.emailDetailsActive = !this.emailDetailsActive;
             this.emailComposerActive = false;
         },
 
+        /* Function to email composer controller */
         emailComposerController(){
             this.emailComposerActive = !this.emailComposerActive;
             this.emailDetailsActive = false;
