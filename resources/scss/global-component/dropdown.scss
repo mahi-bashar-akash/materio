@@ -1,0 +1,12 @@
+.dropdown {
+    .dropdown-menu {
+        .dropdown-item {
+            font-size: 14px;
+
+            &:hover, &:active, &:focus, &.router-link-active {
+                background-color: var(--theme) !important;
+                color: var(--bs-white) !important;
+            }
+        }
+    }
+}

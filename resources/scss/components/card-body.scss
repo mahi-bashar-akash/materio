@@ -1,0 +1,15 @@
+.product-card-body, .customer-card-body, .package-card-body {
+    height: calc(100vh - 250px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--bs-border-color);
+        height: 5px !important;
+    }
+
+}

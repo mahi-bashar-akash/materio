@@ -1,0 +1,73 @@
+.user-content-wrapper {
+    width: 100%;
+
+    .user-header {
+        background-color: var(--bs-white);
+        padding: 0 12px;
+    }
+
+    .user-body {
+        height: calc(100vh - 230px);
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--bs-border-color);
+            height: 5px !important;
+        }
+
+    }
+
+    .user-modal {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        bottom: 0;
+        width: 320px;
+        height: 100vh;
+        background-color: var(--bs-white);
+        border-left: 1px solid var(--bs-border-color);
+        transition: 0.3s all ease-in-out;
+
+        &.active {
+            transition: 0.3s all ease-in-out;
+            right: 0;
+        }
+
+        .btn-close {
+            box-shadow: 0 0 0 0 !important;
+            width: 35px;
+            height: 35px;
+            transition: 0.3s all ease-in-out;
+            border-radius: 50%;
+
+            &:hover {
+                transition: 0.3s all ease-in-out;
+                background-color: var(--bs-border-color);
+            }
+
+        }
+
+        .user-content {
+            height: calc(100vh - 100px);
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                background-color: transparent;
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: var(--bs-border-color);
+                height: 5px !important;
+            }
+
+        }
+
+    }
+
+}

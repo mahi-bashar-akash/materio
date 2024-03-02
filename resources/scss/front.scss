@@ -1,6 +1,10 @@
 .front-portal {
 
-    /* --- --- --- --- --- header as navbar custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ header as navbar custom -------------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .navbar{
         .navbar-brand{}
@@ -64,7 +68,11 @@
         }
     }
 
-    /* --- --- --- --- --- body scrollbar custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ body scrollbar custom ---------------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     &::-webkit-scrollbar {
         background-color: transparent;
@@ -76,7 +84,11 @@
         height: 5px !important;
     }
 
-    /* --- --- --- --- --- slider owl carousel custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ slider owl carousel custom ----------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .slider-carousel {
         .slider-item {
@@ -89,7 +101,11 @@
         }
     }
 
-    /* --- --- --- --- --- product owl carousel custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ product owl carousel custom ---------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .product-carousel, .product-single {
         position: relative;
@@ -131,7 +147,11 @@
         }
     }
 
-    /* --- --- --- --- --- coupon box owl carousel custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ coupon box owl carousel custom ------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .coupon-box {
         height: 250px;
@@ -181,7 +201,11 @@
         }
     }
 
-    /* --- --- --- --- --- blog owl carousel custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ blog owl carousel custom ------------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .blog-carousel {
         .item {
@@ -212,7 +236,11 @@
         }
     }
 
-    /* --- --- --- --- --- shop wrapper custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ shop wrapper custom -----------------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .shop-wrapper {
         display: flex;
@@ -221,17 +249,24 @@
 
         .shop-sidebar {
             width: 300px;
+
             @media screen and (max-width: 991px) {
-                position: fixed;
+                position: absolute;
                 top: 0;
                 bottom: 0;
                 left: -310px;
-                height: 100%;
                 z-index: 1025;
                 transition: 0.3s all ease-in-out;
                 background-color: var(--bs-white);
                 border: 1px solid var(--bs-border-color);
                 overflow-y: scroll;
+            }
+            @media screen and (max-width: 576px) {
+                width: 100%;
+                left: -120%;
+            }
+
+            @media screen and (max-width: 991px) {
                 &.active {
                     left: 0;
                     transition: 0.3s all ease-in-out;
@@ -240,11 +275,13 @@
 
             .shop-sidebar-header {
                 height: 70px;
-                padding: 0 15px;
+                padding-top: 15px;
+                padding-left: 15px;
                 font-size: 22px;
                 display: flex;
-                justify-content: center;
+                justify-content: start;
                 align-items: center;
+
                 @media screen and (max-width: 991px) {
                     border-bottom: 1px solid var(--bs-border-color);
                     justify-content: space-between;
@@ -261,52 +298,18 @@
 
             .shop-sidebar-body {
                 padding: 15px;
-                overflow-y: scroll;
-
-                &::-webkit-scrollbar {
-                    background-color: transparent;
-                    width: 5px;
-                }
-
-                &::-webkit-scrollbar-thumb {
-                    background: var(--bs-border-color);
-                    height: 5px !important;
-                }
 
                 .shop-sidebar-content {
                     width: 100%;
-                    height: 250px;
-                    overflow-y: scroll;
-                    margin-bottom: 25px;
-                    border-radius: 10px;
 
                     .hover-effect-link {
                         transition: 0.3s all ease-in-out;
                         padding: 7px 14px;
-                        border-radius: 10px;
 
                         &:hover {
                             transition: 0.3s all ease-in-out;
                             background-color: var(--bs-light);
                         }
-                    }
-
-                    &:first-child {
-                        height: 170px;
-                    }
-
-                    &:last-child {
-                        height: 160px;
-                    }
-
-                    &::-webkit-scrollbar {
-                        background-color: transparent;
-                        width: 5px;
-                    }
-
-                    &::-webkit-scrollbar-thumb {
-                        background: var(--bs-border-color);
-                        height: 5px !important;
                     }
                 }
             }
@@ -354,7 +357,11 @@
         }
     }
 
-    /* --- --- --- --- --- customer wrapper custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ customer wrapper custom -------------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .customer-wrapper {
         .customer-avatar {
@@ -407,7 +414,11 @@
         height: 350px;
     }
 
-    /* --- --- --- --- --- blogs custom --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ blogs custom ------------------------------------------------
+    |--------------------------------------------------------------------------
+    */
 
     .blogs {
         .blog-content {
@@ -430,7 +441,11 @@
         }
     }
 
-    /* --- --- --- --- --- cart body custom where show cart items --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ cart body custom where show cart items ----------------------
+    |--------------------------------------------------------------------------
+    */
 
     .cart-body {
         height: calc(100vh - 169px);
@@ -449,7 +464,11 @@
         }
     }
 
-    /* --- --- --- --- --- single product details show effect in image --- --- --- --- --- */
+    /*
+    |--------------------------------------------------------------------------
+    |------------ single product details show effect in image -----------------
+    |--------------------------------------------------------------------------
+    */
 
     .zoom {
         background-position: 100% 100%;

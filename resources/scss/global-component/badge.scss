@@ -1,0 +1,26 @@
+.badge {
+    &.bg-success {
+        background-color: #34C38F2D !important;
+        color: #34c38f !important;
+    }
+
+    &.bg-danger {
+        background-color: #F46A6A2D !important;
+        color: #f46a6a !important;
+    }
+
+    &.bg-warning {
+        background-color: #F1B44C2D !important;
+        color: #f1b44c !important;
+    }
+
+    &.bg-secondary {
+        background-color: #EEEDEB !important;
+        color: #607274 !important;
+    }
+
+    &.bg-info {
+        background-color: #DCF2F1 !important;
+        color: #7FC7D9 !important;
+    }
+}

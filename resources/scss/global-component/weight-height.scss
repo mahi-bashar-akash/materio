@@ -1,0 +1,25 @@
+$iteration: 2560;
+
+$base-value: 1px;
+
+$base-percentage: 1%;
+
+@for $i from 1 through $iteration {
+
+    .wpx-#{$i} {
+        width: $base-value * $i !important;
+    }
+
+    .hpx-#{$i} {
+        height: $base-value * $i !important;
+    }
+
+    .wPercentage-#{$i} {
+        width: $base-percentage * $i !important;
+    }
+
+}
+
+.line-height-2 {
+    line-height: 2;
+}

@@ -1,781 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
-
-:root {
-    --theme: #8C57FF;
-    --roboto-slab-font: 'Roboto Slab', serif;
-    --theme-light: #9155FD33;
-    --theme-lightest: #9155FD0C;
-    --theme-dark: #643EAB;
-}
-
-body {
-    font-family: var(--roboto-slab-font) !important;
-}
-
-// preloader
-
-#preloader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999999999;
-    background-color: var(--bs-white);
-
-    .loader {
-        width: 90px;
-        aspect-ratio: 2;
-        --_g: no-repeat radial-gradient(circle closest-side, var(--theme) 90%, #0000);
-        background: var(--_g) 0 50%,
-        var(--_g) 50% 50%,
-        var(--_g) 100% 50%;
-        background-size: calc(100% / 3) 50%;
-        animation: l3 1s infinite linear;
-    }
-
-    @keyframes l3 {
-        20% {
-            background-position: 0 0, 50% 50%, 100% 50%
-        }
-        40% {
-            background-position: 0 100%, 50% 0, 100% 50%
-        }
-        60% {
-            background-position: 0 50%, 50% 100%, 100% 0
-        }
-        80% {
-            background-position: 0 50%, 50% 50%, 100% 100%
-        }
-    }
-
-}
-
-// button area
-
-.btn-theme {
-    background-color: var(--theme) !important;
-    color: var(--bs-white) !important;
-    border: none !important;
-    outline: none !important;
-    transition: 0.3s all ease-in-out !important;
-
-    &:hover {
-        transition: 0.3s all ease-in-out !important;
-        background-color: var(--theme-dark) !important;
-    }
-
-}
-
-.btn-outline-theme {
-    background-color: var(--bs-white) !important;
-    color: var(--theme) !important;
-    border: 1px solid var(--theme) !important;
-    outline: none !important;
-    transition: 0.3s all ease-in-out !important;
-
-    &:hover {
-        transition: 0.3s all ease-in-out !important;
-        border: 1px solid var(--theme-dark) !important;
-        background-color: var(--theme-dark) !important;
-        color: var(--bs-white) !important;
-    }
-
-}
-
-.btn-light-theme {
-    border: none !important;
-    outline: none !important;
-    background-color: var(--theme-light) !important;
-    color: var(--theme) !important;
-}
-
-.btn-discount {
-    width: 65px;
-    height: 45px;
-    background-color: var(--bs-light) !important;
-    border: 1px solid var(--bs-border-color) !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    &.active {
-        border: 1px solid var(--theme) !important;
-
-        .check-icon {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
-    .check-icon {
-        top: -7px;
-        right: -6px;
-        position: absolute;
-        opacity: 0;
-        visibility: hidden;
-        width: 16px;
-        height: 16px;
-        background-color: var(--bs-white);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-    }
-
-}
-
-.btn {
-    height: 40px;
-    padding: 0 20px !important;
-}
-
-.btn-icon {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-    min-height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    background-color: transparent !important;
-    transition: 0.3s all ease-in-out;
-    color: var(--bs-black);
-
-    &:hover {
-        transition: 0.3s all ease-in-out;
-        background-color: var(--bs-border-color) !important;
-    }
-
-}
-
-// form area
-
-.form-control {
-    height: 45px;
-    box-shadow: 0 0 0 0 !important;
-    transition: 0.3s all ease-in-out;
-    line-height: 3.5 !important;
-    border-radius: 5px;
-
-    &:focus, &:active {
-        transition: 0.3s all ease-in-out;
-        border: 1px solid var(--theme) !important;
-    }
-
-}
-
-.form-select {
-    height: 45px;
-    box-shadow: 0 0 0 0 !important;
-    transition: 0.3s all ease-in-out;
-    line-height: 1.5 !important;
-    border-radius: 5px;
-
-    &:focus, &:active {
-        transition: 0.3s all ease-in-out;
-        border: 1px solid var(--theme) !important;
-    }
-
-}
-
-.form-textarea {
-    width: 100%;
-    border: 1px solid var(--bs-border-color);
-    outline: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-
-    &:focus, &:active {
-        transition: 0.3s all ease-in-out;
-        border: 1px solid var(--theme) !important;
-    }
-
-}
-
-.form-check-input[type=checkbox] {
-    position: relative;
-    border: 2px solid var(--bs-border-color);
-    border-radius: 4px;
-    background: none;
-    cursor: pointer;
-    line-height: 0;
-    margin: 0 .6em 0 0;
-    outline: 0;
-    padding: 0 !important;
-    vertical-align: text-top;
-    height: 20px;
-    width: 20px;
-    -webkit-appearance: none;
-    opacity: .5;
-    box-shadow: 0 0 0 0 !important;
-
-    &[type=checkbox]:hover {
-        opacity: 1;
-    }
-
-    &[type=checkbox]:checked {
-        border: 2px solid transparent;
-        background-color: var(--theme);
-        opacity: 1;
-
-        &[type=checkbox]:before {
-            content: '';
-            position: absolute;
-            right: 50%;
-            top: 50%;
-            width: 5px;
-            border: solid #FFF;
-            height: 10px;
-            border-width: 0 2px 2px 0;
-            margin: -1px -1px 0 -1px;
-            transform: rotate(45deg) translate(-50%, -50%);
-            z-index: 2;
-        }
-
-    }
-
-    &[type=checkbox]:before {
-        content: '';
-        position: absolute;
-        right: 50%;
-        top: 50%;
-        width: 7px;
-        height: 14px;
-        border: transparent;
-        border-width: 0 2px 2px 0;
-        margin: -1px -1px 0 -1px;
-        transform: rotate(45deg) translate(-50%, -50%);
-        z-index: 2;
-    }
-
-}
-
-.form-check-input[type=radio] {
-    position: relative;
-    border: 2px solid var(--bs-border-color);
-    border-radius: 50%;
-    background: none;
-    cursor: pointer;
-    outline: 0;
-    padding: 0 !important;
-    vertical-align: text-top;
-    height: 20px;
-    width: 20px;
-    -webkit-appearance: none;
-    opacity: .5;
-    box-shadow: 0 0 0 0 !important;
-
-    &[type=radio]:hover {
-        opacity: 1;
-    }
-
-    &[type=radio]:checked {
-        border: 2px solid transparent;
-        background-color: var(--theme);
-        opacity: 1;
-
-        &[type=radio]:before {
-            content: "";
-            position: absolute;
-            right: 3px;
-            top: 12.4px;
-            width: 12px;
-            height: 12px;
-            border: 3px solid #FFF;
-            border-radius: 50%;
-            background: var(--white);
-            margin: -1px -1px 0 -1px;
-            transform: rotate(45deg) translate(-53%, -53%);
-            z-index: 2;
-        }
-
-    }
-
-    &[type=radio]:before {
-        content: '';
-        position: absolute;
-        right: 50%;
-        top: 50%;
-        width: 7px;
-        height: 14px;
-        border: transparent;
-        border-width: 0 2px 2px 0;
-        margin: -1px -1px 0 -1px;
-        transform: rotate(45deg) translate(-50%, -50%);
-        z-index: 2;
-    }
-
-}
-
-// line height
-
-.line-height-2 {
-    line-height: 2;
-}
-
-// background area
-
-.bg-theme {
-    background-color: var(--theme) !important;
-}
-
-.bg-light-theme {
-    background-color: var(--theme-light) !important;
-}
-
-.bg-lightest-theme {
-    background-color: var(--theme-lightest) !important;
-}
-
-// text
-
-.text-theme {
-    color: var(--theme) !important;
-}
-
-.font-14 {
-    font-size: 14px !important;
-}
-
-.delete-font-size {
-    font-size: 70px !important;
-}
-
-.font-30 {
-    font-size: 30px !important;
-}
-
-.font-50 {
-    font-size: 50px !important;
-}
-
-.truncate-to-2-lines {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-// cursor
-
-.cursor-pointer {
-    cursor: pointer !important;
-}
-
-.cursor-content-menu {
-    cursor: context-menu !important;
-}
-
-// dropdown
-
-.dropdown {
-    .dropdown-menu {
-        .dropdown-item {
-            font-size: 14px;
-
-            &:hover, &:active, &:focus, &.router-link-active {
-                background-color: var(--theme) !important;
-                color: var(--bs-white) !important;
-            }
-        }
-    }
-}
-
-// table
-
-.table-responsive {
-    &::-webkit-scrollbar {
-        background-color: transparent;
-        width: 5px;
-        height: 5px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: var(--bs-border-color);
-        height: 5px !important;
-    }
-}
-
-.table {
-    width: 100%;
-    border-spacing: 0;
-
-    thead {
-        tr {
-            th {
-                padding: 18px 0;
-                text-align: start;
-                border: none;
-                outline: none;
-
-                &.checkbox {
-                    width: 60px;
-                    min-width: 60px;
-                }
-
-                &.button {
-                    width: 200px;
-                    min-width: 200px;
-                }
-
-                &.id {
-                    width: 90px;
-                    min-width: 90px;
-                }
-
-                &.name {
-                    width: 250px;
-                    min-width: 250px;
-                }
-
-                &.date, &.role, &.category {
-                    width: 170px;
-                    min-width: 170px
-                }
-
-                &.payment {
-                    width: 90px;
-                    min-width: 90px;
-                }
-
-                &.status {
-                    width: 90px;
-                    min-width: 90px;
-                }
-
-                &.default-width {
-                    width: 220px;
-                    min-width: 220px;
-                }
-
-                &.action {
-                    width: 120px;
-                    min-width: 120px
-                }
-
-                &:first-child {
-                    padding-left: 18px;
-                }
-
-                &:last-child {
-                    padding-right: 18px;
-                }
-
-            }
-        }
-    }
-
-    tbody {
-        tr {
-            &:hover {
-                transition: 0.3s all ease-in-out;
-
-                td {
-                    background-color: var(--bs-light);
-                    transition: 0.3s all ease-in-out;
-
-                    &:first-child {
-                        border-top-left-radius: 5px;
-                        border-bottom-left-radius: 5px;
-                    }
-
-                    &:last-child {
-                        border-top-right-radius: 5px;
-                        border-bottom-right-radius: 5px;
-                    }
-                }
-            }
-
-            td {
-                padding: 15px 0;
-                vertical-align: middle;
-                outline: none;
-                border-bottom: none;
-                transition: 0.3s all ease-in-out;
-                color: var(--bs-secondary);
-
-                .face, .item {
-                    width: 45px;
-                    height: 45px;
-                    border-radius: 50%;
-                }
-
-                &.checkbox {
-                    width: 60px;
-                    min-width: 60px;
-                }
-
-                &.id {
-                    width: 90px;
-                    min-width: 90px;
-                }
-
-                &.name {
-                    width: 270px;
-                    min-width: 300px;
-                }
-
-                &.payment, &.price, &.quantity {
-                    width: 90px;
-                    min-width: 90px;
-                }
-
-                &.date, &.role {
-                    width: 170px;
-                    min-width: 170px
-                }
-
-                &.status {
-                    width: 90px;
-                    min-width: 90px;
-                }
-
-                &.default-width {
-                    width: 220px;
-                    min-width: 220px;
-                }
-
-                &.action {
-                    width: 120px;
-                    min-width: 120px;
-
-                    .btn-icon {
-                        background-color: transparent;
-                        width: 45px;
-                        height: 45px;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border: none;
-                        outline: none;
-
-                        &:hover {
-                            background-color: var(--bs-border-color);
-                            box-shadow: 0 0 4px 0 var(--bs-border-color);
-                        }
-
-                    }
-
-                }
-
-                &.face {
-                    width: 45px;
-                    height: 45px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                }
-
-                &:first-child {
-                    padding-left: 20px;
-                }
-
-                &:last-child {
-                    padding-right: 20px;
-                }
-
-            }
-        }
-    }
-
-    tfoot {
-        th {
-            padding: 15px 0;
-            vertical-align: middle;
-            outline: none;
-            border-bottom: none;
-            transition: 0.3s all ease-in-out;
-            color: var(--bs-secondary);
-
-            &:first-child {
-                padding-left: 20px;
-            }
-
-            &:last-child {
-                padding-right: 20px;
-            }
-
-        }
-    }
-
-}
-
-// border
-
-.border-theme {
-    border: 1px solid var(--theme);
-}
-
-.border-light-theme {
-    border: 1px solid var(--theme-light);
-}
-
-// pagination
-
-.pagination {
-    .page-item {
-        transition: 0.3s all ease-in-out;
-
-        &.active .page-link {
-            transition: 0.3s all ease-in-out;
-            background-color: var(--theme);
-            border: 1px solid transparent;
-            color: var(--bs-white);
-        }
-
-        .page-link {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 0 0;
-            color: var(--theme);
-            border: 1px solid var(--theme);
-            margin: 0 5px;
-            border-radius: 6px;
-            font-size: 12px;
-
-            &:hover {
-                transition: 0.3s all ease-in-out;
-                background-color: var(--theme);
-                border: 1px solid transparent;
-                color: var(--bs-white);
-            }
-
-        }
-    }
-}
-
-// modal
-
-.modal {
-    .modal-dialog {
-        .modal-content {
-            padding: 15px;
-
-            .modal-header {
-                .modal-title {
-                    font-weight: 600;
-                }
-
-                .btn-close {
-                    width: 35px;
-                    height: 35px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 50%;
-                    transition: 0.3s all ease-in-out;
-                    margin-right: 0;
-                    box-shadow: 0 0 0 0 !important;
-
-                    &:hover {
-                        transition: 0.3s all ease-in-out;
-                        background-color: var(--bs-border-color);
-                    }
-
-                }
-            }
-
-            .modal-body {
-
-            }
-
-            .modal-footer {
-                font-size: 14px;
-            }
-        }
-    }
-}
-
-// accordion
-
-.accordion {
-    .accordion-item {
-        .accordion-header {
-            .accordion-button {
-                box-shadow: 0 0 0 0 !important;
-                background-color: var(--bs-light) !important;
-
-                &::after {
-                    background-image: none !important;
-                }
-
-            }
-        }
-    }
-
-    .accordion-collapse {
-        .accordion-body {
-
-        }
-    }
-}
-
-// badge
-
-.badge {
-    &.bg-success {
-        background-color: #34C38F2D !important;
-        color: #34c38f !important;
-    }
-
-    &.bg-danger {
-        background-color: #F46A6A2D !important;
-        color: #f46a6a !important;
-    }
-
-    &.bg-warning {
-        background-color: #F1B44C2D !important;
-        color: #f1b44c !important;
-    }
-
-    &.bg-secondary {
-        background-color: #EEEDEB !important;
-        color: #607274 !important;
-    }
-
-    &.bg-info {
-        background-color: #DCF2F1 !important;
-        color: #7FC7D9 !important;
-    }
-}
-
-// width and height
-
-$iteration: 2560;
-
-$base-value: 1px;
-
-$base-percentage: 1%;
-
-@for $i from 1 through $iteration {
-
-    .wpx-#{$i} {
-        width: $base-value * $i !important;
-    }
-
-    .hpx-#{$i} {
-        height: $base-value * $i !important;
-    }
-
-    .wPercentage-#{$i} {
-        width: $base-percentage * $i !important;
-    }
-
-}
+
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- Root and source code --------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/root";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- Preloader -------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/preloader";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- color wrapper ---------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "components/color-wrapper";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- button area -----------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/button";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- form area -------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/form";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- background area -------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/background";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- typography ------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/typography";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- cursor ----------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/cursor";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- dropdown --------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/dropdown";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- table -----------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/table";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- border ----------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/border";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- pagination ------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/pagination";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- modal -----------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/model";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- accordion -------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/accordion";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- badge -----------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/badge";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- width and height ------------------------------
+|--------------------------------------------------------------------------
+*/
+
+@import "global-component/weight-height";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- authentication --------------------------------
+|--------------------------------------------------------------------------
+*/
 
 @import "auth";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- user for management ---------------------------
+|--------------------------------------------------------------------------
+*/
+
 @import "user";
+
+/*
+|--------------------------------------------------------------------------
+|-------------------------- Front content ----------------------------------
+|--------------------------------------------------------------------------
+*/
+
 @import "front";

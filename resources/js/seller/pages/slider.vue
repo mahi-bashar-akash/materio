@@ -7,7 +7,7 @@
     </div>
 
     <!-- slider list -->
-    <div class="container-fluid">
+    <div class="container-fluid slider-wrapper">
         <div class="row">
             <div class="col-12 col-md-6 col-xl-4 mb-3" v-for="each in sliders">
                 <div class="slider border overflow-hidden position-relative">

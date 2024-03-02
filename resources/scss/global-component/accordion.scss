@@ -1,0 +1,21 @@
+.accordion {
+    .accordion-item {
+        .accordion-header {
+            .accordion-button {
+                box-shadow: 0 0 0 0 !important;
+                background-color: var(--bs-light) !important;
+
+                &::after {
+                    background-image: none !important;
+                }
+
+            }
+        }
+    }
+
+    .accordion-collapse {
+        .accordion-body {
+
+        }
+    }
+}

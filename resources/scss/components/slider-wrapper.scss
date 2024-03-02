@@ -1,0 +1,21 @@
+.slider-wrapper {
+
+    .slider {
+        height: 300px;
+
+        .each-slider {
+            width: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: 0.3s all ease-in-out;
+
+            &:hover {
+                transition: 0.3s all ease-in-out;
+                transform: scale(1.3);
+            }
+
+        }
+
+    }
+
+}

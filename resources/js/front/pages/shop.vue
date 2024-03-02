@@ -4,7 +4,7 @@
     <div class="shop-wrapper">
 
         <!-- shop sidebar -->
-        <div class="shop-sidebar h-100" :class="{'active' : shopSidebarActive}">
+        <div class="shop-sidebar bg-white" :class="{'active' : shopSidebarActive}">
             <div class="shop-sidebar-header">
                 <span class="fw-semibold">
                     Filter
@@ -15,11 +15,14 @@
             </div>
             <div class="shop-sidebar-body">
 
-                <div class="p-3 shop-sidebar-content border bg-white">
+                <hr class="col-5 border">
+
+                <div class="fw-semibold mb-3 d-block">Price</div>
+
+                <div class="py-3 shop-sidebar-content bg-white">
                     <div class="row">
                         <div class="col-12 mb-3">
                             <div class="form-group">
-                                <label for="price-range" class="form-label">Price</label>
                                 <input v-model="priceRange" type="range" name="price-range" class="form-range" autocomplete="new-price" :min="0" :max="maxPrice">
                             </div>
                         </div>
@@ -36,8 +39,11 @@
                     </div>
                 </div>
 
+                <hr class="col-5 border">
+
                 <div class="fw-semibold mb-3 d-block">Category List</div>
-                <div class="shop-sidebar-content border p-3 bg-white">
+
+                <div class="py-3 shop-sidebar-content bg-white">
                     <div v-for="category in categories" :key="category.id">
                         <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
                             {{category.name}}
@@ -45,8 +51,11 @@
                     </div>
                 </div>
 
+                <hr class="col-5 border">
+
                 <div class="fw-semibold mb-3 d-block">SubCategory List</div>
-                <div class="shop-sidebar-content border p-3 bg-white">
+
+                <div class="py-3 shop-sidebar-content bg-white">
                     <div v-for="category in categories" :key="category.id">
                         <div v-for="subCategory in category.subCategory" :key="subCategory.id">
                             <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
@@ -56,8 +65,11 @@
                     </div>
                 </div>
 
+                <hr class="col-5 border">
+
                 <div class="fw-semibold mb-3 d-block">Discount List</div>
-                <div class="shop-sidebar-content border p-3 bg-white">
+
+                <div class="py-3 shop-sidebar-content bg-white">
                     <div v-for="discount in discounts" :key="discount.id">
                         <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
                             {{discount.discountRate}}
@@ -65,8 +77,11 @@
                     </div>
                 </div>
 
+                <hr class="col-5 border">
+
                 <div class="fw-semibold mb-3 d-block">Customer review</div>
-                <div class="shop-sidebar-content border p-3 bg-white">
+
+                <div class="py-3 shop-sidebar-content bg-white">
                     <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
                         <i class="bi bi-star-fill ms-2 text-warning"></i>
                         <i class="bi bi-star ms-2 text-warning"></i>
@@ -104,8 +119,11 @@
                     </a>
                 </div>
 
+                <hr class="col-5 border">
+
                 <div class="fw-semibold mb-3 d-block">Availability</div>
-                <div class="shop-sidebar-content border p-3 bg-white">
+
+                <div class="py-3 shop-sidebar-content bg-white">
                     <a href="javascript:void(0)" class="text-decoration-none text-secondary d-block hover-effect-link">
                         In Stock
                     </a>
@@ -142,7 +160,7 @@
             </div>
             <div class="shop-content-body">
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-2 row-cols-xxl-3">
 
                     <!-- shop show product list -->
                     <div v-for="each in productItem">

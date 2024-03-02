@@ -1,0 +1,26 @@
+.text-theme {
+    color: var(--theme) !important;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+.delete-font-size {
+    font-size: 70px !important;
+}
+
+.font-30 {
+    font-size: 30px !important;
+}
+
+.font-50 {
+    font-size: 50px !important;
+}
+
+.truncate-to-2-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

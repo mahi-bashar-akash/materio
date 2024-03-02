@@ -1,0 +1,99 @@
+.btn {
+    height: 40px;
+    padding: 0 20px !important;
+}
+
+.btn-theme {
+    background-color: var(--theme) !important;
+    color: var(--bs-white) !important;
+    border: none !important;
+    outline: none !important;
+    transition: 0.3s all ease-in-out !important;
+
+    &:hover {
+        transition: 0.3s all ease-in-out !important;
+        background-color: var(--theme-dark) !important;
+    }
+
+}
+
+.btn-outline-theme {
+    background-color: var(--bs-white) !important;
+    color: var(--theme) !important;
+    border: 1px solid var(--theme) !important;
+    outline: none !important;
+    transition: 0.3s all ease-in-out !important;
+
+    &:hover {
+        transition: 0.3s all ease-in-out !important;
+        border: 1px solid var(--theme-dark) !important;
+        background-color: var(--theme-dark) !important;
+        color: var(--bs-white) !important;
+    }
+
+}
+
+.btn-light-theme {
+    border: none !important;
+    outline: none !important;
+    background-color: var(--theme-light) !important;
+    color: var(--theme) !important;
+}
+
+.btn-discount {
+    width: 65px;
+    height: 45px;
+    background-color: var(--bs-light) !important;
+    border: 1px solid var(--bs-border-color) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &.active {
+        border: 1px solid var(--theme) !important;
+
+        .check-icon {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .check-icon {
+        top: -7px;
+        right: -6px;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        width: 16px;
+        height: 16px;
+        background-color: var(--bs-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+}
+
+.btn-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: transparent !important;
+    transition: 0.3s all ease-in-out;
+    color: var(--bs-black);
+
+    &:hover {
+        transition: 0.3s all ease-in-out;
+        background-color: var(--bs-border-color) !important;
+    }
+
+}
