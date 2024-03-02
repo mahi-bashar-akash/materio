@@ -46,7 +46,7 @@
 
     <div class="container-fluid">
         <div class="row text-secondary text-opacity-75">
-            <div class="col-md-6 mb-3">
+            <div class="col-lg-6 mb-3">
 
                 <!-- terms & conditions -->
                 <div class="fs-bold fs-3 text-center text-dark my-3">
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-lg-6 mb-3">
 
                 <!-- privacy & policy -->
                 <div class="fs-bold fs-3 text-center my-3 text-dark">
