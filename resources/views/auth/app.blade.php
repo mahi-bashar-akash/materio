@@ -2,25 +2,25 @@
 
 <html lang="en">
 
-    <head>
+<head>
 
-        {{-- head --}}
-        @include('components.head')
+    {{-- head --}}
+    @include('components.head')
 
-        {{-- authentication vue connection app js --}}
-        @vite('resources/js/auth/app.js')
+    {{-- authentication vue connection app js --}}
+    @vite('resources/js/auth/app.js')
 
-    </head>
+</head>
 
-    <body class="auth-portal">
+<body class="auth-portal">
 
-        <div id="app"></div>
+    <div id="app"></div>
 
-        {{-- global perloader --}}
-        @include('components/preloader')
+    {{-- global perloader --}}
+    @include('components/preloader')
 
-    </body>
+</body>
 
-    @include('components.script')
+@include('components.script')
 
 </html>

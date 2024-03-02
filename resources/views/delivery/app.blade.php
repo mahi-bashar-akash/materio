@@ -2,25 +2,25 @@
 
 <html lang="en">
 
-    <head>
+<head>
 
-        {{-- head --}}
-        @include('components.head')
+    {{-- head --}}
+    @include('components.head')
 
-        {{-- delivery vue connection app js --}}
-        @vite('resources/js/delivery/app.js')
+    {{-- delivery vue connection app js --}}
+    @vite('resources/js/delivery/app.js')
 
-    </head>
+</head>
 
-    <body class="delivery-portal">
+<body class="delivery-portal">
 
-        <div id="app"></div>
+    <div id="app"></div>
 
-        {{-- global perloader --}}
-        @include('components/preloader')
+    {{-- global perloader --}}
+    @include('components/preloader')
 
-    </body>
+</body>
 
-    @include('components.script')
+@include('components.script')
 
 </html>

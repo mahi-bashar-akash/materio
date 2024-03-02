@@ -2,7 +2,8 @@
     <div class="loader"></div>
 </div>
 
-<script>
+{{-- preloader script js --}}
+<script type="application/javascript">
     const loader = document.getElementById("preloader")
     window.addEventListener("load", function () {
         setTimeout(() => {
