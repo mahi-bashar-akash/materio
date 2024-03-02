@@ -6,8 +6,6 @@ const toaster = createToaster({
     singleton: true, // Prevent duplicate toasts
 });
 
-let headers = {};
-
 const apiService = {
 
     headerContent: {
@@ -40,15 +38,5 @@ const apiService = {
         });
     },
 
-    toasterError(errorObject) {
-        for (const field in errorObject) {
-            if (errorObject.hasOwnProperty(field)) {
-                const errorMessages = errorObject[field];
-                errorMessages.forEach(message => {
-                    toaster.error(`${message}`);
-                });
-            }
-        }
-    },
 }
 export default apiService;
