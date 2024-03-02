@@ -275,7 +275,7 @@
                     <small class="d-block mb-3 text-secondary text-opacity-50">
                         june 18, 2023
                     </small>
-                    <div class="text-secondary text-opacity-50 fw-light mb-3">
+                    <div class="text-secondary fw-light mb-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
                     </div>
                     <div class="text-end">
@@ -299,7 +299,7 @@
                     <small class="d-block mb-3 text-secondary text-opacity-50">
                         june 18, 2023
                     </small>
-                    <div class="text-secondary text-opacity-50 fw-light mb-3">
+                    <div class="text-secondary fw-light mb-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
                     </div>
                     <div class="text-end">
@@ -323,7 +323,7 @@
                     <small class="d-block mb-3 text-secondary text-opacity-50">
                         june 18, 2023
                     </small>
-                    <div class="text-secondary text-opacity-50 fw-light mb-3">
+                    <div class="text-secondary fw-light mb-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
                     </div>
                     <div class="text-end">
