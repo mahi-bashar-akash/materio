@@ -7,12 +7,25 @@ export default defineConfig({
         vuePlugin(),
         laravel({
             input: [
-                'resources/scss/basic.scss',
-                'resources/js/auth/app.js',
-                'resources/js/admin/app.js',
+
+                // stylesheet
+                'resources/scss/stylesheet.scss',
+
+                // front
                 'resources/js/front/app.js',
+
+                // authentication
+                'resources/js/auth/app.js',
+
+                // admin
+                'resources/js/admin/app.js',
+
+                // seller
                 'resources/js/seller/app.js',
-                'resources/js/delivery/app.js'
+
+                // delivery
+                'resources/js/delivery/app.js',
+
             ],
             refresh: true,
         }),

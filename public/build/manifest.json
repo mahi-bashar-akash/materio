@@ -6,7 +6,7 @@
     "file": "assets/global-sJBmbq85.css",
     "src": "_global-!~{007}~.js"
   },
-  "_global-OGyRk9aw.js": {
+  "_global-yF03Ly3U.js": {
     "assets": [
       "assets/bootstrap-icons-2eO-ad8Y.woff2",
       "assets/bootstrap-icons-NpS-Zr3P.woff"
@@ -14,19 +14,19 @@
     "css": [
       "assets/global-sJBmbq85.css"
     ],
-    "file": "assets/global-OGyRk9aw.js"
+    "file": "assets/global-yF03Ly3U.js"
   },
   "_vue-quill.snow-!~{009}~.js": {
     "file": "assets/vue-quill-IRKSPvU3.css",
     "src": "_vue-quill.snow-!~{009}~.js"
   },
-  "_vue-quill.snow-0tFuCKcx.js": {
+  "_vue-quill.snow-Lze69Stb.js": {
     "css": [
       "assets/vue-quill-IRKSPvU3.css"
     ],
-    "file": "assets/vue-quill.snow-0tFuCKcx.js",
+    "file": "assets/vue-quill.snow-Lze69Stb.js",
     "imports": [
-      "_global-OGyRk9aw.js"
+      "_global-yF03Ly3U.js"
     ]
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
@@ -38,11 +38,11 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-PE27BesZ.js",
+    "file": "assets/app-8-i0geOT.js",
     "imports": [
-      "_global-OGyRk9aw.js",
+      "_global-yF03Ly3U.js",
       "_axios-kMxbiGYq.js",
-      "_vue-quill.snow-0tFuCKcx.js"
+      "_vue-quill.snow-Lze69Stb.js"
     ],
     "isEntry": true,
     "src": "resources/js/admin/app.js"
@@ -51,44 +51,44 @@
     "css": [
       "assets/app-9I-rx6nE.css"
     ],
-    "file": "assets/app-4XoUOwzo.js",
+    "file": "assets/app-hwh57M09.js",
     "imports": [
-      "_global-OGyRk9aw.js",
+      "_global-yF03Ly3U.js",
       "_axios-kMxbiGYq.js"
     ],
     "isEntry": true,
     "src": "resources/js/auth/app.js"
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-AqqpauxF.js",
+    "file": "assets/app-gHMB_Uig.js",
     "imports": [
-      "_global-OGyRk9aw.js",
+      "_global-yF03Ly3U.js",
       "_axios-kMxbiGYq.js"
     ],
     "isEntry": true,
     "src": "resources/js/delivery/app.js"
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-VZPfIFfK.js",
+    "file": "assets/app-u3Ni1nDX.js",
     "imports": [
-      "_global-OGyRk9aw.js"
+      "_global-yF03Ly3U.js"
     ],
     "isEntry": true,
     "src": "resources/js/front/app.js"
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-uxd6AQoy.js",
+    "file": "assets/app-VnWkxl3_.js",
     "imports": [
-      "_global-OGyRk9aw.js",
+      "_global-yF03Ly3U.js",
       "_axios-kMxbiGYq.js",
-      "_vue-quill.snow-0tFuCKcx.js"
+      "_vue-quill.snow-Lze69Stb.js"
     ],
     "isEntry": true,
     "src": "resources/js/seller/app.js"
   },
-  "resources/scss/basic.scss": {
-    "file": "assets/basic-eejBORep.css",
+  "resources/scss/stylesheet.scss": {
+    "file": "assets/stylesheet-eejBORep.css",
     "isEntry": true,
-    "src": "resources/scss/basic.scss"
+    "src": "resources/scss/stylesheet.scss"
   }
 }
