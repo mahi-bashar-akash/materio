@@ -96,6 +96,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             profileEditData: {
                 fullName: 'Mahi Bashar Akash',
                 email: 'mahibashar2023@gmail.com',
@@ -119,6 +120,7 @@ export default {
 
     methods: {
 
+        /* Function to set tab */
         setTab(tab) {
             this.tab = tab;
         }

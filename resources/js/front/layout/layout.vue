@@ -31,7 +31,7 @@ export default {
     data(){
 
         return{
-
+            /* Data properties for the component */
             imageUrl: '/images/dots.png',
 
         }

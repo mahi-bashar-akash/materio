@@ -297,6 +297,7 @@ import store from "../../store/index.js";
 export default {
 
     watch: {
+        /* Data properties watching as price range */
         priceRange() {
             this.minPrice = this.priceRange;
             if (this.minPrice > this.maxPrice) {
@@ -308,7 +309,7 @@ export default {
     data() {
 
         return {
-
+            /* Data properties for the component */
             productItem: [
                 {id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '10', category: 'Category Name', review: '1'},
                 {id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '15', category: 'Category Name', review: '2'},
@@ -381,24 +382,21 @@ export default {
 
     },
 
-    mounted() {
-
-
-    },
+    mounted() {  },
 
     methods: {
 
-        /* function of shop sidebar controller */
+        /* Function of shop sidebar controller */
         shopSidebarController(){
             this.shopSidebarActive = !this.shopSidebarActive
         },
 
-        /* function of product information */
+        /* Function of product information */
         productInfo(){
             this.$router.push( { name: 'productDetails' } )
         },
 
-        /* function of add to cart */
+        /* Function of add to cart */
         addToCart(product) {
             store.dispatch('addToCart', product)
         },

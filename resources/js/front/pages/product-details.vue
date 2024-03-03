@@ -286,8 +286,8 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             insertedImage: '/images/product/image-01.jpg',
-
             dealOfTheDaysProduct: [
                 { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name', review: '1' },
                 { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name', review: '2' },
@@ -297,12 +297,10 @@ export default {
                 { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name', review: '3' },
                 { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name', review: '2' },
             ],
-
             kgText: '1 kg',
             quantity: 1,
             review: false,
             isZoomed: false,
-
             productReviewParam: {
                 name: '',
                 email: '',
@@ -323,7 +321,7 @@ export default {
 
     methods: {
 
-        /* function of update rating of product review */
+        /* Function of update rating of product review */
         updateRating(selectedRating) {
             this.productReviewParam.rating = [];
             for (let i = 1; i <= selectedRating; i++) {
@@ -331,37 +329,37 @@ export default {
             }
         },
 
-        /* function to show or hide of review form */
+        /* Function to show or hide of review form */
         reviewController(){
             this.review = !this.review;
             this.productReviewParam = { name: '', email: '', rating: [], title: '', description: '' };
         },
 
-        /* function of increase quantity */
+        /* Function of increase quantity */
         increaseQuantity() {
             if (this.quantity < 5) {
                 this.quantity++;
             }
         },
 
-        /* function of decrease quantity */
+        /* Function of decrease quantity */
         decreaseQuantity() {
             if (this.quantity > 1) {
                 this.quantity--;
             }
         },
 
-        /* function of insert kg as single */
+        /* Function of insert kg as single */
         insertKg(e){
             this.kgText = e.target.innerText;
         },
 
-        /* function of insert image as single from array */
+        /* Function of insert image as single from array */
         insertImage(e){
             this.insertedImage = e.target.src;
         },
 
-        /* function of product as carousel */
+        /* Function of product as carousel */
         product(){
             $('.product-carousel').owlCarousel({
                 loop:true,
@@ -381,17 +379,17 @@ export default {
             })
         },
 
-        /* function of route to push product details */
+        /* Function of route to push product details */
         productInfo(){
             this.$router.push( { name: 'productDetails' } )
         },
 
-        /* function of route to push product details */
+        /* Function of route to push product details */
         addToCart(product) {
             store.dispatch('addToCart', product)
         },
 
-        /* function of zoom effect */
+        /* Function of zoom effect */
         zoom(event) {
             var zoomer = event.currentTarget;
             var offsetX = event.offsetX ? event.offsetX : event.touches[0].pageX;
@@ -399,7 +397,7 @@ export default {
             var x = offsetX / zoomer.offsetWidth * 100;
             var y = offsetY / zoomer.offsetHeight * 100;
             zoomer.style.backgroundPosition = x + '% ' + y + '%';
-        }
+        },
 
 
     }

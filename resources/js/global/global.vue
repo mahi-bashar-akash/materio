@@ -3,7 +3,7 @@
     <!--  color select content  -->
     <div class="color-wrapper" :class="{'active': colorWrapperActive}">
         <div class="color-controller">
-            <button type="button" class="btn btn-gear" @click="colorController">
+            <button type="button" class="btn btn-gear" @click="colorContentToggle">
                 <i class="bi bi-gear-fill"></i>
             </button>
             <div class="fw-semibold ms-4">Theme Colors</div>
@@ -28,6 +28,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             colorWrapperActive: false,
             themeColors: ["#8C57FF", "#0D9394", "#8A8D93", "#FF4C51", "#16B1FF"],
             selectedColor: null,
@@ -47,10 +48,12 @@ export default {
 
     methods: {
 
-        colorController(){
+        /* this function to control color */
+        colorContentToggle(){
             this.colorWrapperActive = !this.colorWrapperActive
         },
 
+        /* this function to update theme color */
         updateThemeColor(color) {
             localStorage.setItem('themeColor', color);
             document.documentElement.style.setProperty('--theme', color);
@@ -61,16 +64,19 @@ export default {
             this.colorWrapperActive = false;
         },
 
+        /* this function to darken color which i select as theme color to show dark  */
         darken(color, amount) {
             const darkColor = tinyColor(color).darken(amount).toString();
             return darkColor;
         },
 
+        /* this function to darken color which i select as theme color to show light  */
         lighten(color, amount) {
             const lightColor = tinyColor(color).lighten(amount).toString();
             return lightColor;
         },
 
+        /* this function to handle color when i use to choose from input color to choose color  */
         handleColorChange() {
             this.updateThemeColor(this.selectedColor);
         },

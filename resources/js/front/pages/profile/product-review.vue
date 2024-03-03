@@ -135,7 +135,7 @@ export default {
     data(){
 
         return{
-
+            /* Data properties for the component */
             productReviewList: [
                 { id: '1', file_path: '/images/product/image-01.jpg', name: 'Product Name', price: '$5', reviewMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis, ipsum quam quod ratione voluptatem.' },
                 { id: '2', file_path: '/images/product/image-02.jpg', name: 'Product Name', price: '$10', reviewMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis, ipsum quam quod ratione voluptatem.' },
@@ -159,23 +159,27 @@ export default {
 
     methods: {
 
+        /* Function to product review open edit modal */
         productReviewEditModalOpen(data){
             this.reviewParam = data;
             const myModal = new bootstrap.Modal("#productReviewEditModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to product review close edit modal */
         productReviewEditModalClose(){
             let myModalEl = document.getElementById('productReviewEditModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
+        /* Function to product review open delete modal */
         productReviewDeleteModalOpen(){
             const myModal = new bootstrap.Modal("#productReviewDeleteModal", {keyboard: false, backdrop: 'static'});
             myModal.show();
         },
 
+        /* Function to product review close delete modal */
         productReviewDeleteModalClose(){
             let myModalEl = document.getElementById('productReviewDeleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)

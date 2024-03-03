@@ -149,7 +149,7 @@ export default {
     data(){
 
         return{
-
+            /* Data properties for the component */
             profileCountActivity: {
                 complete: '100',
                 pending: '25',

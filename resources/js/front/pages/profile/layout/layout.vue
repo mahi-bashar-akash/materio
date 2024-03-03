@@ -78,6 +78,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             url: null,
         }
 
@@ -91,6 +92,7 @@ export default {
 
     methods: {
 
+        /* Function to on add avatar */
         onFileChange(e) {
             const file = e.target.files[0];
             this.url = URL.createObjectURL(file);

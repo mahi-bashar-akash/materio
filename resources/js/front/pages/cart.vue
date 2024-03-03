@@ -8,7 +8,8 @@
     </div>
 
     <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu">
-        <div class="d-flex justify-content-center align-items-center flex-column hpx-450 w-100" v-if="products.length === 0">
+        <div class="d-flex justify-content-center align-items-center flex-column hpx-450 w-100"
+             v-if="products.length === 0">
 
             <!-- if cart item length 0 -->
             <i class="bi bi-bag fs-1 mb-3 d-block"></i>
@@ -73,49 +74,63 @@
     </div>
 
     <!-- total amount to cost -->
-    <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu col-lg-6 mt-3" v-if="products.length !== 0">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th class="default-width">
-                        Description
-                    </th>
-                    <th class="default-width">
-                        Amount
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="default-width">
-                        Amount of subtotal
-                    </td>
-                    <td class="default-width">
-                        ${{ totalAmount }}
-                    </td>
-                </tr>
-                <tr>
-                    <td class="default-width">
-                        shipping fees
-                    </td>
-                    <td class="default-width">
-                        <select name="shipping-fees" class="form-select" v-model="selectedShippingFee">
-                            <option value="50">Inside Country - $50</option>
-                            <option value="120">Outside Country - $120</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="default-width">
-                        total
-                    </td>
-                    <td class="default-width">
-                        ${{ totalAmountWithShipping }}
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+    <div class="d-flex justify-content-end">
+        <div class="bg-white shadow rounded-2 p-3 overflow-hidden cursor-content-menu col-lg-6 mt-3"
+             v-if="products.length !== 0">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="default-width">
+                            Description
+                        </th>
+                        <th class="default-width">
+                            Amount
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="default-width">
+                            Amount of subtotal
+                        </td>
+                        <td class="default-width">
+                            ${{ totalAmount }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="default-width">
+                            shipping fees
+                        </td>
+                        <td class="default-width">
+                            <select name="shipping-fees" class="form-select" v-model="selectedShippingFee">
+                                <option value="50">Inside Country - $50</option>
+                                <option value="120">Outside Country - $120</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="default-width">
+                            total
+                        </td>
+                        <td class="default-width">
+                            ${{ totalAmountWithShipping }}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-outline-theme" @click="continueShopping()">
+                Continue shopping
+            </button>
+            <button type="button" class="btn btn-outline-theme" @click="getCheckout()">
+                Order placed
+            </button>
         </div>
     </div>
 
@@ -129,9 +144,9 @@
                 <div class="product-item bg-white">
                     <img :src="each.file_path" class="product-image img-fluid" :alt="each.name">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                        {{each.category}}
+                        {{ each.category }}
                     </div>
-                    <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
+                    <div class="mt-2 fw-semibold text-center">{{ each.name }}</div>
                     <div class="mt-2 text-center">
                         <span v-if="each.review === '1'">
                             <i class="bi bi-star-fill text-warning mx-1"></i>
@@ -169,7 +184,7 @@
                             <i class="bi bi-star-fill text-warning mx-1"></i>
                         </span>
                     </div>
-                    <div class="text-theme text-center mt-2">${{each.price}}</div>
+                    <div class="text-theme text-center mt-2">${{ each.price }}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
                             <i class="bi bi-cart"></i>
@@ -192,7 +207,7 @@ import store from "../../store/index.js";
 export default {
 
     computed: {
-
+        /* Data computed */
         totalAmount() {
             return this.products.reduce((acc, curr) => acc + (parseInt(curr.price) * parseInt(curr.quantity)), 0);
         },
@@ -210,15 +225,65 @@ export default {
     data() {
 
         return {
+            /* Data properties for the component */
             selectedShippingFee: 50,
             dealOfTheDaysProduct: [
-                { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name', review: '1' },
-                { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name', review: '2' },
-                { id: '10', file_path: '/images/product/image-10.jpg', name: 'Product Name', price: '55', category: 'Category Name', review: '3' },
-                { id: '11', file_path: '/images/product/image-11.jpg', name: 'Product Name', price: '60', category: 'Category Name', review: '4' },
-                { id: '12', file_path: '/images/product/image-12.jpg', name: 'Product Name', price: '65', category: 'Category Name', review: '5' },
-                { id: '13', file_path: '/images/product/image-13.jpg', name: 'Product Name', price: '70', category: 'Category Name', review: '3' },
-                { id: '14', file_path: '/images/product/image-14.jpg', name: 'Product Name', price: '75', category: 'Category Name', review: '2' },
+                {
+                    id: '8',
+                    file_path: '/images/product/image-08.jpg',
+                    name: 'Product Name',
+                    price: '45',
+                    category: 'Category Name',
+                    review: '1'
+                },
+                {
+                    id: '9',
+                    file_path: '/images/product/image-09.jpg',
+                    name: 'Product Name',
+                    price: '50',
+                    category: 'Category Name',
+                    review: '2'
+                },
+                {
+                    id: '10',
+                    file_path: '/images/product/image-10.jpg',
+                    name: 'Product Name',
+                    price: '55',
+                    category: 'Category Name',
+                    review: '3'
+                },
+                {
+                    id: '11',
+                    file_path: '/images/product/image-11.jpg',
+                    name: 'Product Name',
+                    price: '60',
+                    category: 'Category Name',
+                    review: '4'
+                },
+                {
+                    id: '12',
+                    file_path: '/images/product/image-12.jpg',
+                    name: 'Product Name',
+                    price: '65',
+                    category: 'Category Name',
+                    review: '5'
+                },
+                {
+                    id: '13',
+                    file_path: '/images/product/image-13.jpg',
+                    name: 'Product Name',
+                    price: '70',
+                    category: 'Category Name',
+                    review: '3'
+                },
+                {
+                    id: '14',
+                    file_path: '/images/product/image-14.jpg',
+                    name: 'Product Name',
+                    price: '75',
+                    category: 'Category Name',
+                    review: '2'
+                },
             ],
         }
 
@@ -232,40 +297,55 @@ export default {
 
     methods: {
 
+        /* Function to go route as shop */
         goRoute() {
             this.$router.push({name: 'shop'})
         },
 
+        /* Function to remove from cart */
         removeFromCart(cartItem) {
             store.dispatch('removeFromCart', cartItem)
         },
 
-        product(){
+        /* Function to product */
+        product() {
             $('.product-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:false,
-                responsive:{
-                    0:{
-                        items:1
+                loop: true,
+                margin: 10,
+                nav: false,
+                responsive: {
+                    0: {
+                        items: 1
                     },
-                    600:{
-                        items:2
+                    600: {
+                        items: 2
                     },
-                    1000:{
-                        items:4
+                    1000: {
+                        items: 4
                     }
                 }
             })
         },
 
-        productInfo(){
-            this.$router.push( { name: 'productDetails' } )
+        /* Function to go route as product information */
+        productInfo() {
+            this.$router.push({name: 'productDetails'})
         },
 
+        /* Function to add to cart */
         addToCart(product) {
             store.dispatch('addToCart', product)
         },
+
+        /* Function to go route as continue shopping */
+        continueShopping() {
+            this.$router.push({name: 'shop'})
+        },
+
+        /* Function to go route as get checkout */
+        getCheckout() {
+            this.$router.push({name: 'checkout'})
+        }
 
     }
 

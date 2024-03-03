@@ -157,6 +157,7 @@ export default {
     data(){
 
         return{
+            /* Data properties for the component */
             blogCategoryList: [
                 { id: '1', name: 'Food Recipes and Cooking Tips', count: '2' },
                 { id: '2', name: 'Fashion and Style Guides', count: '4' },
@@ -169,6 +170,7 @@ export default {
                 { id: '9', name: 'Academic and Career Development', count: '18' },
                 { id: '10', name: 'Mental Health and Therapy Techniques', count: '20' },
             ],
+
             tagCategoryList: [
                 { id: '1', name: 'Food' },
                 { id: '2', name: 'Recipes' },
@@ -181,6 +183,7 @@ export default {
                 { id: '9', name: 'Skincare' },
                 { id: '10', name: 'Development' },
             ],
+
             blogList: [
                 { id: '1', file_path: '/images/blog/blog-6.jpg', title: 'All time fresh every time healthy', description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. ...', date: 'May 13, 2023', author: 'Spacing Tech' },
                 { id: '2', file_path: '/images/blog/blog-5.jpg', title: 'All time fresh every time healthy', description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. ...', date: 'May 13, 2023', author: 'Spacing Tech' },
@@ -190,6 +193,7 @@ export default {
             ],
 
             singleData: null,
+
         }
 
     },
@@ -202,6 +206,7 @@ export default {
 
     methods: {
 
+        /* Function show single data */
         showInfo(data){
             this.singleData = data
         }

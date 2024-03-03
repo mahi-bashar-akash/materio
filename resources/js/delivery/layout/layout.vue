@@ -75,6 +75,7 @@ import global from "../../global/global.vue";
 export default {
 
     components: {
+        /* components for global */
         global
     },
 
