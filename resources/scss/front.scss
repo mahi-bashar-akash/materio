@@ -6,9 +6,13 @@
     |--------------------------------------------------------------------------
     */
 
-    .navbar{
-        .navbar-brand{}
-        .collapse,.collapsing{
+    .navbar {
+
+        .navbar-brand {}
+
+        .collapse, .collapsing {
+            font-family: var(--lato-font);
+
             @media screen and (max-width: 991px) {
                 position: fixed;
                 top: 0;
@@ -21,11 +25,14 @@
                 box-shadow: 0 0 8px 0 var(--bs-border-color);
                 display: block !important;
                 transition: 0.3s all ease-in-out !important;
+
                 &.show {
                     transition: 0.3s all ease-in-out !important;
                     right: 0;
                 }
+
             }
+
             @media screen and (max-width: 576px) {
                 position: fixed;
                 top: 0;
@@ -38,19 +45,34 @@
                 box-shadow: 0 0 8px 0 var(--bs-border-color);
                 display: block !important;
                 transition: 0.3s all ease-in-out !important;
+
                 &.show {
                     transition: 0.3s all ease-in-out !important;
                     right: 0;
                 }
+
             }
-            .navbar-nav{
-                .nav-item{
-                    .nav-link{}
-                    .icon-close{
+
+            .navbar-nav {
+
+                .nav-item {
+
+                    .nav-link {
+                        transition: 0.3s all ease-in-out;
+
+                        &:hover, &.router-link-active, &.router-link-exact-active{
+                            transition: 0.3s all ease-in-out;
+                            color: var(--theme);
+                        }
+
+                    }
+
+                    .icon-close {
                         background-color: var(--bs-white);
                         box-shadow: 0 0 8px 0 var(--bs-border-color);
                         transition: 0.3s all ease-in-out;
-                        &:hover{
+
+                        &:hover {
                             transition: 0.3s all ease-in-out;
                             box-shadow: 0 0 12px 0 var(--bs-border-color);
                         }
@@ -58,10 +80,12 @@
                 }
             }
         }
+
         .navbar-toggler {
             background-color: var(--bs-white);
             box-shadow: 0 0 8px 0 var(--bs-border-color);
             transition: box-shadow 0.3s ease-in-out;
+
             &:hover {
                 box-shadow: 0 0 12px 0 var(--bs-border-color);
             }
@@ -450,13 +474,13 @@
 
         }
 
-        .link-hover-effect{
+        .link-hover-effect {
             text-decoration: none;
             color: var(--bs-secondary);
             background-color: var(--bs-white);
             transition: 0.3s all ease-in-out;
 
-            &:hover{
+            &:hover {
                 color: var(--theme);
                 transition: 0.3s all ease-in-out;
             }

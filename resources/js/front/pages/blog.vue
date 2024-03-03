@@ -1,7 +1,7 @@
 <template>
 
     <!-- blog list -->
-    <div class="container-fluid cursor-pointer-menu mb-4 blogs" v-if="singleData === null">
+    <div class="container-fluid cursor-pointer-menu mb-4 blogs">
         <div class="row">
             <div class="col-lg-4 p-3 order-0 order-lg-1">
 
@@ -34,114 +34,118 @@
             </div>
             <div class="col-lg-8 p-3 order-1 order-lg-0">
 
-                <!-- blog list -->
-                <div class="row row-cols-1 row-cols-md-2">
-                    <div v-for="each in blogList">
-                        <div class="bg-white blog-content cursor-pointer border mb-4" @click="showInfo(each)">
-                            <div class="mb-3 overflow-hidden hpx-180">
-                                <img :src="each.file_path" class="img-fluid w-100 object-fit-cover image-effect" alt="blog-1">
-                            </div>
-                            <div class="px-3 pb-3">
-                                <div class="fs-4 fw-semibold mb-3 text-theme">
-                                    {{each.title}}
+                <div class="w-100" v-if="singleData === null">
+
+                    <!-- blog list -->
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div v-for="each in blogList">
+                            <div class="bg-white blog-content cursor-pointer border mb-4" @click="showInfo(each)">
+                                <div class="mb-3 overflow-hidden hpx-180">
+                                    <img :src="each.file_path" class="img-fluid w-100 object-fit-cover image-effect" alt="blog-1">
                                 </div>
-                                <div class="mb-3">
-                                    {{each.description}}
-                                </div>
-                                <hr class="border">
-                                <div class="text-secondary">
-                                    {{each.date}} | <span class="text-theme"> By {{each.author}} </span>
+                                <div class="px-3 pb-3">
+                                    <div class="fs-4 fw-semibold mb-3 text-theme">
+                                        {{each.title}}
+                                    </div>
+                                    <div class="mb-3">
+                                        {{each.description}}
+                                    </div>
+                                    <hr class="border">
+                                    <div class="text-secondary">
+                                        {{each.date}} | <span class="text-theme"> By {{each.author}} </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- blog pagination -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="javascript:void(0)">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    1
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">
+                                    2
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    3
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
                 </div>
 
-                <!-- blog pagination -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link" href="javascript:void(0)">
-                                <i class="bi bi-chevron-left"></i>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                1
-                            </a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">
-                                2
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                3
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                <i class="bi bi-chevron-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="cursor-content-menu mb-4" v-if="singleData !== null">
+                    <!-- blog single data -->
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-outline-theme px-2" @click="singleData = null">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                    </div>
+                    <img :src="singleData.file_path" class="img-fluid object-fit-cover w-100 hpx-350" :alt="singleData.title">
+                    <div class="my-3 text-theme fw-semibold fs-4">
+                        {{singleData.title}}
+                    </div>
+
+                    <div class="text-secondary mb-3">
+                        {{singleData.date}} | <span class="text-theme"> By {{singleData.author}} </span>
+                    </div>
+
+                    <div class="text-secondary text-opacity-50 fw-light mb-3">
+                        {{singleData.description}}
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center mt-4">
+                        <button type="button" class="btn btn-light me-2">
+                            <i class="bi bi-hand-thumbs-up me-2"></i>
+                            <span class="badge bg-theme text-white">0</span>
+                        </button>
+                        <button type="button" class="btn btn-light me-2">
+                            <i class="bi bi-chat me-2"></i>
+                            <span class="badge bg-theme text-white">0</span>
+                        </button>
+                        <button type="button" class="btn btn-light">
+                            <i class="bi bi-share me-2"></i>
+                            <span class="badge bg-theme text-white">0</span>
+                        </button>
+                    </div>
+
+                    <!-- blog feedback from customer -->
+                    <form class="mt-4" autocomplete="off">
+                        <div class="d-flex justify-content-start align-items-start mb-3">
+                            <img :src="`/images/clients/face-1.png`" style="width: 45px; height: 45px" class="overflow-hidden rounded-circle" alt="avatar">
+                            <div class="ms-3">
+                                <div class="fw-semibold">John Smith</div>
+                                <div class="text-secondary">johnsmith@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <textarea name="" class="form-textarea" cols="30" rows="3" required autocomplete="off" placeholder="Typing Something..."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-theme">Send</button>
+                    </form>
+                </div>
 
             </div>
         </div>
-    </div>
-
-    <div class="container-fluid cursor-content-menu mb-4" v-if="singleData !== null">
-        <!-- blog single data -->
-        <div class="mb-3">
-            <button type="button" class="btn btn-outline-theme" @click="singleData = null">
-                <i class="bi bi-chevron-left"></i>
-            </button>
-        </div>
-        <img :src="singleData.file_path" class="img-fluid object-fit-cover w-100 hpx-350" :alt="singleData.title">
-        <div class="my-3 text-theme fw-semibold fs-4">
-            {{singleData.title}}
-        </div>
-
-        <div class="text-secondary mb-3">
-            {{singleData.date}} | <span class="text-theme"> By {{singleData.author}} </span>
-        </div>
-
-        <div class="text-secondary text-opacity-50 fw-light mb-3">
-            {{singleData.description}}
-        </div>
-        <div class="d-flex justify-content-start align-items-center mt-4">
-            <button type="button" class="btn btn-light me-2">
-                <i class="bi bi-hand-thumbs-up me-2"></i>
-                <span class="badge bg-theme text-white">0</span>
-            </button>
-            <button type="button" class="btn btn-light me-2">
-                <i class="bi bi-chat me-2"></i>
-                <span class="badge bg-theme text-white">0</span>
-            </button>
-            <button type="button" class="btn btn-light">
-                <i class="bi bi-share me-2"></i>
-                <span class="badge bg-theme text-white">0</span>
-            </button>
-        </div>
-
-        <!-- blog feedback from customer -->
-        <form class="mt-4" autocomplete="off">
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <img :src="`/images/clients/face-1.png`" style="width: 45px; height: 45px" class="overflow-hidden rounded-circle" alt="avatar">
-                <div class="ms-3">
-                    <div class="fw-semibold">John Smith</div>
-                    <div class="text-secondary">johnsmith@gmail.com</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="form-group">
-                    <textarea name="" class="form-textarea" cols="30" rows="3" required autocomplete="off" placeholder="Typing Something..."></textarea>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-theme">Send</button>
-        </form>
     </div>
 
 </template>

@@ -1,11 +1,11 @@
 :root {
     --theme: #8C57FF;
-    --roboto-slab-font: "Lato", sans-serif;
+    --lato-font: "Lato", sans-serif;
     --theme-light: #9155FD33;
     --theme-lightest: #9155FD0C;
     --theme-dark: #643EAB;
 }
 
 body {
-    font-family: var(--roboto-slab-font) !important;
+    font-family: var(--lato-font) !important;
 }
