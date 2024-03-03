@@ -65,7 +65,7 @@ export default {
         return{
             /* Data properties for the component */
             imageUrl: '/images/dots.png',
-            NewsLetterImageUrl: '/images/news-letter.webp',
+            NewsLetterImageUrl: '/images/news-letter.png',
         }
 
     },
