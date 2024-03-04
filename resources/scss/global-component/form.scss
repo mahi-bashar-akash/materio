@@ -126,13 +126,13 @@
             content: "";
             position: absolute;
             right: 3px;
-            top: 12.4px;
+            top: 11.5px;
             width: 12px;
             height: 12px;
-            border: 3px solid #FFF;
+            background-color: #FFF !important;
             border-radius: 50%;
             background: var(--white);
-            margin: -1px -1px 0 -1px;
+            margin: -1px -1px 0;
             transform: rotate(45deg) translate(-53%, -53%);
             z-index: 2;
         }
