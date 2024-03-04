@@ -74,7 +74,7 @@ export default {
 
         setTimeout(() => {
             this.openNewsLetter()
-        }, 5000);
+        }, 7000);
 
     },
 
