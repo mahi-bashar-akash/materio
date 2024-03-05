@@ -60,7 +60,8 @@
                     .nav-link {
                         transition: 0.3s all ease-in-out;
 
-                        &:hover, &.router-link-active, &.router-link-exact-active{
+                        &.router-link-active, &.router-link-exact-active{
+                            font-weight: 700;
                             transition: 0.3s all ease-in-out;
                             color: var(--theme);
                         }
