@@ -14,9 +14,6 @@ export default defineConfig({
                 // front
                 'resources/js/front/app.js',
 
-                // authentication
-                'resources/js/auth/app.js',
-
                 // admin
                 'resources/js/admin/app.js',
 

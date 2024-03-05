@@ -3,10 +3,6 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use App\Http\Middleware\PortalAuth;
-use App\Http\Middleware\PortalAuthReq;
-use App\Http\Middleware\PortalCheck;
-use App\Http\Middleware\PortalLoginCheck;
 
 class Kernel extends HttpKernel
 {
@@ -68,9 +64,5 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'PortalAuth' => PortalAuth::class,
-        'PortalAuthReq' => PortalAuthReq::class,
-        'PortalLoginCheck' => PortalLoginCheck::class,
-        'PortalCheck' => PortalCheck::class,
     ];
 }

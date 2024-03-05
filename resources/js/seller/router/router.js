@@ -1,11 +1,20 @@
 import {createRouter, createWebHistory} from "vue-router";
 
 /*
-|
 |--------------------------------------------------------------------------
-| Seller Pages
+|---- Seller Auth Pages -------------------------------------------------
 |--------------------------------------------------------------------------
-|
+*/
+
+import authLayout from "../auth/layout/layout.vue";
+import login from "../auth/pages/login.vue";
+import register from "../auth/pages/register.vue";
+import forget from "../auth/pages/forget.vue";
+
+/*
+|--------------------------------------------------------------------------
+|---- Seller Pages -------------------------------------------------
+|--------------------------------------------------------------------------
 */
 
 import layout from "../layout/layout.vue";
@@ -21,21 +30,34 @@ import packages from "../pages/package.vue";
 import order from "../pages/order.vue";
 
 const TITLE = window.core.APP_NAME
-const ROOT_URL = "/seller";
+const root_url = "/seller";
+const auth_root_url = "/seller/auth";
 const routes = [
+
+    /* Seller auth panel */
     {
-        path: ROOT_URL, name: 'layout', component: layout,
+        path: auth_root_url, name: 'authLayout', component: authLayout,
         children: [
-            { path: ROOT_URL + '/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard' } },
-            { path: ROOT_URL + '/chat', name: 'chat', component: chat, meta: { title: TITLE + ' - chat' } },
-            { path: ROOT_URL + '/calendar', name: 'calendar', component: calendar, meta: { title: TITLE + ' - calendar' } },
-            { path: ROOT_URL + '/email', name: 'email', component: email, meta: { title: TITLE + ' - email' } },
-            { path: ROOT_URL + '/profile', name: 'profile', component: profile, meta: { title: TITLE + ' - profile' } },
-            { path: ROOT_URL + '/slider', name: 'slider', component: slider, meta: { title: TITLE + ' - slider' } },
-            { path: ROOT_URL + '/category', name: 'category', component: category, meta: { title: TITLE + ' - category' } },
-            { path: ROOT_URL + '/product', name: 'product', component: product, meta: { title: TITLE + ' - product' } },
-            { path: ROOT_URL + '/packages', name: 'packages', component: packages, meta: { title: TITLE + ' - packages' } },
-            { path: ROOT_URL + '/order', name: 'order', component: order, meta: { title: TITLE + ' - order' } },
+            { path: auth_root_url + '/login', name: 'login', component: login, meta: { title: TITLE + ' - login' } },
+            { path: auth_root_url + '/register', name: 'register', component: register, meta: { title: TITLE + ' - register' } },
+            { path: auth_root_url + '/forget', name: 'forget', component: forget, meta: { title: TITLE + ' - forget' } },
+        ]
+    },
+
+    /* Seller panel */
+    {
+        path: root_url, name: 'layout', component: layout,
+        children: [
+            { path: root_url + '/dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - dashboard' } },
+            { path: root_url + '/chat', name: 'chat', component: chat, meta: { title: TITLE + ' - chat' } },
+            { path: root_url + '/calendar', name: 'calendar', component: calendar, meta: { title: TITLE + ' - calendar' } },
+            { path: root_url + '/email', name: 'email', component: email, meta: { title: TITLE + ' - email' } },
+            { path: root_url + '/profile', name: 'profile', component: profile, meta: { title: TITLE + ' - profile' } },
+            { path: root_url + '/slider', name: 'slider', component: slider, meta: { title: TITLE + ' - slider' } },
+            { path: root_url + '/category', name: 'category', component: category, meta: { title: TITLE + ' - category' } },
+            { path: root_url + '/product', name: 'product', component: product, meta: { title: TITLE + ' - product' } },
+            { path: root_url + '/packages', name: 'packages', component: packages, meta: { title: TITLE + ' - packages' } },
+            { path: root_url + '/order', name: 'order', component: order, meta: { title: TITLE + ' - order' } },
         ]
     },
 ];

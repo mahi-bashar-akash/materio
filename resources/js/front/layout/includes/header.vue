@@ -80,14 +80,14 @@
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/auth/register" @click="collapse">
-                                Create new account
-                            </a>
+                            <router-link class="nav-link" :to="{name: 'login'}" @click="collapse">
+                                Login
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/auth/login" @click="collapse">
-                                Login
-                            </a>
+                            <router-link class="nav-link" :to="{name: 'register'}" @click="collapse">
+                                Create new account
+                            </router-link>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"

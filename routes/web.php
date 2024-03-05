@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SellerController;
@@ -20,21 +19,17 @@ use App\Http\Controllers\DeliveryController;
 
 /*
 |--------------------------------------------------------------------------
-|-------------------------- Auth Routes -----------------------------------
+|---- Admin Auth Routes ---------------------------------------------------
 |--------------------------------------------------------------------------
 */
 
-Route::get('/auth', [AuthController::class, 'auth'])->where('any', '.*')->name('lvs.auth');
+Route::get('admin/auth/{any}', [AdminController::class, 'admin'])->where('any', '.*')->name('lvs.admin.auth');
 
-Route::get('/auth/{any}', [AuthController::class, 'auth'])->where('any', '.*')->name('lvs.auth.any');
-
-Route::get('/', function () { return redirect()->route('lvs.auth.any', 'login'); } );
-
-Route::get('/auth', function () { return redirect()->route('lvs.auth.any', 'login'); } );
+Route::get('admin/auth', function () { return redirect()->route('lvs.admin.auth', 'login'); } );
 
 /*
 |--------------------------------------------------------------------------
-|-------------------------- Admin Routes ----------------------------------
+|---- Admin Routes --------------------------------------------------------
 |--------------------------------------------------------------------------
 */
 
@@ -46,7 +41,17 @@ Route::get('/admin', function () { return redirect()->route('lvs.admin.any', 'da
 
 /*
 |--------------------------------------------------------------------------
-|-------------------------- Seller Routes ---------------------------------
+|---- Seller Auth Routes --------------------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+Route::get('seller/auth/{any}', [SellerController::class, 'seller'])->where('any', '.*')->name('lvs.seller.auth');
+
+Route::get('seller/auth', function () { return redirect()->route('lvs.seller.auth', 'login'); } );
+
+/*
+|--------------------------------------------------------------------------
+|---- Seller Routes -------------------------------------------------------
 |--------------------------------------------------------------------------
 */
 
@@ -58,7 +63,17 @@ Route::get('/seller', function () { return redirect()->route('lvs.seller.any', '
 
 /*
 |--------------------------------------------------------------------------
-|-------------------------- Delivery Routes -------------------------------
+|---- Delivery Auth Routes ------------------------------------------------
+|--------------------------------------------------------------------------
+*/
+
+Route::get('delivery/auth/{any}', [DeliveryController::class, 'delivery'])->where('any', '.*')->name('lvs.delivery.auth');
+
+Route::get('delivery/auth', function () { return redirect()->route('lvs.delivery.auth', 'login'); } );
+
+/*
+|--------------------------------------------------------------------------
+|---- Delivery Routes -----------------------------------------------------
 |--------------------------------------------------------------------------
 */
 
@@ -70,7 +85,7 @@ Route::get('/delivery', function () { return redirect()->route('lvs.delivery.any
 
 /*
 |--------------------------------------------------------------------------
-|-------------------------- Front Routes ----------------------------------
+|---- Front Routes --------------------------------------------------------
 |--------------------------------------------------------------------------
 */
 

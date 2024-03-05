@@ -1,94 +1,82 @@
 {
-  "_axios-kMxbiGYq.js": {
-    "file": "assets/axios-kMxbiGYq.js"
+  "_axios-Di5RpEPX.js": {
+    "file": "assets/axios-Di5RpEPX.js"
   },
-  "_global-!~{007}~.js": {
-    "file": "assets/global-sJBmbq85.css",
-    "src": "_global-!~{007}~.js"
+  "_global-!~{006}~.js": {
+    "file": "assets/global-DUn1kput.css",
+    "src": "_global-!~{006}~.js"
   },
-  "_global-SZPRQVTv.js": {
+  "_global-CQ7fwXCb.js": {
+    "file": "assets/global-CQ7fwXCb.js",
+    "css": [
+      "assets/global-DUn1kput.css"
+    ],
     "assets": [
-      "assets/bootstrap-icons-2eO-ad8Y.woff2",
-      "assets/bootstrap-icons-NpS-Zr3P.woff"
-    ],
-    "css": [
-      "assets/global-sJBmbq85.css"
-    ],
-    "file": "assets/global-SZPRQVTv.js"
+      "assets/bootstrap-icons-BtvjY1KL.woff2",
+      "assets/bootstrap-icons-BOrJxbIo.woff"
+    ]
   },
-  "_vue-quill.snow-!~{009}~.js": {
-    "file": "assets/vue-quill-IRKSPvU3.css",
-    "src": "_vue-quill.snow-!~{009}~.js"
+  "_vue-quill.snow-!~{008}~.js": {
+    "file": "assets/vue-quill-hEpI-9Tf.css",
+    "src": "_vue-quill.snow-!~{008}~.js"
   },
-  "_vue-quill.snow-u3ROWELq.js": {
-    "css": [
-      "assets/vue-quill-IRKSPvU3.css"
-    ],
-    "file": "assets/vue-quill.snow-u3ROWELq.js",
+  "_vue-quill.snow-DGtZ4VHF.js": {
+    "file": "assets/vue-quill.snow-DGtZ4VHF.js",
     "imports": [
-      "_global-SZPRQVTv.js"
+      "_global-CQ7fwXCb.js"
+    ],
+    "css": [
+      "assets/vue-quill-hEpI-9Tf.css"
     ]
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-NpS-Zr3P.woff",
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-2eO-ad8Y.woff2",
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-hbxS14WR.js",
-    "imports": [
-      "_global-SZPRQVTv.js",
-      "_axios-kMxbiGYq.js",
-      "_vue-quill.snow-u3ROWELq.js"
-    ],
+    "file": "assets/app-DnPAaQIF.js",
+    "src": "resources/js/admin/app.js",
     "isEntry": true,
-    "src": "resources/js/admin/app.js"
-  },
-  "resources/js/auth/app.js": {
-    "css": [
-      "assets/app-9I-rx6nE.css"
-    ],
-    "file": "assets/app-Yom6RC3J.js",
     "imports": [
-      "_global-SZPRQVTv.js",
-      "_axios-kMxbiGYq.js"
-    ],
-    "isEntry": true,
-    "src": "resources/js/auth/app.js"
+      "_global-CQ7fwXCb.js",
+      "_axios-Di5RpEPX.js",
+      "_vue-quill.snow-DGtZ4VHF.js"
+    ]
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-jFeocggh.js",
-    "imports": [
-      "_global-SZPRQVTv.js",
-      "_axios-kMxbiGYq.js"
-    ],
+    "file": "assets/app-BHjp3rh2.js",
+    "src": "resources/js/delivery/app.js",
     "isEntry": true,
-    "src": "resources/js/delivery/app.js"
+    "imports": [
+      "_global-CQ7fwXCb.js",
+      "_axios-Di5RpEPX.js"
+    ]
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-MBtwX2oi.js",
-    "imports": [
-      "_global-SZPRQVTv.js"
-    ],
+    "file": "assets/app-meK3FBxX.js",
+    "src": "resources/js/front/app.js",
     "isEntry": true,
-    "src": "resources/js/front/app.js"
+    "imports": [
+      "_global-CQ7fwXCb.js"
+    ]
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-Hprclysh.js",
-    "imports": [
-      "_global-SZPRQVTv.js",
-      "_axios-kMxbiGYq.js",
-      "_vue-quill.snow-u3ROWELq.js"
-    ],
+    "file": "assets/app-DxcWbBgY.js",
+    "src": "resources/js/seller/app.js",
     "isEntry": true,
-    "src": "resources/js/seller/app.js"
+    "imports": [
+      "_global-CQ7fwXCb.js",
+      "_axios-Di5RpEPX.js",
+      "_vue-quill.snow-DGtZ4VHF.js"
+    ]
   },
   "resources/scss/stylesheet.scss": {
-    "file": "assets/stylesheet-1ZV3Nw4o.css",
-    "isEntry": true,
-    "src": "resources/scss/stylesheet.scss"
+    "file": "assets/stylesheet-CZXkejOD.css",
+    "src": "resources/scss/stylesheet.scss",
+    "isEntry": true
   }
 }
