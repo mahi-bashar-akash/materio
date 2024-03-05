@@ -128,7 +128,7 @@
             <button type="button" class="btn btn-outline-theme" @click="continueShopping()">
                 Continue shopping
             </button>
-            <button type="button" class="btn btn-outline-theme" @click="getCheckout()">
+            <button type="button" class="btn btn-outline-theme" @click="getCheckout()" v-if="products.length !== 0">
                 Order placed
             </button>
         </div>

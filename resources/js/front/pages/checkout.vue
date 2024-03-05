@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group mb-3 col-md-6">
                         <label for="mobile" class="form-label">Phone number</label>
-                        <input id="mobile" type="text" name="mobile" class="form-control" required autocomplete="new-phone-number" placeholder="Enter your phone number">
+                        <input id="mobile" @keypress="checkNumber($event)" type="text" name="mobile" class="form-control" required autocomplete="new-phone-number" placeholder="Enter your phone number">
                     </div>
                     <div class="form-group mb-3 col-md-6">
                         <label for="city" class="form-label">City</label>
@@ -127,7 +127,22 @@ export default {
 
     methods: {
 
-
+        /* Function to check number */
+        checkNumber(e) {
+            let theEvent = e || window.event;
+            let key;
+            if (theEvent.type === 'paste') {
+                key = event.clipboardData.getData('text/plain');
+            } else {
+                key = theEvent.keyCode || theEvent.which;
+                key = String.fromCharCode(key);
+            }
+            const regex = /^\d*$/;
+            if (!regex.test(key)) {
+                theEvent.returnValue = false;
+                if (theEvent.preventDefault) theEvent.preventDefault();
+            }
+        },
 
     }
 

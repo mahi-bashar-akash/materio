@@ -391,11 +391,11 @@ export default {
 
         /* Function of zoom effect */
         zoom(event) {
-            var zoomer = event.currentTarget;
-            var offsetX = event.offsetX ? event.offsetX : event.touches[0].pageX;
-            var offsetY = event.offsetY ? event.offsetY : event.touches[0].pageY;
-            var x = offsetX / zoomer.offsetWidth * 100;
-            var y = offsetY / zoomer.offsetHeight * 100;
+            let zoomer = event.currentTarget;
+            let offsetX = event.offsetX ? event.offsetX : event.touches[0].pageX;
+            let offsetY = event.offsetY ? event.offsetY : event.touches[0].pageY;
+            let x = offsetX / zoomer.offsetWidth * 100;
+            let y = offsetY / zoomer.offsetHeight * 100;
             zoomer.style.backgroundPosition = x + '% ' + y + '%';
         },
 
