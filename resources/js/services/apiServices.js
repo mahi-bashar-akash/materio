@@ -2,8 +2,8 @@ import {createToaster} from "@meforma/vue-toaster";
 
 const toaster = createToaster({
     position: 'top-left',
-    duration: 5000, // Adjust duration as needed
-    singleton: true, // Prevent duplicate toasts
+    duration: 5000,
+    singleton: true,
 });
 
 const apiService = {

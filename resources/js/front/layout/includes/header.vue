@@ -34,11 +34,11 @@
     </header>
 
     <!-- header content menu -->
-    <header class="sticky-top w-100 bg-light pb-2 px-2 pb-lg-0">
+    <header class="sticky-top w-100 bg-light pb-2 px-2 pb-lg-0 fw-semibold">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
                 <!-- logo show in small screen -->
-                <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}" @click="collapse">
+                <router-link class="navbar-brand d-lg-none" :to="{name: 'home'}">
                     {{app_name}}
                 </router-link>
                 <button class="navbar-toggler border-0" type="button" @click="collapse">

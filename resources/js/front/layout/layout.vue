@@ -4,7 +4,7 @@
 
     <div class="modal fade" id="openNewsLetterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content object-fit-cover img-fluid py-2 px-0" :style="{ background: 'url(' + NewsLetterImageUrl + ')' }">
+            <div class="modal-content object-fit-cover img-fluid py-2 px-0 rounded-0 border-0" :style="{ background: 'url(' + NewsLetterImageUrl + ')' }">
                 <div class="modal-header d-flex justify-content-end border-bottom-0">
                     <button type="button" class="btn-close" @click="closeNewsLetter"></button>
                 </div>
