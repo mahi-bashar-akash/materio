@@ -19,7 +19,7 @@
             </div>
             <div class="mb-3">
                 <div class="form-group">
-                    <button type="button" class="btn btn-theme w-100" @click="emailPush">
+                    <button type="button" class="btn btn-theme w-100" @click="step = 'reset-password'">
                         SEND RESET LINK
                     </button>
                 </div>
@@ -128,11 +128,6 @@ export default {
     },
 
     methods: {
-
-        /* Function to call email push content */
-        emailPush(){
-            this.step = 'reset-password'
-        },
 
         /* Function to password visibility */
         passwordVisibility() {

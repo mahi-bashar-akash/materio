@@ -535,4 +535,16 @@
             }
         }
     }
+
+    .front-chat-wrapper{
+        bottom: -400px;
+        transition: 0.3s all ease-in-out;
+
+        &.active {
+            transition: 0.3s all ease-in-out;
+            bottom: 0;
+        }
+
+    }
+
 }

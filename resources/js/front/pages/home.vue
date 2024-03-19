@@ -59,6 +59,9 @@
     <section class="w-100 container-fluid mt-4">
         <div class="fw-bold text-center fs-3">
             Best Seller Products
+            <div class="d-flex justify-content-center">
+                <hr class="col-4 col-md-2 border-theme">
+            </div>
         </div>
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in bestSellerProducts">
@@ -191,10 +194,40 @@
         </div>
     </div>
 
+    <!-- customer feedback -->
+    <section class="w-100 container-fluid mt-4 py-5">
+        <div class="fw-bold text-center fs-3 mb-4">
+            Testimonial
+            <div class="d-flex justify-content-center">
+                <hr class="col-3 col-md-1 border-theme">
+            </div>
+        </div>
+        <div class="customer-carousel owl-carousel owl-theme">
+            <div class="item mb-3 p-3" v-for="each in testimonialData">
+                <div class="d-flex justify-content-center align-items-center text-center w-100">
+                    <div class="d-flex justify-content-center align-items-center flex-column bg-white py-2 rounded-3">
+                        <div class="py-3 col-10 col-md-7 fw-semibold">
+                            {{each.feedback}}
+                        </div>
+                        <div class="mb-3">
+                            <img :src="each.avatar" class="wpx-75 hpx-75 rounded-circle overflow-hidden" alt="face-1">
+                        </div>
+                        <div class="fw-semibold text-secondary text-opacity-75 fw-semibold pb-3">
+                            {{each.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- deal of the days product area -->
     <section class="w-100 container-fluid mt-4">
         <div class="fw-bold text-center fs-3">
             Deals Of The Days
+            <div class="d-flex justify-content-center">
+                <hr class="col-4 col-md-2 border-theme">
+            </div>
         </div>
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in dealOfTheDaysProduct">
@@ -259,6 +292,9 @@
     <section class="w-100 container-fluid mt-4">
         <div class="fw-bold text-center fs-3">
             Latest Blog Posts
+            <div class="d-flex justify-content-center">
+                <hr class="col-4 col-md-2 border-theme">
+            </div>
         </div>
         <div class="blog-carousel owl-carousel owl-theme">
             <div class="item">
@@ -374,6 +410,12 @@ export default {
                 { id: '7', file_path: '/images/product/image-07.jpg', name: 'Product Name', price: '40', category: 'Category Name', review: '3' },
             ],
 
+            testimonialData: [
+                { id: '1', feedback: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quis, similique! Animi dignissimos laudantium temporibus.', avatar: '/images/clients/face-1.png', name: 'Customer name 1' },
+                { id: '2', feedback: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quis, similique! Animi dignissimos laudantium temporibus.', avatar: '/images/clients/face-2.png', name: 'Customer name 2' },
+                { id: '3', feedback: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quis, similique! Animi dignissimos laudantium temporibus.', avatar: '/images/clients/face-3.png', name: 'Customer name 3' },
+            ],
+
             dealOfTheDaysProduct: [
                 { id: '8', file_path: '/images/product/image-08.jpg', name: 'Product Name', price: '45', category: 'Category Name', review: '1' },
                 { id: '9', file_path: '/images/product/image-09.jpg', name: 'Product Name', price: '50', category: 'Category Name', review: '2' },
@@ -412,6 +454,7 @@ export default {
         this.blog();
         this.brand();
         this.coupon();
+        this.testimonial();
     },
 
     methods: {
@@ -539,6 +582,28 @@ export default {
                 }
             })
         },
+
+        /* Function to show customer owl carousel */
+
+        testimonial(){
+            $('.customer-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    900:{
+                        items:1
+                    },
+                    1400:{
+                        items:1
+                    }
+                }
+            })
+        }
 
     }
 

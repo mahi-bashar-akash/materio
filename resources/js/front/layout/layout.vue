@@ -58,6 +58,8 @@
 
     <Footer/>
 
+    <Chat/>
+
 </template>
 
 <script>
@@ -65,12 +67,13 @@
 import Global from "../../global/global.vue";
 import Header from "./includes/header.vue";
 import Footer from "./includes/footer.vue";
+import Chat from "./includes/chat.vue";
 
 export default {
 
     components: {
         /* components for global, header and footer */
-        Global, Header, Footer
+        Global, Header, Footer, Chat
     },
 
     data(){

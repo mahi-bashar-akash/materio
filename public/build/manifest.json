@@ -6,8 +6,8 @@
     "file": "assets/global-DUn1kput.css",
     "src": "_global-!~{006}~.js"
   },
-  "_global-CQ7fwXCb.js": {
-    "file": "assets/global-CQ7fwXCb.js",
+  "_global-Bmy7aZIO.js": {
+    "file": "assets/global-Bmy7aZIO.js",
     "css": [
       "assets/global-DUn1kput.css"
     ],
@@ -20,10 +20,10 @@
     "file": "assets/vue-quill-hEpI-9Tf.css",
     "src": "_vue-quill.snow-!~{008}~.js"
   },
-  "_vue-quill.snow-DGtZ4VHF.js": {
-    "file": "assets/vue-quill.snow-DGtZ4VHF.js",
+  "_vue-quill.snow-Wylb-RtA.js": {
+    "file": "assets/vue-quill.snow-Wylb-RtA.js",
     "imports": [
-      "_global-CQ7fwXCb.js"
+      "_global-Bmy7aZIO.js"
     ],
     "css": [
       "assets/vue-quill-hEpI-9Tf.css"
@@ -38,44 +38,44 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-DnPAaQIF.js",
+    "file": "assets/app-D_Td5EBe.js",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
     "imports": [
-      "_global-CQ7fwXCb.js",
+      "_global-Bmy7aZIO.js",
       "_axios-Di5RpEPX.js",
-      "_vue-quill.snow-DGtZ4VHF.js"
+      "_vue-quill.snow-Wylb-RtA.js"
     ]
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-BHjp3rh2.js",
+    "file": "assets/app-BvzUD5oH.js",
     "src": "resources/js/delivery/app.js",
     "isEntry": true,
     "imports": [
-      "_global-CQ7fwXCb.js",
+      "_global-Bmy7aZIO.js",
       "_axios-Di5RpEPX.js"
     ]
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-Bqw2J6AP.js",
+    "file": "assets/app-P8n0O8Wd.js",
     "src": "resources/js/front/app.js",
     "isEntry": true,
     "imports": [
-      "_global-CQ7fwXCb.js"
+      "_global-Bmy7aZIO.js"
     ]
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-DxcWbBgY.js",
+    "file": "assets/app-32q79TDv.js",
     "src": "resources/js/seller/app.js",
     "isEntry": true,
     "imports": [
-      "_global-CQ7fwXCb.js",
+      "_global-Bmy7aZIO.js",
       "_axios-Di5RpEPX.js",
-      "_vue-quill.snow-DGtZ4VHF.js"
+      "_vue-quill.snow-Wylb-RtA.js"
     ]
   },
   "resources/scss/stylesheet.scss": {
-    "file": "assets/stylesheet-CZXkejOD.css",
+    "file": "assets/stylesheet-BMtDn3Ee.css",
     "src": "resources/scss/stylesheet.scss",
     "isEntry": true
   }
