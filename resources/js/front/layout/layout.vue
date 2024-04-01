@@ -26,7 +26,7 @@
                                 </button>
                             </div>
                             <label for="checkbox" class="form-label text-secondary text-opacity-75">
-                                <input id="checkbox" type="checkbox" class="form-check-input" name="newLetterPass">
+                                <input id="checkbox" type="checkbox" class="form-checkbox" name="newLetterPass">
                                 Don't show this popup again
                             </label>
                         </div>

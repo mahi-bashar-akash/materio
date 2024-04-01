@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-12 col-md-6 mb-3">
                 <label for="remember" class="form-label">
-                    <input id="remember" type="checkbox" class="form-check-input" v-model="loginParam.rememberMe">
+                    <input id="remember" type="checkbox" class="form-checkbox" v-model="loginParam.rememberMe">
                     Remember me
                 </label>
             </div>

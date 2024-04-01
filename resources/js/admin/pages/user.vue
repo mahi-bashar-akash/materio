@@ -29,7 +29,7 @@
                     <thead>
                     <tr>
                         <th class="checkbox">
-                            <input type="checkbox" name="checkbox" class="form-check-input">
+                            <input type="checkbox" name="checkbox" class="form-checkbox">
                         </th>
                         <th class="id">Id.</th>
                         <th class="name">User.</th>
@@ -41,7 +41,7 @@
                     <tbody>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">1</td>
                             <td class="name">
@@ -90,7 +90,7 @@
                         </tr>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">2</td>
                             <td class="name">
@@ -139,7 +139,7 @@
                         </tr>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">3</td>
                             <td class="name">
@@ -188,7 +188,7 @@
                         </tr>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">4</td>
                             <td class="name">
@@ -237,7 +237,7 @@
                         </tr>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">5</td>
                             <td class="name">
@@ -286,7 +286,7 @@
                         </tr>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">6</td>
                             <td class="name">
@@ -335,7 +335,7 @@
                         </tr>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">7</td>
                             <td class="name">
@@ -386,7 +386,7 @@
                         </tr>
                         <tr>
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">8</td>
                             <td class="name">

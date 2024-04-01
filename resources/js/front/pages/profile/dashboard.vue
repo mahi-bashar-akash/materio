@@ -53,7 +53,7 @@
                         <thead>
                         <tr>
                             <th class="checkbox">
-                                <input type="checkbox" class="form-check-input">
+                                <input type="checkbox" class="form-checkbox">
                             </th>
                             <th class="default-width">
                                 Date.
@@ -78,7 +78,7 @@
                         <tbody>
                         <tr v-for="each in orderTable">
                             <td class="checkbox">
-                                <input type="checkbox" class="form-check-input">
+                                <input type="checkbox" class="form-checkbox">
                             </td>
                             <td class="default-width">
                                 {{each.date}}

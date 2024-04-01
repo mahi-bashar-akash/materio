@@ -41,7 +41,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-CtekBSde.js",
+    "file": "assets/app-eFGFvS06.js",
     "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
@@ -52,7 +52,7 @@
     ]
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-3wxCnsJg.js",
+    "file": "assets/app-BGqZvzaS.js",
     "name": "app",
     "src": "resources/js/delivery/app.js",
     "isEntry": true,
@@ -62,7 +62,7 @@
     ]
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-P8n0O8Wd.js",
+    "file": "assets/app-CkHBA9oP.js",
     "name": "app",
     "src": "resources/js/front/app.js",
     "isEntry": true,
@@ -71,7 +71,7 @@
     ]
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-BKG-nIxI.js",
+    "file": "assets/app-DIV4H2fY.js",
     "name": "app",
     "src": "resources/js/seller/app.js",
     "isEntry": true,
@@ -82,7 +82,7 @@
     ]
   },
   "resources/scss/stylesheet.scss": {
-    "file": "assets/stylesheet-CG-YbD5m.css",
+    "file": "assets/stylesheet-kUhVlT7t.css",
     "src": "resources/scss/stylesheet.scss",
     "isEntry": true
   }

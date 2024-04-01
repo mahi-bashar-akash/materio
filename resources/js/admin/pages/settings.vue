@@ -116,7 +116,7 @@
         <form>
             <div class="fs-5 fw-semibold mb-4">Delete Account</div>
             <label for="delete-account" class="form-label mb-3 d-block">
-                <input id="delete-account" type="checkbox" name="delete-account" class="form-check-input" v-model="isConfirmed" required>
+                <input id="delete-account" type="checkbox" name="delete-account" class="form-checkbox" v-model="isConfirmed" required>
                 I confirm my account deactivation
             </label>
             <button type="submit" class="btn btn-danger px-4" :disabled="!isConfirmed">

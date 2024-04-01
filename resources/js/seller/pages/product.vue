@@ -26,7 +26,7 @@
                 <thead>
                     <tr>
                         <th class="checkbox">
-                            <input type="checkbox" name="checkbox" class="form-check-input">
+                            <input type="checkbox" name="checkbox" class="form-checkbox">
                         </th>
                         <th class="id">
                             Id.
@@ -51,7 +51,7 @@
                 <tbody>
                     <tr v-for="each in productTableData">
                         <td class="checkbox">
-                            <input type="checkbox" name="checkbox" class="form-check-input">
+                            <input type="checkbox" name="checkbox" class="form-checkbox">
                         </td>
                         <td class="id">
                             1

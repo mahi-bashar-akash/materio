@@ -310,13 +310,13 @@
                                             New for you
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="type" class="form-check-input" checked>
+                                            <input type="checkbox" name="type" class="form-checkbox" checked>
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                     </tr>
                                     <tr>
@@ -324,13 +324,13 @@
                                             Account activity
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input" checked>
+                                            <input type="checkbox" name="" class="form-checkbox" checked>
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                     </tr>
                                     <tr>
@@ -338,13 +338,13 @@
                                             A new browser used to sign in
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input" checked>
+                                            <input type="checkbox" name="" class="form-checkbox" checked>
                                         </td>
                                     </tr>
                                     <tr>
@@ -352,13 +352,13 @@
                                             A new device is linked
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input" checked>
+                                            <input type="checkbox" name="" class="form-checkbox" checked>
                                         </td>
                                         <td class="text-secondary default-width text-center">
-                                            <input type="checkbox" name="" class="form-check-input">
+                                            <input type="checkbox" name="" class="form-checkbox">
                                         </td>
                                     </tr>
                                 </tbody>

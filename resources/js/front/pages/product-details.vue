@@ -177,15 +177,15 @@
                     <div class="form-group">
                         <label class="form-label"> Rating </label>
                         <div class="d-flex justify-content-start align-items-center">
-                            <input type="checkbox" id="star1" class="form-check-input d-none" v-model="productReviewParam.rating" value="1" @click="updateRating(1)" />
+                            <input type="checkbox" id="star1" class="form-checkbox d-none" v-model="productReviewParam.rating" value="1" @click="updateRating(1)" />
                             <label for="star1" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('1'), 'bi bi-star': !productReviewParam.rating.includes('1') }"></label>
-                            <input type="checkbox" id="star2" class="form-check-input d-none" v-model="productReviewParam.rating" value="2" @click="updateRating(2)" />
+                            <input type="checkbox" id="star2" class="form-checkbox d-none" v-model="productReviewParam.rating" value="2" @click="updateRating(2)" />
                             <label for="star2" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('2'), 'bi bi-star': !productReviewParam.rating.includes('2') }"></label>
-                            <input type="checkbox" id="star3" class="form-check-input d-none" v-model="productReviewParam.rating" value="3" @click="updateRating(3)" />
+                            <input type="checkbox" id="star3" class="form-checkbox d-none" v-model="productReviewParam.rating" value="3" @click="updateRating(3)" />
                             <label for="star3" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('3'), 'bi bi-star': !productReviewParam.rating.includes('3') }"></label>
-                            <input type="checkbox" id="star4" class="form-check-input d-none" v-model="productReviewParam.rating" value="4" @click="updateRating(4)" />
+                            <input type="checkbox" id="star4" class="form-checkbox d-none" v-model="productReviewParam.rating" value="4" @click="updateRating(4)" />
                             <label for="star4" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('4'), 'bi bi-star': !productReviewParam.rating.includes('4') }"></label>
-                            <input type="checkbox" id="star5" class="form-check-input d-none" v-model="productReviewParam.rating" value="5" @click="updateRating(5)" />
+                            <input type="checkbox" id="star5" class="form-checkbox d-none" v-model="productReviewParam.rating" value="5" @click="updateRating(5)" />
                             <label for="star5" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('5'), 'bi bi-star': !productReviewParam.rating.includes('5') }"></label>
                         </div>
                     </div>

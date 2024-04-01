@@ -40,7 +40,7 @@
 
 }
 
-.form-check-input[type=checkbox] {
+.form-checkbox[type=checkbox] {
     position: relative;
     border: 2px solid var(--bs-border-color);
     border-radius: 4px;
@@ -98,7 +98,7 @@
 
 }
 
-.form-check-input[type=radio] {
+.form-radio[type=radio] {
     position: relative;
     border: 2px solid var(--bs-border-color);
     border-radius: 50%;
@@ -132,7 +132,7 @@
             background-color: #FFF !important;
             border-radius: 50%;
             background: var(--white);
-            margin: -1px -1px 0;
+            margin: 0 -1px 0;
             transform: rotate(45deg) translate(-53%, -53%);
             z-index: 2;
         }
@@ -148,7 +148,7 @@
         height: 14px;
         border: transparent;
         border-width: 0 2px 2px 0;
-        margin: -1px -1px 0 -1px;
+        margin: 0 -1px 0;
         transform: rotate(45deg) translate(-50%, -50%);
         z-index: 2;
     }

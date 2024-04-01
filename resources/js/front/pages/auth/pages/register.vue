@@ -52,7 +52,7 @@
         </div>
         <div class="mb-3">
             <label for="agree">
-                <input id="agree" type="checkbox" class="form-check-input" v-model="agreeChecked">
+                <input id="agree" type="checkbox" class="form-checkbox" v-model="agreeChecked">
                 I agree to
                 <a href="javascript:void(0)" class="text-decoration-none text-theme">
                     privacy policy & terms

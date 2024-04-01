@@ -29,7 +29,7 @@
                     <thead>
                         <tr>
                             <th class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </th>
                             <th class="id">Invoice no.</th>
                             <th class="name">Client.</th>
@@ -41,7 +41,7 @@
                     <tbody>
                         <tr v-for="each in invoiceTableData">
                             <td class="checkbox">
-                                <input type="checkbox" name="checkbox" class="form-check-input">
+                                <input type="checkbox" name="checkbox" class="form-checkbox">
                             </td>
                             <td class="id">{{each.invoiceNo}}</td>
                             <td class="name">

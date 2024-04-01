@@ -78,7 +78,7 @@
 
                     <!-- email btn group -->
                     <div class="email-btn-group d-flex justify-content-start align-items-center">
-                        <input type="checkbox" class="form-check-input">
+                        <input type="checkbox" class="form-checkbox">
                         <button type="button" class="btn-icon ms-2">
                             <i class="bi bi-trash2 text-danger"></i>
                         </button>
@@ -92,7 +92,7 @@
                         <!-- email single data -->
                         <div class="single-data row py-2 align-items-center cursor-content-menu" v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
                             <div class="col-12 col-xl-8 text-truncate d-flex align-items-center">
-                                <input type="checkbox" class="form-check-input">
+                                <input type="checkbox" class="form-checkbox">
                                 <button type="button" class="btn-icon me-2">
                                     <i class="bi bi-star text-warning"></i>
                                 </button>

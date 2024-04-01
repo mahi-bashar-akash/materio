@@ -83,7 +83,7 @@
                             <thead>
                                 <tr>
                                     <th class="checkbox">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-checkbox">
                                     </th>
                                     <th class="id">
                                         Order Id.
@@ -108,7 +108,7 @@
                             <tbody>
                                 <tr v-for="each in orderTable">
                                     <td class="checkbox">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-checkbox">
                                     </td>
                                     <td class="id">
                                         {{each.id}}

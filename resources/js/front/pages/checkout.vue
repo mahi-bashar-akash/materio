@@ -47,15 +47,15 @@
                     Select a payment method
                 </div>
                 <label for="cash-on-delivery" class="form-label d-flex align-items-center mb-3 cursor-pointer">
-                    <input id="cash-on-delivery" type="radio" name="payment-method" class="form-check-input me-2">
+                    <input id="cash-on-delivery" type="radio" name="payment-method" class="form-radio me-2">
                     Cash on delivery
                 </label>
                 <label for="online-payment" class="form-label d-flex align-items-center mb-3 cursor-pointer">
-                    <input id="online-payment" type="radio" name="payment-method" class="form-check-input me-2">
+                    <input id="online-payment" type="radio" name="payment-method" class="form-radio me-2">
                     Online payment
                 </label>
                 <label for="pos-on-delivery" class="form-label d-flex align-items-center mb-3 cursor-pointer">
-                    <input id="pos-on-delivery" type="radio" name="payment-method" class="form-check-input me-2">
+                    <input id="pos-on-delivery" type="radio" name="payment-method" class="form-radio me-2">
                     POS on Delivery
                 </label>
             </div>
@@ -68,15 +68,15 @@
                     Select a delivery method
                 </div>
                 <label for="home-delivery" class="form-label d-flex align-items-center mb-3 cursor-pointer">
-                    <input id="home-delivery" type="radio" name="delivery-system" class="form-check-input me-2">
+                    <input id="home-delivery" type="radio" name="delivery-system" class="form-radio me-2">
                     Home Delivery - 60৳
                 </label>
                 <label for="stock-pic-delivery" class="form-label d-flex align-items-center mb-3 cursor-pointer">
-                    <input id="stock-pic-delivery" type="radio" name="delivery-system" class="form-check-input me-2">
+                    <input id="stock-pic-delivery" type="radio" name="delivery-system" class="form-radio me-2">
                     Store Pickup - 0৳
                 </label>
                 <label for="request-express-charge-applicable" class="form-label d-flex align-items-center mb-3 cursor-pointer">
-                    <input id="request-express-charge-applicable" type="radio" name="delivery-system" class="form-check-input me-2">
+                    <input id="request-express-charge-applicable" type="radio" name="delivery-system" class="form-radio me-2">
                     Request Express - Charge Applicable
                 </label>
             </div>
@@ -104,6 +104,11 @@
                 </div>
             </div>
 
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-theme">
+                Confirm Order
+            </button>
         </div>
     </form>
 
