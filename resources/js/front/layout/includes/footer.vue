@@ -86,8 +86,8 @@
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
                 <div class="p-3">
                     Copyright © 2025
-                    <a href="javascript:void(0)" class="text-theme text-decoration-none">
-                        Materio
+                    <a href="https://redishketch.com/" class="text-theme text-decoration-none">
+                        Redishketch
                     </a>
                     all rights reserved.
                 </div>
