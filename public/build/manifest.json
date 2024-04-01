@@ -1,6 +1,7 @@
 {
-  "_axios-Di5RpEPX.js": {
-    "file": "assets/axios-Di5RpEPX.js"
+  "_axios-G5LVpFxl.js": {
+    "file": "assets/axios-G5LVpFxl.js",
+    "name": "axios"
   },
   "_global-!~{006}~.js": {
     "file": "assets/global-DUn1kput.css",
@@ -8,6 +9,7 @@
   },
   "_global-Bmy7aZIO.js": {
     "file": "assets/global-Bmy7aZIO.js",
+    "name": "global",
     "css": [
       "assets/global-DUn1kput.css"
     ],
@@ -22,6 +24,7 @@
   },
   "_vue-quill.snow-Wylb-RtA.js": {
     "file": "assets/vue-quill.snow-Wylb-RtA.js",
+    "name": "vue-quill.snow",
     "imports": [
       "_global-Bmy7aZIO.js"
     ],
@@ -38,26 +41,29 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-D_Td5EBe.js",
+    "file": "assets/app-CtekBSde.js",
+    "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
     "imports": [
       "_global-Bmy7aZIO.js",
-      "_axios-Di5RpEPX.js",
+      "_axios-G5LVpFxl.js",
       "_vue-quill.snow-Wylb-RtA.js"
     ]
   },
   "resources/js/delivery/app.js": {
-    "file": "assets/app-BvzUD5oH.js",
+    "file": "assets/app-3wxCnsJg.js",
+    "name": "app",
     "src": "resources/js/delivery/app.js",
     "isEntry": true,
     "imports": [
       "_global-Bmy7aZIO.js",
-      "_axios-Di5RpEPX.js"
+      "_axios-G5LVpFxl.js"
     ]
   },
   "resources/js/front/app.js": {
     "file": "assets/app-P8n0O8Wd.js",
+    "name": "app",
     "src": "resources/js/front/app.js",
     "isEntry": true,
     "imports": [
@@ -65,17 +71,18 @@
     ]
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-32q79TDv.js",
+    "file": "assets/app-BKG-nIxI.js",
+    "name": "app",
     "src": "resources/js/seller/app.js",
     "isEntry": true,
     "imports": [
       "_global-Bmy7aZIO.js",
-      "_axios-Di5RpEPX.js",
+      "_axios-G5LVpFxl.js",
       "_vue-quill.snow-Wylb-RtA.js"
     ]
   },
   "resources/scss/stylesheet.scss": {
-    "file": "assets/stylesheet-BMtDn3Ee.css",
+    "file": "assets/stylesheet-CG-YbD5m.css",
     "src": "resources/scss/stylesheet.scss",
     "isEntry": true
   }

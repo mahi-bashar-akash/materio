@@ -11,7 +11,7 @@
         .navbar-brand {}
 
         .collapse, .collapsing {
-            font-family: var(--lato-font);
+            font-family: var(--font-family);
 
             @media screen and (max-width: 991px) {
                 position: fixed;
