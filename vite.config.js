@@ -20,9 +20,6 @@ export default defineConfig({
                 // seller
                 'resources/js/seller/app.js',
 
-                // delivery
-                'resources/js/delivery/app.js',
-
             ],
             refresh: true,
         }),

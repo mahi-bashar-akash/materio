@@ -1,11 +1,7 @@
 {
-  "_axios-G5LVpFxl.js": {
-    "file": "assets/axios-G5LVpFxl.js",
-    "name": "axios"
-  },
-  "_global-!~{006}~.js": {
+  "_global-!~{005}~.js": {
     "file": "assets/global-DUn1kput.css",
-    "src": "_global-!~{006}~.js"
+    "src": "_global-!~{005}~.js"
   },
   "_global-Bmy7aZIO.js": {
     "file": "assets/global-Bmy7aZIO.js",
@@ -18,12 +14,12 @@
       "assets/bootstrap-icons-BOrJxbIo.woff"
     ]
   },
-  "_vue-quill.snow-!~{008}~.js": {
+  "_vue-quill.snow-!~{006}~.js": {
     "file": "assets/vue-quill-hEpI-9Tf.css",
-    "src": "_vue-quill.snow-!~{008}~.js"
+    "src": "_vue-quill.snow-!~{006}~.js"
   },
-  "_vue-quill.snow-Wylb-RtA.js": {
-    "file": "assets/vue-quill.snow-Wylb-RtA.js",
+  "_vue-quill.snow-D7Mg-2X8.js": {
+    "file": "assets/vue-quill.snow-D7Mg-2X8.js",
     "name": "vue-quill.snow",
     "imports": [
       "_global-Bmy7aZIO.js"
@@ -41,28 +37,17 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-eFGFvS06.js",
+    "file": "assets/app-Q9OOYDbX.js",
     "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
     "imports": [
       "_global-Bmy7aZIO.js",
-      "_axios-G5LVpFxl.js",
-      "_vue-quill.snow-Wylb-RtA.js"
-    ]
-  },
-  "resources/js/delivery/app.js": {
-    "file": "assets/app-BGqZvzaS.js",
-    "name": "app",
-    "src": "resources/js/delivery/app.js",
-    "isEntry": true,
-    "imports": [
-      "_global-Bmy7aZIO.js",
-      "_axios-G5LVpFxl.js"
+      "_vue-quill.snow-D7Mg-2X8.js"
     ]
   },
   "resources/js/front/app.js": {
-    "file": "assets/app-Df2UNRRv.js",
+    "file": "assets/app-DxgS7jZ9.js",
     "name": "app",
     "src": "resources/js/front/app.js",
     "isEntry": true,
@@ -71,14 +56,13 @@
     ]
   },
   "resources/js/seller/app.js": {
-    "file": "assets/app-DIV4H2fY.js",
+    "file": "assets/app-TOxUpFbV.js",
     "name": "app",
     "src": "resources/js/seller/app.js",
     "isEntry": true,
     "imports": [
       "_global-Bmy7aZIO.js",
-      "_axios-G5LVpFxl.js",
-      "_vue-quill.snow-Wylb-RtA.js"
+      "_vue-quill.snow-D7Mg-2X8.js"
     ]
   },
   "resources/scss/stylesheet.scss": {
