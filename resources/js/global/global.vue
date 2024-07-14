@@ -30,7 +30,7 @@ export default {
         return{
             /* Data properties for the component */
             colorWrapperActive: false,
-            themeColors: ["#8C57FF", "#0D9394", "#8A8D93", "#FF4C51", "#16B1FF"],
+            themeColors: ["FF4C51", "#0D9394", "#8A8D93", "#16B1FF", "#8C57FF"],
             selectedColor: null,
         }
 
