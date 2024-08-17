@@ -24,19 +24,34 @@
                             <input type="checkbox" name="checkbox" class="form-checkbox">
                         </th>
                         <th class="id">
-                            Id.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Id.
+                            </button>
                         </th>
                         <th class="default-width">
-                            Customer Name.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Customer Name.
+                            </button>
                         </th>
                         <th class="default-width">
-                            Customer Email.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Customer Email.
+                            </button>
                         </th>
                         <th class="default-width">
-                            Phone Number
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Phone Number
+                            </button>
                         </th>
                         <th class="default-width">
-                            status
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                status
+                            </button>
                         </th>
                     </tr>
                 </thead>

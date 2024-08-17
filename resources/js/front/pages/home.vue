@@ -66,7 +66,7 @@
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in bestSellerProducts">
                 <div class="product-item bg-white">
-                    <img :src="each.file_path" class="product-image img-fluid" :alt="each.name">
+                    <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         {{each.category}}
                     </div>
@@ -232,7 +232,7 @@
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in dealOfTheDaysProduct">
                 <div class="product-item bg-white">
-                    <img :src="each.file_path" class="product-image img-fluid" :alt="each.name">
+                    <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name">
                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                         {{each.category}}
                     </div>
@@ -297,70 +297,22 @@
             </div>
         </div>
         <div class="blog-carousel owl-carousel owl-theme">
-            <div class="item">
+            <div class="item" v-for="each in blogs">
                 <div class="blog-item bg-white rounded-bottom-3">
                     <div class="blog-item-top">
-                        <img :src="`/images/slider/banner-1.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
+                        <img :src="each.file_path" class="mb-3 blog-image img-fluid object-fit-cover height-250"/>
                     </div>
                     <div class="my-3 text-theme fw-semibold fs-4">
-                        Blog title
+                        {{each.title}}
                     </div>
                     <div class="fw-semibold">
-                        Mahi Bashar Akash
+                        {{each.author}}
                     </div>
                     <small class="d-block mb-3 text-secondary text-opacity-50">
-                        june 18, 2023
+                        {{each.data}}
                     </small>
                     <div class="text-secondary fw-light mb-3 fw-semibold">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
-                    </div>
-                    <div class="text-end">
-                        <button type="button" class="btn btn-theme">
-                            Read more
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="blog-item bg-white rounded-bottom-3">
-                    <div class="blog-item-top">
-                        <img :src="`/images/slider/banner-2.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
-                    </div>
-                    <div class="my-3 text-theme fw-semibold fs-4">
-                        Blog title
-                    </div>
-                    <div class="fw-semibold">
-                        Mahi Bashar Akash
-                    </div>
-                    <small class="d-block mb-3 text-secondary text-opacity-50">
-                        june 18, 2023
-                    </small>
-                    <div class="text-secondary fw-light mb-3 fw-semibold">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
-                    </div>
-                    <div class="text-end">
-                        <button type="button" class="btn btn-theme">
-                            Read more
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="blog-item bg-white rounded-bottom-3">
-                    <div class="blog-item-top">
-                        <img :src="`/images/slider/banner-3.jpg`" class="mb-3 blog-image img-fluid object-fit-cover"/>
-                    </div>
-                    <div class="my-3 text-theme fw-semibold fs-4">
-                        Blog title
-                    </div>
-                    <div class="fw-semibold">
-                        Mahi Bashar Akash
-                    </div>
-                    <small class="d-block mb-3 text-secondary text-opacity-50">
-                        june 18, 2023
-                    </small>
-                    <div class="text-secondary fw-light mb-3 fw-semibold">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.
+                        {{each.description}}
                     </div>
                     <div class="text-end">
                         <button type="button" class="btn btn-theme">
@@ -433,6 +385,12 @@ export default {
                 { id: '4', imageUrl: '/images/brand/brand-4.jpg'},
                 { id: '5', imageUrl: '/images/brand/brand-5.jpg'},
                 { id: '6', imageUrl: '/images/brand/brand-6.jpg'},
+            ],
+
+            blogs: [
+                { id: '1', file_path: '/images/slider/banner-1.jpg', title: 'Blog title 1', author: 'author name 1', data: 'june 12, 2023', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.', },
+                { id: '2', file_path: '/images/slider/banner-2.jpg', title: 'Blog title 2', author: 'author name 2', data: 'june 14, 2023', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.', },
+                { id: '3', file_path: '/images/slider/banner-3.jpg', title: 'Blog title 3', author: 'author name 3', data: 'june 16, 2023', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor doloribus earum incidunt maiores, nam nemo numquam, pariatur porro sequi soluta totam velit voluptate voluptatum.', },
             ],
 
             OperationImageUrl1: '/images/slider/content-1.jpg',

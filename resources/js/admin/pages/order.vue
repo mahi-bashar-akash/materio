@@ -25,22 +25,40 @@
                             <input type="checkbox" name="checkbox" class="form-checkbox">
                         </th>
                         <th class="id">
-                            Id.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Id.
+                            </button>
                         </th>
                         <th class="name">
-                            Customer Name.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Customer Name.
+                            </button>
                         </th>
                         <th class="default-width">
-                            Order Name.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Order Name.
+                            </button>
                         </th>
                         <th class="default-width">
-                            Price * Quantity
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Price * Quantity
+                            </button>
                         </th>
                         <th class="default-width">
-                            SubTotal
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                SubTotal
+                            </button>
                         </th>
                         <th class="status">
-                            Status
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Status
+                            </button>
                         </th>
                     </tr>
                 </thead>

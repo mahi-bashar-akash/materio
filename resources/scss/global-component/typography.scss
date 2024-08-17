@@ -2,6 +2,14 @@
     color: var(--theme) !important;
 }
 
+.text-theme-secondary {
+    transition: 0.3s all ease-in-out !important;
+    &:hover {
+        transition: 0.3s all ease-in-out !important;
+        color: var(--theme) !important;
+    }
+}
+
 .font-14 {
     font-size: 14px !important;
 }

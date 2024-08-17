@@ -29,19 +29,34 @@
                             <input type="checkbox" name="checkbox" class="form-checkbox">
                         </th>
                         <th class="id">
-                            Id.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Id.
+                            </button>
                         </th>
                         <th class="name">
-                            Name.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Name.
+                            </button>
                         </th>
                         <th class="price">
-                            Price.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Price.
+                            </button>
                         </th>
                         <th class="category">
-                            Category.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Category.
+                            </button>
                         </th>
                         <th class="quantity">
-                            Quantity.
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Quantity.
+                            </button>
                         </th>
                         <th class="action text-end">
                             Action.

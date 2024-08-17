@@ -31,11 +31,33 @@
                         <th class="checkbox">
                             <input type="checkbox" name="checkbox" class="form-checkbox">
                         </th>
-                        <th class="id">Id.</th>
-                        <th class="name">User.</th>
-                        <th class="role">Role.</th>
-                        <th class="status">Status.</th>
-                        <th class="action text-end">Action.</th>
+                        <th class="id">
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Id.
+                            </button>
+                        </th>
+                        <th class="name">
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                User.
+                            </button>
+                        </th>
+                        <th class="role">
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Role.
+                            </button>
+                        </th>
+                        <th class="status">
+                            <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                <i class="bi bi-caret-down-fill me-1"></i>
+                                Status.
+                            </button>
+                        </th>
+                        <th class="action text-end">
+                            Action.
+                        </th>
                     </tr>
                     </thead>
                     <tbody>

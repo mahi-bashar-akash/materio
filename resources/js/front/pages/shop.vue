@@ -191,7 +191,9 @@
                         <div class="product-single overflow-hidden">
                             <div class="item">
                                 <div class="product-item bg-white">
-                                    <img :src="each.file_path" class="product-image img-fluid">
+                                    <div class="d-flex justify-content-center">
+                                        <img :src="each.file_path" class="img-fluid object-fit-contain height-250">
+                                    </div>
                                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                                         {{ each.category }}
                                     </div>

@@ -31,11 +31,33 @@
                             <th class="checkbox">
                                 <input type="checkbox" name="checkbox" class="form-checkbox">
                             </th>
-                            <th class="id">Invoice no.</th>
-                            <th class="name">Client.</th>
-                            <th class="date">Date.</th>
-                            <th class="payment">Due.</th>
-                            <th class="action text-end">Action.</th>
+                            <th class="id">
+                                <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                    <i class="bi bi-caret-down-fill me-1"></i>
+                                    Invoice no.
+                                </button>
+                            </th>
+                            <th class="name">
+                                <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                    <i class="bi bi-caret-down-fill me-1"></i>
+                                    Client.
+                                </button>
+                            </th>
+                            <th class="date">
+                                <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                    <i class="bi bi-caret-down-fill me-1"></i>
+                                    Date.
+                                </button>
+                            </th>
+                            <th class="payment">
+                                <button type="button" class="border-0 bg-transparent p-0 fw-bold">
+                                    <i class="bi bi-caret-down-fill me-1"></i>
+                                    Due.
+                                </button>
+                            </th>
+                            <th class="action text-end">
+                                Action.
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
