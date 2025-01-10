@@ -44,7 +44,7 @@ import settings from "../pages/profile/settings.vue";
 
 const TITLE = window.core.APP_NAME
 
-const ROOT_URL = "/";
+const ROOT_URL = "";
 
 const routes = [
 
@@ -54,7 +54,7 @@ const routes = [
 
         children: [
 
-            { path: ROOT_URL + 'home', name: 'home', component: home, meta: { title: TITLE + ' - home' } },
+            { path: ROOT_URL + '', name: 'home', component: home, meta: { title: TITLE + ' - home' } },
 
             { path: ROOT_URL + 'about', name: 'about', component: about, meta: { title: TITLE + ' - about' } },
 

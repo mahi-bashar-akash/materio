@@ -60,7 +60,7 @@
                     .nav-link {
                         transition: 0.3s all ease-in-out;
 
-                        &.router-link-active, &.router-link-exact-active{
+                        &.router-link-exact-active{
                             transition: 0.3s all ease-in-out;
                             color: var(--theme);
                         }

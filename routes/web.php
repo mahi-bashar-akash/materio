@@ -66,8 +66,4 @@ Route::get('/seller', function () { return redirect()->route('lvs.seller.any', '
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', [FrontController::class, 'front'])->where('any', '.*')->name('lvs.front');
-
-Route::get('/{any}', [FrontController::class, 'front'])->where('any', '.*')->name('lvs.front.any');
-
-Route::get('/', function () { return redirect()->route('lvs.front.any', 'home'); } );
+Route::get('{any}', [FrontController::class, 'front'])->where('any', '.*')->name('lvs.front.any');
