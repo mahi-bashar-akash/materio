@@ -1,209 +1,210 @@
 <template>
 
     <!-- shop wrapper -->
-    <div class="shop-wrapper">
+    <section class="w-100 container">
+        <div class="shop-wrapper">
 
-        <!-- shop sidebar -->
-        <div class="shop-sidebar bg-white" :class="{'active' : shopSidebarActive}">
-            <div class="shop-sidebar-header">
+            <!-- shop sidebar -->
+            <div class="shop-sidebar bg-white" :class="{'active' : shopSidebarActive}">
+                <div class="shop-sidebar-header">
                 <span class="fw-semibold">
                     Filter
                 </span>
-                <button type="button" class="btn-icon" @click="shopSidebarController">
-                    <i class="bi bi-x-lg"></i>
-                </button>
-            </div>
-            <div class="shop-sidebar-body">
-
-                <hr class="col-12 border">
-
-                <div class="fw-semibold d-block">
-                    Price
+                    <button type="button" class="btn-icon" @click="shopSidebarController">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
                 </div>
+                <div class="shop-sidebar-body">
 
-                <hr class="col-5 border">
+                    <hr class="col-12 border">
 
-                <div class="shop-sidebar-content bg-white">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="form-group">
-                                <input v-model="priceRange" type="range" name="price-range" class="form-range" autocomplete="new-price" :min="0" :max="maxPrice">
+                    <div class="fw-semibold d-block">
+                        Price
+                    </div>
+
+                    <hr class="col-5 border">
+
+                    <div class="shop-sidebar-content bg-white">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <div class="form-group">
+                                    <input v-model="priceRange" type="range" name="price-range" class="form-range" autocomplete="new-price" :min="0" :max="maxPrice">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <input v-model="minPrice" type="text" name="min-price" class="form-control" autocomplete="new-min-price" :min="0" :max="maxPrice" placeholder="Min Price">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input v-model="minPrice" type="text" name="min-price" class="form-control" autocomplete="new-min-price" :min="0" :max="maxPrice" placeholder="Min Price">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <input v-model="maxPrice" type="text" name="max-price" class="form-control" autocomplete="new-max-price" :max="maxPrice" placeholder="Max Price">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input v-model="maxPrice" type="text" name="max-price" class="form-control" autocomplete="new-max-price" :max="maxPrice" placeholder="Max Price">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <hr class="col-12 border">
+                    <hr class="col-12 border">
 
-                <div class="fw-semibold d-block">
-                    Availability
-                </div>
+                    <div class="fw-semibold d-block">
+                        Availability
+                    </div>
 
-                <hr class="col-5 border">
+                    <hr class="col-5 border">
 
-                <div class="shop-sidebar-content bg-white">
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        In Stock
-                    </a>
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        Out of Stock
-                    </a>
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        Coming Soon
-                    </a>
-                </div>
-
-                <hr class="col-12 border">
-
-                <div class="fw-semibold d-block">
-                    Category List
-                </div>
-
-                <hr class="col-5 border">
-
-                <div class="shop-sidebar-content bg-white">
-                    <div v-for="category in categories" :key="category.id">
+                    <div class="shop-sidebar-content bg-white">
                         <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                            {{category.name}}
+                            In Stock
+                        </a>
+                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                            Out of Stock
+                        </a>
+                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                            Coming Soon
                         </a>
                     </div>
-                </div>
 
-                <hr class="col-12 border">
+                    <hr class="col-12 border">
 
-                <div class="fw-semibold d-block">
-                    SubCategory List
-                </div>
+                    <div class="fw-semibold d-block">
+                        Category List
+                    </div>
 
-                <hr class="col-5 border">
+                    <hr class="col-5 border">
 
-                <div class="shop-sidebar-content bg-white">
-                    <div v-for="category in categories" :key="category.id">
-                        <div v-for="subCategory in category.subCategory" :key="subCategory.id">
+                    <div class="shop-sidebar-content bg-white">
+                        <div v-for="category in categories" :key="category.id">
                             <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                                {{subCategory.name}}
+                                {{category.name}}
                             </a>
                         </div>
                     </div>
-                </div>
 
-                <hr class="col-12 border">
+                    <hr class="col-12 border">
 
-                <div class="fw-semibold d-block">
-                    Discount List
-                </div>
-
-                <hr class="col-5 border">
-
-                <div class="shop-sidebar-content bg-white">
-                    <div v-for="discount in discounts" :key="discount.id">
-                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                            {{discount.discountRate}}
-                        </a>
+                    <div class="fw-semibold d-block">
+                        SubCategory List
                     </div>
-                </div>
 
-                <hr class="col-12 border">
+                    <hr class="col-5 border">
 
-                <div class="fw-semibold d-block">
-                    Customer review
-                </div>
-
-                <hr class="col-5 border">
-
-                <div class="shop-sidebar-content bg-white">
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star ms-2 text-warning"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                        <i class="bi bi-star-fill ms-2 text-warning"></i>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- shop content -->
-        <div class="shop-content">
-            <div class="shop-content-header">
-
-                <!-- shop sidebar controller -->
-                <button type="button" class="btn-icon" @click="shopSidebarController">
-                    <i class="bi bi-justify"></i>
-                </button>
-
-                <!-- shop search product -->
-                <div class="col-10 col-md-6">
-                    <div class="position-relative">
-                        <input type="text" name="" class="form-control ps-5" autocomplete="new-search" placeholder="Search here">
-                        <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
-                            <i class="bi bi-search"></i>
+                    <div class="shop-sidebar-content bg-white">
+                        <div v-for="category in categories" :key="category.id">
+                            <div v-for="subCategory in category.subCategory" :key="subCategory.id">
+                                <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                                    {{subCategory.name}}
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+                    <hr class="col-12 border">
+
+                    <div class="fw-semibold d-block">
+                        Discount List
+                    </div>
+
+                    <hr class="col-5 border">
+
+                    <div class="shop-sidebar-content bg-white">
+                        <div v-for="discount in discounts" :key="discount.id">
+                            <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                                {{discount.discountRate}}
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr class="col-12 border">
+
+                    <div class="fw-semibold d-block">
+                        Customer review
+                    </div>
+
+                    <hr class="col-5 border">
+
+                    <div class="shop-sidebar-content bg-white">
+                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star ms-2 text-warning"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-decoration-none d-block hover-effect-link">
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                            <i class="bi bi-star-fill ms-2 text-warning"></i>
+                        </a>
+                    </div>
+
                 </div>
-
             </div>
-            <div class="shop-content-body">
 
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-2 row-cols-xxl-3">
+            <!-- shop content -->
+            <div class="shop-content">
+                <div class="shop-content-header">
 
-                    <!-- shop show product list -->
-                    <div v-for="each in productItem">
-                        <div class="product-single overflow-hidden">
-                            <div class="item">
-                                <div class="product-item bg-white">
-                                    <div class="position-relative">
-                                        <div class="d-flex justify-content-center">
-                                            <img :src="each.file_path" class="img-fluid object-fit-contain height-250">
+                    <!-- shop sidebar controller -->
+                    <button type="button" class="btn-icon" @click="shopSidebarController">
+                        <i class="bi bi-justify"></i>
+                    </button>
+
+                    <!-- shop search product -->
+                    <div class="col-10 col-md-6">
+                        <div class="position-relative">
+                            <input type="text" name="" class="form-control ps-5" autocomplete="new-search" placeholder="Search here">
+                            <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="shop-content-body">
+
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-2 row-cols-xxl-3">
+
+                        <!-- shop show product list -->
+                        <div v-for="each in productItem">
+                            <div class="product-single overflow-hidden">
+                                <div class="item">
+                                    <div class="product-item bg-white">
+                                        <div class="position-relative">
+                                            <div class="d-flex justify-content-center">
+                                                <img :src="each.file_path" class="img-fluid object-fit-contain height-250">
+                                            </div>
+                                            <div class="position-absolute top-0 end-0">
+                                                <div class="text-theme fw-bold bg-light-theme px-2 py-1 rounded-1 small">${{each.price}} per Kg</div>
+                                            </div>
                                         </div>
-                                        <div class="position-absolute top-0 end-0">
-                                            <div class="text-theme fw-bold bg-light-theme px-2 py-1 rounded-1 small">${{each.price}} per Kg</div>
+                                        <div class="text-uppercase text-secondary text-opacity-50 text-center">
+                                            {{ each.category }}
                                         </div>
-                                    </div>
-                                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
-                                        {{ each.category }}
-                                    </div>
-                                    <div class="mt-2 fw-semibold text-center">{{ each.name }}</div>
-                                    <div class="mt-2 text-center">
+                                        <div class="mt-2 fw-semibold text-center">{{ each.name }}</div>
+                                        <div class="mt-2 text-center">
                                         <span v-if="each.review === '1'">
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
@@ -211,88 +212,89 @@
                                             <i class="bi bi-star text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
                                         </span>
-                                        <span v-if="each.review === '2'">
+                                            <span v-if="each.review === '2'">
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
                                         </span>
-                                        <span v-if="each.review === '3'">
+                                            <span v-if="each.review === '3'">
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
                                         </span>
-                                        <span v-if="each.review === '4'">
+                                            <span v-if="each.review === '4'">
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star text-warning mx-1"></i>
                                         </span>
-                                        <span v-if="each.review === '5'">
+                                            <span v-if="each.review === '5'">
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                         </span>
-                                    </div>
-                                    <div class="product-active">
-                                        <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
-                                            <i class="bi bi-cart"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-theme" @click="productInfo(each)">
-                                            <i class="bi bi-search"></i>
-                                        </button>
+                                        </div>
+                                        <div class="product-active">
+                                            <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
+                                                <i class="bi bi-cart"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-theme" @click="productInfo(each)">
+                                                <i class="bi bi-search"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
 
-            </div>
+                <!-- shop pagination for product -->
+                <div class="shop-content-footer">
 
-            <!-- shop pagination for product -->
-            <div class="shop-content-footer">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="javascript:void(0)">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    1
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">
+                                    2
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    3
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
 
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link" href="javascript:void(0)">
-                                <i class="bi bi-chevron-left"></i>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                1
-                            </a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">
-                                2
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                3
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                <i class="bi bi-chevron-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
 </template>
 

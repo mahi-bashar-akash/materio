@@ -1,7 +1,7 @@
 <template>
 
     <!-- box area -->
-    <section class="w-100 container-fluid cursor-content-menu">
+    <section class="w-100 container cursor-content-menu">
         <div class="row row-cols-1 row-cols-sm-2">
 
             <div class="p-3">
@@ -44,7 +44,7 @@
         </div>
     </section>
 
-    <div class="container-fluid">
+    <div class="container">
 
         <!-- terms & conditions -->
         <div class="fs-bold fs-3 text-center text-dark my-3">

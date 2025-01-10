@@ -178,16 +178,14 @@
                                 ${{ cartItem.price * cartItem.quantity }}
                             </span>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center border rounded-3 wpx-170">
-                                <button class="btn border-0" type="button" @click="decrementQuantity(cartItem)">
-                                    <i class="bi bi-dash"></i>
-                                </button>
-                                <input type="text" disabled class="form-control cursor-content-menu text-center border-0 bg-transparent mx-2" v-model="cartItem.quantity" min="1" max="5"/>
-                                <button class="btn border-0" type="button" @click="incrementQuantity(cartItem)">
-                                    <i class="bi bi-plus"></i>
-                                </button>
-                            </div>
+                        <div class="d-flex align-items-center justify-content-between border rounded-3 wpx-170">
+                            <button class="btn border-0" type="button" @click="decrementQuantity(cartItem)">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                            {{cartItem.quantity}}
+                            <button class="btn border-0" type="button" @click="incrementQuantity(cartItem)">
+                                <i class="bi bi-plus"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

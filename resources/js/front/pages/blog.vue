@@ -1,7 +1,7 @@
 <template>
 
     <!-- blog list -->
-    <div class="container-fluid cursor-pointer-menu mb-4 blogs">
+    <div class="container cursor-pointer-menu mb-4 blogs">
         <div class="row">
             <div class="col-lg-4 p-3 order-0 order-lg-1">
 

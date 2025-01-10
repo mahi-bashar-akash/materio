@@ -1,10 +1,5 @@
 <template>
 
-    <!-- contact section -->
-    <div class="fw-bold text-center fs-3 mb-3">
-        Contact Us
-    </div>
-
     <!-- map -->
     <div class="map mb-3">
         <div id="canvas-for-googlemap" class="w-100 h-100">
@@ -12,7 +7,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-white">
+    <div class="container bg-white">
         <div class="row px-2 py-1">
             <form class="col-md-6 mb-3 p-3" autocomplete="off">
 
@@ -21,16 +16,16 @@
                     Drop us message
                 </div>
                 <div class="mb-3 form-group">
-                    <label for="name" class="form-label">Name</label>
+                    <label for="name" class="form-label fw-medium">Name</label>
                     <input id="name" type="text" name="name" class="form-control" required autocomplete="new-name" placeholder="Enter your name">
                 </div>
                 <div class="mb-3 form-group">
-                    <label for="email" class="form-label">Email</label>
+                    <label for="email" class="form-label fw-medium">Email</label>
                     <input id="email" type="email" name="email" class="form-control" required autocomplete="new-email" placeholder="Enter your email">
                 </div>
                 <div class="mb-3 form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea name="message" class="form-textarea" id="message" cols="30" rows="5" required autocomplete="new-message" placeholder="write your message..."></textarea>
+                    <label for="message" class="form-label fw-medium">Message</label>
+                    <textarea name="message" class="form-textarea" id="message" cols="30" rows="5" required autocomplete="new-message" placeholder="Write your message..."></textarea>
                 </div>
                 <div>
                     <button type="submit" class="btn btn-theme">

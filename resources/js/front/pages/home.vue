@@ -1,7 +1,7 @@
 <template>
 
     <!-- slider area -->
-    <section class="w-100 container-fluid">
+    <section class="w-100 container">
         <div class="slider-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in Sliders">
                 <div class="position-relative">
@@ -12,7 +12,7 @@
     </section>
 
     <!-- box area -->
-    <section class="w-100 container-fluid mt-4 cursor-content-menu">
+    <section class="w-100 container mt-4 cursor-content-menu">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
 
             <div class="p-3">
@@ -56,7 +56,7 @@
     </section>
 
     <!-- best seller product area -->
-    <section class="w-100 container-fluid mt-4">
+    <section class="w-100 container mt-4">
         <div class="fw-bold text-center fs-3">
             Best Seller Products
             <div class="d-flex justify-content-center">
@@ -71,7 +71,7 @@
                             <div class="text-theme fw-bold bg-light-theme px-2 py-1 rounded-1 small">${{each.price}}</div>
                         </div>
                     </div>
-                    <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name">
+                    <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name" loading="lazy" />
                     <div class="text-uppercase text-secondary small fw-medium">
                         {{each.category}}
                     </div>
@@ -127,7 +127,7 @@
     </section>
 
     <!-- operation area  -->
-    <div class="w-100 container-fluid mt-4">
+    <div class="w-100 container mt-4">
         <div class="coupon-carousel owl-carousel owl-theme">
             <div class="item p-1">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl1 + ')' }">
@@ -199,7 +199,7 @@
     </div>
 
     <!-- customer feedback -->
-    <section class="w-100 container-fluid mt-4 py-5">
+    <section class="w-100 container mt-4 py-5">
         <div class="fw-bold text-center fs-3 mb-4">
             Testimonial
             <div class="d-flex justify-content-center">
@@ -214,7 +214,7 @@
                             {{each.feedback}}
                         </div>
                         <div class="mb-3">
-                            <img :src="each.avatar" class="wpx-75 hpx-75 rounded-circle overflow-hidden" alt="face-1">
+                            <img :src="each.avatar" class="wpx-75 hpx-75 rounded-circle overflow-hidden" alt="face-1" loading="lazy" />
                         </div>
                         <div class="fw-semibold text-secondary text-opacity-75 fw-semibold pb-3">
                             {{each.name}}
@@ -226,7 +226,7 @@
     </section>
 
     <!-- deal of the days product area -->
-    <section class="w-100 container-fluid mt-4">
+    <section class="w-100 container mt-4">
         <div class="fw-bold text-center fs-3">
             Deals Of The Days
             <div class="d-flex justify-content-center">
@@ -241,7 +241,7 @@
                             <div class="text-theme fw-bold bg-light-theme px-2 py-1 rounded-1 small">${{each.price}}</div>
                         </div>
                     </div>
-                    <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name">
+                    <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name" loading="lazy" />
                     <div class="text-uppercase text-secondary small fw-medium">
                         {{each.category}}
                     </div>
@@ -297,7 +297,7 @@
     </section>
 
     <!-- latest blog post  -->
-    <section class="w-100 container-fluid mt-4">
+    <section class="w-100 container mt-4">
         <div class="fw-bold text-center fs-3">
             Latest Blog Posts
             <div class="d-flex justify-content-center">
@@ -308,7 +308,7 @@
             <div class="item" v-for="each in blogs">
                 <div class="blog-item bg-white rounded-bottom-3">
                     <div class="blog-item-top">
-                        <img :src="each.file_path" class="mb-3 blog-image img-fluid object-fit-cover height-250"/>
+                        <img :src="each.file_path" class="mb-3 blog-image img-fluid object-fit-cover height-250" :alt="each.title" loading="lazy" />
                     </div>
                     <div class="my-3 text-theme fw-semibold fs-4">
                         {{each.title}}
@@ -333,10 +333,10 @@
     </section>
 
     <!-- brand area -->
-    <section class="container-fluid w-100 border mt-3 bg-white">
+    <section class="container w-100 border mt-3 bg-white">
         <div class="brand-carousel owl-carousel owl-theme">
             <div v-for="each in brands">
-                <img :src="each.imageUrl" class="img-fluid" :alt="each.id">
+                <img :src="each.imageUrl" class="img-fluid" :alt="each.id" loading="lazy" />
             </div>
         </div>
     </section>

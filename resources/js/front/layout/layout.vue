@@ -51,9 +51,7 @@
 
     <!-- router content view -->
     <div class="w-100 py-4" :style="{ background: 'url(' + imageUrl + ')' }">
-        <div class="container">
-            <router-view/>
-        </div>
+        <router-view/>
     </div>
 
     <Footer/>
