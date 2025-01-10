@@ -1,7 +1,7 @@
 <template>
 
     <!-- product details -->
-    <form class="w-100 h-100 container-fluid cursor-content-menu">
+    <form class="w-100 h-100 container cursor-content-menu">
         <div class="row justify-content-center">
 
             <!-- single image -->
@@ -118,7 +118,7 @@
     </form>
 
     <!-- customer review -->
-    <div class="w-100 h-100 container-fluid cursor-content-menu mt-4 bg-white p-3">
+    <div class="w-100 h-100 container cursor-content-menu mt-4 bg-white p-3">
 
         <div class="fw-bold text-center fs-3">
             Reviews
@@ -212,7 +212,7 @@
     </div>
 
     <!-- related product area -->
-    <section class="w-100 container-fluid mt-4">
+    <section class="w-100 container mt-4">
         <div class="fw-bold text-center fs-3">
             Related Products
         </div>
