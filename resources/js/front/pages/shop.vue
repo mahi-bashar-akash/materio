@@ -191,8 +191,13 @@
                         <div class="product-single overflow-hidden">
                             <div class="item">
                                 <div class="product-item bg-white">
-                                    <div class="d-flex justify-content-center">
-                                        <img :src="each.file_path" class="img-fluid object-fit-contain height-250">
+                                    <div class="position-relative">
+                                        <div class="d-flex justify-content-center">
+                                            <img :src="each.file_path" class="img-fluid object-fit-contain height-250">
+                                        </div>
+                                        <div class="position-absolute top-0 end-0">
+                                            <div class="text-theme fw-bold bg-light-theme px-2 py-1 rounded-1 small">${{each.price}} per Kg</div>
+                                        </div>
                                     </div>
                                     <div class="text-uppercase text-secondary text-opacity-50 text-center">
                                         {{ each.category }}
@@ -235,7 +240,6 @@
                                             <i class="bi bi-star-fill text-warning mx-1"></i>
                                         </span>
                                     </div>
-                                    <div class="text-theme text-center mt-2">${{ each.price }} per Kg</div>
                                     <div class="product-active">
                                         <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
                                             <i class="bi bi-cart"></i>

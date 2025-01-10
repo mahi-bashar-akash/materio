@@ -19,8 +19,8 @@
                 <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                     <i class="bi bi-truck fs-3 text-theme"></i>
                     <div class="ms-3">
-                        <div class="text-secondary">Free Delivery</div>
-                        <div class="text-secondary text-opacity-50">orders over $99.00</div>
+                        <div class="text-dark fw-bold">Free Delivery</div>
+                        <div class="text-secondary small">orders over $99.00</div>
                     </div>
                 </div>
             </div>
@@ -29,8 +29,8 @@
                 <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                 <i class="bi bi-cash-coin fs-3 text-theme"></i>
                 <div class="ms-3">
-                    <div class="text-secondary">Money Guarantee</div>
-                    <div class="text-secondary text-opacity-50">7 days back</div>
+                    <div class="text-dark fw-bold">Money Guarantee</div>
+                    <div class="text-secondary small">7 days back</div>
                 </div>
                 </div>
             </div>
@@ -38,8 +38,8 @@
                 <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                 <i class="bi bi-credit-card-2-front fs-3 text-theme"></i>
                 <div class="ms-3">
-                    <div class="text-secondary">Payment</div>
-                    <div class="text-secondary text-opacity-50">secure system</div>
+                    <div class="text-dark fw-bold">Payment</div>
+                    <div class="text-secondary small">secure system</div>
                 </div>
                 </div>
             </div>
@@ -47,8 +47,8 @@
                 <div class="shadow rounded-3 p-3 d-flex justify-content-center align-items-center bg-white">
                 <i class="bi bi-telephone fs-3 text-theme"></i>
                 <div class="ms-3">
-                    <div class="text-secondary">Online Support</div>
-                    <div class="text-secondary text-opacity-50">24/24h on day</div>
+                    <div class="text-dark fw-bold">Online Support</div>
+                    <div class="text-secondary small">24/24h on day</div>
                 </div>
             </div>
             </div>
@@ -66,12 +66,17 @@
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in bestSellerProducts">
                 <div class="product-item bg-white">
+                    <div class="position-relative">
+                        <div class="position-absolute top-0 end-0">
+                            <div class="text-theme fw-bold bg-light-theme px-2 py-1 rounded-1 small">${{each.price}}</div>
+                        </div>
+                    </div>
                     <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
+                    <div class="text-uppercase text-secondary small fw-medium">
                         {{each.category}}
                     </div>
-                    <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
-                    <div class="mt-2 text-center">
+                    <div class="mt-2 fw-semibold">{{each.name}}</div>
+                    <div class="mt-2">
                         <span v-if="each.review === '1'">
                             <i class="bi bi-star-fill text-warning mx-1"></i>
                             <i class="bi bi-star text-warning mx-1"></i>
@@ -108,7 +113,6 @@
                             <i class="bi bi-star-fill text-warning mx-1"></i>
                         </span>
                     </div>
-                    <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
                             <i class="bi bi-cart"></i>
@@ -125,7 +129,7 @@
     <!-- operation area  -->
     <div class="w-100 container-fluid mt-4">
         <div class="coupon-carousel owl-carousel owl-theme">
-            <div class="item p-3">
+            <div class="item p-1">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl1 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -136,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item p-3">
+            <div class="item p-1">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl2 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -147,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item p-3">
+            <div class="item p-1">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl3 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -158,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item p-3">
+            <div class="item p-1">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl4 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -169,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item p-3">
+            <div class="item p-1">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl5 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -180,7 +184,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item p-3">
+            <div class="item p-1">
                 <div class="w-100 coupon-box" @click="pushType" :style="{ background: 'url(' + OperationImageUrl6 + ')' }">
                     <div class="h-100 px-3">
                         <div class="h-100 d-flex justify-content-center align-items-start flex-column ps-3">
@@ -232,12 +236,17 @@
         <div class="product-carousel owl-carousel owl-theme">
             <div class="item" v-for="each in dealOfTheDaysProduct">
                 <div class="product-item bg-white">
+                    <div class="position-relative">
+                        <div class="position-absolute top-0 end-0">
+                            <div class="text-theme fw-bold bg-light-theme px-2 py-1 rounded-1 small">${{each.price}}</div>
+                        </div>
+                    </div>
                     <img :src="each.file_path" class="img-fluid object-fit-contain height-250" :alt="each.name">
-                    <div class="text-uppercase text-secondary text-opacity-50 text-center">
+                    <div class="text-uppercase text-secondary small fw-medium">
                         {{each.category}}
                     </div>
-                    <div class="mt-2 fw-semibold text-center">{{each.name}}</div>
-                    <div class="mt-2 text-center">
+                    <div class="mt-2 fw-semibold">{{each.name}}</div>
+                    <div class="mt-2">
                         <span v-if="each.review === '1'">
                             <i class="bi bi-star-fill text-warning mx-1"></i>
                             <i class="bi bi-star text-warning mx-1"></i>
@@ -274,7 +283,6 @@
                             <i class="bi bi-star-fill text-warning mx-1"></i>
                         </span>
                     </div>
-                    <div class="text-theme text-center mt-2">${{each.price}}</div>
                     <div class="product-active">
                         <button type="button" class="btn btn-theme me-1" @click="addToCart(each)">
                             <i class="bi bi-cart"></i>
@@ -327,7 +335,7 @@
     <!-- brand area -->
     <section class="container-fluid w-100 border mt-3 bg-white">
         <div class="brand-carousel owl-carousel owl-theme">
-            <div class="p-3" v-for="each in brands">
+            <div v-for="each in brands">
                 <img :src="each.imageUrl" class="img-fluid" :alt="each.id">
             </div>
         </div>
@@ -479,7 +487,7 @@ export default {
         blog(){
             $('.blog-carousel').owlCarousel({
                 loop:true,
-                margin:10,
+                margin:0,
                 nav:false,
                 dots: false,
                 autoplay: true,

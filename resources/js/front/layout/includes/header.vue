@@ -236,13 +236,6 @@ export default {
             app_name: window.core.APP_NAME,
             userInfo: false,
             cartItem: [],
-            navbarToggle: {
-                'data-bs-toggle' :  'collapse',
-                'data-bs-target' :  '#navbarSupportedContent',
-                'aria-controls'  :  'navbarSupportedContent',
-                'aria-expanded'  :  'false',
-                'aria-label'     :  'Toggle navigation',
-            },
         }
 
     },

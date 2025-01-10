@@ -135,7 +135,6 @@
         position: relative;
 
         .item {
-            padding: 20px;
 
             &:hover {
                 transition: 0.3s all ease-in-out;
@@ -234,7 +233,7 @@
     .blog-carousel {
 
         .item {
-            padding: 20px;
+            padding: 0 !important;
 
             .blog-item {
                 padding: 10px;
